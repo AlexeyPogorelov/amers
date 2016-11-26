@@ -9,7 +9,8 @@
 
 body
 	font: $font-stack
-	padding-top: 60px
+	padding-top: 59px
+	transition: none
 	// &::-webkit-scrollbar
 	// 	height: 0
 	// 	width: 0
@@ -26,18 +27,23 @@ body
 	padding: 200px 0
 	align-items: center
 	min-height: 600px
-	@media #{$media-xs-min}
+	@media #{$media-xs}
 		padding: 20px 0
 		min-height: 300px
 	h1
 		font-weight: 100
+		margin-top: 10px
+		@media #{$media-xs-min}
+			font-size: 2rem
 	p
 		font-size: 1.2rem
-		line-height: 1.2em
-		// font-weight: 600
+		line-height: 1.4em
+		@media #{$media-xs-min}
+			line-height: 1.4em
+			font-size: 1rem
 	// .container
 	.content
-		background: rgba(255,255,255,0.5)
+		background: rgba(255,255,255,0.85)
 		border-radius: 2px
 		padding: 20px 28px
 		max-width: 700px
@@ -69,6 +75,7 @@ body
 			background: #333
 			border-top-right-radius: 1px
 			border-bottom-right-radius: 1px
+			transition: background 100ms
 			span
 				height: 40px
 				font-size: 18px
@@ -109,7 +116,7 @@ body
 			font-size: 18px
 		a
 			background: #fff
-			padding: 6px
+			padding: 6px 12px
 			line-height: 1em
 			color: inherit
 			font-size: inherit
@@ -132,9 +139,11 @@ body
 			color: #333
 			background: #fff
 	& > .row
-		border: 4px solid #eee
+		border: 2px solid #eee
 		border-radius: 1px
 		margin: 30px
+		@media #{$media-xs}
+			margin-bottom: 60px
 		@media #{$media-xs-min}
 			margin-bottom: 80px
 			text-align: center
@@ -142,11 +151,15 @@ body
 			margin: -30px
 		&:nth-of-type(odd)
 			.h2, h2
-				margin-left: -6px
+				position: relative
+				top: -5px
+				margin-left: -9px
 				@media #{$media-xs-min}
 					margin-left: 0
 		&:nth-of-type(even)
 			.h2, h2
+				position: relative
+				top: -5px
 				margin-left: 60px
 				@media #{$media-xs-min}
 					margin-left: 0
@@ -160,9 +173,14 @@ body
 //----------------------------------
 .where-to-buy
 	background: url('../img/bg/map-ukraine-outline.svg') 50% 50% no-repeat / contain
-	padding: 50px 0 100px
+	padding: 50px 15px 100px
+	@media #{$media-xs-min}
+		padding: 10px 15px
+		text-align: center
 	h2
 		margin-bottom: 1em
+	p
+		line-height: 1.4em
 	.cities-buttons
 		margin-top: 40px
 		a
@@ -171,6 +189,7 @@ body
 			border: 2px solid #333
 			padding: 10px 24px
 			text-decoration: none
+			transition: background 100ms
 			margin: 0 20px 20px
 			width: 180px
 			&:hover
@@ -185,6 +204,56 @@ body
 //----------------------------------
 // END WHERE TO BUY
 //----------------------------------
+
+//----------------------------------
+// CART
+//----------------------------------
+.cart-items-holder
+	margin: 120px 0
+	padding: 0 20px
+.cart-item
+	font-size: 0
+	letter-spacing: 0
+	white-space: nowrap
+	.left-side,
+	.right-side
+		display: inline-block
+		height: 120px
+		font-size: 1rem
+		vertical-align: middle
+	.left-side
+		width: 40%
+		.item-name,
+		.item-image
+			display: inline-block
+			vertical-align: middle
+		.item-image
+			width: 120px
+			a
+				display: block
+				img
+		.item-name
+			margin-left: 20px
+			color: #333
+			font-weight: 600
+	.right-side
+		text-align: right
+		width: 60%
+		select
+			padding: 2px 10px
+		.item-color
+		.item-material
+		.item-price
+			.price-cost
+				font-size: 1.6em
+			.currency
+		.item-remove
+			.remove-button
+				font-size: 24px
+//----------------------------------
+// END CART
+//----------------------------------
+
 
 //----------------------------------
 // TEST

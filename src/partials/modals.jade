@@ -1,4 +1,126 @@
-#calltaxi_open.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+#mobile-navigation.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content
+			.container-fluid
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+				.row
+					ul
+						li
+							a(href="tel:0472733168").binct-phone-number-1 (047) 273-31-68
+						li
+							a(href='about.html') О нас
+						li
+							a(href='catalog.html') Каталог
+						li
+							a(href='blog.html') Блог
+						li
+							a(href='feedbacks.html') Отзывы
+						li
+							a(href='contacts.html') Контакты
+						li.dropdown
+							a(href='contacts.html#map' data-toggle="dropdown")
+								| Магазины 
+							ul.dropdown-menu
+								li
+									a(href='contacts.html#city') Киев
+								li
+									a(href='contacts.html#city') Сумы
+								li
+									a(href='contacts.html#city') Харьков
+								li
+									a(href='contacts.html#city') Одесса
+								li
+									a(href='contacts.html#city') Белая Церковь
+								li
+									a(href='contacts.html#city') Полтава
+								li
+									a(href='contacts.html#city') Запорожье
+								li
+									a(href='contacts.html#city') Хмельницкий
+								li
+									a(href='contacts.html#city') Черкассы
+						li
+							a(href='catalog.html') Модульные диваны 
+						li
+							a(href='catalog.html') Угловые диваны
+						li
+							a(href='catalog.html') Прямые диваны
+				br
+				br
+
+#cart-sidebar.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content
+			.container-fluid
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+				.row
+					ul.cart-items-holder
+						li.cart-item
+							.left-side
+								span.item-image
+									a.image-holder(href='item-card.html')
+										img(src='https://www.pufetto.com.ua/items/gerardo/c/1/c.gerardo.jpg', alt='Витто')
+								a.item-name(href='item-card.html') Витто 
+							.right-side
+								span.item-color
+									select(name='color')
+										option(value='red', selected='') Красный
+								span.item-material
+									select(name='material')
+										option(value='342', selected='') Ткань
+								span.item-price
+									span.price-cost 12700
+									span.currency грн.
+								span.item-remove
+									button.remove-button
+										span.glyphicon.glyphicon-trash(aria-hidden="true")
+				br
+				br
+
+#search-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content
+			.container-fluid
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+				.row
+					form(action="#").search-wrapper
+						h2 Поиск
+						.input-form
+							input(type="text" placeholder="Введите название товара или тип дивана")
+							input(type="submit" value="")
+						ul.tag-cloud-1
+							li Модульные диваны
+							li Угловые диваны
+							li Прямые диваны
+				br
+				br
+
+#login-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content
+			.container-fluid
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+				.row
+					form(action="#")
+						.form-group
+							.input-group
+								label(for="popup-login-email") Email
+								input(type="text")#popup-login-email
+						.form-group
+							.input-group
+								label(for="popup-login-password") Пароль
+								input(type="password")#popup-login-password
+								a(href="password-recovery.html" data-modal="#password-recovery").forgot-password Забыли?
+						.button-group
+							button(type="submit")
+								span Вход
+						.button-group
+							a(href="signup.html" data-modal="#signup-modal") Регистрации
+				br
+				br
+
+
+#calltaxi-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 	.modal-dialog.modal-lg
 		.modal-content
 			.container-fluid
@@ -67,7 +189,7 @@
 						.clearfix
 				br
 				br
-#backcall_open.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+#backcall-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 	.modal-dialog.modal-lg
 		.modal-content
 			.container-fluid

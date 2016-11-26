@@ -38,15 +38,15 @@ footer.footer-main
 		margin-bottom: 4px
 
 	.copyright-section
-		@media #{$media-xs-min}
+		@media #{$media-sm}
 			text-align: center
 		&__copyright
 		&__developers
 			text-align: right
-			@media #{$media-xs-min}
+			@media #{$media-sm}
 				text-align: center
 	.social-networks-section
-		@media #{$media-xs-min}
+		@media #{$media-sm}
 			text-align: center
 		a
 			display: inline-block
@@ -64,6 +64,7 @@ footer.footer-main
 				width: auto
 				path
 					fill: #333
+					transition: fill 100ms
 			&:hover
 				svg
 					path
