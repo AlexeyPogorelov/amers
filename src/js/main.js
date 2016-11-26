@@ -12,3 +12,4 @@ $('.dropdown').hover(function() {
 		$this.find('[data-toggle="dropdown"]').trigger('click');
 	}
 });
+

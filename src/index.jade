@@ -2,6 +2,7 @@ doctype html
 html(lang='ru')
 	head
 		title greatest page
+		meta(charset="utf-8")
 
 		include ./partials/head.jade
 
@@ -78,34 +79,41 @@ html(lang='ru')
 							a.blackbut.bold(href='/krovati/dvuhspalniye-krovati/', rel='nofollow') Все модели
 				hr.row
 				.clearfix
-			.container
+			.container.where-to-buy
 				.row
-					.top_banner.detali.col-md-8.col-md-offset-2.col-sm-12.col-sm-offset-0
+					.col-sm-12.col-md-8.col-md-offset-2
 						div
 							h2.text-uppercase.text-center Магазины
 							p Ваш коллектив руководствуется девизом “качество не только снаружи, но и внутри”, именно поэтому для производства мебели используются только экологически чистые материалы. Мы постоянно обновляем наш модельный ряд, а также следуем современным тенденциям в мире дизайна и технологий, которые успешно применяем при изготовлении новых изделий.
-							.clearfix
-							.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
-								.col-sm-4
-									a.whitebuts.bold(href='#') Киев
-								.col-sm-4
-									a.whitebuts.bold(href='#') Сумы
-								.col-sm-4
-									a.whitebuts.bold(href='#') Харьков
-								.col-sm-4
-									a.whitebuts.bold(href='#') Одесса
-								.col-sm-4
-									a.whitebuts.bold(href='#') Белая Церковь
-								.col-sm-4
-									a.whitebuts.bold(href='#') Полтава
-								.col-sm-4
-									a.whitebuts.bold(href='#') Запорожье
-								.col-sm-4
-									a.whitebuts.bold(href='#') Хмельницкий
-								.col-sm-4
-									a.whitebuts.bold(href='#') Черкассы
-							.clearfix
-			.container
+					ul.cities-buttons.col-sm-12.col-md-8.col-md-offset-2.list-inline.text-center
+						li
+							a.whitebuts.bold(href='#')
+								span Киев
+						li
+							a.whitebuts.bold(href='#')
+								span Сумы
+						li
+							a.whitebuts.bold(href='#')
+								span Харьков
+						li
+							a.whitebuts.bold(href='#')
+								span Одесса
+						li
+							a.whitebuts.bold(href='#')
+								span Белая Церковь
+						li
+							a.whitebuts.bold(href='#')
+								span Полтава
+						li
+							a.whitebuts.bold(href='#')
+								span Запорожье
+						li
+							a.whitebuts.bold(href='#')
+								span Хмельницкий
+						li
+							a.whitebuts.bold(href='#')
+								span Черкассы
+			.container.hidden
 				.bordered
 					h2.text-uppercase.text-center Отзывы покупателей
 				.row.clearfix
@@ -117,8 +125,7 @@ html(lang='ru')
 									a(href='/divany-i-kresla/ugloviye-divany/matteo-l-d/')
 										img.rewimg(src='/items/matteo/d/1/small/d.matteo.l.jpg')
 								p.h4.normal
-									span
-										| Владимир · Харьков · 23.11.2016 · 
+									span Владимир · Харьков · 23.11.2016 ·
 								.comment_text
 									| Купили диван MATTEO для ежедневного использования (сна). После приобретения возникла определенная сложность в раскладывании дивана (механизм дельфин был достаточно тугой и требовал чрезмерного прикладывания силы). Обратились в салон в Харькове, и на следующий день специалист устранил эту проблему. Спасибо за оперативность и качественный диван.
 						li.col-md-4
@@ -128,8 +135,7 @@ html(lang='ru')
 									a(href='/divany-i-kresla/trehmestniye-divany/sofia-c/')
 										img.rewimg(src='/items/sofia/c/1/small/c.sofia.jpg')
 								p.h4.normal
-									span
-										| Елена · Харьков · 18.11.2016 · 
+									span Елена · Харьков · 18.11.2016 ·
 								.comment_text
 									| Спасибо Огромное Pufetto и его команде ,а особенно Татьяне. Долго искала диван и наткнулась на ваш сайт.Сервис супер ,качество мебели супер.
 						li.col-md-4
@@ -139,8 +145,7 @@ html(lang='ru')
 									a(href='/divany-i-kresla/trehmestniye-divany/rafaella-c/')
 										img.rewimg(src='/items/rafaella/c/1/small/c.rafaella.jpg')
 								p.h4.normal
-									span
-										| Валерия · Киев · 16.11.2016 · 
+									span Валерия · Киев · 16.11.2016 ·
 								.comment_text
 									| Была впечатлена сервисом как в шоу-руме в Киеве так и сроками исполнения (быстрее ожидаемого) так и доставкой со сборкой. Чувствуется толковый менеджмент и лояльный персонал раз так все без сучка без задоринки. Диван - шикарный! Я выбрала rafaella, цвет томатный trinity. Он самый неглубокий в глубину, длинный по длине и мне нравиться со всех сторон, включаю с боковой. Мягкий, приятный, цвет то розовый, то красный - зависит от освещения. Вообщем, всем довольна. Спасибо, так держать!
 					.col-md-12

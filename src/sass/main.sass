@@ -26,6 +26,9 @@ body
 	padding: 200px 0
 	align-items: center
 	min-height: 600px
+	@media #{$media-xs-min}
+		padding: 20px 0
+		min-height: 300px
 	h1
 		font-weight: 100
 	p
@@ -92,11 +95,18 @@ body
 	.item-description
 		& > *
 			margin-left: 40px
+			@media #{$media-xs-min}
+				margin-left: 0
+	.desc_row
+		@media #{$media-xs-min}
+			display: none
 	.h2, h2
 		color: #333
 		font-size: 28px
 		font-weight: 600
 		margin-bottom: 0.8em
+		@media #{$media-xs-min}
+			font-size: 18px
 		a
 			background: #fff
 			padding: 6px
@@ -104,36 +114,77 @@ body
 			color: inherit
 			font-size: inherit
 			font-weight: inherit
-	.desc_row
+			@media #{$media-xs-min}
+				background: transparent
 	.blackbut
-		border: 2px solid #000
-		background: #000
+		border: 2px solid #333
+		background: #333
+		display: inline-block
 		color: #fff
 		padding: 10px 24px
 		text-transform: uppercase
 		font-size: 12px
 		font-weight: 600
 		letter-spacing: 0.05em
+		margin-bottom: 20px
 		&:hover
 			text-decoration: none
-			color: #000
+			color: #333
 			background: #fff
 	& > .row
 		border: 4px solid #eee
 		border-radius: 1px
 		margin: 30px
+		@media #{$media-xs-min}
+			margin-bottom: 80px
+			text-align: center
 		.category-item
 			margin: -30px
 		&:nth-of-type(odd)
 			.h2, h2
 				margin-left: -6px
+				@media #{$media-xs-min}
+					margin-left: 0
 		&:nth-of-type(even)
 			.h2, h2
 				margin-left: 60px
+				@media #{$media-xs-min}
+					margin-left: 0
 //----------------------------------
 // END CATEGORIES ON MAIN-PAGE
 //----------------------------------
 
+
+//----------------------------------
+// WHERE TO BUY
+//----------------------------------
+.where-to-buy
+	background: url('../img/bg/map-ukraine-outline.svg') 50% 50% no-repeat / contain
+	padding: 50px 0 100px
+	h2
+		margin-bottom: 1em
+	.cities-buttons
+		margin-top: 40px
+		a
+			display: block
+			color: #333
+			border: 2px solid #333
+			padding: 10px 24px
+			text-decoration: none
+			margin: 0 20px 20px
+			width: 180px
+			&:hover
+				color: #fff
+				background: #333
+			span
+				overflow: hidden
+				text-overflow: ellipsis
+				display: block
+				white-space: nowrap
+				max-width: 100%
+//----------------------------------
+// END WHERE TO BUY
+//----------------------------------
 
 //----------------------------------
 // TEST

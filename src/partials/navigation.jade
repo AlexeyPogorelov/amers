@@ -5,23 +5,20 @@ header.site-top
 	.light-line
 		.container
 			.row
-				.col-md-9
+				.col-md-9.col-sm-9.col-xs-3
 					ul.secondary-navigation.list-inline
 						li
-							span.sandvich.visible-xs-block
-								| МЕНЮ 
-								span.glyphicon.glyphicon-option-vertical(aria-hidden="true")
 							a(href='/')
 								img#logo-main.logo-main(src='img/icons/logo-main.png', width='1010', height='208', alt='Amers логотип', title='Перейти на главную страницу')
-						li
+						li.hidden-xs
 							a(href='about.html') О нас
-						li
+						li.hidden-xs
 							a(href='catalog.html') Каталог
-						li
+						li.hidden-xs
 							a(href='blog.html') Блог
-						li
+						li.hidden-xs
 							a(href='contacts.html') Контакты
-				.col-md-3
+				.col-md-3.col-sm-6
 					ul.user-controls-panel.list-inline.text-right
 						li
 							a(href="#")
@@ -32,7 +29,10 @@ header.site-top
 						li
 							a(href="#")
 								span.glyphicon.glyphicon-shopping-cart(aria-hidden="true")
-	.dark-line
+						li.visible-xs-inline-block
+							span.sandvich
+								span.glyphicon.glyphicon-option-vertical(aria-hidden="true")
+	.dark-line.visible-lg-block.visible-md-block
 		.container
 			.row
 				.col-md-9

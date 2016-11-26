@@ -1,7 +1,8 @@
 @import _mixins
 
 footer.footer-main
-	margin: 20px 0
+	background: #eee
+	padding: 20px 0
 	textarea,
 	input
 		display: block
@@ -22,8 +23,48 @@ footer.footer-main
 		width: 100%
 		tr
 			vertical-align: top
+	h4
+		font-size: 12px
+		text-transform: uppercase
+		letter-spacing: 0.1em
+		font-weight: 600
+		margin-bottom: 1.2em
+	a
+		text-decoration: none
+		color: #666
+		&:hover
+			text-decoration: underline
+	li
+		margin-bottom: 4px
 
 	.copyright-section
+		@media #{$media-xs-min}
+			text-align: center
 		&__copyright
 		&__developers
 			text-align: right
+			@media #{$media-xs-min}
+				text-align: center
+	.social-networks-section
+		@media #{$media-xs-min}
+			text-align: center
+		a
+			display: inline-block
+			padding: 6px
+			height: 36px
+			width: 36px
+		li
+			display: inline-block
+			vertical-align: middle
+			// border: 2px solid #000
+			// border-radius: 50%
+			// padding: 8px
+			svg
+				height: 100%
+				width: auto
+				path
+					fill: #333
+			&:hover
+				svg
+					path
+						fill: #666
