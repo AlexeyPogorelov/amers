@@ -1,3 +1,75 @@
-//- .preloader
-	//- .after
+.preloader
+	.after
 
+header.site-top
+	.container
+		.row
+			.col-md-9
+				ul.secondary-navigation.list-inline
+					li
+						span.sandvich.visible-xs-block
+							| МЕНЮ 
+							span.glyphicon.glyphicon-option-vertical(aria-hidden="true")
+						a(href='/')
+							img#logo-main(src='img/icons/logo-main.png', width='1010', height='208', alt='Amers логотип', title='Перейти на главную страницу')
+					li
+						a(href='about.html') О нас
+					li
+						a(href='catalog.html') Каталог
+					li
+						a(href='blog.html') Блог
+					li
+						a(href='contacts.html') Контакты
+			.col-md-3.text-uppercase.text-right
+				ul.main-cellphone
+					li
+						a(href="tel:0472733168").binct-phone-number-1 +3(047)273-31-68
+	.container
+		.row
+			.col-md-9
+				ul.primary-navigation.list-inline
+					li.dropdown
+						a(href='#' data-toggle="dropdown") Модульные диваны 
+						ul.dropdown-menu
+							li
+								a(href='#') Прямые диваны
+							li
+								a(href='#') Угловые диваны
+							li
+								a(href='#') Раскладные диваны
+					li
+						a(href='catalog.html') Угловые диваны
+					li
+						a(href='catalog.html') Прямые диваны
+					li.dropdown
+						a(href='#' data-toggle="dropdown")
+							| Магазины 
+						ul.dropdown-menu
+							li
+								a(href='contacts.html#city') Киев
+							li
+								a(href='contacts.html#city') Сумы
+							li
+								a(href='contacts.html#city') Харьков
+							li
+								a(href='contacts.html#city') Одесса
+							li
+								a(href='contacts.html#city') Белая Церковь
+							li
+								a(href='contacts.html#city') Полтава
+							li
+								a(href='contacts.html#city') Запорожье
+							li
+								a(href='contacts.html#city') Хмельницкий
+							li
+								a(href='contacts.html#city') Черкассы
+					li
+						a(href='feedbacks.html') Отзывы
+			.col-md-3
+				ul.user-controls-panel.list-inline.text-right
+					li
+						span.glyphicon.glyphicon-search(aria-hidden="true")
+					li
+						span.glyphicon.glyphicon-log-in(aria-hidden="true")
+					li
+						span.glyphicon.glyphicon-shopping-cart(aria-hidden="true")

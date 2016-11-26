@@ -3,20 +3,12 @@ if ($.browser.mobile) $('body').addClass('mobile');
 if ($.browser.safari) $('body').addClass('safari');
 if ($.browser.iphone || $.browser.ipad || $.browser.ipod ) $('body').addClass('ios');
 
-$(document).on('ready', function () {
-	var $window = $(window),
-		windowWidth = $window.width(),
-		windowHeight = $window.height(),
-		bodyHeight = $('body').height();
 
-
-		// resize
-		$window.on('resize', function () {
-
-			windowWidth = $window.width();
-			windowHeight = $window.height();
-			bodyHeight = $('body').height();
-
-		});
-
+$('.dropdown').hover(function() {
+	$(this).find('[data-toggle="dropdown"]').trigger('click');
+}, function() {
+	var $this = $(this);
+	if ($this.hasClass('open')) {
+		$this.find('[data-toggle="dropdown"]').trigger('click');
+	}
 });

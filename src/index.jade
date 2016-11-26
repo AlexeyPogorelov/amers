@@ -10,109 +10,14 @@ html(lang='ru')
 		include ./partials/noscript.jade
 		include ./partials/navigation.jade
 
-		header
-			.header
-				.container.sitetop
-					.row
-						.topline.text-uppercase.text-right
-							.centerinfo
-								span.topphone
-									span.binct-phone-number-1 044 333-49-15
-								span.worktime.hidden-sm
-									| Пн-Пт 10:00-20:00
-									br
-									| Сб-Вс 10:00-19:00
-							span.sandvich.visible-xs-block
-								| МЕНЮ 
-								i.fa.fa-bars
-							.main-navigation
-								ul.primary-navigation
-									li
-										a(href='/divany-i-kresla/raskladniye-divany/')
-											| Модульные диваны 
-										ul
-											li
-												a(href='/divany-i-kresla/priamye-divany/', data-rx='divanc') Прямые диваны
-											li
-												a(href='/divany-i-kresla/ugloviye-divany/', data-rx='divand') Угловые диваны
-											li
-												a(href='/divany-i-kresla/raskladniye-divany/', data-rx='transform') Раскладные диваны
-											li
-												a(href='/divany-i-kresla/divany-s-ortopedicheskim-matrasom/', data-rx='ortoped') С ортопедическим матрасом
-											li
-												a(href='/divany-i-kresla/kresla/') Кресла и пуфы
-											li
-												a(href='/aksessuary/') Аксессуары
-											li
-												a(href='/divany-i-kresla/divany-v-kredit/') Диваны в кредит
-									li
-										a(href='/krovati/dvuhspalniye-krovati/') Угловые диваны
-									li
-										a(href='/matrasy/') Прямые диваны
-									li
-										a(href='#')
-											| Магазины 
-										ul
-											li
-												a(href='#') Киев
-												a(href='#') Сумы
-												a(href='#') Харьков
-												a(href='#') Одесса
-												a(href='#') Белая Церковь
-												a(href='#') Полтава
-												a(href='#') Запорожье
-												a(href='#') Хмельницкий
-												a(href='#') Черкассы
-									li
-										a(href='/o-nas/otzyvy-pokupatelejj/') Отзывы
-								ul.secondary-navigation
-									li
-										a(href='/o-nas/kto-my/')
-											| О нас 
-										ul
-											li
-												a(href='/o-nas/kto-my/') Кто мы
-											li
-												a(href='/o-nas/kachestvo-v-detaljakh/') Качество в деталях
-									li
-										a(href='/kontakty/') Контакты
-						.logoline
-							.row
-								.col-md-3.col-xs-center
-									a(href='/')
-										img#logo.w100a(src='/img/logo.png', width='400', height='41', alt='Pufetto логотип', title='Перейти на главную страницу')
-								.col-md-9.noright
 		content
-			h1.noin Диваны с итальянской душой
-			#mslide.sliderContainer.fullWidth.clearfix.shide
-				#main-slider.royalSlider.heroSlider.rsMinW
-					.rsContent(style="background:url('/img/slidecovers/girl.jpg') no-repeat 50% 50% / cover !important;")
-						div
-							a.slblack.onlytop(a='', href='https://www.pufetto.com.ua/divany-i-kresla/raskladniye-divany/')
-								img(src='/img/slidecovers/delta.png', alt='slide-icon')
-								p.sl-line-1
-									| Ты — творец
-									br
-									| своего дивана
-								img(src='/img/slidecovers/delta.png', alt='slide-icon')
-					.rsContent(style="background:url('/img/slidecovers/actionnovemder.jpg') no-repeat 50% 50% / cover !important;")
-						div
-							a.slwhite(a='', href='https://www.pufetto.com.ua/akcii/skidki-na-pokupku/')
-								p.sl-line-2 - Акция -
-								p.sl-line-1 Получите гарантированную скидку до 3000 грн.
-								p.sl-line-2
-									| на покупку дивана или кровати!
-									br
-									| Только с 14 по 30 ноября
-					.rsContent(style="background:url('/img/slidecovers/matras.jpg') no-repeat 50% 50% / cover !important;")
-						div
-							a.slblack.specialthin(a='', href='https://www.pufetto.com.ua/matrasy/')
-								img(src='/img/slidecovers/stars.png', alt='slide-icon')
-								p.sl-line-1 30 ночей
-								p.sl-line-2 на лучших ортопедических матрасах - бесплатно!
+			.hero-section(style="background:url('/img/bg/ec4c8f25319415.56344c8ea94d5.jpg') no-repeat 50% 50% / cover;")
+				.container
+					h1 Качественная мебель для ежедневного сна.
+					p Основными характеристиками мягкой мебели ”Amers” являются современный дизайн, компактность, надежность и функциональность. Именно это по словам наших клиентов является ключевыми преимуществами при выборе нашей мебели.
 			br
 			.clearfix
-			.top_item.container1
+			.container.categories-section
 				.row.clearfix
 					.col-md-6.col-md-push-6.itop_img
 						div
@@ -122,7 +27,6 @@ html(lang='ru')
 					.col-md-6.col-md-pull-6.item_desk.col-xs-center
 						p.h2.text-uppercase.normal
 							a.item_a(href='/divany-i-kresla/raskladniye-divany/') Модульные диваны
-						p.h3 от 8 800 грн.
 						.desc_row
 							p
 								| Красивые. Функциональные. Надежные внутри
@@ -130,6 +34,7 @@ html(lang='ru')
 								|  Раскладные диваны Pufetto создадут дополнительный комфорт
 								br
 								| Гарантия спокойного сна и долгой службы!
+						p.h3 от 8 800 грн.
 						br.hidden-md
 						a.blackbut.bold(href='/divany-i-kresla/raskladniye-divany/', rel='nofollow') Все модели
 				hr.row
@@ -142,7 +47,6 @@ html(lang='ru')
 					.col-md-6.item_desk.col-xs-center
 						p.h2.text-uppercase.normal
 							a.item_a(href='/divany-i-kresla/ugloviye-divany/') Угловые диваны
-						p.h3 от 13 600 грн.
 						.desc_row
 							p
 								| Идея. Креатив. Разнообразие
@@ -150,6 +54,7 @@ html(lang='ru')
 								| Угловые диваны Pufetto создадут много комфортного пространства
 								br
 								| и подчеркнут Ваш особенный взгляд на интерьер!
+						p.h3 от 13 600 грн.
 						br.hidden-md
 						a.blackbut.bold(href='/divany-i-kresla/ugloviye-divany/', rel='nofollow') Все модели
 				hr.row
@@ -162,24 +67,22 @@ html(lang='ru')
 					.col-md-6.col-md-pull-6.item_desk.col-xs-center
 						p.h2.text-uppercase.normal
 							a.item_a(href='/krovati/dvuhspalniye-krovati/') Прямые диваны
-						p.h3 от 9 700 грн.
 						.desc_row
 							p
 								| Удобная кровать нужна в каждом доме.
 								br
 								| Мы, в Pufetto, предлагаем Вам не только просторную двуспальную кровать, а еще и пример итальянского стиля и долговечного качества.
+						p.h3 от 9 700 грн.
 						br.hidden-md
 						a.blackbut.bold(href='/krovati/dvuhspalniye-krovati/', rel='nofollow') Все модели
 				hr.row
 				.clearfix
-				br
+			.container
 				.row
-					.top_banner.detali
+					.top_banner.detali.col-md-12
 						div
-							span.h1.ttuc Магазины
-							br
-							br
-							span.h4.ttuc.normal.hidden-xs Ваш коллектив руководствуется девизом “качество не только снаружи, но и внутри”, именно поэтому для производства мебели используются только экологически чистые материалы. Мы постоянно обновляем наш модельный ряд, а также следуем современным тенденциям в мире дизайна и технологий, которые успешно применяем при изготовлении новых изделий.
+							h2.text-uppercase.text-center Магазины
+							p Ваш коллектив руководствуется девизом “качество не только снаружи, но и внутри”, именно поэтому для производства мебели используются только экологически чистые материалы. Мы постоянно обновляем наш модельный ряд, а также следуем современным тенденциям в мире дизайна и технологий, которые успешно применяем при изготовлении новых изделий.
 							.clearfix
 							.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
 								.col-sm-4
@@ -201,13 +104,13 @@ html(lang='ru')
 								.col-sm-4
 									a.whitebuts.bold(href='#') Черкассы
 							.clearfix
-			.container.hidden
+			.container
 				.bordered
-					h2.text-uppercase.center Отзывы покупателей
+					h2.text-uppercase.text-center Отзывы покупателей
 				.row.clearfix
 					ul.alt_content
-						li
-							.col-md-12.comments
+						li.col-md-4
+							.comments
 								p.h2
 									a(href='/divany-i-kresla/ugloviye-divany/matteo-l-d/') Угловой диван Matteo
 									a(href='/divany-i-kresla/ugloviye-divany/matteo-l-d/')
@@ -217,8 +120,8 @@ html(lang='ru')
 										| Владимир · Харьков · 23.11.2016 · 
 								.comment_text
 									| Купили диван MATTEO для ежедневного использования (сна). После приобретения возникла определенная сложность в раскладывании дивана (механизм дельфин был достаточно тугой и требовал чрезмерного прикладывания силы). Обратились в салон в Харькове, и на следующий день специалист устранил эту проблему. Спасибо за оперативность и качественный диван.
-						li
-							.col-md-12.comments
+						li.col-md-4
+							.comments
 								p.h2
 									a(href='/divany-i-kresla/trehmestniye-divany/sofia-c/') Трехместный диван Sofia
 									a(href='/divany-i-kresla/trehmestniye-divany/sofia-c/')
@@ -228,8 +131,8 @@ html(lang='ru')
 										| Елена · Харьков · 18.11.2016 · 
 								.comment_text
 									| Спасибо Огромное Pufetto и его команде ,а особенно Татьяне. Долго искала диван и наткнулась на ваш сайт.Сервис супер ,качество мебели супер.
-						li
-							.col-md-12.comments
+						li.col-md-4
+							.comments
 								p.h2
 									a(href='/divany-i-kresla/trehmestniye-divany/rafaella-c/') Трехместный диван Rafaella
 									a(href='/divany-i-kresla/trehmestniye-divany/rafaella-c/')
@@ -239,305 +142,10 @@ html(lang='ru')
 										| Валерия · Киев · 16.11.2016 · 
 								.comment_text
 									| Была впечатлена сервисом как в шоу-руме в Киеве так и сроками исполнения (быстрее ожидаемого) так и доставкой со сборкой. Чувствуется толковый менеджмент и лояльный персонал раз так все без сучка без задоринки. Диван - шикарный! Я выбрала rafaella, цвет томатный trinity. Он самый неглубокий в глубину, длинный по длине и мне нравиться со всех сторон, включаю с боковой. Мягкий, приятный, цвет то розовый, то красный - зависит от освещения. Вообщем, всем довольна. Спасибо, так держать!
-					.col-md-6.col-md-offset-3
+					.col-md-12
 						a.text-uppercase.blackbut.w100(href='/o-nas/otzyvy-pokupatelejj/') Посмотреть все отзывы
 					.clearfix
 		.clearfix
-		footer
-			nav
-				.fcolor
-					.container.bmenu
-						.row
-							table.foottb
-								tbody
-									tr.hidden-xs.hidden-sm
-										td(rowspan='2')
-											p.lh5 О нас
-											a(href='/o-nas/kto-my/', rel='nofollow') Кто мы
-											br
-											a(href='/o-nas/kachestvo-v-detaljakh/', rel='nofollow') Качество в деталях
-											br
-											a(href='/o-nas/otzyvy-pokupatelejj/', rel='nofollow') Отзывы покупателей
-											br
-											a(href='/o-nas/dizajjneram/', rel='nofollow') Дизайнерам
-										td(rowspan='2')
-											p.lh5 Диваны и кресла
-											a(href='/divany-i-kresla/priamye-divany/', rel='nofollow') Прямые диваны
-											br
-											a(href='/divany-i-kresla/dvuhmestniye-divany/', rel='nofollow') Двухместные диваны
-											br
-											a(href='/divany-i-kresla/trehmestniye-divany/', rel='nofollow') Трехместные диваны
-											br
-											a(href='/divany-i-kresla/ugloviye-divany/', rel='nofollow') Угловые диваны
-											br
-											a(href='/divany-i-kresla/kresla/', rel='nofollow') Кресла и пуфы
-											br
-											a(href='/divany-i-kresla/raskladniye-divany/', rel='nofollow') Раскладные диваны
-											br
-											a(href='/divany-i-kresla/divany-s-ortopedicheskim-matrasom/', rel='nofollow') С ортопедическим матрасом
-											br
-											a(href='/divany-i-kresla/podushki/', rel='nofollow') Подушки для диванов
-											br
-											a(href='/divany-i-kresla/divany-evroknizhki/', rel='nofollow') Диваны еврокнижки
-											br
-											a(href='/invite/', rel='nofollow') Накопительная программа
-										td(rowspan='2')
-											p.lh5
-												a(href='/krovati/', rel='nofollow') Кровати
-											a(href='/krovati/dvuhspalniye-krovati/', rel='nofollow') Двуспальные кровати
-											br
-											a(href='/matrasy/', rel='nofollow') Матрасы
-											br
-											a(href='/aksessuary/', rel='nofollow') Аксессуары
-										td(rowspan='2')
-											p.lh5 Шоу-румы
-											a(href='/gde-posmotret/shourum-v-kieve/', rel='nofollow') Шоу-рум в Киеве
-											br
-											a(href='/gde-posmotret/shourum-v-odesse/', rel='nofollow') Шоу-рум в Одессе
-											br
-											a(href='/gde-posmotret/shourum-v-kharkove/', rel='nofollow') Шоу-рум в Харькове
-											br
-											a(href='/gde-posmotret/shourum-v-dnepropetrovske/', rel='nofollow') Шоу-рум в Днепропетровске
-											br
-											a(href='/gde-posmotret/shourum-v-zaporozhe/', rel='nofollow') Шоу-рум в Запорожье
-											br
-											a(href='/gde-posmotret/shourum-vo-lvove/', rel='nofollow') Шоу-рум во Львове
-										td
-											p.lh5 Наши ткани
-											a(href='/nashi-tkani/informatsija-o-tkanjakh/', rel='nofollow') Однотонные
-											br
-											a(href='/nashi-tkani/tkani-s-risunkom/', rel='nofollow') С рисунком
-											br
-											a(href='/nashi-tkani/zakaz-obrazcov-tkani/', rel='nofollow') Заказ образцов
-										td
-											p.lh5
-												a(href='/oplata-i-dostavka/', rel='nofollow') Оплата и доставка
-											a(href='/divany-i-kresla/divany-v-kredit/') Диваны в кредит
-											br
-											a(href='/uslovija-pokupki/', rel='nofollow') Условия покупки
-											br
-											a(href='/garantija/', rel='nofollow') Гарантия
-											br
-										td
-											p.lh5
-												a(href='/na-sklade/', rel='nofollow') Cклад
-									tr
-										td.col-sm-center.col-xs-center(colspan='3')
-											table.social-bottom.hidden-xs.hidden-sm
-												tbody
-													tr
-														td.fbplace
-														td.gplace
-											.newssubs
-												p.btitle Подписаться на рассылку новостей
-												.clearfix
-												input.binput(type='text', name='news_email_bottom', value='')
-												input#news_send.bbutton(type='submit', value='Отправить')
-											.clearfix
-											br
-											.newsocbot.col-sm-center.col-xs-center
-												a(href='https://www.facebook.com/pages/Pufettocomua/513475798669085', rel='nofollow')
-													i.fa.fa-facebook
-												a(href='https://plus.google.com/u/0/103626273117403404256/posts', rel='nofollow')
-													i.fa.fa-google-plus
-												a(href='https://twitter.com/pufetto', rel='nofollow')
-													i.fa.fa-twitter
-												a(href='https://www.pinterest.com/Pufetto/', rel='nofollow')
-													i.fa.fa-pinterest
-												a(href='https://www.youtube.com/channel/UCj2BaFdVBrfmcbGlcpkMyuw', rel='nofollow')
-													i.fa.fa-youtube
-												a(href='http://www.odnoklassniki.ru/pufetto', rel='nofollow')
-													i.fa
-			.copy.fcolor2
-				.container
-					.row
-						.col-md-7.col-sm-center.col-xs-center
-							p.sh_center
-								| Использование материалов без письменного согласия администрации сайта запрещено.
-								br
-								| © 2010 - 2016 Pufetto.com.ua | Все права защищены
-						.col-md-5.hidden-sm.hidden-xs.w3c.sh_center
-							img(src='/img/visa.jpg', alt='Оплата покупок карточкой VISA', title='Оплата покупок карточкой VISA', width='88', height='31')
-							img(src='/img/mastercard.jpg', alt='Оплата покупок карточкой Mastercard', title='Оплата покупок карточкой Mastercard', width='63', height='31')
-				.clearfix
-		#calltaxi_open.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-			.modal-dialog.modal-lg
-				.modal-content
-					.container-fluid
-						.row
-							#calltaxi.col-md-12.text-center.text-uppercase
-								span.closeModal(data-dismiss='modal')
-									img(src='/img/modal/closemodalw.png', alt='ЗАКРЫТЬ', width='79', height='79')
-									br
-									span ЗАКРЫТЬ
-								p.h3.normal.lspace Заказать бесплатное такси к шоу-руму
-							.clearfix
-							br
-							.clearfix
-							form#taxiform(method='POST', action='')
-								input(type='hidden', name='type', value='taxicall')
-								input(type='hidden', name='sitelan', value='ru')
-								.col-md-5.col-md-offset-1
-									.uninput
-										input(type='text', placeholder='Имя', name='name', required='', value='')
-										span.unliner
-									br
-								.col-md-5
-									.uninput
-										input(type='text', placeholder='Телефон', name='phone', data-type='phone', required='', value='')
-										span.unliner
-									br
-								.col-md-5.col-md-offset-1
-									.uninput
-										input(type='text', placeholder='Время подачи машины', required='', name='time', value='')
-										span.unliner
-									br
-								.col-md-5
-									.uninput
-										select.StyleSelectBox(name='city', required='', data-placeholder='Город')
-											option
-											option(value='') ...
-											option(value='Днепр') Днепр
-											option(value='Запорожье') Запорожье
-											option(value='Киев') Киев
-											option(value='Львов') Львов
-											option(value='Одесса') Одесса
-											option(value='Харьков') Харьков
-										span.unliner
-									br
-								.col-md-10.col-md-offset-1
-									.uninput
-										input(type='text', required='', placeholder='Адрес подачи машины', name='adress', value='')
-										span.unliner
-									br
-								.clearfix
-								.col-md-4.col-md-offset-4
-									br
-									button#sendtaxi.modal-but.tr05e(type='submit') Отправить
-								.clearfix
-							.tcall_me.text-center.modal-answer.text-uppercase
-								span.col-md-10.col-md-offset-1
-									| Большое спасибо,
-									br
-									|  мы свяжемся с Вами в ближайшее время.
-								.clearfix
-							.tcall_me_error.text-center.modal-answer.text-uppercase
-								span.col-md-10.col-md-offset-1
-									| Во время отправки запроса произошла ошибка.
-									br
-									|  Попробуйте повторить запрос позже.
-								.clearfix
-						br
-						br
-		#backcall_open.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-			.modal-dialog.modal-lg
-				.modal-content
-					.container-fluid
-						.row
-							.col-md-12.text-center.text-uppercase
-								span.closeModal(data-dismiss='modal')
-									img(src='/img/modal/closemodal.png', alt='ЗАКРЫТЬ', width='79', height='79')
-									br
-									span ЗАКРЫТЬ
-								br
-								p.h3.normal.lspace
-									| Оставьте свой номер телефона
-									br
-									| и наш менеджер свяжется с вами!
-							.col-md-12.text-center.text-uppercase
-								img.img-responsive.center-block(src='/img/modal/callbackimg.jpg', alt='Обратный звонок')
-							.clearfix
-							form#bcform(method='POST', action='')
-								input(type='hidden', name='type', value='backcall')
-								input(type='hidden', name='sitelan', value='ru')
-								.modal-form.modal-row
-									.col-md-4.col-md-offset-1
-										input(name='name', value='', type='text', required='', placeholder='ВАШЕ ИМЯ')
-									.col-md-4
-										input(name='phone', data-type='phone', value='', type='text', required='', placeholder='ВАШ НОМЕР ТЕЛЕФОНА')
-									.col-md-2
-										button#call_me.modal-but(type='submit') Заказать
-							.clearfix
-							.call_me.text-center.modal-answer.text-uppercase
-								span.col-md-10.col-md-offset-1
-									| Большое спасибо,
-									br
-									|  мы свяжемся с Вами в ближайшее время.
-								.clearfix
-							.call_me_error.text-center.modal-answer.text-uppercase
-								span.col-md-10.col-md-offset-1
-									| Во время отправки запроса произошла ошибка.
-									br
-									|  Попробуйте повторить запрос позже.
-								.clearfix
-						br
-						br
-		#email_code.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-			.modal-dialog.modal-lg
-				.modal-content
-					.container-fluid
-						.row
-							.col-md-12.text-center.text-uppercase
-								span.closeModal(data-dismiss='modal')
-									img(src='/img/modal/closemodal.png', alt='ЗАКРЫТЬ', width='79', height='79')
-									br
-									span ЗАКРЫТЬ
-								br
-								p.h3.normal.lspace
-									| Подпишись на рассылку новостей
-									br
-									| и получи гарантированую скидку
-							.col-sm-6.col-sm-offset-3.text-center.text-uppercase
-								img.img-responsive.center-block(src='/img/modal/300.jpg', alt='Скидка за подписку', width='500', height='208')
-							.col-md-12.text-center.text-uppercase
-								p.h3.normal.lspace на любой диван, кровать или матрас
-							.clearfix
-							form#emform(method='POST', action='')
-								input(type='hidden', name='type', value='discont')
-								input(type='hidden', name='sitelan', value='ru')
-								.modal-form.modal-row
-									.col-md-5.col-md-offset-2
-										input(title='Email', name='email', value='', type='email', required='', placeholder='ВАШ EMAIL')
-									.col-md-3
-										button#subscribe.modal-but(type='submit') Отправить
-							.clearfix
-							.ecall_me.text-center.modal-answer.text-uppercase
-								span.col-md-10.col-md-offset-1
-									| Большое спасибо,
-									br
-									|  на ваш адрес отправлено письмо с кодом скидки.
-								.clearfix
-							.ecall_me_is.text-center.modal-answer.text-uppercase
-								span.col-md-10.col-md-offset-1 Вы уже подписаны на новости.
-								.clearfix
-							.ecall_me_error.text-center.modal-answer.text-uppercase
-								span.col-md-10.col-md-offset-1
-									| Во время отправки запроса произошла ошибка.
-									br
-									|  Попробуйте повторить запрос позже.
-								.clearfix
-						br
-						br
-		#puaction.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-			.modal-dialog.modal-lg
-				.modal-content
-					.container-fluid.actionpop(style="background:url('/img/action/actionpop10.jpg') no-repeat 50% 50% / cover;")
-						span.closeModal(data-dismiss='modal')
-							img(src='/img/modal/wclosemodal.png', alt='ЗАКРЫТЬ', width='79', height='79')
-							br
-							span ЗАКРЫТЬ
-						.puaction
-							p.text-uppercase
-								b Только до 30 ноября
-								br
-								| оформляя заказ в нашем шоу-руме
-								br
-								b получите скидку до 3000 грн.
-								br
-								| Приходите!
-							.col-md-6.col-sm-8.col-xs-8.col-xs-offset-h-2.col-md-offset-3.col-sm-offset-2
-								a.whitebuts.bold(href='/akcii/skidki-na-pokupku/') Узнать больше
-							.clearfix
 
 
 		include ./partials/footer.jade

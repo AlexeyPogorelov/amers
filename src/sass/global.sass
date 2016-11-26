@@ -1,9 +1,7 @@
 @import _mixins
 
-*
-	margin: 0
-	padding: 0
-	box-sizing: border-box
+html
+	font-size: 15px
 
 body
 	// font-weight: 400
@@ -64,7 +62,7 @@ label
 button, input, select, textarea
 	font: $font-stack
 
-//	SELECT
+//	SELECT INPUT
 select
 	appearance: none
 	border: 1px solid $base-font-color
@@ -75,31 +73,27 @@ select
 		color: transparent
 		text-shadow: none
 
-textarea
-	border: 1px solid $base-font-color
-	outline: none
-	resize: none
-	outline-color: $main-color
-	&::placeholder
-		font: $font-stack
-//	END SELECT
-
-// INPUT
+textarea,
 input
-	// height: 64px
-	appearance: none
-	border: none
-	outline-color: $main-color
-
+	border: 1px solid #ccc
 	color: $base-font-color
-	font: $font-stack
-	// font-weight: 400
-	// transition: background .3s
-	&:focus
-		// outline: none
+	outline-color: $main-color
+	padding: 10px 14px
+	border-radius: 1px
 	&::placeholder
-		font: $font-stack
-		// font-weight: 400
+		font-size: 0.9em
+	&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+		-webkit-appearance: none
+	&:focus
+		border-color: $main-color
+
+textarea
+	resize: none
+
+input
+	appearance: none
+	&[type='number']
+		-moz-appearance: textfield
 //	END INPUT
 
 // CHECKBOX
@@ -231,21 +225,8 @@ input
 		//&:hover + label, &:focus + label
 //	END INPUT FILE
 
-//	INPUT NUMBER
-input
-	&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
-		-webkit-appearance: none
-	&[type='number']
-		-moz-appearance: textfield
-//	END INPUT NUMBER
-
 
 // GRID
-.container
-	margin: 0 auto
-	width: 80%
-	@media #{$media-sm}
-		width: 100%
 .inline-layout
 	font-size: 0
 	letter-spacing: 0
@@ -274,12 +255,6 @@ input
 	&.col-10 > *
 		width: 100 / 10 + %
 
-// .hidden, .mobile-visible, .tablet-visible
-// 	display: none !important
-
-// .mobile-xs-visible, .x-mobile-visible, .tablet-visible
-// 	display: none
-
 // image-holder
 .image-holder
 	overflow: hidden
@@ -306,58 +281,10 @@ input
 		right: 0
 		top: 0
 
-.form-group
-	position: relative
-	&.error
-		.error-label
-			// display: block
-			opacity: 1
-			transition: opacity .3s
-	&.error
-		.input-line
-			background: #f41f52
-			width: 100%
-	.input-holder
-		&:after
-			background: #f41f52
-	.error-label
-		color: $error-color
-		font-size: 13px
-		font-weight: 400
-		line-height: 19px
-		opacity: 0
-		position: absolute
-		right: 0
-		bottom: -21px
-		transition: opacity .3s
-		// display: none
 
 .table-holder
 	max-width: 100%
 	overflow: auto
-
-.flex-vertical
-	display: flex
-	height: 100%
-	flex-flow: row wrap
-	align-items: center
-	justify-content: center
-
-//	MARKUP
-.align-center,
-.text-center
-	text-align: center
-
-.align-right,
-.text-right
-	text-align: right
-
-.align-left,
-.text-left
-	text-align: left
-
-.nowrap
-	white-space: nowrap
 
 button, .btn, input[type="button"]
 	border: none
@@ -381,10 +308,3 @@ button, .btn, input[type="button"]
 	&:active, &:focus
 		outline: none
 
-.clearfix
-	&:before,
-	&:after
-		content: ''
-		height: 0
-		display: table
-		clear: both

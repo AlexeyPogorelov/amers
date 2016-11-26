@@ -1,2 +1,70 @@
-// footer
-.footer
+footer.footer-main
+	nav.container
+		.row
+			.col-md-12
+				table
+					tbody
+						tr.hidden-xs.hidden-sm
+							td
+								h4 О нас
+								ul
+									li
+										a(href='about.html', rel='nofollow') Кто мы
+									li
+										a(href='about.html#feedbacks', rel='nofollow') Отзывы покупателей
+									li
+										a(href='about.html#map-about', rel='nofollow') Где найти?
+							td
+								h4 Каталог товаров
+								ul
+									li
+										a(href='catalog.html', rel='nofollow') Модульные диваны
+									li
+										a(href='catalog.html', rel='nofollow') Угловые диваны
+									li
+										a(href='catalog.html', rel='nofollow') Прямые диваны
+							td
+								h4 Блог
+								ul
+									li
+										a(href='blog.html', rel='nofollow') Новые записи
+									li
+										a(href='blog.html', rel='nofollow') Самые популярные
+									li
+										a(href='blog.html', rel='nofollow') Просматривыемые
+							td
+								h4 Контакты
+								ul
+									li
+										a(href='contacts.html', rel='nofollow') Связаться с нами
+									li
+										a(href='contacts.html#cellphones', rel='nofollow') Номера телефонов
+									li
+										a(href='contacts.html#map', rel='nofollow') Карта
+							td.subscribe-field.subscribe-field__footer(width="320")
+								h4 Подпишитесь на нас
+								p И мы оповестим Вас о скидках, акциях и новых точках продаж. Вы сможете отписаться в любой момент.
+								form(action="#")
+									.form-group
+										input(type="text" placeholder="Как с Вами связаться?")
+										button
+											span.glyphicon.glyphicon-ok(aria-hidden="true")
+							//- td(width="320")
+							//- 	h4 Напишите нам
+							//- 	form(action="#")
+							//- 		.form-group
+							//- 			input(type="text" placeholder="Как с Вами связаться?")
+							//- 		.form-group
+							//- 			input(type="text" placeholder="Ваше имя")
+							//- 		.form-group
+							//- 			textarea#feedback-message-textarea(name="feedback-message-textarea", cols="30", rows="10", placeholder="Введите сообщение")
+							//- 		.form-group
+							//- 			input(type="submit" placeholder="Отправить")
+	.container.copyright-section
+		.row
+			.col-md-6.col-sm-12
+				p.copyright-section__copyright
+					| © 2012 TM "AMERS" Все права защищены.
+			.col-md-6.col-sm-12
+				p.copyright-section__developers
+					| Дизайн и разработка <a href="#">наш сайт</a>

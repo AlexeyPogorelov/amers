@@ -9,24 +9,96 @@
 
 body
 	font: $font-stack
-	&::-webkit-scrollbar
-		height: 0
-		width: 0
+	padding-top: 60px
+	// &::-webkit-scrollbar
+	// 	height: 0
+	// 	width: 0
 
 *
 	transition: all .3s
 
 
 //----------------------------------
-// MAIN NAVIGATION
+// HERO
 //----------------------------------
-.header
-	.centerinfo
-		float: left
-	.primary-navigation
-	.secondary-navigation
+.hero-section
+	display: flex
+	padding: 200px 0
+	align-items: center
+	min-height: 600px
+	h1
+		font-weight: 100
+	p
+		font-weight: 600
 //----------------------------------
-// END MAIN NAVIGATION
+// END HERO
+//----------------------------------
+
+//----------------------------------
+// CATEGORIES ON MAIN-PAGE
+//----------------------------------
+.categories-section
+	hr
+		border-color: #eee
+	.h2, h2
+		color: #333
+		font-size: 24px
+		font-weight: 600
+		a
+			color: inherit
+			font-size: inherit
+			font-weight: inherit
+	.desc_row
+	.blackbut
+		border: 2px solid #000
+		background: #000
+		color: #fff
+		padding: 10px 24px
+		text-transform: uppercase
+		font-size: 12px
+		font-weight: 600
+		letter-spacing: 0.05em
+		&:hover
+			text-decoration: none
+			color: #000
+			background: #fff
+	// img
+		// position: absolute
+		// left: 10%
+		// height: 300px
+
+//----------------------------------
+// END CATEGORIES ON MAIN-PAGE
+//----------------------------------
+
+//----------------------------------
+// SUBSCRIBE FIELD
+//----------------------------------
+.subscribe-field
+	h4
+	p
+		margin-bottom: 1em
+	.form-group
+		position: relative
+		input,
+		button
+			height: 40px
+		button
+			position: absolute
+			right: 0
+			top: 0
+			line-height: 40px
+			padding: 0 10px
+			background: #000
+			span
+				height: 40px
+				font-size: 18px
+				line-height: 34px
+				color: #fff
+				vertical-align: middle
+	&__footer
+//----------------------------------
+// END SUBSCRIBE FIELD
 //----------------------------------
 
 

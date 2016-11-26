@@ -1,0 +1,178 @@
+#calltaxi_open.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content
+			.container-fluid
+				.row
+					#calltaxi.col-md-12.text-center.text-uppercase
+						span.closeModal(data-dismiss='modal')
+							img(src='/img/modal/closemodalw.png', alt='ЗАКРЫТЬ', width='79', height='79')
+							br
+							span ЗАКРЫТЬ
+						p.h3.normal.lspace Заказать бесплатное такси к шоу-руму
+					.clearfix
+					br
+					.clearfix
+					form#taxiform(method='POST', action='')
+						input(type='hidden', name='type', value='taxicall')
+						input(type='hidden', name='sitelan', value='ru')
+						.col-md-5.col-md-offset-1
+							.uninput
+								input(type='text', placeholder='Имя', name='name', required='', value='')
+								span.unliner
+							br
+						.col-md-5
+							.uninput
+								input(type='text', placeholder='Телефон', name='phone', data-type='phone', required='', value='')
+								span.unliner
+							br
+						.col-md-5.col-md-offset-1
+							.uninput
+								input(type='text', placeholder='Время подачи машины', required='', name='time', value='')
+								span.unliner
+							br
+						.col-md-5
+							.uninput
+								select.StyleSelectBox(name='city', required='', data-placeholder='Город')
+									option
+									option(value='') ...
+									option(value='Днепр') Днепр
+									option(value='Запорожье') Запорожье
+									option(value='Киев') Киев
+									option(value='Львов') Львов
+									option(value='Одесса') Одесса
+									option(value='Харьков') Харьков
+								span.unliner
+							br
+						.col-md-10.col-md-offset-1
+							.uninput
+								input(type='text', required='', placeholder='Адрес подачи машины', name='adress', value='')
+								span.unliner
+							br
+						.clearfix
+						.col-md-4.col-md-offset-4
+							br
+							button#sendtaxi.modal-but.tr05e(type='submit') Отправить
+						.clearfix
+					.tcall_me.text-center.modal-answer.text-uppercase
+						span.col-md-10.col-md-offset-1
+							| Большое спасибо,
+							br
+							|  мы свяжемся с Вами в ближайшее время.
+						.clearfix
+					.tcall_me_error.text-center.modal-answer.text-uppercase
+						span.col-md-10.col-md-offset-1
+							| Во время отправки запроса произошла ошибка.
+							br
+							|  Попробуйте повторить запрос позже.
+						.clearfix
+				br
+				br
+#backcall_open.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content
+			.container-fluid
+				.row
+					.col-md-12.text-center.text-uppercase
+						span.closeModal(data-dismiss='modal')
+							img(src='/img/modal/closemodal.png', alt='ЗАКРЫТЬ', width='79', height='79')
+							br
+							span ЗАКРЫТЬ
+						br
+						p.h3.normal.lspace
+							| Оставьте свой номер телефона
+							br
+							| и наш менеджер свяжется с вами!
+					.col-md-12.text-center.text-uppercase
+						img.img-responsive.center-block(src='/img/modal/callbackimg.jpg', alt='Обратный звонок')
+					.clearfix
+					form#bcform(method='POST', action='')
+						input(type='hidden', name='type', value='backcall')
+						input(type='hidden', name='sitelan', value='ru')
+						.modal-form.modal-row
+							.col-md-4.col-md-offset-1
+								input(name='name', value='', type='text', required='', placeholder='ВАШЕ ИМЯ')
+							.col-md-4
+								input(name='phone', data-type='phone', value='', type='text', required='', placeholder='ВАШ НОМЕР ТЕЛЕФОНА')
+							.col-md-2
+								button#call_me.modal-but(type='submit') Заказать
+					.clearfix
+					.call_me.text-center.modal-answer.text-uppercase
+						span.col-md-10.col-md-offset-1
+							| Большое спасибо,
+							br
+							|  мы свяжемся с Вами в ближайшее время.
+						.clearfix
+					.call_me_error.text-center.modal-answer.text-uppercase
+						span.col-md-10.col-md-offset-1
+							| Во время отправки запроса произошла ошибка.
+							br
+							|  Попробуйте повторить запрос позже.
+						.clearfix
+				br
+				br
+#email_code.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content
+			.container-fluid
+				.row
+					.col-md-12.text-center.text-uppercase
+						span.closeModal(data-dismiss='modal')
+							img(src='/img/modal/closemodal.png', alt='ЗАКРЫТЬ', width='79', height='79')
+							br
+							span ЗАКРЫТЬ
+						br
+						p.h3.normal.lspace
+							| Подпишись на рассылку новостей
+							br
+							| и получи гарантированую скидку
+					.col-sm-6.col-sm-offset-3.text-center.text-uppercase
+						img.img-responsive.center-block(src='/img/modal/300.jpg', alt='Скидка за подписку', width='500', height='208')
+					.col-md-12.text-center.text-uppercase
+						p.h3.normal.lspace на любой диван, кровать или матрас
+					.clearfix
+					form#emform(method='POST', action='')
+						input(type='hidden', name='type', value='discont')
+						input(type='hidden', name='sitelan', value='ru')
+						.modal-form.modal-row
+							.col-md-5.col-md-offset-2
+								input(title='Email', name='email', value='', type='email', required='', placeholder='ВАШ EMAIL')
+							.col-md-3
+								button#subscribe.modal-but(type='submit') Отправить
+					.clearfix
+					.ecall_me.text-center.modal-answer.text-uppercase
+						span.col-md-10.col-md-offset-1
+							| Большое спасибо,
+							br
+							|  на ваш адрес отправлено письмо с кодом скидки.
+						.clearfix
+					.ecall_me_is.text-center.modal-answer.text-uppercase
+						span.col-md-10.col-md-offset-1 Вы уже подписаны на новости.
+						.clearfix
+					.ecall_me_error.text-center.modal-answer.text-uppercase
+						span.col-md-10.col-md-offset-1
+							| Во время отправки запроса произошла ошибка.
+							br
+							|  Попробуйте повторить запрос позже.
+						.clearfix
+				br
+				br
+#puaction.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content
+			.container-fluid.actionpop(style="background:url('/img/action/actionpop10.jpg') no-repeat 50% 50% / cover;")
+				span.closeModal(data-dismiss='modal')
+					img(src='/img/modal/wclosemodal.png', alt='ЗАКРЫТЬ', width='79', height='79')
+					br
+					span ЗАКРЫТЬ
+				.puaction
+					p.text-uppercase
+						b Только до 30 ноября
+						br
+						| оформляя заказ в нашем шоу-руме
+						br
+						b получите скидку до 3000 грн.
+						br
+						| Приходите!
+					.col-md-6.col-sm-8.col-xs-8.col-xs-offset-h-2.col-md-offset-3.col-sm-offset-2
+						a.whitebuts.bold(href='/akcii/skidki-na-pokupku/') Узнать больше
+					.clearfix

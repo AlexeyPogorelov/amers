@@ -1,5 +1,58 @@
 @import _mixins
 
 //----------------------------------
-// Default navbar
+// MAIN NAVIGATION
+//----------------------------------
+
+#logo-main
+	height: auto
+	width: 90px
+
+.site-top
+	padding: 10px 0
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	background: #eee
+	z-index: 10
+	a
+		outline: none
+	.dropdown-menu
+		background: #eee
+		border: none
+		border-radius: 0
+		box-shadow: none
+		margin: -2px 0 0
+		li
+			&:hover
+				background: #fff
+				a
+					text-decoration: underline
+	.user-controls-panel
+		// color: #525252
+		li
+			background: #000
+			color: #fff
+			font-size: 18px
+			text-align: center
+			line-height: 32px
+			margin-left: 5px
+			height: 32px
+			width: 32px
+	.primary-navigation,
+	.secondary-navigation
+		margin-top: 10px
+		a
+			text-transform: uppercase
+			font-size: 14px
+			color: #333
+			font-weight: 600
+	.main-cellphone
+		a
+			color: #333
+			font-weight: 700
+			font-size: 1em
+//----------------------------------
+// END MAIN NAVIGATION
 //----------------------------------

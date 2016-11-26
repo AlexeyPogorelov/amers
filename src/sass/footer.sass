@@ -1,3 +1,29 @@
 @import _mixins
 
-.footer
+footer.footer-main
+	margin: 20px 0
+	textarea,
+	input
+		display: block
+		width: 100%
+	[type="submit"]
+		border-color: #ccc
+		background-color: transparent
+		text-transform: uppercase
+		font-size: 0.8em
+		font-weight: 700
+		letter-spacing: 0.05em
+		display: inline-block
+		width: auto
+		&:hover
+			background-color: #222
+			color: #fff
+	table
+		width: 100%
+		tr
+			vertical-align: top
+
+	.copyright-section
+		&__copyright
+		&__developers
+			text-align: right
