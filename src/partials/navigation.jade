@@ -18,33 +18,33 @@ header.site-top
 							a(href='blog.html') Блог
 						li.hidden-xs
 							a(href='contacts.html') Контакты
-				.col-md-3.col-sm-6
+				.col-md-3.col-sm-3.col-xs-9
 					ul.user-controls-panel.list-inline.text-right
 						li
-							a(href="#")
+							a(href="#" data-toggle="modal" data-target="#search-modal")
 								span.glyphicon.glyphicon-search(aria-hidden="true")
 						li
-							a(href="#")
+							a(href="#" data-toggle="modal" data-target="#login-modal")
 								span.glyphicon.glyphicon-log-in(aria-hidden="true")
 						li
-							a(href="#")
+							a(href="#" data-toggle="modal" data-target="#cart-sidebar")
 								span.glyphicon.glyphicon-shopping-cart(aria-hidden="true")
 						li.visible-xs-inline-block
-							span.sandvich
+							a(href="#" data-toggle="modal" data-target="#mobile-navigation").sandvich
 								span.glyphicon.glyphicon-option-vertical(aria-hidden="true")
 	.dark-line.visible-lg-block.visible-md-block
 		.container
 			.row
 				.col-md-9
 					ul.primary-navigation.list-inline
-						li.dropdown
-							a(href='#' data-toggle="dropdown") Модульные диваны 
+						li
+							a(href='catalog.html') Модульные диваны 
 						li
 							a(href='catalog.html') Угловые диваны
 						li
 							a(href='catalog.html') Прямые диваны
 						li.dropdown
-							a(href='#' data-toggle="dropdown")
+							a(href='contacts.html#map' data-toggle="dropdown")
 								| Магазины 
 							ul.dropdown-menu
 								li
@@ -70,4 +70,4 @@ header.site-top
 				.col-md-3.text-uppercase.text-right
 					ul.main-cellphone
 						li
-							a(href="tel:0472733168").binct-phone-number-1 (047)273-31-68
+							a(href="tel:0472733168").binct-phone-number-1 (047) 273-31-68
