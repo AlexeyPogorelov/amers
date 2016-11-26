@@ -4,12 +4,7 @@
 // MAIN NAVIGATION
 //----------------------------------
 
-#logo-main
-	height: auto
-	width: 90px
-
 .site-top
-	padding: 10px 0
 	position: fixed
 	left: 0
 	top: 0
@@ -18,28 +13,10 @@
 	z-index: 10
 	a
 		outline: none
-	.dropdown-menu
-		background: #eee
-		border: none
-		border-radius: 0
-		box-shadow: none
-		margin: -2px 0 0
-		li
-			&:hover
-				background: #fff
-				a
-					text-decoration: underline
-	.user-controls-panel
-		// color: #525252
-		li
-			background: #000
-			color: #fff
-			font-size: 18px
-			text-align: center
-			line-height: 32px
-			margin-left: 5px
-			height: 32px
-			width: 32px
+	.logo-main
+		height: auto
+		width: 110px
+		margin-right: 35px
 	.primary-navigation,
 	.secondary-navigation
 		margin-top: 10px
@@ -48,11 +25,71 @@
 			font-size: 14px
 			color: #333
 			font-weight: 600
+	.user-controls-panel
+		margin: 14px 0 0
+		li
+			// background: #000
+			// color: #fff
+			text-align: center
+			line-height: 32px
+			margin-left: 5px
+			height: 32px
+			width: 32px
+			&:first-child
+				position: relative
+				&:before
+					position: absolute
+					content: ''
+					border-left: 1px solid #ccc
+					left: -20px
+					top: 0
+					bottom: 0
+			a
+				color: #525252
+				font-size: 18px
 	.main-cellphone
+		margin-bottom: 0
 		a
 			color: #333
 			font-weight: 700
-			font-size: 1em
+			font-size: 1.2em
+			text-decoration: none
+			line-height: 38px
+			vertical-align: middle
+	.light-line
+	.dark-line
+		background: #292929
+		a
+			color: #fff
+		.dropdown-menu
+			background: #333
+	.secondary-navigation
+		margin: 18px 0
+		li
+			margin-right: 10px
+			a
+				font-weight: 500
+	.primary-navigation
+		li
+			margin-right: 10px
+			a
+				font-weight: 500
+	.dropdown-menu
+		background: #eee
+		border: none
+		border-radius: 0
+		box-shadow: none
+		margin: -2px 0 0
+		padding: 12px 0 10px
+		a
+			text-transform: none
+			font-weight: 100
+		li
+			margin-right: 0
+			&:hover
+				background: #fff
+				a
+					text-decoration: none
 //----------------------------------
 // END MAIN NAVIGATION
 //----------------------------------

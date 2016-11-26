@@ -1,15 +1,14 @@
 {
-  "name": "---",
-  "description": "---",
+  "name": "Amers",
+  "description": "Shop",
   "main": "index.html",
   "moduleType": [],
-  "keywords": [
-  ],
+  "keywords": [],
   "authors": [
-    "---"
+    "Alexey Pogorelov"
   ],
   "license": "no license",
-  "homepage": "https://github.com/---/---",
+  "homepage": "amers.ck.ua",
   "private": true,
   "ignore": [
     "**/.*",
@@ -20,6 +19,7 @@
   ],
   "dependencies": {
     "jquery": "^3.0.0",
-    "jquery.browser": "latest"
+    "jquery.browser": "latest",
+    "bootstrap": "^3.3.7"
   }
 }
