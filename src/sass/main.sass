@@ -9,11 +9,16 @@
 
 body
 	font: $font-stack
-	padding-top: 59px
+	padding-top: 97px
 	transition: none
 	// &::-webkit-scrollbar
 	// 	height: 0
 	// 	width: 0
+	& > content
+		display: block
+		min-height: calc(100vh - 376px)
+		@media #{$media-sm}
+			min-height: calc(100vh - 244px)
 
 *
 	transition: all .3s
@@ -253,6 +258,32 @@ body
 //----------------------------------
 // END CART
 //----------------------------------
+
+
+//----------------------------------
+// ABOUT PAGE
+//----------------------------------
+.about-page
+	padding-bottom: 40px
+	@media #{$media-lg}
+		padding-top: 100px
+	.bottom-bar
+		margin-top: 2em
+	br
+		@media #{$media-md}
+			display: none
+	h1
+		@media #{$media-lg}
+			margin-top: 0
+			white-space: nowrap
+		// max-width: 300px
+		// float: left
+		// height: 100vh
+		// margin: 0 100px 0 0
+//----------------------------------
+// END ABOUT PAGE
+//----------------------------------
+
 
 
 //----------------------------------

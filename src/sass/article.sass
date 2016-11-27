@@ -1,19 +1,24 @@
 @import _mixins
 
-article
+.article-page
+	margin: 30px auto 60px
+article, .wysiwyg
 	$article-base-font-size: 1.1rem
 	$article-base-line-height: 1.4em
 	$article-base-color: #333
-	margin-top: 94px
 	h1, h2, h3, h4, h5, h6
 		text-transform: uppercase
 		margin: 1em 0 0.5em
 	h1, h2
 		font-size: 2.4rem
+		@media #{$media-sm}
+			font-size: 2.0rem
 	h3
-		font-size: 1.8rem
+		font-size: 1.6rem
+		@media #{$media-sm}
 	h4
-		font-size: 1.2rem
+		font-size: 1rem
+		@media #{$media-sm}
 	h5
 		font-size: 0.8rem
 	h6
