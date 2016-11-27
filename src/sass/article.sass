@@ -1,0 +1,97 @@
+@import _mixins
+
+article
+	$article-base-font-size: 1.1rem
+	$article-base-line-height: 1.4em
+	$article-base-color: #333
+	margin-top: 94px
+	h1, h2, h3, h4, h5, h6
+		text-transform: uppercase
+		margin: 1em 0 0.5em
+	h1, h2
+		font-size: 2.4rem
+	h3
+		font-size: 1.8rem
+	h4
+		font-size: 1.2rem
+	h5
+		font-size: 0.8rem
+	h6
+		font-size: 0.8rem
+
+	hr
+		margin: 20px 0
+		border-color: #ddd
+
+	p
+		// margin: 1em 0
+		color: $article-base-color
+		margin: 0 0 1em
+		font-size: $article-base-font-size
+		line-height: $article-base-line-height
+	a
+		color: $main-color
+		font-size: $article-base-font-size
+		line-height: $article-base-line-height
+	// b, strong
+	// i, em
+	mark
+		background: #a3ccff
+	// strike
+
+	img
+		display: block
+		margin: 1rem auto
+		max-width: 100%
+
+	time
+		display: block
+		margin: 1rem 0
+
+	blockquote, q
+		color: $article-base-color
+		display: block
+		margin: 1em 0
+		font-size: $article-base-font-size
+		line-height: $article-base-line-height
+
+	ul, ol
+		color: $article-base-color
+		margin: 1rem 0
+		padding-left: 2.6em
+	li
+		margin: 0.6em 0
+		font-size: $article-base-font-size
+		line-height: $article-base-line-height
+	ul
+		li
+			list-style: circle
+	ol
+		li
+			list-style: inherit
+
+	table
+		color: $article-base-color
+		font-size: $article-base-font-size
+		line-height: $article-base-line-height
+		border-spacing: 0
+		border-collapse: collapse
+		width: 100%
+	thead
+	tbody
+	tr
+	th, td
+		border: 1px solid #ddd
+		padding: 8px 15px
+
+	video,
+	audio
+		margin: 1rem auto
+		max-height: calc(100vh - 80px)
+		width: 100%
+	video
+	audio
+
+	iframe
+		margin: 1rem 0
+		width: 100%
