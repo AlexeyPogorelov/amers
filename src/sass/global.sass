@@ -99,7 +99,7 @@ input
 //	END INPUT
 
 // CHECKBOX
-.checkbox input[type="checkbox"]
+.checkbox-group input[type="checkbox"]
 	&:not(:checked), &:checked
 		left: -9999px
 		position: absolute
@@ -123,15 +123,15 @@ input
 		content: ''
 		color: #000
 		position: absolute
-		top: 2px
-		left: 7px
+		top: 3px
+		left: 6px
 		font-size: 18px
 		transition: all .2s
-		height: 10px
-		width: 3px
+		height: 12px
+		width: 6px
 	&:not(:checked) + label:after
 		opacity: 0
-		transform: rotate(-90deg) scale(0)
+		transform: rotate(0deg) scale(0)
 	&:checked + label:after
 		opacity: 1
 		transform: rotate(40deg) scale(1)
@@ -154,7 +154,7 @@ input
 // END CHECKBOX
 
 // RADIO
-.radio input[type="radio"]
+.radio-group input[type="radio"]
 	&:not(:checked), &:checked
 		left: -9999px
 		position: absolute

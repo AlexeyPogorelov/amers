@@ -78,18 +78,29 @@
 #search-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 	.modal-dialog.modal-lg
 		.modal-content
-			.container-fluid
+			.container
 				button.close(type='button', data-dismiss='modal', aria-label='Close')
 				.row
+					//- h2 Поиск
 					form(action="#").search-wrapper
-						h2 Поиск
-						.input-form
+						.input-form.search-main-input-group
 							input(type="text" placeholder="Введите название товара или тип дивана")
 							input(type="submit" value="")
 						ul.tag-cloud-1
-							li Модульные диваны
-							li Угловые диваны
-							li Прямые диваны
+							li
+								a.btn.btn-primary(href="#") Модульные диваны
+							li
+								a.btn.btn-primary(href="#") Угловые диваны
+							li
+								a.btn.btn-primary(href="#") Прямые диваны
+						.search-main-results-holder
+							mixin result (name, type, description, image)
+								.search-result
+									h3= name
+									h4= type
+									if image
+										img(src= image, alt= name)
+									p= description
 
 
 #login-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
@@ -98,21 +109,63 @@
 			.container-fluid
 				button.close(type='button', data-dismiss='modal', aria-label='Close')
 				.row
-					form(action="#")
+					form(action="#").col-md-12.profile-form
 						.form-group
-							.input-group
-								label(for="popup-login-email") Email
-								input(type="text")#popup-login-email
+							label(for="popup-login-email") Email
+							input(type="text")#popup-login-email
 						.form-group
-							.input-group
-								label(for="popup-login-password") Пароль
-								input(type="password")#popup-login-password
-								a(href="password-recovery.html" data-modal="#password-recovery").forgot-password Забыли?
+							label(for="popup-login-password") Пароль
+							input(type="password")#popup-login-password
+							a(href="password-recovery.html" data-toggle="modal" data-target="#forgot-modal").forgot-password Забыли?
+						.form-group.checkbox-group
+							input(type="checkbox")#popup-login-save
+							label(for="popup-login-save") Сохранить
 						.button-group
-							button(type="submit")
-								span Вход
+							button.btn.btn-primary(type="submit") Вход
+							a.btn.btn-under(href="signup.html" data-toggle="modal" data-target="#register-modal") Регистрация
+
+
+
+#register-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content
+			.container-fluid
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+				.row
+					form(action="#").col-md-12.profile-form
+						.form-group
+							label(for="popup-register-email") Email *
+							input(type="text")#popup-register-email
+						.form-group
+							label(for="popup-register-email") ФИО
+							input(type="text")#popup-register-email
+						.form-group
+							label(for="popup-register-email") Номер телефона
+							input(type="text")#popup-register-email
+						.form-group
+							label(for="popup-register-password") Пароль *
+							input(type="password")#popup-register-password
+						.form-group
+							label(for="popup-register-password") Пароль повторно *
+							input(type="password")#popup-register-password
+						.form-group.checkbox-group
+							input(type="checkbox")#popup-register-save
+							label(for="popup-register-save") Согласен с правилами *
 						.button-group
-							a(href="signup.html" data-modal="#signup-modal") Регистрация
+							button.btn.btn-primary(type="submit") Регистрация
+
+#forgot-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content
+			.container-fluid
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+				.row
+					form(action="#").col-md-12.profile-form
+						.form-group
+							label(for="popup-forgot-email") Email *
+							input(type="text")#popup-forgot-email
+						.button-group
+							button.btn.btn-primary(type="submit") Напомнить пароль
 
 
 
