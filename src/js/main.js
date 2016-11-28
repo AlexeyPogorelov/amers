@@ -7,7 +7,8 @@ var map;
 function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
 		center: {lat: 49.4053761, lng: 32.1087626},
-		zoom: 12
+		zoom: 12,
+		styles: [{"featureType": "poi.business","stylers": [{ "visibility": "off" }]},{"featureType": "poi.school","stylers": [{ "visibility": "off" }]},{},{"featureType": "landscape","stylers": [{ saturation: -100 }]},{"featureType": "whater","stylers": [{ saturation: -100 }]}]
 	});
 	if (map && markers && markers.length) {
 		for (var i = 0; i < markers.length; i++) {

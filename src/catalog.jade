@@ -12,6 +12,93 @@ html(lang='ru')
 		include ./partials/navigation.jade
 
 		content
+			.catalog-page
+				mixin item (name, img, category, short)
+					.col-md-4.col-lg-3.catalog-item
+						a(href="item-card.html")
+							h3= name
+						a(href="item-card.html").image-holder
+							img(src= img, alt= name).fake-img
+							.img(style="background-image:url(#{img})")
+						a(href="catalog.html")
+							h4= category
+						p= short
+						.buttons-holder
+							a(href="item-card.html").btn.btn-grey Подробней
+							a(href="item-card.html").btn.btn-primary Купить
+
+				.container
+					.row
+						.col-md-12
+							.catalog-category-name
+								h1 Категория товаров
+					.row.catalog-category-items-holder
+						+item(
+							'Милана',
+							'http://amers.ck.ua/upload/Milana.jpg',
+							'Угловой диван',
+							'Бладает респектабельным дизайном сочетая в себе плавность и благородство...'
+						)
+						+item(
+							'Доната',
+							'http://amers.ck.ua/upload/Donata_divan.jpg',
+							'Прямой диван',
+							'Элитная модель для истинных ценителей классического дизайна. Изысканные и...'
+						)
+						+item(
+							'Сенатор',
+							'http://amers.ck.ua/upload/Senator_1.jpg',
+							'Прямой диван',
+							'Оригинальный набор мягкой мебели, который удачно объединяет в себе...'
+						)
+						+item(
+							'Болеро',
+							'http://amers.ck.ua/upload/Bolero_8.jpg',
+							'Прямой диван',
+							'Диван который по праву может стать украшением классических интерьеров, будь то...'
+						)
+						+item(
+							'Диана',
+							'http://amers.ck.ua/upload/Diana2_2.jpg',
+							'Угловой диван',
+							'Универсальный и стильный диван, который очень прост в использовании. Изделие...'
+						)
+						+item(
+							'Джули',
+							'http://amers.ck.ua/upload/Juli.jpg',
+							'Угловой диван',
+							'Компактный  и  практичный диван, который легко впишется в современный...'
+						)
+						+item(
+							'Лоретта',
+							'http://amers.ck.ua/upload/loretta2.jpg',
+							'Угловой диван',
+							'Отличный выбор для небольших квартир. Несмотря на свои компактные...'
+						)
+						+item(
+							'Освальд',
+							'http://amers.ck.ua/upload/Osvald_2.jpg',
+							'Прямой диван',
+							'Обладает респектабельным дизайном сочетая в себе плавность и благородство...'
+						)
+						+item(
+							'Доната',
+							'http://amers.ck.ua/upload/Donata_divan.jpg',
+							'Прямой диван',
+							'Элитная модель для истинных ценителей классического дизайна. Изысканные и...'
+						)
+						+item(
+							'Сенатор',
+							'http://amers.ck.ua/upload/Senator_1.jpg',
+							'Прямой диван',
+							'Оригинальный набор мягкой мебели, который удачно объединяет  в себе...'
+						)
+						+item(
+							'Сенатор',
+							'http://amers.ck.ua/upload/Senator_1.jpg',
+							'Прямой диван',
+							'Оригинальный набор мягкой мебели, который удачно объединяет  в себе...'
+						)
 
 
 		include ./partials/footer.jade
