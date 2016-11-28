@@ -29,7 +29,8 @@
 
 .modal
 	.close
-		background: transparent url('../img/icons/close-icon-1.svg') 50% 50% no-repeat / contain
+		background: transparent url('../img/icons/close-icon-1.svg') 50% 50% no-repeat
+		background-size: contain
 		position: absolute
 		opacity: 0.8
 		border: 10px solid transparent
@@ -67,6 +68,7 @@
 	&.in .modal-dialog
 		transform: translate(0,0)
 	.modal-dialog
+		border-left: 1px solid #eee
 		background: white
 		margin: 0 0 0 auto
 		width: 660px
@@ -102,7 +104,8 @@
 				height: 50px
 				line-height: 50px
 		input[type="submit"]
-			background: url(../img/icons/search-icon-1.svg) 50% 50% no-repeat / contain
+			background: url(../img/icons/search-icon-1.svg) 50% 50% no-repeat
+			background-size: contain
 			border: none
 			display: block
 			opacity: 0.6

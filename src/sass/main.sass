@@ -186,7 +186,8 @@ body
 // WHERE TO BUY
 //----------------------------------
 .where-to-buy
-	background: url('../img/bg/map-ukraine-outline.svg') 50% 50% no-repeat / contain
+	background: url('../img/bg/map-ukraine-outline.svg') 50% 50% no-repeat
+	background-size: contain
 	padding: 50px 15px 100px
 	@media #{$media-xs-min}
 		padding: 10px 15px
@@ -264,6 +265,7 @@ body
 			color: #333
 			font-weight: 600
 			white-space: normal
+			width: calc(100% - 92px)
 			@media #{$media-xs}
 				line-height: 2em
 				margin-left: 0
@@ -389,6 +391,31 @@ body
 //----------------------------------
 // END CONTACTS PAGE
 //----------------------------------
+
+//----------------------------------
+// ORDER FORM
+//----------------------------------
+.order-form-page
+	padding-bottom: 60px
+	.total-price
+		font-size: 2rem
+		color: #ff3737
+		font-weight: 600
+	.form-group
+		a
+			color: inherit
+			font-weight: inherit
+			font-size: inherit
+			text-decoration: underline
+			&:hover
+				opacity: 0.8
+	.text-inputs-group
+		input
+			margin: 6px 10px 6px 0
+//----------------------------------
+// END ORDER FORM
+//----------------------------------
+
 
 //----------------------------------
 // TEST PAGE

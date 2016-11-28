@@ -12,16 +12,54 @@ html(lang='ru')
 		include ./partials/navigation.jade
 
 		content
-			.container.wysiwyg
+			.container.wysiwyg.order-form-page
 				.row
-					.col-md-12.col-lg-4
-						h1 О компании <br>”Amers”
-					.col-md-12.col-lg-8
+					.col-md-12
+						h1 Сделать заказ
 						p Производство мягкой мебели ”Amers” было создано 1998 году. С самого начала приоритетным направлением компании было изготовление недорогой, но  качественной мягкой мебели для ежедневного сна. Эта тенденция сохранилась и до сегодня. 
-						p Основными характеристиками мягкой мебели ”Amers” являются современный дизайн, компактность, надежность и функциональность. Именно это по словам наших клиентов является ключевыми преимуществами при выборе нашей мебели. 
-						p Наш коллектив руководствуется девизом “качество не только снаружи, но и внутри”, именно поэтому для производства мебели используются только экологически чистые материалы. Мы постоянно обновляем наш модельный ряд, а также следуем современным тенденциям в мире дизайна и технологий, которые успешно применяем при изготовлении новых изделий.
-						p Наши клиенты по достоинству оценили надежность, комфорт и долговечность мебели нашего производства по всей Украине.
-						p.bottom-bar.text-right С уважением, коллектив TM "Amers"
+						p Основными характеристиками мягкой мебели ”Amers” являются современный дизайн, компактность, надежность и функциональность. Именно это по словам наших клиентов является ключевыми преимуществами при выборе нашей мебели.
+				.row
+					form(action="#")
+						.col-md-12
+							.radios-inline
+								.radio-group.form-group
+									input#radio-6(type='radio', value='privat24', name='payment_type', checked='true')
+									label(for='radio-6') Кредитной картой
+								.radio-group.form-group
+									input#radio-7(type='radio', value='courier', name='payment_type')
+									label(for='radio-7') Наличными курьеру
+								.radio-group.form-group
+									input#radio-8(type='radio', value='mail', name='payment_type')
+									label(for='radio-8') Наложенный платеж (Новая почта)
+						.col-md-12
+							h3 Способ доставки
+							.radio-group.form-group
+								input#radio-1(type='radio', value='kiev', name='shipping_type', checked='true')
+								label(for='radio-1') Службой по городу (350-470 грн)
+							.radio-group.form-group
+								input#radio-2(type='radio', value='ukraine', name='shipping_type')
+								label(for='radio-2') Новой Почтой (наложенным платежем)
+							h3 Контактная информация
+							.form-group.text-inputs-group
+								input#phone(type='text', name='shipping_phone', placeholder='Телефон', required='', aria-required='true')
+								input#first(type='text', name='shipping_name', placeholder='Имя', value='', required='', aria-required='true')
+								input#last(type='text', name='shipping_surname', placeholder='Фамилия', value='', required='', aria-required='true')
+								input#country(type='text', name='shipping_country', placeholder='Страна', required='', aria-required='true')
+								input#town(type='text', name='shipping_town', placeholder='Город', required='', aria-required='true')
+								input#street(type='text', name='shipping_street', placeholder='Улица')
+								input#county(type='text', name='shipping_county', placeholder='Дом')
+								input#email(type='email', name='email', placeholder='Email', required='', aria-required='true')
+							.checkbox-group.form-group
+								input#checkbox(type='checkbox', name='use_address')
+								label(for='checkbox') Согласен(на) с <a href="#">условиями</a> доставки.
+							.form-group.send-button-holder
+								span.total-price
+									| 2270 
+									span.small грн
+
+
+						.col-md-12
+							button.btn.btn-primary Отправить
 
 		include ./partials/footer.jade
 		include ./partials/modals.jade
