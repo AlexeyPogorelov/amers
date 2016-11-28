@@ -32,69 +32,7 @@
 		.modal-content
 			.container-fluid
 				button.close(type='button', data-dismiss='modal', aria-label='Close')
-				.row
-					ul.cart-items-holder
-						li.cart-item
-							.left-side
-								span.item-image
-									a.image-holder(href='item-card.html')
-										img(src='https://www.pufetto.com.ua/items/gerardo/c/1/c.gerardo.jpg', alt='Витто')
-								a.item-name(href='item-card.html') Витто 
-							.right-side
-								span.item-color
-									select(name='color')
-										option(value='red', selected='') Красный
-								span.item-material
-									select(name='material')
-										option(value='342', selected='') Ткань
-								span.item-price
-									span.price-cost 12700
-									span.currency грн.
-								span.item-remove
-									button.remove-button
-										span.glyphicon.glyphicon-trash(aria-hidden="true")
-						li.cart-item
-							.left-side
-								span.item-image
-									a.image-holder(href='item-card.html')
-										img(src='https://www.pufetto.com.ua/items/gerardo/c/1/c.gerardo.jpg', alt='Витто')
-								a.item-name(href='item-card.html') Витто 
-							.right-side
-								span.item-color
-									select(name='color')
-										option(value='red', selected='') Красный
-								span.item-material
-									select(name='material')
-										option(value='342', selected='') Ткань
-								span.item-price
-									span.price-cost 12700
-									span.currency грн.
-								span.item-remove
-									button.remove-button
-										span.glyphicon.glyphicon-trash(aria-hidden="true")
-						li.cart-item
-							.left-side
-								span.item-image
-									a.image-holder(href='item-card.html')
-										img(src='https://www.pufetto.com.ua/items/gerardo/c/1/c.gerardo.jpg', alt='Витто')
-								a.item-name(href='item-card.html') Витто 
-							.right-side
-								span.item-color
-									select(name='color')
-										option(value='red', selected='') Красный
-								span.item-material
-									select(name='material')
-										option(value='342', selected='') Ткань
-								span.item-price
-									span.price-cost 12700
-									span.currency грн.
-								span.item-remove
-									button.remove-button
-										span.glyphicon.glyphicon-trash(aria-hidden="true")
-
-				.row
-					.make-order-button-holder
-						a(href="order").btn.btn-primary Оформить
+				include ./cart-items
 
 #search-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 	.modal-dialog.modal-lg

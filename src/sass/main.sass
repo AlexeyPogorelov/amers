@@ -230,10 +230,12 @@ body
 	letter-spacing: 0
 	margin: 20px 0
 	white-space: nowrap
+	@media #{$media-xs}
+		border-bottom: 2px solid #ccc
+		padding-bottom: 20px
 	.left-side,
 	.right-side
 		display: inline-block
-		height: 50px
 		font-size: 1rem
 		vertical-align: middle
 		@media #{$media-xs}
@@ -261,7 +263,9 @@ body
 			margin-left: 20px
 			color: #333
 			font-weight: 600
+			white-space: normal
 			@media #{$media-xs}
+				line-height: 2em
 				margin-left: 0
 				font-size: 2rem
 	.right-side
@@ -273,13 +277,27 @@ body
 			width: 100%
 		select
 			padding: 2px 10px
-		.item-color
-		.item-material
+		.item-properties
+			white-space: normal
+			button
+				cursor: default
+				border-radius: 0
+				padding: 10px 10px
+				display: inline-block
+				text-transform: uppercase
+				font-size: 12px
+				font-weight: 600
+				letter-spacing: 0.05em
+				line-height: 1em
+				margin: 0
+				border: 2px solid #eee
+				background: #eee
+				color: #333
 		.item-price
 			padding: 0 10px
 			@media #{$media-xs}
 				display: block
-				padding: 10px 10px
+				padding: 18px 10px
 			.price-cost
 				font-size: 1.6em
 			.currency
@@ -296,6 +314,7 @@ body
 			@media #{$media-xs}
 				display: block
 				text-align: center
+
 .make-order-button-holder
 	padding: 0 20px
 	margin: 0 0 60px

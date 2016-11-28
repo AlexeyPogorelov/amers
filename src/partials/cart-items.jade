@@ -1,0 +1,48 @@
+.row
+	ul.cart-items-holder
+		mixin cart-item (name, img, ...prop)
+			li.cart-item
+				.left-side
+					span.item-image
+						a.image-holder(href='item-card.html')
+							img(src= img, alt= name)
+					a.item-name(href='item-card.html')= name
+				.right-side
+					span.item-properties
+						-for (key in prop)
+							button= prop[key]
+					span.item-price
+						span.price-cost 12700
+						span.currency грн.
+					span.item-remove
+						button.remove-button
+							span.glyphicon.glyphicon-trash(aria-hidden="true")
+		+cart-item(
+			'Сенатор',
+			'https://www.pufetto.com.ua/items/gerardo/c/1/c.gerardo.jpg',
+			'Красный',
+			'PENTA'
+		)
+		+cart-item(
+			'Милана',
+			'http://amers.ck.ua/upload/Milana.jpg',
+			'Синий',
+			'NOVEL'
+		)
+		+cart-item(
+			'Доната',
+			'http://amers.ck.ua/upload/Donata_divan.jpg',
+			'Желтый',
+			'RITZ'
+		)
+		+cart-item(
+			'Сенатор',
+			'http://amers.ck.ua/upload/Senator_1.jpg',
+			'Красный',
+			'TRINITY'
+		)
+
+
+.row
+	.make-order-button-holder
+		a(href="order").btn.btn-primary Оформить

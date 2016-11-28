@@ -29,3 +29,65 @@
 		justify-content: space-between
 	.image-holder
 		display: block
+		.hover
+			background: rgba(255,255,255,0.6)
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+			z-index: 2
+			@media #{$media-sm}
+				background: none
+			a
+				text-decoration: none
+				color: #888
+				transition: color 100ms
+				font-size: 26px
+				&:hover
+					color: #333
+			span
+				display: block
+				position: relative
+				transition: transform 300ms, color 100ms
+				@media #{$media-sm}
+					display: none
+		&:hover
+			.hover
+				opacity: 1
+				pointer-events: all
+				span
+					transform: translate(-50%, -50%)
+	.go-to-item,
+	.go-to-cart
+		height: 50%
+		// background: rgba(255,255,255,0.6)
+		position: absolute
+		left: 0
+		right: 0
+		span
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%) translateZ(0)
+	.go-to-item
+		top: 0
+		bottom: 50%
+		@media #{$media-sm}
+			height: 100%
+			bottom: 0
+		span
+			transform: translate(-50%, -80%) translateZ(0)
+	.go-to-cart
+		top: 50%
+		bottom: 0
+		@media #{$media-sm}
+			display: none
+		span
+			transform: translate(-50%, -20%) translateZ(0)
+		// .img
+		// 	transition: transform 600ms
+		// &:hover
+		// 	.img
+		// 		transform: scale(1.02)
