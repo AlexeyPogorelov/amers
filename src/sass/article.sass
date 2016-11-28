@@ -1,7 +1,10 @@
 @import _mixins
 
 .article-page
-	margin: 30px auto 60px
+	@media #{$media-lg}
+		padding-top: 30px
+		padding-bottom: 60px
+
 article, .wysiwyg
 	$article-base-font-size: 1.1rem
 	$article-base-line-height: 1.4em

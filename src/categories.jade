@@ -1,0 +1,21 @@
+doctype html
+html(lang='ru')
+	head
+		title greatest page
+		meta(charset="utf-8")
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/noscript.jade
+		include ./partials/navigation.jade
+
+		content
+			.categories-page
+				include ./partials/categories.jade
+
+		include ./partials/footer.jade
+		include ./partials/modals.jade
+
+	include ./partials/scripts.jade

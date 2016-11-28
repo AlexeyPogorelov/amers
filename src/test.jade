@@ -1,0 +1,52 @@
+doctype html
+html(lang='ru')
+	head
+		title greatest page
+		meta(charset="utf-8")
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/noscript.jade
+		include ./partials/navigation.jade
+
+		content
+			.container.test-page
+				h1 Карта проекта
+				h3 Странички
+				ul
+					li
+						a(href="index.html") Главная
+					li
+						a(href="about.html") О нас
+					li
+						a(href="categories.html") Список категорий
+					li
+						a(href="catalog.html") Каталог товаров
+					li
+						a(href="item-card.html") Карта товара
+					li
+						a(href="blog.html") Блог
+					li
+						a(href="article.html") Статья блога
+					li
+						a(href="contacts.html") Контакты
+					li
+						a(href="article.html") Информационная страница
+
+				h3 Модальные окна
+				ul
+					li
+						a(href="#" data-toggle="modal" data-target="#login-modal") Логин
+					li
+						a(href="#" data-toggle="modal" data-target="#search-modal") Поиск
+					li
+						a(href="#" data-toggle="modal" data-target="#cart-sidebar") Корзина
+					li
+						a(href="#" data-toggle="modal" data-target="#mobile-navigation") Навигация для мобильного
+
+		include ./partials/footer.jade
+		include ./partials/modals.jade
+
+	include ./partials/scripts.jade

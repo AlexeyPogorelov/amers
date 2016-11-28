@@ -12,7 +12,66 @@ html(lang='ru')
 		include ./partials/navigation.jade
 
 		content
-			//- Add your code here
+			.container.contacts-page
+
+				.row
+					.col-md-8
+						.buttons-holder
+							button.btn.btn-primary.js-button-map-trigger Черкассы
+							button.btn.btn-primary.js-button-map-trigger Киев
+							button.btn.btn-primary.js-button-map-trigger Харьков
+							button.btn.btn-primary.js-button-map-trigger Белая церковь
+							button.btn.btn-primary.js-button-map-trigger Полтава
+							button.btn.btn-primary.js-button-map-trigger Запорожье
+							button.btn.btn-primary.js-button-map-trigger Хмельницкмй
+							button.btn.btn-primary.js-button-map-trigger Одесса
+					.col-md-4
+						.adresses-section
+							h4 TM AMERS
+							p г. Черкассы, ул.Зелинского 1/1
+							p Тел.: 
+								a(href="tel:0472733168") (047) 2733168
+							p Факс: (047) 2733168
+							p E-mail: 
+								a(href="mailto:amers_mebel@list.ru") amers_mebel@list.ru
+
+				.row
+					.col-md-8
+						#map.google-map
+					.col-md-4
+						form(action="#").contact-form.contact-form-main
+							.form-group
+								label(for='exampleInputName') Ваше имя
+								input#exampleInputName(type='text', placeholder='Введите Ваше имя')
+							.form-group
+								label(for='exampleInputEmail1') Контакт *
+								input#exampleInputEmail1(type='text', placeholder='Телефон или почта')
+								p.help-block (000) 000-00-00 или example@domain.nm
+							.form-group
+								label(for='exampleInputMessage') Текст *
+								textarea#exampleInputMessage(type='password', placeholder='Введите Ваше сообщение')
+							.form-group.input-file
+								input#exampleInputFile(type='file')
+								label(for='exampleInputFile') Прикрепить файл
+							button.btn.btn-primary(type='submit') Submit
+
+
+		script.
+			var markers = [
+				['Черкассы', 'Офис', 49.405594, 32.111898],
+				['Черкассы', 'Магазин в Черкассах', 49.415594, 32.101898],
+				['Киев', 'ТЦ "Дарынок", 2 этаж, место 2ДМ-31, ул. Беломорская 1 А', 50.461513, 30.642854],
+				['Киев', 'ТЦ "Б - 52", 3 этаж, ул. Братиславская 52', 50.491520, 30.610616],
+				['Киев', 'Мебель Макс, пр. 40 лет октября 128', 50.384000, 30.480218],
+				['Харьков', 'ТЦ «Sun City Plaza», Пр-т Московский, 199-А', 49.977229, 36.297531],
+				['Белая церковь', '"Магазин 1001 дрібниця", ул. Куценко 1', 49.796312, 30.128979],
+				['Полтава', 'Дом мебели "Ворскла", отдел "Piggagor interiors", ул.Октябрьская д.72, 3 этаж', 49.598253, 34.534521],
+				['Запорожье', 'Мебельный салон "ROMANDI", ТРЦ "БРУСНИЧКА", 3 этаж, ул. Независимой Украины 57 В', 47.843419, 35.138088],
+				['Запорожье', 'Мебельный салон "Формула Комфорта", ТЦ "Строй Центр", 2 этаж, ул. Космическая 121 Б', 47.788792, 35.221235],
+				['Хмельницкмй', 'ТЦ "Сильпо", ул. Зареченская 34, 3 этаж', 49.423178, 26.987197],
+				['Одесса', 'Малиновский рынок, Павильон Б12, Л21', 46.441641, 30.638545],
+				['Одесса', 'ТЦ "Шестой элемент", ул. 6-й километр ', 46.449623, 30.663936]
+			]
 
 		include ./partials/footer.jade
 		include ./partials/modals.jade

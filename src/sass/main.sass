@@ -11,6 +11,8 @@ body
 	font: $font-stack
 	padding-top: 97px
 	transition: none
+	@media #{$media-sm}
+		padding-top: 59px
 	// &::-webkit-scrollbar
 	// 	height: 0
 	// 	width: 0
@@ -100,6 +102,12 @@ body
 //----------------------------------
 // CATEGORIES ON MAIN-PAGE
 //----------------------------------
+.categories-page
+	padding-top: 40px
+	padding-bottom: 40px
+	@media #{$media-xs}
+		padding-top: 20px
+		padding-bottom: 20px
 .categories-section
 	hr
 		border-color: #eee
@@ -276,14 +284,63 @@ body
 		@media #{$media-lg}
 			margin-top: 0
 			white-space: nowrap
-		// max-width: 300px
-		// float: left
-		// height: 100vh
-		// margin: 0 100px 0 0
 //----------------------------------
 // END ABOUT PAGE
 //----------------------------------
 
+//----------------------------------
+// CONTACTS PAGE
+//----------------------------------
+.contacts-page
+	padding-top: 40px
+	padding-bottom: 80px
+	.buttons-holder
+		button
+			margin: 4px 4px 4px 0
+.contact-form
+	.help-block
+		text-align: right
+		font-size: 12px
+	label
+		font-weight: 400
+	input, textarea
+		width: 100%
+	textarea
+		min-height: 140px
+	.input-file
+		text-decoration: underline
+	&-main
+		background: #f7f7f7 url('../img/bg/09.png') 0 0 repeat
+		padding: 20px
+
+.google-map
+	transition: none
+	height: 475px
+	width: 100%
+	@media #{$media-sm}
+		max-height: 80vh
+	*
+		transition: none
+
+.buttons-holder,
+.adresses-section
+	margin-bottom: 20px
+.adresses-section
+
+//----------------------------------
+// END CONTACTS PAGE
+//----------------------------------
+
+//----------------------------------
+// TEST PAGE
+//----------------------------------
+.test-page
+	a
+		line-height: 2em
+		font-size: 1rem
+//----------------------------------
+// END TEST PAGE
+//----------------------------------
 
 
 //----------------------------------
