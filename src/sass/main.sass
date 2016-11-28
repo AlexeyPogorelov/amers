@@ -223,26 +223,37 @@ body
 // CART
 //----------------------------------
 .cart-items-holder
-	margin: 120px 0
+	margin: 120px 0 40px
 	padding: 0 20px
 .cart-item
 	font-size: 0
 	letter-spacing: 0
+	margin: 20px 0
 	white-space: nowrap
 	.left-side,
 	.right-side
 		display: inline-block
-		height: 120px
+		height: 50px
 		font-size: 1rem
 		vertical-align: middle
+		@media #{$media-xs}
+			display: block
+			height: auto
+			text-align: center
 	.left-side
 		width: 40%
+		@media #{$media-xs}
+			width: 100%
 		.item-name,
 		.item-image
 			display: inline-block
 			vertical-align: middle
+			@media #{$media-xs}
+				display: block
 		.item-image
 			width: 120px
+			@media #{$media-xs}
+				width: 100%
 			a
 				display: block
 				img
@@ -250,20 +261,48 @@ body
 			margin-left: 20px
 			color: #333
 			font-weight: 600
+			@media #{$media-xs}
+				margin-left: 0
+				font-size: 2rem
 	.right-side
 		text-align: right
+		padding-top: 10px
 		width: 60%
+		@media #{$media-xs}
+			text-align: center
+			width: 100%
 		select
 			padding: 2px 10px
 		.item-color
 		.item-material
 		.item-price
+			padding: 0 10px
+			@media #{$media-xs}
+				display: block
+				padding: 10px 10px
 			.price-cost
 				font-size: 1.6em
 			.currency
 		.item-remove
 			.remove-button
-				font-size: 24px
+				font-size: 18px
+				@media #{$media-xs}
+					color: #fff
+					display: block
+					background: #e43131
+					height: auto
+					padding: 10px 10px
+					width: 100%
+			@media #{$media-xs}
+				display: block
+				text-align: center
+.make-order-button-holder
+	padding: 0 20px
+	margin: 0 0 60px
+	.btn
+		@media #{$media-xs}
+			padding: 15px 0
+			display: block
 //----------------------------------
 // END CART
 //----------------------------------

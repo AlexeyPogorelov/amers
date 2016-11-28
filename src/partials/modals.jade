@@ -17,28 +17,8 @@
 							a(href='feedbacks.html') Отзывы
 						li
 							a(href='contacts.html') Контакты
-						li.dropdown
-							a(href='contacts.html#map' data-toggle="dropdown")
-								| Магазины 
-							ul.dropdown-menu
-								li
-									a(href='contacts.html#city') Киев
-								li
-									a(href='contacts.html#city') Сумы
-								li
-									a(href='contacts.html#city') Харьков
-								li
-									a(href='contacts.html#city') Одесса
-								li
-									a(href='contacts.html#city') Белая Церковь
-								li
-									a(href='contacts.html#city') Полтава
-								li
-									a(href='contacts.html#city') Запорожье
-								li
-									a(href='contacts.html#city') Хмельницкий
-								li
-									a(href='contacts.html#city') Черкассы
+						li
+							a(href='contacts.html#map') Магазины
 						li
 							a(href='catalog.html') Модульные диваны 
 						li
@@ -73,7 +53,48 @@
 								span.item-remove
 									button.remove-button
 										span.glyphicon.glyphicon-trash(aria-hidden="true")
+						li.cart-item
+							.left-side
+								span.item-image
+									a.image-holder(href='item-card.html')
+										img(src='https://www.pufetto.com.ua/items/gerardo/c/1/c.gerardo.jpg', alt='Витто')
+								a.item-name(href='item-card.html') Витто 
+							.right-side
+								span.item-color
+									select(name='color')
+										option(value='red', selected='') Красный
+								span.item-material
+									select(name='material')
+										option(value='342', selected='') Ткань
+								span.item-price
+									span.price-cost 12700
+									span.currency грн.
+								span.item-remove
+									button.remove-button
+										span.glyphicon.glyphicon-trash(aria-hidden="true")
+						li.cart-item
+							.left-side
+								span.item-image
+									a.image-holder(href='item-card.html')
+										img(src='https://www.pufetto.com.ua/items/gerardo/c/1/c.gerardo.jpg', alt='Витто')
+								a.item-name(href='item-card.html') Витто 
+							.right-side
+								span.item-color
+									select(name='color')
+										option(value='red', selected='') Красный
+								span.item-material
+									select(name='material')
+										option(value='342', selected='') Ткань
+								span.item-price
+									span.price-cost 12700
+									span.currency грн.
+								span.item-remove
+									button.remove-button
+										span.glyphicon.glyphicon-trash(aria-hidden="true")
 
+				.row
+					.make-order-button-holder
+						a(href="order").btn.btn-primary Оформить
 
 #search-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 	.modal-dialog.modal-lg
@@ -82,7 +103,7 @@
 				button.close(type='button', data-dismiss='modal', aria-label='Close')
 				.row
 					//- h2 Поиск
-					form(action="#").search-wrapper
+					form(action="#").col-md-12.search-wrapper
 						.input-form.search-main-input-group
 							input(type="text" placeholder="Введите название товара или тип дивана")
 							input(type="submit" value="")
