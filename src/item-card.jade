@@ -15,9 +15,111 @@ html(lang='ru')
 			.container.item-card-page
 				.row
 					.col-md-12.item-card-main-slider
-						//
+						#owl-main.owl-carousel.owl-theme
+							.item
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/montaj_nikol_nikol.jpg&w=1200&h=480', alt='description')
+							.item
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Nikol_sh_4.jpg&w=1200&h=480', alt='description')
+							.item
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Nikol_razrez1_2.jpg&w=1200&h=480', alt='description')
+							.item
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Nikol_Soho_7.jpg&w=1200&h=480', alt='description')
+							.item
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Juli.jpg&w=1200&h=480', alt='description')
+							.item
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Juli_sh_1.jpg&w=1200&h=480', alt='description')
+							.item
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Juli%20_razrez_1.jpg&w=1200&h=480', alt='description')
+						#owl-helper.owl-carousel.owl-theme
+							.item(style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/montaj_nikol_nikol.jpg&w=240&h=120)")
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/montaj_nikol_nikol.jpg&w=240&h=120', alt='description')
+							.item(style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Nikol_sh_4.jpg&w=240&h=120)")
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Nikol_sh_4.jpg&w=240&h=120', alt='description')
+							.item(style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Nikol_razrez1_2.jpg&w=240&h=120)")
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Nikol_razrez1_2.jpg&w=240&h=120', alt='description')
+							.item(style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Nikol_Soho_7.jpg&w=240&h=120)")
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Nikol_Soho_7.jpg&w=240&h=120', alt='description')
+							.item(style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Juli.jpg&w=240&h=120)")
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Juli.jpg&w=240&h=120', alt='description')
+							.item(style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Juli_sh_1.jpg&w=240&h=120)")
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Juli_sh_1.jpg&w=240&h=120', alt='description')
+							.item(style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Juli%20_razrez_1.jpg&w=240&h=120)")
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Juli%20_razrez_1.jpg&w=240&h=120', alt='description')
 
 		include ./partials/footer.jade
 		include ./partials/modals.jade
 
 	include ./partials/scripts.jade
+	script(src='external/owl/owl-carousel/owl.carousel.min.js')
+	link(rel="stylesheet", href="external/owl/owl-carousel/owl.carousel.css")
+
+	script.
+		$(document).ready(function() {
+			var owlMain, owlHelper;
+
+			var owlMain = $("#owl-main");
+			var owlHelper = $("#owl-helper");
+			
+			owlMain.owlCarousel({
+				singleItem : true,
+				slideSpeed : 300,
+				navigation: true,
+				pagination:false,
+				afterAction : syncPosition,
+				responsiveRefreshRate : 200,
+			});
+			
+			owlHelper.owlCarousel({
+				items : 4,
+				pagination:false,
+				responsiveRefreshRate : 100,
+				afterInit : function(el){
+					el.find(".owl-item").eq(0).addClass("synced");
+				}
+			});
+			
+			function syncPosition(el){
+				var current = this.currentItem;
+				owlHelper
+					.find(".owl-item")
+					.removeClass("synced")
+					.eq(current)
+					.addClass("synced")
+				if(owlHelper.data("owlCarousel") !== undefined){
+					center(current)
+				}
+			}
+			
+			owlHelper.on("click", ".owl-item", function(e){
+				e.preventDefault();
+				var number = $(this).data("owlItem");
+				owlMain.trigger("owl.goTo",number);
+			});
+			
+			function center(number){
+				var owlHelpervisible = owlHelper.data("owlCarousel").owl.visibleItems;
+				var num = number;
+				var found = false;
+				for(var i in owlHelpervisible){
+					if(num === owlHelpervisible[i]){
+						var found = true;
+					}
+				}
+			
+				if(found===false){
+					if(num>owlHelpervisible[owlHelpervisible.length-1]){
+						owlHelper.trigger("owl.goTo", num - owlHelpervisible.length+2)
+					}else{
+						if(num - 1 === -1){
+							num = 0;
+						}
+						owlHelper.trigger("owl.goTo", num);
+					}
+				} else if(num === owlHelpervisible[owlHelpervisible.length-1]){
+					owlHelper.trigger("owl.goTo", owlHelpervisible[1])
+				} else if(num === owlHelpervisible[0]){
+					owlHelper.trigger("owl.goTo", num-1)
+				}
+				
+			}
+		});

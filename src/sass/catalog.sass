@@ -61,33 +61,45 @@
 					transform: translate(-50%, -50%)
 	.go-to-item,
 	.go-to-cart
-		height: 50%
+		height: 100%
+		width: 50%
 		// background: rgba(255,255,255,0.6)
 		position: absolute
-		left: 0
-		right: 0
+		top: 0
+		bottom: 0
 		span
 			position: absolute
 			left: 50%
 			top: 50%
 			transform: translate(-50%, -50%) translateZ(0)
 	.go-to-item
-		top: 0
-		bottom: 50%
+		left: 0
+		right: 50%
 		@media #{$media-sm}
-			height: 100%
-			bottom: 0
+			right: 100%
 		span
-			transform: translate(-50%, -80%) translateZ(0)
+			transform: translate(-80%, -50%) translateZ(0)
 	.go-to-cart
-		top: 50%
-		bottom: 0
+		left: 50%
+		right: 0
 		@media #{$media-sm}
 			display: none
 		span
-			transform: translate(-50%, -20%) translateZ(0)
+			transform: translate(-20%, -50%) translateZ(0)
 		// .img
 		// 	transition: transform 600ms
 		// &:hover
 		// 	.img
 		// 		transform: scale(1.02)
+
+#owl-main,
+#owl-helper
+	*
+		transition: none
+#owl-helper
+	.item
+		background-size: cover
+		img
+			opacity: 0
+			height: 100%
+			width: 100%
