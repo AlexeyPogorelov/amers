@@ -21,6 +21,8 @@
     "jquery": "^3.0.0",
     "jquery.browser": "latest",
     "bootstrap": "^3.3.7",
-    "owl": "~1.3.2"
+    "owl": "~1.3.2",
+    "elevatezoom": "~2.2.3",
+    "magnific-popup": "~1.1.0"
   }
 }

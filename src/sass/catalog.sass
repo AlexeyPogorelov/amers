@@ -38,6 +38,7 @@
 			bottom: 0
 			opacity: 0
 			z-index: 2
+			transition: opacity 300ms
 			@media #{$media-sm}
 				background: none
 			a
@@ -92,14 +93,71 @@
 		// 	.img
 		// 		transform: scale(1.02)
 
+.item-card-page
+	h1
+		text-align: center
+		margin: 1em auto 1em
+		text-transform: uppercase
+		font-size: 2rem
+		font-weight: 600
+		span
+			// border-bottom: 2px solid #333
+
+.item-card-main-slider
+	position: relative
+	.owl-prev,
+	.owl-next
+		background: transparent 50% 50% no-repeat
+		background-size: contain
+		position: absolute
+		top: 50%
+		font-size: 0
+		margin-top: -14px
+		height: 28px
+		width: 14px
+	.owl-prev
+		left: -38px
+		background-image: url('../img/icons/slide-arrow-prev-1.svg')
+	.owl-next
+		background-image: url('../img/icons/slide-arrow-next-1.svg')
+		right: -38px
+
 #owl-main,
 #owl-helper
+	margin-left: auto
+	margin-right: auto
 	*
 		transition: none
+
+#owl-main
+	max-width: 900px
+	.item
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		background-size: cover
+		height: 450px
+		a
+			display: block
+		img
+			opacity: 0
+			height: auto
+			width: 100%
+
 #owl-helper
+	max-width: 920px
+	margin-top: 20px
+	@media #{$media-xs-min}
+		display: none !important
 	.item
 		background-size: cover
+		background-repeat: no-repeat
+		border-left: 10px solid transparent
+		border-right: 10px solid transparent
 		img
 			opacity: 0
 			height: 100%
 			width: 100%
+	.owl-prev
+		left: -28px
+	.owl-next
+		right: -28px
