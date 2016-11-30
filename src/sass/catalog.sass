@@ -98,17 +98,17 @@
  * ITEM CARD PAGE
  */
 
-// .item-card-page
-// 	h1
-// 		text-align: center
-// 		margin: 1em auto 1em
-// 		text-transform: uppercase
-// 		font-size: 2rem
-// 		font-weight: 600
-// 		span
+.item-card-page
+	h1
+		@media #{$media-sm}
+			font-size: 26px
+	.radios-inline
+		.radio-group
+			display: inline-block
+			margin-right: 20px
 
 .item-card-main-description
-	margin-bottom: 40px
+	margin-bottom: 20px
 	a
 		display: block
 	img
@@ -147,20 +147,24 @@
 
 
 #owl-main
+	margin-top: 27px
 	margin-bottom: 20px
 	.item
 		background-position: 0 0
 		background-repeat: no-repeat
-		background-size: cover
-		height: 350px
+		background-size: 100% auto
+		height: 305px
+		@media #{$media-sm}
+			height: auto
 		a
 			display: block
 		img
-			opacity: 0
 			height: auto
 			width: 100%
 
 #owl-helper
+	@media #{$media-sm}
+		display: none !important
 	.item
 		background-size: cover
 		background-repeat: no-repeat
@@ -219,19 +223,22 @@
 
 
 // .item-card-main-header
-// 	h1
-// 		@media #{$media-xs}
-// 			font-size: 1.4em
 
 
 .item-card-main-info-block
-	margin: 20px 0 10px
+	margin: 0 0 10px
 	.price-tag
 		font-weight: bold
 		font-size: 2rem
+		line-height: 2rem
 	.price-tag-old
 		font-size: 1.2rem
 		text-decoration: line-through
+	a
+		margin: 10px 10px 0 0
+		@media #{$media-xs}
+			display: block
+			margin: 10px 0 10px
 
 .item-card-main-materials
 	margin-bottom: 0
@@ -255,6 +262,19 @@
 			&:checked + label
 				transform: scale(1.2)
 				outline: 2px solid rgba(0,0,0,0.8)
+
+.description-table
+	tr
+		@media #{$media-xs}
+			display: block
+		padding: 6px 0
+	td
+		padding: 4px 10px
+		@media #{$media-xs}
+			display: block
+			padding: 0
+		&:first-child
+			padding-left: 0
 
 .color-tooltip-wrapper
 	padding-bottom: 14px
