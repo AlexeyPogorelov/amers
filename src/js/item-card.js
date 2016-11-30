@@ -4,6 +4,26 @@
 	'use strict';
 	var owlMain, owlHelper;
 
+	$('.material-link').each(function () {
+		var $this = $(this),
+			style = '',
+			color = $this.data('color') || '',
+			image = $this.data('image') || '';
+		if (color) {
+			color = 'background-color:'+ color;
+			style = color;
+		}
+		if (image) {
+			style = style + ';'
+			image = 'background-image:url('+ image +')';
+			style = style + image;
+		}
+		$this.tooltip({
+			viewport: { selector: 'body', padding: 20 },
+			template: "<div class='color-tooltip' style='" + style + "'></div>"
+		});
+	});
+
 	owlMain = $("#owl-main");
 	owlHelper = $("#owl-helper");
 
