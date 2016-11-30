@@ -2,7 +2,7 @@
 // OWL slider
 (function () {
 	'use strict';
-	var owlMain, owlHelper;
+	var owlMain, owlHelper, owlOtherItems;
 
 	$('.material-link').each(function () {
 		var $this = $(this),
@@ -20,12 +20,13 @@
 		}
 		$this.tooltip({
 			viewport: { selector: 'body', padding: 20 },
-			template: "<div class='color-tooltip' style='" + style + "'></div>"
+			template: "<div class='color-tooltip-wrapper'><div class='color-tooltip' style='" + style + "'></div></div>"
 		});
 	});
 
 	owlMain = $("#owl-main");
 	owlHelper = $("#owl-helper");
+	owlOtherItems = $("#owl-other-items");
 
 	owlMain.owlCarousel({
 		singleItem: true,
@@ -38,8 +39,14 @@
 
 	if ($(window).width() <= 480) {
 		owlHelper.remove();
+		owlOtherItems.remove();
 		return;
 	}
+
+	owlOtherItems.owlCarousel({
+		items: 4,
+		navigation: true
+	});
 
 	owlHelper.owlCarousel({
 		items: 4,
@@ -93,7 +100,21 @@
 		}
 	}
 
-	$('.item a').magnificPopup({
+	$('#owl-main').find('.item a').magnificPopup({
+		type:'image',
+		zoom: {
+			enabled: true,
+
+			duration: 300,
+			easing: 'ease-in-out',
+
+			opener: function(openerElement) {
+				return openerElement.is('img') ? openerElement : openerElement.find('img');
+			}
+		}
+	});
+
+	$('.item-card-main-description').find('a').magnificPopup({
 		type:'image',
 		zoom: {
 			enabled: true,
