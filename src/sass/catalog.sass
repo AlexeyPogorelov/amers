@@ -94,57 +94,65 @@
 		// 	.img
 		// 		transform: scale(1.02)
 
-.item-card-page
-	h1
-		text-align: center
-		margin: 1em auto 1em
-		text-transform: uppercase
-		font-size: 2rem
-		font-weight: 600
-		span
-			// border-bottom: 2px solid #333
+/**
+ * ITEM CARD PAGE
+ */
+
+// .item-card-page
+// 	h1
+// 		text-align: center
+// 		margin: 1em auto 1em
+// 		text-transform: uppercase
+// 		font-size: 2rem
+// 		font-weight: 600
+// 		span
+
+.item-card-main-description
+	margin-bottom: 40px
+	a
+		display: block
+	img
+		width: 100%
 
 .item-card-main-slider
-	position: relative
 	.owl-prev,
 	.owl-next
-		background: transparent 50% 50% no-repeat
-		background-size: contain
-		position: absolute
-		top: 50%
-		font-size: 0
-		margin-top: -15px
-		height: 30px
-		width: 16px
-	.owl-prev
-		left: -38px
-		background-image: url('../img/icons/slide-arrow-prev-1.svg')
-		@media #{$media-xs}
-			left: 8px
-	.owl-next
-		background-image: url('../img/icons/slide-arrow-next-1.svg')
-		right: -38px
-		@media #{$media-xs}
-			right: 8px
+		display: none
+// 	position: relative
+// 	.owl-prev,
+// 	.owl-next
+// 		background: transparent 50% 50% no-repeat
+// 		background-size: contain
+// 		position: absolute
+// 		top: 50%
+// 		font-size: 0
+// 		margin-top: -15px
+// 		height: 30px
+// 		width: 16px
+// 	.owl-prev
+// 		left: -38px
+// 		background-image: url('../img/icons/slide-arrow-prev-1.svg')
+// 		@media #{$media-xs}
+// 			left: 8px
+// 	.owl-next
+// 		background-image: url('../img/icons/slide-arrow-next-1.svg')
+// 		right: -38px
+// 		@media #{$media-xs}
+// 			right: 8px
 
-#owl-main,
-#owl-helper
-	margin-left: auto
-	margin-right: auto
-	max-width: 900px
-	*
-		transition: none
+
+/**
+ * SLIDERS
+ */
+
 
 #owl-main
 	margin-bottom: 20px
-	@media #{$media-md}
-		padding-left: 10px
-		padding-right: 10px
 	.item
-		background-position: 50% 0
+		background-position: 0 0
 		background-repeat: no-repeat
 		background-size: cover
-		height: 450px
+		height: 350px
 		a
 			display: block
 		img
@@ -153,32 +161,24 @@
 			width: 100%
 
 #owl-helper
-	margin: 20px auto
-	max-width: 920px
-	@media #{$media-xs-min}
-		display: none !important
 	.item
 		background-size: cover
 		background-repeat: no-repeat
 		margin: 0 10px
+		outline: 2px solid rgba(0,0,0,0.3)
+		outline-offset: -2px
+		transition: outline 100ms
 		img
 			opacity: 0
 			height: 100%
 			width: 100%
-	.owl-prev
-		background-image: url('../img/icons/slide-arrow-prev-2.svg')
-		left: -28px
-		@media #{$media-xs}
-			left: 8px
-	.owl-next
-		background-image: url('../img/icons/slide-arrow-next-2.svg')
-		right: -28px
-		@media #{$media-xs}
-			right: 8px
 	.synced
 		& > *
-			outline: 2px solid #000
-			outline-offset: -2px
+			outline-color: rgba(0,0,0,0.9)
+	.owl-prev
+		background-image: url('../img/icons/slide-arrow-prev-2.svg')
+	.owl-next
+		background-image: url('../img/icons/slide-arrow-next-2.svg')
 
 #owl-other-items
 	padding: 0 6px
@@ -213,24 +213,31 @@
 		@media #{$media-xs}
 			right: 8px
 
-.item-card-main-header
-	h1
-		@media #{$media-xs}
-			font-size: 1.4em
+/**
+ * END SLIDERS
+ */
 
-.item-card-main-description
-	margin-bottom: 40px
-	a
-		display: block
-	img
-		width: 100%
+
+// .item-card-main-header
+// 	h1
+// 		@media #{$media-xs}
+// 			font-size: 1.4em
+
+
+.item-card-main-info-block
+	margin: 20px 0 10px
+	.price-tag
+		font-weight: bold
+		font-size: 2rem
+	.price-tag-old
+		font-size: 1.2rem
+		text-decoration: line-through
 
 .item-card-main-materials
 	margin-bottom: 0
 	.material-list
 	li
 		padding-right: 0
-		// margin-right: 6px
 		label
 			background-size: cover
 			cursor: pointer
@@ -249,24 +256,6 @@
 				transform: scale(1.2)
 				outline: 2px solid rgba(0,0,0,0.8)
 
-.item-card-main-info-block
-	text-align: right
-	margin: 20px 0 10px
-	@media #{$media-xs}
-		text-align: center
-	& > *
-		display: inline-block
-		margin-left: 12px
-		@media #{$media-xs}
-			display: block
-			margin: 18px 0
-	.price-tag
-		font-weight: bold
-		font-size: 2rem
-	.price-tag-old
-		font-size: 1.2rem
-		text-decoration: line-through
-
 .color-tooltip-wrapper
 	padding-bottom: 14px
 	position: absolute
@@ -282,5 +271,5 @@
 .color-tooltip
 	outline: 4px solid rgba(0,0,0,0.8)
 	background-size: contain
-	height: 160px
-	width: 160px
+	height: 190px
+	width: 190px

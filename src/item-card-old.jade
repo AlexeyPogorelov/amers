@@ -13,9 +13,12 @@ html(lang='ru')
 
 		content
 			.container.item-card-page
-
 				.row
-					#item-card-main-slider.col-md-5.item-card-main-slider
+					.col-md-12.item-card-main-header
+						h1
+							span Название товара
+				.row
+					#item-card-main-slider.col-md-12.item-card-main-slider
 						#owl-main.owl-carousel.owl-theme
 							.item(style="background-image:url(http://amers.ck.ua/upload/montaj_nikol_nikol.jpg)")
 								a(href="http://amers.ck.ua/upload/montaj_nikol_nikol.jpg")
@@ -54,11 +57,8 @@ html(lang='ru')
 							.item(style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Juli%20_razrez_1.jpg&w=600&h=220)")
 								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Juli%20_razrez_1.jpg&w=600&h=220', alt='description')
 
-					form.col-md-7.item-card-main-materials(action="#")
-						.item-card-main-description
-							h1 Угловой диван ВИТТО
-							p Витто - универсальный диван трасформер, конструкция которого легко  позволяет  самостоятельно изменять  угловое изделие на прямой диван и наоборот. Механизм раскладки "Еврокнижка"  без особых усилий превращает изделие в просторную двуспальную кровать, а вместительные короба для белья помогут разместить множество предметов. Также в диване предусмотрены ниши в подлокотниках, которые создают дополнительное место для вещей, а так же практичные ламинированные накладки с помощью которых подлокотники легко содержать в чистоте.
-
+				form(action="#").row
+					.col-md-6.col-sm-12.item-card-main-materials
 						h4 Категория ткани 1
 						ul.list-inline.materials-list
 							li
@@ -89,55 +89,25 @@ html(lang='ru')
 								input#material-84(type="radio" name="material" value="material-84")
 								label(for="material-84" style="background:#591E18;" data-toggle="tooltip" title="&nbsp" data-color="#591E18").material-link
 
-						.item-card-main-info-block
-							.price-tag-old 2010
-								small грн.
-							.price-tag 1920
-								small грн.
-							a.btn.btn-grey(href="cart.html" data-toggle="modal" data-target="#cart-sidebar") В корзину
-							a.btn.btn-primary(href="order.html") Оформить
+					.col-md-6.item-card-main-info-block
+						span.price-tag-old 2010
+							small грн.
+						span.price-tag 1920
+							small грн.
+						a.btn.btn-grey(href="cart.html" data-toggle="modal" data-target="#cart-sidebar") В корзину
+						a.btn.btn-primary(href="order.html") Оформить
 
-						.row
-							.col-md-12
-								h3 Технические характеристики
-								.cart_technical_item
-									span.cart_technical_i_left Виды:
-									span.cart_technical_i_right диван прямой, диван угловой, кресло
-								.cart_technical_item
-									span.cart_technical_i_left Укомплектован:
-									span.cart_technical_i_right пенополиуретан, ламели, эластичные пасы
-								.cart_technical_item
-									span.cart_technical_i_left Опоры:
-									span.cart_technical_i_right дерево
-							.col-md-12
-								h3 Габаритные размеры:
-								.cart_technical_number
-									| Длина 
-									span.cart_technical_number_qual
-										| 265
-										small см
-								.cart_technical_number
-									| Глубина посадочного места 
-									span.cart_technical_number_qual
-										| 60
-										small см
-								.cart_technical_number
-									| Спальное место 
-									span.cart_technical_number_qual
-										| 145x210
-										small см
+				.row
+					//- .col-md-4.col-sm-12.col-md-push-8.item-card-main-materials
+					//- .col-md-8.col-sm-12.col-md-pull-4.item-card-main-description
 
-						.item-card-main-description
-							.row
-								.col-md-6
-									a(href="http://amers.ck.ua/upload/Juli_sh_1.jpg")
-										img(src='http://amers.ck.ua/upload/Juli_sh_1.jpg', alt='Угловой диван PARMA')
-								.col-md-6
-									a(href="http://amers.ck.ua/upload/Nikol_sh_4.jpg")
-										img(src='http://amers.ck.ua/upload/Nikol_sh_4.jpg', alt='Угловой диван PARMA')
+					.col-md-6.col-sm-12.item-card-main-description
+						h3 Угловой диван ВИТТО
+						p Витто - универсальный диван трасформер, конструкция которого легко  позволяет  самостоятельно изменять  угловое изделие на прямой диван и наоборот. Механизм раскладки "Еврокнижка"  без особых усилий превращает изделие в просторную двуспальную кровать, а вместительные короба для белья помогут разместить множество предметов. Также в диване предусмотрены ниши в подлокотниках, которые создают дополнительное место для вещей, а так же практичные ламинированные накладки с помощью которых подлокотники легко содержать в чистоте.
 
-
-
+					.col-md-6.col-sm-12.item-card-main-description
+						a(href="http://amers.ck.ua/upload/Nikol_sh_4.jpg")
+							img(src="http://amers.ck.ua/upload/Nikol_sh_4.jpg", alt="scheme")
 
 				.row
 					.col-md-12

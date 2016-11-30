@@ -49,7 +49,7 @@
 	});
 
 	owlHelper.owlCarousel({
-		items: 4,
+		items: 3,
 		navigation: true,
 		responsiveRefreshRate: 100,
 		afterInit: function(el){
