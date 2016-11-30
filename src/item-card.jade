@@ -9,16 +9,16 @@ html(lang='ru')
 	body
 
 		include ./partials/noscript.jade
-		include ./partials/navigation.jade
+		//- include ./partials/navigation.jade
 
 		content
 			.container.item-card-page
 				.row
-					.col-md-12
+					.col-md-12.item-card-main-header
 						h1
 							span Название товара
 				.row
-					.col-md-12.item-card-main-slider
+					#item-card-main-slider.col-md-12.item-card-main-slider
 						#owl-main.owl-carousel.owl-theme
 							.item(style="background-image:url(http://amers.ck.ua/upload/montaj_nikol_nikol.jpg)")
 								a(href="http://amers.ck.ua/upload/montaj_nikol_nikol.jpg")
@@ -57,7 +57,52 @@ html(lang='ru')
 							.item(style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Juli%20_razrez_1.jpg&w=600&h=220)")
 								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Juli%20_razrez_1.jpg&w=600&h=220', alt='description')
 
-		include ./partials/footer.jade
+				.row
+					.col-md-12.item-card-main-info-block
+						.price-tag
+						a.btn.btn-primary(href="order.html") В корзину
+						a.btn.btn-order(href="order.html") Оформить
+
+				.row
+					.col-md-12.item-card-main-description
+						h3 Угловой диван ВИТТО
+						p Витто - универсальный диван трасформер, конструкция которого легко  позволяет  самостоятельно изменять  угловое изделие на прямой диван и наоборот. Механизм раскладки "Еврокнижка"  без особых усилий превращает изделие в просторную двуспальную кровать, а вместительные короба для белья помогут разместить множество предметов. Также в диване предусмотрены ниши в подлокотниках, которые создают дополнительное место для вещей, а так же практичные ламинированные накладки с помощью которых подлокотники легко содержать в чистоте.
+
+				.row
+					.col-md-12.item-card-main-materials
+						h3 Категория ткани 1
+						ul.list-inline.materials-list
+							li
+								a(href="#", style="background:#009FD4;").material-link
+							li
+								a(href="#", style="background:#BF533B;").material-link
+							li
+								a(href="#", style="background:#C96100;").material-link
+							li
+								a(href="#", style="background:#591E18;").material-link
+							li
+								a(href="#", style="background:#8C5A56;").material-link
+
+						h3 Категория ткани 2
+						ul.list-inline.materials-list
+							li
+								a(href="#", style="background:#E88425;").material-link
+							li
+								a(href="#", style="background:#DB2100;").material-link
+							li
+								a(href="#", style="background:#9BC900;").material-link
+
+						h3 Категория ткани 3
+						ul.list-inline.materials-list
+							li
+								a(href="#" style="background-color:#cf4534").material-link
+							li
+								a(href="#" style="background-color:#cf4534").material-link
+							li
+								a(href="#" style="background-color:#cf4534").material-link
+
+
+		//- include ./partials/footer.jade
 		include ./partials/modals.jade
 
 	include ./partials/scripts.jade

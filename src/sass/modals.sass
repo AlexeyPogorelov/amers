@@ -111,7 +111,7 @@
 			opacity: 0.6
 			position: absolute
 			top: 13px
-			right: 9px
+			right: 14px
 			height: 52px
 			width: 52px
 			transition: opacity 100ms
@@ -135,8 +135,12 @@
 	background: rgba(255,255,255,0.8)
 	height: 100%
 	width: 100%
+	overflow: hidden
 	@media #{$media-xs}
 		background: white
+		overflow: auto
+		overflow-x: hidden
+		overflow-y: auto
 	.modal-dialog
 		pointer-events: none
 		margin: 0

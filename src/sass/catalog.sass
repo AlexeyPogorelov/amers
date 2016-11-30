@@ -46,6 +46,7 @@
 				color: #888
 				transition: color 100ms
 				font-size: 26px
+				outline: none
 				&:hover
 					color: #333
 			span
@@ -112,27 +113,35 @@
 		position: absolute
 		top: 50%
 		font-size: 0
-		margin-top: -14px
-		height: 28px
-		width: 14px
+		margin-top: -15px
+		height: 30px
+		width: 16px
 	.owl-prev
 		left: -38px
 		background-image: url('../img/icons/slide-arrow-prev-1.svg')
+		@media #{$media-xs}
+			left: 8px
 	.owl-next
 		background-image: url('../img/icons/slide-arrow-next-1.svg')
 		right: -38px
+		@media #{$media-xs}
+			right: 8px
 
 #owl-main,
 #owl-helper
 	margin-left: auto
 	margin-right: auto
+	max-width: 900px
 	*
 		transition: none
 
 #owl-main
-	max-width: 900px
+	margin-bottom: 20px
+	@media #{$media-md}
+		padding-left: 10px
+		padding-right: 10px
 	.item
-		background-position: 50% 50%
+		background-position: 50% 0
 		background-repeat: no-repeat
 		background-size: cover
 		height: 450px
@@ -144,20 +153,40 @@
 			width: 100%
 
 #owl-helper
+	margin: 20px auto
 	max-width: 920px
-	margin-top: 20px
 	@media #{$media-xs-min}
 		display: none !important
 	.item
 		background-size: cover
 		background-repeat: no-repeat
-		border-left: 10px solid transparent
-		border-right: 10px solid transparent
+		margin: 0 10px
 		img
 			opacity: 0
 			height: 100%
 			width: 100%
 	.owl-prev
+		background-image: url('../img/icons/slide-arrow-prev-2.svg')
 		left: -28px
+		@media #{$media-xs}
+			left: 8px
 	.owl-next
+		background-image: url('../img/icons/slide-arrow-next-2.svg')
 		right: -28px
+		@media #{$media-xs}
+			right: 8px
+
+.item-card-main-materials
+	.material-list
+	li
+		padding-right: 0
+		// margin-right: 6px
+		a
+			outline: 1px solid rgba(0,0,0,0.2)
+			display: inline-block
+			height: 25px
+			width: 25px
+
+.item-card-main-info-block
+	.price-tag
+

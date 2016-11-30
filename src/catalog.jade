@@ -21,16 +21,16 @@ html(lang='ru')
 							img(src= img, alt= name).fake-img
 							.img(style="background-image:url(#{img})")
 							.hover
-								a(href="item-card.html").go-to-item
+								a(href="item-card.html" tabindex="-1").go-to-item
 									span.glyphicon.glyphicon-eye-open
-								a(href="cart.html" data-toggle="modal" data-target="#cart-sidebar").go-to-cart
+								a(href="cart.html" data-toggle="modal" data-target="#cart-sidebar" tabindex="-1").go-to-cart
 									span.glyphicon.glyphicon-plus
-						a(href="catalog.html")
+						a(href="catalog.html" tabindex="-1")
 							h4= category
 						p= short
 						.buttons-holder
-							a(href="item-card.html").btn.btn-grey Подробней
-							a(href="item-card.html").btn.btn-primary Купить
+							a(href="item-card.html" tabindex="-1").btn.btn-grey Подробней
+							a(href="item-card.html" tabindex="-1").btn.btn-primary Купить
 
 				.container
 					.row

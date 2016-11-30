@@ -11,6 +11,9 @@
 	line-height: 1em
 	margin: 0
 	transition: background 100ms, border 100ms, color 100ms
+	&:focus,
+	&:active
+		box-shadow: none
 	&-primary
 		border: 2px solid #333
 		background: #333
@@ -40,3 +43,8 @@
 		color: #333
 		&:hover
 			text-decoration: underline
+	&-order
+		border: 2px solid #ec1b25
+		background: #ec1b25
+		color: #fff
+		&:hover
