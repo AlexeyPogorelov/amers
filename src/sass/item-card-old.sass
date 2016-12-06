@@ -20,20 +20,20 @@
 	.owl-prev,
 	.owl-next
 		display: none
+
 /**
  * SLIDERS
  */
 
-
 #owl-main
 	margin-top: 0
-	margin-bottom: 20px
+	margin-bottom: 0
 	.item
 		background-position: 0 0
 		background-repeat: no-repeat
 		background-size: 100% auto
-		height: 405px
-		height: 72vh
+		// height: 405px
+		// height: 72vh
 		@media #{$media-sm}
 			height: auto
 		a
@@ -43,8 +43,8 @@
 			width: 100%
 
 #owl-helper
-	@media #{$media-sm}
-		display: none !important
+	// @media #{$media-xs}
+		// display: none !important
 	.item
 		background-size: cover
 		background-repeat: no-repeat
@@ -58,7 +58,7 @@
 			width: 100%
 	.synced
 		& > *
-			outline-color: rgba(0,0,0,0.9)
+			outline-color: $main-color
 	.owl-prev
 		background-image: url('../img/icons/slide-arrow-prev-2.svg')
 	.owl-next
@@ -121,6 +121,7 @@
 			margin: 10px 0 10px
 
 .item-card-main-materials
+	margin-top: 66px
 	margin-bottom: 0
 	.material-list
 	li
@@ -130,8 +131,8 @@
 			cursor: pointer
 			outline: 1px solid rgba(0,0,0,0.2)
 			display: inline-block
-			height: 25px
-			width: 25px
+			height: 30px
+			width: 30px
 			transition: transform 100ms
 		input
 			text-indent: -99999px
@@ -141,7 +142,7 @@
 			opacity: 0
 			&:checked + label
 				transform: scale(1.2)
-				outline: 2px solid rgba(0,0,0,0.8)
+				outline: 2px solid $main-color
 
 .description-table
 	tr

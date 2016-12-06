@@ -30,11 +30,47 @@ body
 //----------------------------------
 // HERO
 //----------------------------------
+.hero-section-slider
+	// position: relative
+	.owl-controls
+		// display: none
+		.owl-prev,
+		.owl-next
+			font-size: 0
+			position: absolute
+			top: 0
+			bottom: 0
+			width: 78px
+			&:after
+				content: ''
+				position: absolute
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: contain
+				top: 50%
+				left: 50%
+				margin-left: -18px
+				margin-top: -12px
+				height: 36px
+				width: 34px
+			&:hover
+				background: rgba(255,255,255,0.3)
+		.owl-prev
+			left: 0
+			&:after
+				background-image: url("../img/icons/slide-arrow-prev-1.svg")
+		.owl-next
+			right: 0
+			&:after
+				background-image: url("../img/icons/slide-arrow-next-1.svg")
 .hero-section
 	display: flex
 	padding: 200px 0
 	align-items: center
 	min-height: 600px
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover
 	@media #{$media-xs}
 		padding: 20px 0
 		min-height: 300px

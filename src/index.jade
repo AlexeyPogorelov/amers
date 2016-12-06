@@ -12,11 +12,17 @@ html(lang='ru')
 		include ./partials/navigation.jade
 
 		content
-			.hero-section(style="background:url('img/bg/ec4c8f25319415.56344c8ea94d5.jpg') no-repeat 50% 50%;background-size:cover;")
-				.container
-					.content
-						h1 Качественная мебель для ежедневного сна.
-						p Основными характеристиками мягкой мебели ”Amers” являются современный дизайн, компактность, надежность и функциональность. Именно это по словам наших клиентов является ключевыми преимуществами при выборе нашей мебели.
+			.hero-section-slider
+				.hero-section(style="background-image:url('img/bg/ec4c8f25319415.56344c8ea94d5.jpg');")
+					.container
+						.content
+							h1 Качественная мебель для ежедневного сна.
+							p Основными характеристиками мягкой мебели ”Amers” являются современный дизайн, компактность, надежность и функциональность. Именно это по словам наших клиентов является ключевыми преимуществами при выборе нашей мебели.
+				.hero-section(style="background-image:url('https://wallpaperscraft.com/image/furniture_interior_design_gift_86632_2560x1024.jpg');")
+					.container
+						.content
+							h1 Качественная мебель для ежедневного сна.
+							p Основными характеристиками мягкой мебели ”Amers” являются современный дизайн, компактность, надежность и функциональность. Именно это по словам наших клиентов является ключевыми преимуществами при выборе нашей мебели.
 			br
 			.clearfix
 
@@ -100,3 +106,14 @@ html(lang='ru')
 		include ./partials/modals.jade
 
 	include ./partials/scripts.jade
+
+	link(rel="stylesheet", href="external/owl/owl-carousel/owl.carousel.css")
+	script(src='external/owl/owl-carousel/owl.carousel.min.js')
+	script.
+		$('.hero-section-slider').owlCarousel({
+				autoPlay : 5000,
+				singleItem: true,
+				slideSpeed: 300,
+				navigation: true,
+				pagination: false
+			});

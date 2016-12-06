@@ -49,9 +49,23 @@
 	});
 
 	owlHelper.owlCarousel({
-		items: 3,
+		items: 8,
 		navigation: true,
 		responsiveRefreshRate: 100,
+		responsive:{
+			0:{
+				items:4
+			},
+			600:{
+				items:5
+			},
+			1000:{
+				items:6
+			},
+			1200:{
+				items:8
+			}
+		},
 		afterInit: function(el){
 			el.find(".owl-item").eq(0).addClass("synced");
 		}
