@@ -15,13 +15,13 @@ html(lang='ru')
 			.catalog-page
 				mixin item (name, img, category, short)
 					.col-md-4.col-lg-3.catalog-item
-						a(href="item-card.html")
+						a(href="item-card-old.html")
 							h3= name
 						.image-holder
 							img(src= img, alt= name).fake-img
 							.img(style="background-image:url(#{img})")
 							.hover
-								a(href="item-card.html" tabindex="-1").go-to-item
+								a(href="item-card-old.html" tabindex="-1").go-to-item
 									span.glyphicon.glyphicon-eye-open
 								a(href="cart.html" data-toggle="modal" data-target="#cart-sidebar" tabindex="-1").go-to-cart
 									span.glyphicon.glyphicon-plus
@@ -29,8 +29,8 @@ html(lang='ru')
 							h4= category
 						p= short
 						.buttons-holder
-							a(href="item-card.html" tabindex="-1").btn.btn-grey Подробней
-							a(href="item-card.html" tabindex="-1").btn.btn-primary Купить
+							a(href="item-card-old.html" tabindex="-1").btn.btn-grey Подробней
+							a(href="item-card-old.html" tabindex="-1").btn.btn-primary Купить
 
 				.container
 					.row

@@ -1,0 +1,1183 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"l",
+				"length〔variable〕"
+			],
+			[
+				"tran",
+				"transparent"
+			],
+			[
+				"tra",
+				"transparent"
+			],
+			[
+				"op",
+				"opened"
+			],
+			[
+				"fixe",
+				"fixedFooterList"
+			],
+			[
+				"se",
+				"selectedItems"
+			],
+			[
+				"app",
+				"appendTo"
+			],
+			[
+				"cl",
+				"clone"
+			],
+			[
+				"sp",
+				"splice"
+			],
+			[
+				"sel",
+				"selectedItems〔variable〕"
+			],
+			[
+				"e",
+				"else"
+			],
+			[
+				"cli",
+				"click"
+			],
+			[
+				"ty",
+				"type=\"hidden"
+			],
+			[
+				"fi",
+				"find"
+			],
+			[
+				"re",
+				"remove〔function〕"
+			],
+			[
+				"f",
+				"find〔function〕"
+			],
+			[
+				"ch",
+				"children"
+			],
+			[
+				"boxs",
+				"box-sizing"
+			],
+			[
+				"la",
+				"label"
+			],
+			[
+				"clic",
+				"clickHandler"
+			],
+			[
+				"tr",
+				"trigger"
+			],
+			[
+				"ta",
+				"table"
+			],
+			[
+				"clos",
+				"closest"
+			],
+			[
+				"lin",
+				"link-color"
+			],
+			[
+				"fun",
+				"fun\tFunction"
+			],
+			[
+				"lo",
+				"loaded"
+			],
+			[
+				"set",
+				"setTimeout〔function〕"
+			],
+			[
+				"loa",
+				"loadElements"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"st",
+				"style"
+			],
+			[
+				"in",
+				"infiniteList"
+			],
+			[
+				"co",
+				"content"
+			],
+			[
+				"cont",
+				"content〔variable〕"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"v",
+				"var"
+			],
+			[
+				"ad",
+				"addEventListener"
+			],
+			[
+				"q",
+				"querySelector"
+			],
+			[
+				"n",
+				"number"
+			],
+			[
+				"cu",
+				"currentPosition"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"del",
+				"delta〔argument〕"
+			],
+			[
+				"requ",
+				"requestAnimationFrame〔variable〕"
+			],
+			[
+				"de",
+				"delta"
+			],
+			[
+				"wi",
+				"window.pageYOffset"
+			],
+			[
+				"o",
+				"offsetTop"
+			],
+			[
+				"res",
+				"resizeHandler"
+			],
+			[
+				"int",
+				"interval"
+			],
+			[
+				"call",
+				"callback〔function〕"
+			],
+			[
+				"fo",
+				"forEach"
+			],
+			[
+				"bo",
+				"boxes"
+			],
+			[
+				"bi",
+				"bind"
+			],
+			[
+				"cons",
+				"console.log(2"
+			],
+			[
+				"va",
+				"var"
+			],
+			[
+				"al",
+				"alert"
+			],
+			[
+				"sc",
+				"scrolling"
+			],
+			[
+				"scr",
+				"scrolling〔class〕"
+			],
+			[
+				"ca",
+				"call\tmethod.call()"
+			],
+			[
+				"ele",
+				"element〔variable〕"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"trans",
+				"transparent"
+			],
+			[
+				"w",
+				"width〔function〕"
+			],
+			[
+				"ite",
+				"item-card"
+			],
+			[
+				"des",
+				"description"
+			],
+			[
+				"ma",
+				"markers"
+			],
+			[
+				"qs",
+				"qsa\tquerySelectorAll"
+			],
+			[
+				"so",
+				"soursemap"
+			],
+			[
+				"to",
+				"topOffset"
+			],
+			[
+				"pars",
+				"parseInt〔function〕"
+			],
+			[
+				"sho",
+				"showNavigation"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"clo",
+				"clothing"
+			],
+			[
+				"si",
+				"siblings"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"mo",
+				"modals"
+			],
+			[
+				"bu",
+				"button"
+			],
+			[
+				"an",
+				"animating"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"on",
+				"one"
+			],
+			[
+				"fa",
+				"false"
+			],
+			[
+				"s",
+				"step"
+			],
+			[
+				"3",
+				"360"
+			],
+			[
+				"m",
+				"min〔function〕"
+			],
+			[
+				"fu",
+				"fun\tFunction"
+			],
+			[
+				"ar",
+				"array"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"pr",
+				"price"
+			],
+			[
+				"ba",
+				"baseUserInfo"
+			],
+			[
+				"ap",
+				"appendTo"
+			],
+			[
+				"li",
+				"list"
+			],
+			[
+				"pa",
+				"parent〔function〕"
+			],
+			[
+				"list",
+				"listWidth"
+			],
+			[
+				"has",
+				"hasClass〔function〕"
+			],
+			[
+				"da",
+				"data-class"
+			],
+			[
+				"ac",
+				"activeTabs"
+			],
+			[
+				"t",
+				"this"
+			],
+			[
+				"firs",
+				"first-child"
+			],
+			[
+				"mi",
+				"middle"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"pos",
+				"post〔function〕"
+			],
+			[
+				"ke",
+				"keydown"
+			],
+			[
+				"a",
+				"addEventListener〔function〕"
+			],
+			[
+				"ge",
+				"getElementsByTagName〔function〕"
+			],
+			[
+				"te",
+				"test"
+			],
+			[
+				"cla",
+				"class=\"table-holder"
+			],
+			[
+				"cat",
+				"categories"
+			],
+			[
+				"main",
+				"main-color"
+			],
+			[
+				"col",
+				"col-md-12"
+			],
+			[
+				"comme",
+				"comment"
+			],
+			[
+				"comm",
+				"comments"
+			],
+			[
+				"act",
+				"activeTasks"
+			],
+			[
+				"g",
+				"getTime"
+			],
+			[
+				"ex",
+				"extend"
+			],
+			[
+				"backg",
+				"background-size"
+			],
+			[
+				"bg",
+				"bgr\tbackground-repeat"
+			],
+			[
+				"ab",
+				"abstract-3"
+			],
+			[
+				"na",
+				"navigation"
+			],
+			[
+				"sv",
+				"svgSelector"
+			],
+			[
+				"io",
+				"iphone"
+			],
+			[
+				"if",
+				"iframes"
+			],
+			[
+				"d",
+				"data"
+			],
+			[
+				"ti",
+				"timeout"
+			],
+			[
+				"b",
+				"body"
+			],
+			[
+				"pl",
+				"plg"
+			],
+			[
+				"win",
+				"winWidth"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
+				"i",
+				"if\tif"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"last_filter": "jad",
+		"selected_items":
+		[
+			[
+				"jad",
+				"Set Syntax: Jade"
+			],
+			[
+				"r",
+				"Random:Int"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"ra",
+				"Random:Int"
+			],
+			[
+				"git s",
+				"Git: Status"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pug",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"form",
+				"CodeFormatter: Format as HTML Syntax"
+			],
+			[
+				"h",
+				"Set Syntax: HTML"
+			],
+			[
+				"git di",
+				"Git: Diff Current File"
+			],
+			[
+				"conso",
+				"consolewrap"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"uppe",
+				"Convert Case: Upper Case"
+			],
+			[
+				"rever",
+				"Permute Lines: Reverse"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"ran",
+				"Random:UUID"
+			],
+			[
+				"linter",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"es",
+				"ESLint"
+			],
+			[
+				"p",
+				"Preferences: Browse Packages"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"reg",
+				"RegReplace: Edit Regular Expression Rule"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"comm",
+				"DocBlockr: Decorate line comment"
+			],
+			[
+				"j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"incr",
+				"Emmet: Increment Number by 10"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"we",
+				"Set Syntax: Web Inspector (Log)"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"docblo",
+				"DocBlockr: Decorate line comment"
+			],
+			[
+				"doc",
+				"DocBlockr: Decorate line comment"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove p",
+				"Package Control: Remove Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"tw",
+				"Set Syntax: HTML (Twig)"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"diff",
+				"Diff View: Run custom diff..."
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"ls",
+			"ды",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/D/Git/justicon/src/kved-2.jade",
+		"/D/Git/justicon/src/index.jade",
+		"/D/Git/justicon/src/partials/head.jade",
+		"/D/Git/justicon/src/partials/modals.jade",
+		"/D/Git/justicon/src/main.jade",
+		"/D/Git/justicon/src/test.jade",
+		"/D/Git/justicon/src/css/foot.sass",
+		"/D/Git/justicon/src/partials/navigation.jade",
+		"/D/Git/justicon/src/css/elements.sass",
+		"/D/Git/justicon/src/partials/footer.jade",
+		"/D/Git/justicon/src/partials/contacts.jade",
+		"/D/Git/justicon/src/contacts.jade",
+		"/D/Git/justicon/src/css/global.sass",
+		"/D/Git/justicon/src/css/concated.sass",
+		"/D/Git/justicon/src/price-list.jade",
+		"/D/Git/justicon/src/about.jade",
+		"/D/Git/justicon/src/partners.jade",
+		"/D/Git/justicon/src/adresses.jade",
+		"/D/Git/justicon/src/contacts-old.jade",
+		"/D/Git/justicon/src/js/main.js",
+		"/D/Git/justicon/src/more.jade",
+		"/D/Git/justicon/src/article.jade",
+		"/D/Git/justicon/src/kved-1.jade",
+		"/D/Git/justicon/src/css/main.sass",
+		"/D/Git/justicon/src/press.jade",
+		"/D/Git/justicon/src/404.jade",
+		"/D/Git/justicon/src/css/modals.sass",
+		"/C/Users/Blick/Downloads/require.js",
+		"/D/Git/dailymail/gulpfile.js",
+		"/D/Git/huffingtonpost/index.html",
+		"/D/Git/huffingtonpost/js/main.js",
+		"/C/Users/Blick/AppData/Local/Temp/fz3temp-2/additional.css",
+		"/C/Users/Blick/AppData/Local/Temp/fz3temp-2/main.css",
+		"/C/Users/Blick/Downloads/huffingtonpost_rebuilt_client/huffingtonpost_rebuilt_client/index.html",
+		"/C/Users/Blick/Downloads/huffingtonpost_rebuilt_client/huffingtonpost_rebuilt_client/js/main.js",
+		"/C/Users/Blick/AppData/Local/Packages/Microsoft.SkypeApp_kzf8qxf38zg5c/LocalState/Downloads/scroll.js",
+		"/D/Git/dailymail/src/sass/footer.sass",
+		"/D/Git/dailymail/dist/external/wow/dist/wow.js",
+		"/D/Git/dailymail/src/sass/main.sass",
+		"/D/Git/dailymail/src/partials/from-the-web.jade",
+		"/D/Git/dailymail/bower.json",
+		"/D/Git/dailymail/src/partials/infinitie-list.html",
+		"/D/Git/dailymail/src/partials/infinitie-list.jade",
+		"/D/Git/dailymail/src/partials/article-content.jade",
+		"/D/Git/dailymail/src/js/player.js",
+		"/D/Git/dailymail/src/js/main.js",
+		"/D/Git/dailymail/src/sass/videoplayer.sass",
+		"/D/Git/dailymail/src/js/related-videos-plugin.js",
+		"/D/Git/dailymail/src/js/playlist-plugin.js",
+		"/D/Git/dailymail/src/js/mol-fe-videoplayer.js",
+		"/D/Git/dailymail/src/js/tracking-plugin.js",
+		"/D/Git/dailymail/src/partials/sidebar-femail-item.jade",
+		"/D/Git/dailymail/src/partials/ad-article-content-1.jade",
+		"/D/Git/dailymail/src/partials/main-ad-section.jade",
+		"/D/Git/amers/src/sass/catalog-old.sass",
+		"/D/Git/amers/src/item-card-old.jade",
+		"/D/Git/amers/src/sass/global.sass",
+		"/D/Git/amers/dist/css/elements.css",
+		"/D/Git/amers/src/partials/navigation.jade",
+		"/C/Users/Blick/Desktop/meatstudies mail template source.html",
+		"/C/Users/Blick/Desktop/meatstudies mail template.html",
+		"/C/Users/Blick/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/Dropbox/Backup/Preferences.sublime-settings",
+		"/D/Git/amers/src/sass/elements.sass",
+		"/D/Git/amers/src/sass/modals.sass",
+		"/D/Git/amers/src/sass/navigation.sass",
+		"/D/Git/amers/src/partials/categories.jade",
+		"/D/Git/amers/src/partials/cart-items.jade",
+		"/D/Git/amers/src/partials/modals.jade",
+		"/D/Git/amers/src/sass/_mixins.sass",
+		"/D/Git/amers/src/catalog.jade",
+		"/D/Git/amers/src/img/icons/slide-arrow-prev-2.svg",
+		"/D/Git/amers/src/img/icons/slide-arrow-next-2.svg",
+		"/D/Git/amers/src/partials/noscript.jade",
+		"/D/Git/amers/src/js/item-card.js",
+		"/D/Git/amers/src/img/icons/slide-arrow-next-1.svg",
+		"/D/Git/amers/src/img/icons/slide-arrow-prev-1.svg",
+		"/D/Git/amers/src/partials/scripts.jade",
+		"/D/Git/amers/src/sass/catalog.sass",
+		"/D/Git/amers/src/sass/main.sass",
+		"/D/Git/amers/src/order.jade",
+		"/D/Git/amers/src/test.jade",
+		"/D/Git/amers/bower.json",
+		"/D/Git/amers/src/index.jade",
+		"/D/Git/amers/src/sass/blog.sass",
+		"/D/Git/amers/src/item-card.jade",
+		"/D/Git/amers/src/sass/article.sass",
+		"/D/Git/amers/src/blog.jade",
+		"/D/Git/amers/src/sass/footer.sass",
+		"/D/Git/amers/src/partials/head.jade",
+		"/D/Git/amers/src/partials/article.jade",
+		"/D/Git/amers/src/article.jade",
+		"/D/Git/amers/src/partials/footer.jade",
+		"/D/Git/amers/src/sass/profile.sass",
+		"/D/Git/amers/src/contacts.jade",
+		"/D/Git/amers/src/sass/concated.sass",
+		"/D/Git/amers/src/js/main.js",
+		"/D/Git/amers/src/categories.jade",
+		"/D/Git/amers/src/about.jade",
+		"/D/Git/interplate/src/sass/article-content.sass",
+		"/D/Git/interplate/src/partials/article-content.jade",
+		"/D/Git/interplate/src/sass/concated.sass",
+		"/D/Git/amers/src/feedbacks.jade",
+		"/D/Git/amers/src/demo.jade",
+		"/D/Git/amers/src/layout.jade",
+		"/D/Git/amers/src/sass/fonts.sass",
+		"/D/Git/amers/external-content",
+		"/D/Git/amers/README.md",
+		"/D/Git/amers/dist/external/bootstrap/dist/js/bootstrap.js",
+		"/D/Git/dailymail/src/index.jade",
+		"/D/Git/dailymail/src/sass/additional.sass",
+		"/C/Users/Blick/AppData/Roaming/Sublime Text 3/Packages/User/GitGutter.sublime-settings",
+		"/C/Users/Blick/AppData/Roaming/Sublime Text 3/Packages/GitGutter/GitGutter.sublime-settings",
+		"/D/Git/dailymail/src/sass/_mixins.sass",
+		"/D/Git/dailymail/src/sass/fonts.sass",
+		"/D/Git/womenshealthmag/src/js/main.js",
+		"/D/Git/dailymail/templates/test.jade",
+		"/D/Git/womenshealthmag/dist/rebuild/index.html",
+		"/D/Git/womenshealthmag/dist/rebuild/partials/ad_long_1.html",
+		"/D/Git/womenshealthmag/dist/rebuild/css/main.css",
+		"/D/Git/womenshealthmag/dist/rebuild/js/main.js",
+		"/C/Users/Blick/AppData/Local/Temp/fz3temp-2/index.html",
+		"/D/Git/womenshealthmag/dist/index.html",
+		"/D/Git/womenshealthmag/dist/js/main.js",
+		"/D/Git/womenshealthmag/dist/rebuilded/css/main.css",
+		"/D/Git/womenshealthmag/src/sass/_mixins.sass",
+		"/D/Git/womenshealthmag/src/sass/original.sass",
+		"/D/Git/womenshealthmag/src/original.jade"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 108.0,
+		"where_history":
+		[
+			"D:\\Git\\justicon\\src\\css",
+			"D:\\Git\\justicon\\src",
+			"D:\\Git\\dailymail\\src\\sass",
+			"D:\\Git\\dailymail\\src",
+			"D:\\Git\\amers\\src\\sass",
+			"D:\\Git\\womenshealthmag\\dist\\css",
+			"D:\\Git\\womenshealthmag\\src\\sass",
+			"D:\\Git\\womenshealthmag\\src",
+			"D:\\Git\\womenshealthmag\\src\\sass",
+			"D:\\Git\\womenshealthmag\\src\\js",
+			"D:\\Git\\justicon\\src\\css",
+			"D:\\Git\\justicon\\src\\js",
+			"D:\\Git\\justicon\\src",
+			"D:\\Git\\justicon\\src\\css",
+			"D:\\Git\\brix.ck.ua",
+			"D:\\Git\\justicon\\src\\css",
+			"D:\\Git\\justicon\\src",
+			"D:\\Git\\justicon\\src\\css",
+			"D:\\Git\\justicon\\src",
+			"D:\\Git\\justicon\\src\\css",
+			"D:\\Git\\justicon\\src",
+			"D:\\Git\\justicon\\src\\css",
+			"D:\\Git\\justicon\\src",
+			"D:\\Git\\interplate\\src",
+			"D:\\Git\\justicon\\src\\css",
+			"D:\\Git\\intertechapp",
+			"D:\\Git\\oasis\\src",
+			"D:\\Git\\oasis\\src\\sass",
+			"D:\\Git\\oasis\\dist\\vendor\\bootstrap\\less",
+			"D:\\Git\\oasis\\src",
+			"D:\\Git\\oasis\\dist\\vendor\\bootstrap\\less",
+			"D:\\Git\\oasis\\dist\\vendor\\bootstrap\\less\\mixins",
+			"D:\\Git\\brix.ck.ua\\themes\\brix",
+			"D:\\Git\\getleaf\\src\\css",
+			"D:\\Git\\getleaf\\src",
+			"D:\\Git\\getleaf\\src\\css",
+			"D:\\Git\\getleaf\\src",
+			"D:\\Git\\getleaf\\src\\css",
+			"D:\\Git\\getleaf\\src",
+			"D:\\Git\\getleaf\\src\\css",
+			"D:\\Git\\meatstudies2\\src\\css",
+			"D:\\Git\\meatstudies2\\src",
+			"D:\\Git\\meatstudies2\\src\\css",
+			"D:\\Git\\meatstudies2\\src",
+			"D:\\Git\\meatstudies2\\src\\css",
+			"D:\\Git\\meatstudies2\\src",
+			"D:\\Git\\meatstudies2\\src\\css",
+			"D:\\Git\\meatstudies2\\src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".consult-me-block",
+			".active",
+			"350x250",
+			"t/350x250",
+			".masonry",
+			"http://justicon.ua/upload/ibl",
+			"https://",
+			"350x150",
+			".top-news",
+			"section.top-news",
+			"shuffle",
+			".shuffle",
+			"&:hover",
+			"$main-color",
+			"&:hover",
+			"ackground-color",
+			"contacts",
+			".contacts",
+			".tab-pane",
+			".top-news",
+			".fixed-header",
+			"footer",
+			"a(href=\"#\")",
+			"icon",
+			"image",
+			" 0 0",
+			".image-",
+			"\u0003",
+			"contacts",
+			"4.02.75",
+			"4.02.99",
+			".",
+			"4.01.100",
+			"4.01.99",
+			"attr",
+			"4.02.36",
+			"4.02.35",
+			"4.02.34",
+			"4.02.33",
+			"600ms",
+			"li",
+			".08.",
+			".02.",
+			"4.01",
+			"sub_1_",
+			"/'",
+			"'",
+			"  ",
+			".00",
+			"4.",
+			"  ",
+			".top-news",
+			".kved-template",
+			".kved-1-template",
+			".item-",
+			"modal",
+			"justify",
+			"(style='text-align: justify;')",
+			"(align='justify')",
+			"(style='text-align: justify;')",
+			"justify",
+			"slide-description",
+			".cl-im",
+			".fixed-header",
+			"//",
+			"ostring",
+			":before",
+			"iframe",
+			"data-",
+			"script",
+			"<iframe",
+			"iframe",
+			"loadElements",
+			"offsetTop",
+			"footer",
+			" (",
+			"iframe",
+			"getSize",
+			"requestAnimationFrame",
+			"addEvent",
+			"boxes",
+			"isVisible",
+			"PLG",
+			"prototype",
+			"scrolling",
+			"boxes",
+			".beta_search_wrapper label",
+			"transform",
+			"element",
+			"clientHeight",
+			"box",
+			"createEvent",
+			"callback",
+			"boxClass",
+			"pageYOffset",
+			"window.pageYOffset",
+			"top: 10px",
+			";",
+			"<div id=\"trc_wrapper_14477\" class=\"trc_rbox thumbnails-b trc-content-sponsored \" style=\"overflow: hidden; display: block;\"><div id=\"trc_header_14477\" class=\"trc_rbox_header trc_rbox_border_elm\"><div class=\"trc_header_ext\"><div class=\"logoDiv link-adc \"><a class=\"trc_desktop_adc_link trc_attribution_position_top\" rel=\"nofollow\" href=\"http://popup.taboola.com/en/?template=colorbox&amp;utm_source=dailymail-row&amp;utm_medium=referral&amp;utm_content=thumbnails-b:Stream Thumbnails 2:\" target=\"_blank\"><span class=\"trc_adc_wrapper\"><span class=\"trc_adc_s_logo\"></span>&nbsp;</span><span class=\"trc_logos_v_align\">&nbsp;</span></a><a class=\"trc_mobile_adc_link trc_attribution_position_top\" rel=\"nofollow\" href=\"http://popup.taboola.com/en/?template=colorbox&amp;utm_source=dailymail-row&amp;utm_medium=referral&amp;utm_content=thumbnails-b:Stream Thumbnails 2:\" target=\"_blank\"><span class=\"trc_adc_wrapper\"><span class=\"trc_adc_s_logo\"></span>&nbsp;</span><span class=\"trc_logos_v_align\">&nbsp;</span></a></div><div class=\"logoDiv link-attribution \"><a class=\"trc_desktop_attribution_link trc_attribution_position_top\" rel=\"nofollow\" href=\"http://popup.taboola.com/en/?template=colorbox&amp;utm_source=dailymail-row&amp;utm_medium=referral&amp;utm_content=thumbnails-b:Stream Thumbnails 2:\" target=\"_blank\"><span>by Taboola</span><span class=\"trc_logos_v_align\">&nbsp;</span></a><a class=\"trc_mobile_attribution_link trc_attribution_position_top\" rel=\"nofollow\" href=\"http://popup.taboola.com/en/?template=colorbox&amp;utm_source=dailymail-row&amp;utm_medium=referral&amp;utm_content=thumbnails-b:Stream Thumbnails 2:\" target=\"_blank\"><span>by Taboola</span><span class=\"trc_logos_v_align\">&nbsp;</span></a></div><div class=\"logoDiv link-disclosure  attribution-disclosure-link-sponsored\"><a class=\"trc_desktop_disclosure_link trc_attribution_position_top\" rel=\"nofollow\" href=\"http://popup.taboola.com/en/?template=colorbox&amp;utm_source=dailymail-row&amp;utm_medium=referral&amp;utm_content=thumbnails-b:Stream Thumbnails 2:\" target=\"_blank\"><span>Sponsored Links</span><span class=\"trc_logos_v_align\">&nbsp;</span></a><a class=\"trc_mobile_disclosure_link trc_attribution_position_top\" rel=\"nofollow\" href=\"http://popup.taboola.com/en/?template=colorbox&amp;utm_source=dailymail-row&amp;utm_medium=referral&amp;utm_content=thumbnails-b:Stream Thumbnails 2:\" target=\"_blank\"><span>Sponsored Links</span><span class=\"trc_logos_v_align\">&nbsp;</span></a></div><div class=\"logoDiv link-disclosure  attribution-disclosure-link-hybrid\"><a class=\"trc_desktop_disclosure_link trc_attribution_position_top\" rel=\"nofollow\" href=\"http://popup.taboola.com/en/?template=colorbox&amp;utm_source=dailymail-row&amp;utm_medium=referral&amp;utm_content=thumbnails-b:Stream Thumbnails 2:\" target=\"_blank\"><span>Promoted Links</span><span class=\"trc_logos_v_align\">&nbsp;</span></a><a class=\"trc_mobile_disclosure_link trc_attribution_position_top\" rel=\"nofollow\" href=\"http://popup.taboola.com/en/?template=colorbox&amp;utm_source=dailymail-row&amp;utm_medium=referral&amp;utm_content=thumbnails-b:Stream Thumbnails 2:\" target=\"_blank\"><span>Promoted Links</span><span class=\"trc_logos_v_align\">&nbsp;</span></a>",
+			"px",
+			"&.active",
+			"li.",
+			"inherit",
+			"}",
+			" {",
+			"/i/furniture/articles",
+			"\t *",
+			"/*",
+			";",
+			".trc_undo_btn Undo",
+			"trc_undo_btn",
+			", style='visibility: visible;'",
+			" height: 172px !important;",
+			"(style='height: 172px; width: 206px; position: relative; float: none; display: block;')",
+			"(style='height: 172px; width: 206px;')",
+			";",
+			"events",
+			"controlbar",
+			";",
+			"float: left",
+			"DM.later",
+			"adverts.",
+			"adverts",
+			"font/",
+			"\\",
+			"-webkit",
+			"*",
+			"/*"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\\'",
+			"/'",
+			"::before",
+			"/",
+			"active",
+			"    ",
+			"",
+			".article img",
+			".fixed-socials"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 168.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 118.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "amers.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ele",
+				"src\\sass\\elements.sass"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 281.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

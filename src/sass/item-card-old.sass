@@ -1,0 +1,175 @@
+@import _mixins
+
+.item-card-page
+	h1
+		@media #{$media-sm}
+			font-size: 26px
+	.radios-inline
+		.radio-group
+			display: inline-block
+			margin-right: 20px
+
+.item-card-main-description
+	margin-bottom: 20px
+	a
+		display: block
+	img
+		width: 100%
+
+.item-card-main-slider
+	.owl-prev,
+	.owl-next
+		display: none
+/**
+ * SLIDERS
+ */
+
+
+#owl-main
+	margin-top: 0
+	margin-bottom: 20px
+	.item
+		background-position: 0 0
+		background-repeat: no-repeat
+		background-size: 100% auto
+		height: 405px
+		height: 72vh
+		@media #{$media-sm}
+			height: auto
+		a
+			display: block
+		img
+			height: auto
+			width: 100%
+
+#owl-helper
+	@media #{$media-sm}
+		display: none !important
+	.item
+		background-size: cover
+		background-repeat: no-repeat
+		// margin: 0 10px
+		outline: 2px solid rgba(0,0,0,0.3)
+		outline-offset: -2px
+		transition: outline 100ms
+		img
+			opacity: 0
+			height: 100%
+			width: 100%
+	.synced
+		& > *
+			outline-color: rgba(0,0,0,0.9)
+	.owl-prev
+		background-image: url('../img/icons/slide-arrow-prev-2.svg')
+	.owl-next
+		background-image: url('../img/icons/slide-arrow-next-2.svg')
+
+#owl-other-items
+	padding: 0 6px
+	margin: 20px 0 40px
+	.item
+		display: block
+		margin: 0 10px
+		overflow: hidden
+		background-size: cover
+		background-position: 50% 50%
+		transition: opacity 100ms
+		&:hover
+			opacity: 0.6
+	.owl-prev,
+	.owl-next
+		background: transparent 50% 50% no-repeat
+		background-size: contain
+		position: absolute
+		top: 50%
+		font-size: 0
+		margin-top: -15px
+		height: 30px
+		width: 16px
+	.owl-prev
+		left: -38px
+		background-image: url('../img/icons/slide-arrow-prev-1.svg')
+		@media #{$media-xs}
+			left: 8px
+	.owl-next
+		background-image: url('../img/icons/slide-arrow-next-1.svg')
+		right: -38px
+		@media #{$media-xs}
+			right: 8px
+
+/**
+ * END SLIDERS
+ */
+
+
+// .item-card-main-header
+
+
+.item-card-main-info-block
+	margin: 0 0 10px
+	.price-tag
+		font-weight: bold
+		font-size: 2rem
+		line-height: 2rem
+	.price-tag-old
+		font-size: 1.2rem
+		text-decoration: line-through
+	a
+		margin: 10px 10px 0 0
+		@media #{$media-xs}
+			display: block
+			margin: 10px 0 10px
+
+.item-card-main-materials
+	margin-bottom: 0
+	.material-list
+	li
+		padding-right: 0
+		label
+			background-size: cover
+			cursor: pointer
+			outline: 1px solid rgba(0,0,0,0.2)
+			display: inline-block
+			height: 25px
+			width: 25px
+			transition: transform 100ms
+		input
+			text-indent: -99999px
+			display: inline-block
+			height: 0 !important
+			width: 0 !important
+			opacity: 0
+			&:checked + label
+				transform: scale(1.2)
+				outline: 2px solid rgba(0,0,0,0.8)
+
+.description-table
+	tr
+		@media #{$media-xs}
+			display: block
+		padding: 6px 0
+	td
+		padding: 4px 10px
+		@media #{$media-xs}
+			display: block
+			padding: 0
+		&:first-child
+			padding-left: 0
+
+.color-tooltip-wrapper
+	padding-bottom: 14px
+	position: absolute
+	&:after
+		content: ''
+		position: absolute
+		left: 50%
+		bottom: 4px
+		border: 7px solid transparent
+		border-top-color: rgba(0,0,0,0.8)
+		border-bottom: none
+		margin-left: -7px
+.color-tooltip
+	outline: 4px solid rgba(0,0,0,0.8)
+	background-size: contain
+	height: 190px
+	width: 190px
