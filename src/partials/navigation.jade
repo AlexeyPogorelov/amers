@@ -10,10 +10,21 @@ header.site-top
 						li
 							a(href='index.html' tabindex="-1")
 								img#logo-main.logo-main(src='img/icons/logo-main.png', width='997', height='280', alt='Amers логотип', title='Перейти на главную страницу')
+						li.hidden-xs.dropdown
+							a(href='about.html' data-toggle="dropdown") О компании
+							ul.dropdown-menu
+								li
+									a(href='contacts.html#city') О нас
+								li
+									a(href='contacts.html#city') Гарантии
+								li
+									a(href='contacts.html#city') Отзывы
+						li.hidden-xs.dropdown
+							a(href='about.html' data-toggle="dropdown") Доставка и оплата
 						li.hidden-xs
-							a(href='about.html') О нас
+							a(href='catalog.html') Гарания
 						li.hidden-xs
-							a(href='catalog.html') Каталог
+							a(href='catalog.html') Отзывы
 						li.hidden-xs
 							a(href='blog.html') Блог
 						li.hidden-xs
@@ -38,14 +49,47 @@ header.site-top
 	.dark-line.visible-lg-block.visible-md-block
 		.container
 			.row
-				.col-md-9
+				.col-md-10
 					ul.primary-navigation.list-inline
+						li.dropdown
+							a(href='catalog.html' data-toggle="dropdown") Диваны 
+							ul.dropdown-menu
+								li
+									a(href='catalog.html') Модульные диваны
+								li
+									a(href='catalog.html') Угловые диваны
+								li
+									a(href='catalog.html') Прямые диваны
 						li
-							a(href='catalog.html') Модульные диваны 
+							a(href='catalog.html' data-toggle="dropdown") Кресла 
+							ul.dropdown-menu
+								li
+									a(href='catalog.html') Со спальным местом
+								li
+									a(href='catalog.html') Без раскладки
 						li
-							a(href='catalog.html') Угловые диваны
+							a(href='catalog.html') Пуфы 
+						li.dropdown
+							a(href='catalog.html' data-toggle="dropdown") Кровати 
+							ul.dropdown-menu
+								li
+									a(href='catalog.html') Кровати двухспальные
+								li
+									a(href='catalog.html') Кровати односпальные
+						li.dropdown
+							a(href='catalog.html' data-toggle="dropdown") Матрасы 
+							ul.dropdown-menu
+								li
+									a(href='catalog.html') Пружинные матрасы
+								li
+									a(href='catalog.html') Беспружинные матрасы
 						li
-							a(href='catalog.html') Прямые диваны
+							a(href='catalog.html') Подушки 
+						li.dropdown
+							a(href='catalog.html' data-toggle="dropdown") Аксесуары 
+							ul.dropdown-menu
+								li
+									a(href='contacts.html#city') Подушки
 						li.dropdown
 							a(href='contacts.html#map' data-toggle="dropdown")
 								| Магазины 
@@ -68,11 +112,14 @@ header.site-top
 									a(href='contacts.html#city') Хмельницкий
 								li
 									a(href='contacts.html#city') Черкассы
+						li
+							a(href='catalog.html') Распродажа 
+							.badge %
 						li.hidden
 							a(href='feedbacks.html') Отзывы
 						li
 							a(href='test.html') Тест
-				.col-md-3.text-uppercase.text-right
+				.col-md-2.text-uppercase.text-right
 					ul.main-cellphone
 						li
 							a(href="tel:0472733168" tabindex="-1").binct-phone-number-1 (047) 273-31-68
