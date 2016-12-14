@@ -75,6 +75,7 @@
 			vertical-align: middle
 	.light-line
 		background: #eee
+		border-bottom: 6px solid $main-color
 	.dark-line
 		background: rgba(41, 41, 41, 0.8)
 		a
@@ -128,8 +129,20 @@
 			margin-right: 0
 			&:hover
 				a
+					background: #f5f5f5
 					color: #333
 					text-decoration: none
+
+	.dropdown-menu
+		transform: translateY(-4px) translateZ(0)
+		transition: transform 300ms, opacity 300ms
+		display: block
+		opacity: 0
+		pointer-events: none
+	.open > .dropdown-menu
+		transform: translateY(0) translateZ(0)
+		pointer-events: all
+		opacity: 1
 
 //----------------------------------
 // END MAIN NAVIGATION
