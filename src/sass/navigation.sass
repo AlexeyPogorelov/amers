@@ -10,7 +10,6 @@
 	top: 0
 	right: 0
 	width: 100vw
-	background: #eee
 	z-index: 10
 	transition: none
 	transform: translateZ(0)
@@ -22,6 +21,9 @@
 		background: $main-color
 	a
 		outline: none
+		text-decoration: none !important
+		&:hover
+			color: $main-color
 	.logo-main
 		height: auto
 		width: 130px
@@ -35,12 +37,12 @@
 			font-size: 14px
 			color: #333
 			font-weight: 600
+			&:hover
+				color: $main-color
 	.user-controls-panel
 		margin: 14px 0 0
 		height: 32px
 		li
-			// background: #000
-			// color: #fff
 			text-align: center
 			line-height: 32px
 			margin-left: 5px
@@ -72,13 +74,21 @@
 			line-height: 38px
 			vertical-align: middle
 	.light-line
+		background: #eee
 	.dark-line
-		background: #292929
+		background: rgba(41, 41, 41, 0.8)
 		a
 			color: #fff
 		.dropdown-menu
-			background: #292929
-			background: rgba(41,41,41,0.8)
+			background: transparent
+			overflow: hidden
+			li
+				background: #292929
+				background: rgba(41,41,41,0.8)
+				&:first-child
+					border-top: 4px solid transparent
+				&:last-child
+					border-bottom: 4px solid transparent
 	.secondary-navigation
 		margin: 18px 0
 		height: 26px
@@ -98,6 +108,11 @@
 			margin-right: 10px
 			a
 				font-weight: 500
+	.dropdown
+		&.open
+			& > a
+				text-decoration: none
+				color: $main-color
 	.dropdown-menu
 		background: #eee
 		border: none
@@ -112,8 +127,8 @@
 		li
 			margin-right: 0
 			&:hover
-				background: #fff
 				a
+					color: #333
 					text-decoration: none
 
 //----------------------------------

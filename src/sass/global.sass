@@ -310,3 +310,14 @@ button, .btn, input[type="button"]
 		// background-color: $main-color-hover
 	&:active, &:focus
 		outline: none
+
+.dropdown-menu
+	transform: translateY(4px) translateZ(0)
+	transition: transform 300ms, opacity 300ms
+	display: block
+	opacity: 0
+	pointer-events: none
+.open > .dropdown-menu
+	transform: translateY(0) translateZ(0)
+	pointer-events: all
+	opacity: 1
