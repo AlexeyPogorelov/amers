@@ -6,4 +6,4 @@ hover
 
 подписаться
 
-top navigation opacity
++ top navigation opacity

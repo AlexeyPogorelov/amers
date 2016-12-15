@@ -1,15 +1,7 @@
 @import _mixins
 
 .catalog-page
-	padding-top: 20px
 	padding-bottom: 40px
-
-.catalog-category-name
-	text-transform: uppercase
-	text-align: right
-	h1
-		margin-bottom: 3em
-		font-size: 2em
 
 .catalog-item
 	margin-bottom: 3.5rem
@@ -47,16 +39,40 @@
 		height: 350px
 		@media #{$media-sm}
 			height: 280px
+		.img
+			transition: transform 300ms
+		&:focus
+			outline: none
+		&:hover
+			.img
+				transform: scale(1.1)
 		.hover
-			background: rgba(255,255,255,0.6)
+			background: rgba(0,0,0,0.6)
 			position: absolute
 			top: 0
 			left: 0
 			right: 0
 			bottom: 0
-			opacity: 0
+			opacity: 1
 			z-index: 2
-			transition: opacity 300ms
+			transition: opacity 300ms, background 300ms
+			display: flex
+			align-items: center
+			&:after
+				transition: border 300ms, top 300ms, bottom 300ms
+				content: ''
+				position: absolute
+				top: 20%
+				bottom: 20%
+				left: 10%
+				right: 10%
+				border: 1px solid rgba(255,255,255,0.4)
+				border-top-color: rgba(255,255,255,0)
+				border-bottom-color: rgba(255,255,255,0)
+				transform: translateZ(0)
+			h3
+				color: #fff
+				margin: 1em auto
 			@media #{$media-sm}
 				background: none
 			a
@@ -75,12 +91,11 @@
 					display: none
 		&:hover
 			.hover
-				opacity: 1
-				pointer-events: all
-				span
-					transform: translate(-50%, -50%)
-		// .img
-			// background-size: contain
+				background: rgba(0,0,0,0)
+				&:after
+					top: 10%
+					bottom: 10%
+					border-color: rgba(255,255,255,1)
 	.catalog-item-description
 		background: #f1f1f1
 		border-top: 2px solid #ababab
@@ -91,35 +106,6 @@
 			margin: 6px 0
 		h4
 			line-height: 1em
-	.go-to-item,
-	.go-to-cart
-		height: 100%
-		width: 50%
-		// background: rgba(255,255,255,0.6)
-		position: absolute
-		top: 0
-		bottom: 0
-		span
-			position: absolute
-			left: 50%
-			top: 50%
-			transform: translate(-50%, -50%) translateZ(0)
-	.go-to-item
-		left: 0
-		right: 50%
-		@media #{$media-sm}
-			right: 100%
-		span
-			transform: translate(-80%, -50%) translateZ(0)
-	.go-to-cart
-		left: 50%
-		right: 0
-		@media #{$media-sm}
-			display: none
-		span
-			transform: translate(-20%, -50%) translateZ(0)
-		// .img
-		// 	transition: transform 600ms
-		// &:hover
-		// 	.img
-		// 		transform: scale(1.02)
+		a
+			display: block
+			overflow: hidden

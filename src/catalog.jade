@@ -17,29 +17,45 @@ html(lang='ru')
 					.col-md-4.catalog-item
 						//- a(href="item-card-old.html")
 							//- h3= name
-						.image-holder
+						a(href="item-card-old.html" tabindex="-1").image-holder
 							img(src= img, alt= name).fake-img
 							.img(style="background-image:url(#{img})")
 							.hover
-								a(href="item-card-old.html" tabindex="-1").go-to-item
-									span.glyphicon.glyphicon-eye-open
-								a(href="cart.html" data-toggle="modal" data-target="#cart-sidebar" tabindex="-1").go-to-cart
-									span.glyphicon.glyphicon-plus
+								h3= name
 						.catalog-item-description
-							a(href="catalog.html" tabindex="-1")
+							a(href="catalog.html")
 								h4= category
-							h3= name
-							p!= 'цена от <b>' + price + '</b> <small>грн</small>'
+								h3= name
+								p!= 'цена от <b>' + price + '</b> <small>грн</small>'
 							//- p= short
 							//- .buttons-holder
 								a(href="item-card-old.html" tabindex="-1").btn.btn-grey Подробней
 								a(href="item-card-old.html" tabindex="-1").btn.btn-primary Купить
 
+				.page-label(style="background-image: url('https://wallpaperscraft.com/image/furniture_room_style_70008_1920x1200.jpg')")
+					.container
+						.row
+							.col-md-12
+								.catalog-category-name
+									h1 Категория товаров
+				.sort-controls
+					.container
+						.row
+							.col-md-12
+								form(action="#")
+									//- .form-group
+										label(for="sort-param") Сортировать по: 
+										select#sort-param(name="sort-param")
+											option цена ⬆
+											option цена ⬇
+											option новые
+									.form-group
+										span Сортировать по: 
+										a(href="#") цене ⬆ 
+										a(href="#") цене ⬇ 
+										a(href="#") новые 
+										a(href="#") популярные
 				.container
-					.row
-						.col-md-12
-							.catalog-category-name
-								h1 Категория товаров
 					.row.catalog-category-items-holder
 						+item(
 							'Милана',

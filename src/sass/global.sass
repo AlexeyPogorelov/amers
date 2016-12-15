@@ -25,10 +25,11 @@ a
 	outline: none
 	color: $main-color
 	font: $font-stack
-	&:hover
+	&:hover,
+	&:focus
 		color: $main-color-hover
-	// font-weight: 400
-	// text-decoration: none
+		text-decoration: none
+
 p
 	color: $base-font-color
 	// font-size: 18px
@@ -66,15 +67,13 @@ button, input, select, textarea
 	font: $font-stack
 
 //	SELECT INPUT
-select
-	appearance: none
-	border: 1px solid $base-font-color
-	outline-color: $main-color
-	// background-repeat: no-repeat
-	// height: 48px
-	&:-moz-focusring
-		color: transparent
-		text-shadow: none
+// select
+// 	appearance: none
+// 	border: 1px solid $base-font-color
+// 	outline-color: $main-color
+// 	&:-moz-focusring
+// 		color: transparent
+// 		text-shadow: none
 
 textarea,
 input

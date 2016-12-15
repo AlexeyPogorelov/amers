@@ -22,8 +22,6 @@
 	a
 		outline: none
 		text-decoration: none !important
-		&:hover
-			color: $main-color
 	.logo-main
 		height: auto
 		width: 130px
@@ -31,14 +29,39 @@
 		margin-right: 15px
 	.primary-navigation,
 	.secondary-navigation
-		margin-top: 10px
+		margin-bottom: 0
 		a
 			text-transform: uppercase
 			font-size: 14px
 			color: #333
 			font-weight: 600
-			&:hover
-				color: $main-color
+			white-space: nowrap
+	.secondary-navigation
+		margin: 18px 0
+		height: 26px
+		height: 1.73rem
+		li
+			margin-right: 10px
+			height: 23px
+			a
+				font-weight: 500
+		.dropdown-menu
+			li
+				height: auto
+			a
+				display: block
+	.primary-navigation
+		& > li
+			margin-right: 10px
+			padding: 0
+			& > a
+				display: inline-block
+				font-weight: 500
+				line-height: 42px
+				padding: 0 6px
+				&:hover
+					background: #eee
+					color: #333
 	.user-controls-panel
 		margin: 14px 0 0
 		height: 32px
@@ -62,8 +85,6 @@
 		a
 			color: #525252
 			font-size: 20px
-			&:hover
-				color: $main-color
 	.main-cellphone
 		margin-bottom: 0
 		a
@@ -90,41 +111,26 @@
 					border-top: 4px solid transparent
 				&:last-child
 					border-bottom: 4px solid transparent
-	.secondary-navigation
-		margin: 18px 0
-		height: 26px
-		height: 1.73rem
-		li
-			margin-right: 10px
-			height: 23px
-			a
-				font-weight: 500
-		.dropdown-menu
-			li
-				height: auto
-			a
-				display: block
-	.primary-navigation
-		li
-			margin-right: 10px
-			a
-				font-weight: 500
-	.dropdown
-		&.open
-			& > a
-				text-decoration: none
-				color: $main-color
 	.dropdown-menu
 		background: #eee
 		border: none
 		border-radius: 0
 		box-shadow: none
 		margin: -2px 0 0
-		padding: 12px 0 10px
+		padding: 2px 0 10px
+
+		transform: translateY(-4px) translateZ(0)
+		transition: transform 300ms, opacity 300ms
+		display: block
+		opacity: 0
+		pointer-events: none
 		a
 			text-transform: none
 			font-weight: 100
 			line-height: 2.4em
+			padding-left: 16px
+			padding-right: 16px
+			width: 100%
 		li
 			margin-right: 0
 			&:hover
@@ -133,16 +139,16 @@
 					color: #333
 					text-decoration: none
 
-	.dropdown-menu
-		transform: translateY(-4px) translateZ(0)
-		transition: transform 300ms, opacity 300ms
-		display: block
-		opacity: 0
-		pointer-events: none
 	.open > .dropdown-menu
 		transform: translateY(0) translateZ(0)
 		pointer-events: all
 		opacity: 1
+
+	// .dropdown
+	// 	&.open
+	// 		& > a
+	// 			text-decoration: none
+	// 			color: $main-color
 
 //----------------------------------
 // END MAIN NAVIGATION

@@ -47,7 +47,7 @@ body
 			display: inline-block
 			opacity: 1
 			font-size: 0
-			background-color: rgba(239, 127, 26, 0.6)
+			background-color: rgba(239, 127, 26, 0.8)
 			height: 82px
 			width: 82px
 			border: 8px solid transparent
@@ -70,6 +70,7 @@ body
 				opacity: 1
 				background-color: $main-color
 		.owl-prev
+			background-color: rgba(26, 26, 26, 0.8)
 			background-image: url("../img/icons/gm-arrow-left.svg")
 			// left: 0
 			// &:after
@@ -200,21 +201,83 @@ body
 			font-weight: inherit
 			@media #{$media-xs-min}
 				background: transparent
-	.blackbut
-		border: 2px solid #333
+	// .blackbut
+	// 	border: 2px solid #333
+	// 	background: #333
+	// 	display: inline-block
+	// 	color: #fff
+	// 	padding: 10px 24px
+	// 	text-transform: uppercase
+	// 	font-size: 12px
+	// 	font-weight: 600
+	// 	letter-spacing: 0.05em
+	// 	margin-bottom: 20px
+	// 	&:hover
+	// 		text-decoration: none
+	// 		color: #333
+	// 		background: #fff
+	%pseudo-border
+		content: '' !important
+		display: block
+		position: absolute
+		transition: width 200ms linear, height 200ms linear
 		background: #333
+	.blackbut
+		outline: 2px solid #eee
+		outline-offset: -2px
+		// background: #333
+		position: relative
 		display: inline-block
-		color: #fff
+		color: #333
 		padding: 10px 24px
 		text-transform: uppercase
 		font-size: 12px
 		font-weight: 600
 		letter-spacing: 0.05em
 		margin-bottom: 20px
+		&:before
+			@extend %pseudo-border
+			left: 0
+			top: 0
+			width: 0
+			height: 2px
+			transition-delay: 600ms
+		&:after
+			@extend %pseudo-border
+			right: 0
+			bottom: 0
+			width: 0
+			height: 2px
+			transition-delay: 200ms
+		span
+			&:before
+				@extend %pseudo-border
+				bottom: 0
+				left: 0
+				height: 0
+				width: 2px
+				transition-delay: 0ms
+			&:after
+				@extend %pseudo-border
+				top: 0
+				right: 0
+				height: 0
+				width: 2px
+				transition-delay: 400ms
 		&:hover
-			text-decoration: none
-			color: #333
-			background: #fff
+			&:before
+				width: 100%
+				transition-delay: 0ms
+			&:after
+				width: 100%
+				transition-delay: 400ms
+			span
+				&:before
+					height: 100%
+					transition-delay: 600ms
+				&:after
+					height: 100%
+					transition-delay: 200ms
 	& > .row
 		border: 2px solid #eee
 		border-radius: 1px
