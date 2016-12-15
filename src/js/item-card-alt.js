@@ -24,12 +24,8 @@
 	});
 
 	owlMain = $("#owl-main");
-	owlHelper = $('#js-product-slide-pages');
+	owlHelper = $("#owl-helper");
 	owlOtherItems = $("#owl-other-items");
-
-	if ($(window).width() > 480) {
-		owlHelper.html(owlMain.html());
-	}
 
 	owlMain.owlCarousel({
 		singleItem: true,
@@ -51,23 +47,71 @@
 		navigation: true
 	});
 
-	owlHelper.find(".item").eq(0).addClass("synced");
-	owlHelper.find(".item").each(function (i) {
-		$(this).data('owlItem', i);
+	owlHelper.owlCarousel({
+		items: 8,
+		navigation: true,
+		responsiveRefreshRate: 100,
+		responsive:{
+			0:{
+				items:4
+			},
+			600:{
+				items:5
+			},
+			1000:{
+				items:6
+			},
+			1200:{
+				items:8
+			}
+		},
+		afterInit: function(el){
+			el.find(".owl-item").eq(0).addClass("synced");
+		}
 	});
 
-	function syncPosition () {
-		owlHelper.find('.item').eq(this.currentItem).addClass("synced").siblings().removeClass("synced");
+	function syncPosition(el){
+		var current = this.currentItem;
+		owlHelper
+			.find(".owl-item")
+			.removeClass("synced")
+			.eq(current)
+			.addClass("synced");
+		if(owlHelper.data("owlCarousel") !== undefined){
+			center(current);
+		}
 	}
 
-	owlHelper.on("click", ".item", function(e){
+	owlHelper.on("click", ".owl-item", function(e){
 		e.preventDefault();
-		var $self = $(this),
-			number = $self.data("owlItem");
-		$self.addClass("synced").siblings().removeClass("synced");
+		var number = $(this).data("owlItem");
 		owlMain.trigger("owl.goTo", number);
 	});
 
+	function center(num){
+		var owlHelpervisible = owlHelper.data("owlCarousel").owl.visibleItems;
+		var found = false;
+		for(var i in owlHelpervisible){
+			if(num === owlHelpervisible[i]){
+				found = true;
+			}
+		}
+
+		if( found===false ) {
+			if( num>owlHelpervisible[owlHelpervisible.length-1] ) {
+				owlHelper.trigger( "owl.goTo", num - owlHelpervisible.length+2 );
+			}else{
+				if( num - 1 === -1 ) {
+					num = 0;
+				}
+				owlHelper.trigger("owl.goTo", num);
+			}
+		} else if( num === owlHelpervisible[owlHelpervisible.length-1] ) {
+			owlHelper.trigger("owl.goTo", owlHelpervisible[1]);
+		} else if( num === owlHelpervisible[0] ) {
+			owlHelper.trigger("owl.goTo", num-1);
+		}
+	}
 
 	$('#owl-main').find('.item a').magnificPopup({
 		type:'image',

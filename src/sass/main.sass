@@ -216,16 +216,16 @@ body
 	// 		text-decoration: none
 	// 		color: #333
 	// 		background: #fff
+	$speed: 100ms
 	%pseudo-border
 		content: '' !important
 		display: block
 		position: absolute
-		transition: width 200ms linear, height 200ms linear
+		transition: width $speed linear, height $speed linear
 		background: #333
 	.blackbut
 		outline: 2px solid #eee
 		outline-offset: -2px
-		// background: #333
 		position: relative
 		display: inline-block
 		color: #333
@@ -241,14 +241,14 @@ body
 			top: 0
 			width: 0
 			height: 2px
-			transition-delay: 600ms
+			transition-delay: $speed * 3
 		&:after
 			@extend %pseudo-border
 			right: 0
 			bottom: 0
 			width: 0
 			height: 2px
-			transition-delay: 200ms
+			transition-delay: $speed
 		span
 			&:before
 				@extend %pseudo-border
@@ -263,21 +263,21 @@ body
 				right: 0
 				height: 0
 				width: 2px
-				transition-delay: 400ms
+				transition-delay: $speed * 2
 		&:hover
 			&:before
 				width: 100%
 				transition-delay: 0ms
 			&:after
 				width: 100%
-				transition-delay: 400ms
+				transition-delay: $speed * 2
 			span
 				&:before
 					height: 100%
-					transition-delay: 600ms
+					transition-delay: $speed * 3
 				&:after
 					height: 100%
-					transition-delay: 200ms
+					transition-delay: $speed
 	& > .row
 		border: 2px solid #eee
 		border-radius: 1px
@@ -322,13 +322,14 @@ body
 		margin-bottom: 1em
 	p
 		line-height: 1.4em
+	$speed: 100ms
 	.cities-buttons
 		margin-top: 40px
 		%pseudo-border
 			content: '' !important
 			display: block
 			position: absolute
-			transition: width 200ms linear, height 200ms linear
+			transition: width $speed linear, height $speed linear
 			background: #333
 		a
 			display: block
@@ -348,14 +349,14 @@ body
 				top: 0
 				width: 0
 				height: 2px
-				transition-delay: 600ms
+				transition-delay: $speed * 3
 			&:after
 				@extend %pseudo-border
 				right: 0
 				bottom: 0
 				width: 0
 				height: 2px
-				transition-delay: 200ms
+				transition-delay: $speed
 			span
 				&:before
 					@extend %pseudo-border
@@ -370,21 +371,21 @@ body
 					right: 0
 					height: 0
 					width: 2px
-					transition-delay: 400ms
+					transition-delay: $speed * 2
 			&:hover
 				&:before
 					width: 100%
 					transition-delay: 0ms
 				&:after
 					width: 100%
-					transition-delay: 400ms
+					transition-delay: $speed * 2
 				span
 					&:before
 						height: 100%
-						transition-delay: 600ms
+						transition-delay: $speed * 3
 					&:after
 						height: 100%
-						transition-delay: 200ms
+						transition-delay: $speed
 			span
 				overflow: hidden
 				text-overflow: ellipsis

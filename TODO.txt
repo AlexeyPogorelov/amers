@@ -1,9 +1,6 @@
-underline убрать
-
-hover
++ underline убрать
++ hover
++ top navigation opacity
 
 города на карте с главной
-
 подписаться
-
-+ top navigation opacity
