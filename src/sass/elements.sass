@@ -67,6 +67,37 @@
 			color: inherit
 
 .sort-controls
-	margin: 1em 0 0
+	margin-bottom: 2em
+	background: #f5f5f5
 	a
-		margin-left: 1em
+		display: inline-block
+		padding: 0 0.8em
+		line-height: 4em
+		position: relative
+		color: #333
+		font-weight: 600
+		i
+			font-weight: 100
+			font-style: normal
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 2px
+			background: $main-color
+			opacity: 0
+			transform: translateY(4px) translateZ(0)
+			transition: transform 100ms, opacity 100ms
+		&:hover
+			background: rgba(255,255,255,0.6)
+		&:nth-of-type(1)
+			margin-left: 1em
+		&.active
+			color: $main-color
+			&:after
+				opacity: 1
+				transform: translateY(0) translateZ(0)
+	.form-group
+		margin: 0

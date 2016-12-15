@@ -229,7 +229,7 @@ body
 		position: relative
 		display: inline-block
 		color: #333
-		padding: 10px 24px
+		padding: 12px 28px
 		text-transform: uppercase
 		font-size: 12px
 		font-weight: 600
@@ -324,18 +324,67 @@ body
 		line-height: 1.4em
 	.cities-buttons
 		margin-top: 40px
+		%pseudo-border
+			content: '' !important
+			display: block
+			position: absolute
+			transition: width 200ms linear, height 200ms linear
+			background: #333
 		a
 			display: block
 			color: #333
-			border: 2px solid #333
+			outline: 2px solid #ddd
+			outline-offset: -2px
 			padding: 10px 24px
 			text-decoration: none
 			transition: background 100ms
-			margin: 0 20px 20px
+			margin: 0 22px 24px
 			width: 180px
+			position: relative
+
+			&:before
+				@extend %pseudo-border
+				left: 0
+				top: 0
+				width: 0
+				height: 2px
+				transition-delay: 600ms
+			&:after
+				@extend %pseudo-border
+				right: 0
+				bottom: 0
+				width: 0
+				height: 2px
+				transition-delay: 200ms
+			span
+				&:before
+					@extend %pseudo-border
+					bottom: 0
+					left: 0
+					height: 0
+					width: 2px
+					transition-delay: 0ms
+				&:after
+					@extend %pseudo-border
+					top: 0
+					right: 0
+					height: 0
+					width: 2px
+					transition-delay: 400ms
 			&:hover
-				color: #fff
-				background: #333
+				&:before
+					width: 100%
+					transition-delay: 0ms
+				&:after
+					width: 100%
+					transition-delay: 400ms
+				span
+					&:before
+						height: 100%
+						transition-delay: 600ms
+					&:after
+						height: 100%
+						transition-delay: 200ms
 			span
 				overflow: hidden
 				text-overflow: ellipsis
