@@ -4,6 +4,8 @@
 	h1
 		@media #{$media-sm}
 			font-size: 26px
+	h3
+		font-size: 20px
 	.radios-inline
 		.radio-group
 			display: inline-block
@@ -15,6 +17,16 @@
 		display: block
 	img
 		width: 100%
+
+.item-card-main-props
+	h4
+		margin-top: 14px
+		margin-bottom: 0.3em
+	p
+		border-bottom: 1px solid #ccc
+		padding-bottom: 14px
+		&:last-of-type
+			border: none
 
 .item-card-main-slider
 	margin-top: 1.5rem
@@ -148,48 +160,90 @@
 
 .item-card-main-info-block
 	margin: 0 0 10px
+	text-align: right
 	.price-tag
 		font-weight: bold
 		font-size: 2rem
 		line-height: 2rem
+		color: $main-color
 	.price-tag-old
 		font-size: 1.2rem
-		text-decoration: line-through
+		// text-decoration: line-through
+		margin:
+			left: 0.5em
+			right: 0.5em
+		position: relative
+		&:after
+			content: ''
+			background: #333
+			// background: $main-color
+			height: 2px
+			top: 50%
+			left: 0
+			right: 0
+			display: block
+			position: absolute
+	span
+		vertical-align: middle
 	a
-		margin: 10px 10px 0 0
+		margin: 0 0 0 1em
 		@media #{$media-xs}
 			display: block
 			margin: 10px 0 10px
 
-.item-card-main-materials
-	margin-top: 36px
+.basic-information-row
 	margin-bottom: 0
-	.material-list
 	li
 		padding-right: 0
-		label
-			background-size: cover
-			cursor: pointer
-			outline: 1px solid rgba(0,0,0,0.2)
-			display: inline-block
-			height: 30px
-			width: 30px
-			transition: transform 100ms
-		input
-			text-indent: -99999px
-			display: inline-block
-			height: 0 !important
-			width: 0 !important
-			opacity: 0
-			&:checked + label
-				transform: scale(1.2)
-				outline: 2px solid $main-color
+
+.materials-list
+	label
+		background-size: cover
+		cursor: pointer
+		outline: 1px solid rgba(0,0,0,0.2)
+		display: inline-block
+		height: 30px
+		width: 30px
+		transition: transform 100ms
+	input
+		text-indent: -99999px
+		display: inline-block
+		height: 0 !important
+		width: 0 !important
+		opacity: 0
+		&:checked + label
+			transform: scale(1.2)
+			// outline: 2px solid $main-color
+			position: relative
+			&:before
+				content: ''
+				background-color: rgba(255,255,255,0.8)
+				position: absolute
+				border-radius: 50%
+				display: block
+				top: 4px
+				bottom: 4px
+				left: 4px
+				right: 4px
+				z-index: 1
+			&:after
+				content: ''
+				background: url('../img/icons/icon-checked-1.svg') 50% 50% no-repeat
+				position: absolute
+				display: block
+				top: 9px
+				bottom: 9px
+				left: 9px
+				right: 9px
+				z-index: 2
 
 .description-table-header
 	background: #888
 	color: #fff
 	padding: 0.6em 1em
 	text-align: center
+	margin-top: 0
+
 .description-table
 	tr
 		@media #{$media-xs}

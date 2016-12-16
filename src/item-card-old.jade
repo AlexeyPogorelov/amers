@@ -60,8 +60,20 @@ html(lang='ru')
 				.container
 					.row
 
-						form(action="#").col-md-8.item-card-main-materials
+						form(action="#").col-md-9.item-card-main-materials
 
+							.row
+								.col-md-12
+									#basic-information-row.basic-information-row
+										.item-card-main-info-block
+											span.price-tag-old 2010
+												small грн.
+											span.price-tag 1920
+												small грн.
+											a.btn.btn-grey(href="cart.html" data-toggle="modal" data-target="#cart-sidebar")
+												span В корзину
+											a.btn.btn-primary(href="order.html")
+												span Купить в один клик
 							.row
 								.col-md-12
 									.radios-inline
@@ -106,56 +118,30 @@ html(lang='ru')
 
 							.row
 								.col-md-12
-									.item-card-main-info-block
-										.price-tag-old 2010
-											small грн.
-										.price-tag 1920
-											small грн.
-										a.btn.btn-grey(href="cart.html" data-toggle="modal" data-target="#cart-sidebar") В корзину
-										a.btn.btn-primary(href="order.html") Оформить
-							.row
-								.col-md-12
 									.item-card-main-description
 										h1 Угловой диван ВИТТО
 										p Витто - универсальный диван трасформер, конструкция которого легко  позволяет  самостоятельно изменять  угловое изделие на прямой диван и наоборот. Механизм раскладки "Еврокнижка"  без особых усилий превращает изделие в просторную двуспальную кровать, а вместительные короба для белья помогут разместить множество предметов. Также в диване предусмотрены ниши в подлокотниках, которые создают дополнительное место для вещей, а так же практичные ламинированные накладки с помощью которых подлокотники легко содержать в чистоте.
 
-
-						.col-md-4
+						.col-md-3.item-card-main-props
 							.row
 								.col-md-12
 									h3.description-table-header Технические характеристики
-									table.description-table
-										tr
-											td
-												span Укомплектован: 
-											td
-												b пенополиуретан, ламели, эластичные пасы
-										tr
-											td
-												span Опоры: 
-											td
-												b дерево
-								.col-md-12
-									h3 Габаритные размеры:
-									table.description-table
-										tr
-											td
-												span Длина: 
-											td
-												b 265
-													small см
-										tr
-											td
-												span Глубина посадочного места: 
-											td
-												b 60
-													small см
-										tr
-											td
-												span Спальное место: 
-											td
-												b 145x210
-													small см
+									h4 Укомплектован: 
+									p
+										b пенополиуретан, ламели, эластичные пасы
+									h4 Опоры: 
+									p
+										b дерево
+									h4 Габаритные размеры:
+									p Длина: 
+										b 265 
+											small см
+									p Глубина посадочного места: 
+										b 60 
+											small см
+									p Спальное место: 
+										b 145x210 
+											small см
 
 							.item-card-main-description
 								.row
@@ -170,6 +156,7 @@ html(lang='ru')
 					.row
 						.col-md-12
 							h3 Похожие товары
+					.row
 						#owl-other-items.owl-carousel.owl-theme
 							a.item(href="#" style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/montaj_nikol_nikol.jpg&w=600&h=160)")
 								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/montaj_nikol_nikol.jpg&w=600&h=160', alt='description')
