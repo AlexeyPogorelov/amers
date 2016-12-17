@@ -3,7 +3,7 @@
 (function () {
 	var owlMain, owlHelper, owlOtherItems;
 
-	$('.material-link').each(function () {
+	$('.materials-list').find('label').each(function () {
 		var $this = $(this),
 			style = '',
 			color = $this.data('color') || '',
@@ -17,6 +17,7 @@
 			image = 'background-image:url('+ image +')';
 			style = style + image;
 		}
+		$this.attr('style', style);
 		$this.tooltip({
 			viewport: { selector: 'body', padding: 20 },
 			template: "<div class='color-tooltip-wrapper'><div class='color-tooltip' style='" + style + "'></div></div>"
@@ -96,4 +97,40 @@
 			}
 		}
 	});
+
+	// smart form
+	(function () {
+		var $form = $('#js-item-card-main-form'),
+			$priceTarget = $form.find('[data-base-price]'),
+			methods = {
+				changeMaterial: function () {
+					console.log('this', this);
+				}
+			};
+		$form.on('change', function (e) {
+			var i,
+				$target = $(':checked'),
+				price,
+				priceSumm = 0;
+			$target.each(function () {
+				var $currentTarget = $(this),
+					method;
+				price = $currentTarget.data('price');
+				price = parseInt(price) || 0;
+				method = $currentTarget.data('method');
+				if (method && typeof methods[method] === 'function') {
+					methods[method].call(this);
+				}
+				if (!price) return;
+				priceSumm += price;
+			});
+			$priceTarget.each(function () {
+				var $this = $(this),
+					basePrice = $this.data('base-price'),
+					currency = $this.data('currency');
+				basePrice = parseInt(basePrice) || 0;
+				$this.html(priceSumm + basePrice + '<small>' + currency + '</small>');
+			});
+		});
+	})();
 })(jQuery);
