@@ -47,11 +47,14 @@
 							input(type="submit" value="")
 						ul.tag-cloud-1
 							li
-								a.btn.btn-primary(href="#") Модульные диваны
+								a.btn.btn-primary(href="#")
+									span Модульные диваны
 							li
-								a.btn.btn-primary(href="#") Угловые диваны
+								a.btn.btn-primary(href="#")
+									span Угловые диваны
 							li
-								a.btn.btn-primary(href="#") Прямые диваны
+								a.btn.btn-primary(href="#")
+									span Прямые диваны
 						.search-main-results-holder
 							mixin result (name, type, description, image)
 								.search-result
@@ -80,8 +83,10 @@
 							input(type="checkbox")#popup-login-save
 							label(for="popup-login-save") Сохранить
 						.button-group
-							button.btn.btn-primary(type="submit") Вход
-							a.btn.btn-under(href="signup.html" data-toggle="modal" data-target="#register-modal") Регистрация
+							button.btn.btn-primary(type="submit")
+								span Вход
+							a.btn.btn-under(href="signup.html" data-toggle="modal" data-target="#register-modal")
+								span Регистрация
 
 #register-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 	.modal-dialog.modal-lg
@@ -109,7 +114,8 @@
 							input(type="checkbox")#popup-register-save
 							label(for="popup-register-save") Согласен с правилами *
 						.button-group
-							button.btn.btn-primary(type="submit") Регистрация
+							button.btn.btn-primary(type="submit")
+								span Регистрация
 
 #forgot-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 	.modal-dialog.modal-lg
@@ -122,5 +128,6 @@
 							label(for="popup-forgot-email") Email *
 							input(type="text")#popup-forgot-email
 						.button-group
-							button.btn.btn-primary(type="submit") Напомнить пароль
+							button.btn.btn-primary(type="submit")
+								span Напомнить пароль
 

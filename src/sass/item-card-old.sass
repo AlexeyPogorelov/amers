@@ -11,6 +11,37 @@
 			display: inline-block
 			margin-right: 20px
 
+.chosen-material
+	float: left
+	white-space: nowrap
+	@media #{$media-sm}
+		float: none
+	.color-tooltip-wrapper
+		top: auto !important
+		bottom: 100% !important
+		left: 50% !important
+		transform: translateX(-50%)
+		opacity: 0
+		pointer-events: none
+	input
+		display: none
+	li
+		list-style: none
+		display: inline-block
+		position: relative
+		margin: 0 0 0 10px
+		// margin: 0
+		&:hover
+			.color-tooltip-wrapper
+				opacity: 1
+	span
+		display: inline-block
+		vertical-align: top
+	label
+		margin: 0
+		height: 40px
+		width: 40px
+
 .item-card-main-description
 	margin-bottom: 20px
 	a
@@ -27,6 +58,12 @@
 			background: #fff
 	small
 		display: block
+	@media #{$media-sm}
+		li
+			width: 50%
+	@media #{$media-xs}
+		li
+			width: 100%
 
 .item-card-main-tab-content
 	border: 1px solid #ddd
@@ -175,8 +212,10 @@
  */
 
 .item-card-main-info-block
-	margin: 0 0 10px
+	margin: 0 0 20px
 	text-align: right
+	@media #{$media-sm}
+		text-align: center
 	.price-tag
 		font-weight: bold
 		font-size: 2rem
@@ -208,7 +247,10 @@
 			margin: 10px 0 10px
 
 .basic-information-row
-	margin-bottom: 0
+	margin-bottom: 20px
+	border-bottom: 1px solid #eee
+	// border-left: none
+	// border-right: none
 	li
 		padding-right: 0
 

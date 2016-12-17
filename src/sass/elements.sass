@@ -127,7 +127,7 @@ $speed: 100ms
 		background: #eee
 		color: #333
 		position: relative
-		transition: width $speed linear, height $speed linear
+		transition: width $speed linear, height $speed linear, background $speed linear
 		&:before
 			@extend %pseudo-border
 			left: 0
@@ -158,6 +158,7 @@ $speed: 100ms
 				width: 2px
 				transition-delay: $speed * 2
 		&:hover
+			background: #fff
 			&:before
 				width: 100%
 				transition-delay: 0ms

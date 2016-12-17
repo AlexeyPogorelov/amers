@@ -66,13 +66,16 @@ html(lang='ru')
 								.col-md-12
 									#basic-information-row.basic-information-row
 										.item-card-main-info-block
+											.chosen-material
+												span Ткань: 
+												span#js-chosen-material
 											span.price-tag-old(data-base-price="2010" data-currency="грн.") 2230
 												small грн.
 											span.price-tag(data-base-price="1920" data-currency="грн.") 2140
 												small грн.
 											a.btn.btn-grey(href="cart.html" data-toggle="modal" data-target="#cart-sidebar")
 												span В корзину
-											a.btn.btn-primary(href="order.html")
+											//- a.btn.btn-primary(href="order.html")
 												span Купить в один клик
 							.row
 								.col-md-12
@@ -99,7 +102,7 @@ html(lang='ru')
 										li(role='presentation')
 											a(href='#tab-category-3', aria-controls='tab-category-3', role='tab', data-toggle='tab') Премиум <small>от 600 до 900</small>
 										li(role='presentation')
-											a(href='#tab-category-4', aria-controls='tab-category-3', role='tab', data-toggle='tab') Все <small>от 600 до 900</small>
+											a(href='#tab-category-4', aria-controls='tab-category-3', role='tab', data-toggle='tab') Все <small>от 100 до 900</small>
 
 									.tab-content.item-card-main-tab-content
 										#tab-category-1.tab-pane.active(role='tabpanel')
@@ -144,36 +147,85 @@ html(lang='ru')
 													'313',
 													'#bf533b'
 												)
-												li
-													input#material-80(type="radio" name="material" value="material-80" data-price="313")
-													label(for="material-80" style="background:#BF533B;" data-toggle="tooltip" title="&nbsp" data-color="#BF533B").material-link
-												li
-													input#material-22(type="radio" name="material" value="material-22" data-price="409")
-													label(for="material-22" style="background:#C96100;" data-toggle="tooltip" title="&nbsp" data-color="#C96100").material-link
+												+material(
+													'material-22',
+													'409',
+													'#C96100'
+												)
 										#tab-category-3.tab-pane(role='tabpanel')
 											h4 Категория ткани 58
 											ul.list-inline.materials-list
-												li
-													input#material-680(type="radio" name="material" value="material-680" data-price="313")
-													label(for="material-680" style="background:#BF533B;" data-toggle="tooltip" title="&nbsp" data-color="#BF533B").material-link
-												li
-													input#material-622(type="radio" name="material" value="material-622" data-price="409")
-													label(for="material-622" style="background:#C96100;" data-toggle="tooltip" title="&nbsp" data-color="#C96100").material-link
-												li
-													input#material-684(type="radio" name="material" value="material-684" data-price="779")
-													label(for="material-684" style="background:#591E18;" data-toggle="tooltip" title="&nbsp" data-color="#591E18").material-link
+												+material(
+													'material-20',
+													'796',
+													'#b79e65',
+													'http://dommino.ua/media/catalog/product/cache/1/full/210x210/9df78eab33525d08d6e5fb8d27136e95/1/0/10-sun_1.jpg'
+												)
+												+material(
+													'material-21',
+													'409',
+													'#886a4e',
+													'http://dommino.ua/media/catalog/product/cache/1/full/210x210/9df78eab33525d08d6e5fb8d27136e95/s/e/seul-46.jpg'
+												)
 										#tab-category-4.tab-pane(role='tabpanel')
+											h4 Категория ткани 20
+											ul.list-inline.materials-list
+												+material(
+													'all-material-92',
+													'200',
+													'#788186',
+													'https://www.pufetto.com.ua/fabrics/real/trinity-14.jpg'
+												)
+												+material(
+													'all-material-24',
+													'300',
+													'#6e4750',
+													'http://dommino.ua/media/catalog/product/cache/1/full/210x210/9df78eab33525d08d6e5fb8d27136e95/2/0/20.jpg'
+												)
+												+material(
+													'all-material-64',
+													'100',
+													'#8a2252',
+													'http://dommino.ua/media//catalog/product/d/k/30x30xdk-pink-13.jpg'
+												)
+												+material(
+													'all-material-33',
+													'600',
+													'#745a44',
+													'http://dommino.ua/media//catalog/product/g/o/30x30xgold-brown-05.jpg'
+												)
+												+material(
+													'all-material-97',
+													'270',
+													'#868c8c',
+													'http://dommino.ua/media//catalog/product/g/r/30x30xgrey-09.jpg'
+												)
 											h4 Категория ткани 58
 											ul.list-inline.materials-list
-												li
-													input#material-680(type="radio" name="material" value="material-680" data-price="313")
-													label(for="material-680" style="background:#BF533B;" data-toggle="tooltip" title="&nbsp" data-color="#BF533B").material-link
-												li
-													input#material-622(type="radio" name="material" value="material-622" data-price="409")
-													label(for="material-622" style="background:#C96100;" data-toggle="tooltip" title="&nbsp" data-color="#C96100").material-link
-												li
-													input#material-684(type="radio" name="material" value="material-684" data-price="779")
-													label(for="material-684" style="background:#591E18;" data-toggle="tooltip" title="&nbsp" data-color="#591E18").material-link
+												+material(
+													'all-material-20',
+													'796',
+													'#b79e65',
+													'http://dommino.ua/media/catalog/product/cache/1/full/210x210/9df78eab33525d08d6e5fb8d27136e95/1/0/10-sun_1.jpg'
+												)
+												+material(
+													'all-material-21',
+													'409',
+													'#886a4e',
+													'http://dommino.ua/media/catalog/product/cache/1/full/210x210/9df78eab33525d08d6e5fb8d27136e95/s/e/seul-46.jpg'
+												)
+											h4 Категория ткани 61
+											ul.list-inline.materials-list
+												+material(
+													'all-material-80',
+													'313',
+													'#bf533b'
+												)
+												+material(
+													'all-material-22',
+													'409',
+													'#C96100'
+												)
 
 
 							.row

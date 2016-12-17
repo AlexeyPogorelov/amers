@@ -102,9 +102,14 @@
 	(function () {
 		var $form = $('#js-item-card-main-form'),
 			$priceTarget = $form.find('[data-base-price]'),
+			$chosenMaterial = $form.find('#js-chosen-material'),
 			methods = {
 				changeMaterial: function () {
-					console.log('this', this);
+					var $material = $(this).closest('li').clone();
+					$material.find('input').remove();
+					$chosenMaterial
+						.empty()
+						.append( $material );
 				}
 			};
 		$form.on('change', function (e) {
@@ -131,6 +136,6 @@
 				basePrice = parseInt(basePrice) || 0;
 				$this.html(priceSumm + basePrice + '<small>' + currency + '</small>');
 			});
-		});
+		}).trigger('change');
 	})();
 })(jQuery);
