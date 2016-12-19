@@ -291,15 +291,128 @@ body
 
 .categories-alternative
 	font-size: 0
+	$block-height-desktop: 300px
 	.container
 	.row
 	.categories-col
+		background-position: 50% 50%
+		background-size: cover
+		background-repeat: no-repeat
+
+		font-size: 1rem
+		text-align: center
+
+		position: relative
 		vertical-align: top
-		width: 33.3%
+		display: inline-block
+		float: left
+		width: 25%
+		height: $block-height-desktop
+		display: flex
+		align-items: center
+		&:nth-child(4),
+		&:nth-child(5)
+			height: $block-height-desktop / 2
+
+		p
+			width: 100%
+
+
+		.img
+			transition: transform 300ms
+		&:focus
+			outline: none
+		.hover
+			background: rgba(0,0,0,0.6)
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			opacity: 1
+			z-index: 2
+			transition: opacity 300ms, background 300ms
+			display: flex
+			align-items: center
+			&:after
+				transition: border 300ms, top 300ms, bottom 300ms
+				content: ''
+				position: absolute
+				top: 40%
+				bottom: 40%
+				left: 10%
+				right: 10%
+				border: 1px solid rgba(255,255,255,0.4)
+				border-top-color: rgba(255,255,255,0)
+				border-bottom-color: rgba(255,255,255,0)
+				transform: translateZ(0)
+			h3
+				color: #fff
+				margin: 1em auto
+				text-transform: uppercase
+				padding: 0 12%
+			@media #{$media-sm}
+				background: none
+			a
+				text-decoration: none
+				color: #888
+				transition: color 100ms
+				font-size: 26px
+				outline: none
+				&:hover
+					color: #333
+			span
+				display: block
+				position: relative
+				transition: transform 300ms, color 100ms
+				@media #{$media-sm}
+					display: none
+		&:hover
+			.hover
+				background: rgba(0,0,0,0)
+				&:after
+					top: 10%
+					bottom: 10%
+					border-color: rgba(255,255,255,1)
+			.img
+				transform: scale(1.1)
+
 //----------------------------------
 // END CATEGORIES ON MAIN-PAGE
 //----------------------------------
 
+//----------------------------------
+// SHIELDBLOCK
+//----------------------------------
+.shieldblock-alternative
+	font-size: 0
+	$block-height-desktop: 300px
+	.container
+	.row
+	.shieldblock-col
+		background-position: 50% 50%
+		background-size: cover
+		background-repeat: no-repeat
+
+		font-size: 1rem
+		text-align: center
+
+		position: relative
+		vertical-align: top
+		display: inline-block
+		float: left
+		width: 33.3%
+		height: $block-height-desktop
+		display: flex
+		align-items: center
+		.shieldblock-holder
+			height: $block-height-desktop / 2
+
+		p
+			width: 100%
+//----------------------------------
+// END SHIELDBLOCK
+//----------------------------------
 
 //----------------------------------
 // WHERE TO BUY
