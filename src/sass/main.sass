@@ -387,9 +387,29 @@ body
 .where-to-buy-alternative
 	.dropdown
 		background: #eee
+		margin-top: 2em
 		width: 100%
-		ul
+		button
+			line-height: 2.4em
 			width: 100%
+			.caret
+				margin-left: 78%
+		.dropdown-menu
+			border: none
+			width: 100%
+			transform: translateY(-4px) translateZ(0)
+			transition: transform 300ms, opacity 300ms
+			display: block
+			opacity: 0
+			pointer-events: none
+			a
+				line-height: 3em
+		&.open > .dropdown-menu
+			transform: translateY(0) translateZ(0)
+			pointer-events: all
+			opacity: 1
+	.cities-buttons
+		padding-top: 2em
 //----------------------------------
 // END WHERE TO BUY ALTERNATIVE
 //----------------------------------
@@ -594,11 +614,22 @@ body
 // SUBSCRIBE ROW
 //----------------------------------
 .subscribe-row
+	background: #eee
+	margin-top: 4em
+	padding-top: 2em
+	padding-bottom: 2em
 	.form-group
 		position: relative
 		label
 			position: absolute
 			display: none
+		input
+			width: 100%
+	.btn
+		padding-top: 14px
+		padding-bottom: 14px
+	.description-holder
+		margin-bottom: 2em
 //----------------------------------
 // END SUBSCRIBE ROW
 //----------------------------------

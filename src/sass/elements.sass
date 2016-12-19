@@ -21,7 +21,8 @@ $speed: 100ms
 	transition: background 100ms, border 100ms, color 100ms
 	&:focus,
 	&:active
-		box-shadow: none
+		box-shadow: none !important
+		outline: none !important
 	&-primary
 		background: #333
 		color: #fff
@@ -56,7 +57,8 @@ $speed: 100ms
 				height: 0
 				width: 2px
 				transition-delay: $speed * 2
-		&:hover
+		&:hover,
+		&:focus:active
 			background: #fff
 			color: #333
 			&:before
@@ -106,7 +108,8 @@ $speed: 100ms
 				height: 0
 				width: 2px
 				transition-delay: $speed * 2
-		&:hover
+		&:hover,
+		&:focus:active
 			background: #333
 			color: #fff
 			border-color: #333
@@ -157,7 +160,8 @@ $speed: 100ms
 				height: 0
 				width: 2px
 				transition-delay: $speed * 2
-		&:hover
+		&:hover,
+		&:focus:active
 			background: #fff
 			&:before
 				width: 100%
@@ -175,12 +179,14 @@ $speed: 100ms
 	&-under
 		background: transparent
 		color: #333
-		&:hover
+		&:hover,
+		&:focus:active
 			text-decoration: underline
 	&-order
 		background: #ec1b25
 		color: #fff
-		&:hover
+		&:hover,
+		&:focus:active
 			color: #000
 			background: #ec1b25 + #ec1b25
 			border-color: #ec1b25 + #ec1b25
@@ -234,3 +240,52 @@ $speed: 100ms
 				transform: translateY(0) translateZ(0)
 	.form-group
 		margin: 0
+
+.hover-effect
+	background:
+		position: 50% 50%
+		size: cover
+		repeat: no-repeat
+
+	position: relative
+	text-align: center
+	height: 260px
+	.hover
+		display: flex
+		align-items: center
+
+		background: rgba(0,0,0,0.6)
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: 1
+		z-index: 2
+		transition: opacity 300ms, background 300ms
+		&:after
+			transition: border 300ms, top 300ms, bottom 300ms
+			content: ''
+			position: absolute
+			top: 40%
+			bottom: 40%
+			left: 10%
+			right: 10%
+			border: 1px solid rgba(255,255,255,0.4)
+			border-top-color: rgba(255,255,255,0)
+			border-bottom-color: rgba(255,255,255,0)
+			transform: translateZ(0)
+		h3
+			color: #fff
+			margin: 1em auto
+			text-transform: uppercase
+			padding: 0 12%
+		@media #{$media-sm}
+			background: none
+	&:hover
+		.hover
+			background: rgba(0,0,0,0)
+			&:after
+				top: 10%
+				bottom: 10%
+				border-color: rgba(255,255,255,1)

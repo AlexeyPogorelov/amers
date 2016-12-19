@@ -81,14 +81,19 @@ input
 	border-radius: 0
 	color: $base-font-color
 	outline-color: $main-color
-	padding: 10px 14px
+	padding: 8px 14px
 	border-radius: 1px
 	&::placeholder
 		font-size: 0.9em
 	&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
 		-webkit-appearance: none
 	&:focus
-		border-color: $main-color
+		// border-color: transparent
+		outline-color: #333
+		// outline: none
+		outline-style: solid
+		outline-width: 2px
+		// box-shadow: none
 
 textarea
 	resize: none
