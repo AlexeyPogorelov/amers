@@ -194,7 +194,64 @@ html(lang='ru')
 									h3 Кресла
 
 
-			.container.where-to-buy
+			.container.where-to-buy-alternative
+				.row
+					.col-sm-12.col-md-4
+						div
+							h2.text-uppercase.text-center Магазины
+					.cities-buttons.col-sm-12.col-md-8.text-center
+						p Ваш коллектив руководствуется девизом “качество не только снаружи, но и внутри”, именно поэтому для производства мебели используются только экологически чистые материалы. Мы постоянно обновляем наш модельный ряд, а также следуем современным тенденциям в мире дизайна и технологий, которые успешно применяем при изготовлении новых изделий.
+						.dropdown
+							button#city-select(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+								| Выберите город
+								span.caret
+							ul.dropdown-menu(aria-labelledby='city-select')
+								li
+									a.whitebuts.bold(href='#')
+										span Киев
+								li
+									a.whitebuts.bold(href='#')
+										span Сумы
+								li
+									a.whitebuts.bold(href='#')
+										span Харьков
+								li
+									a.whitebuts.bold(href='#')
+										span Одесса
+								li
+									a.whitebuts.bold(href='#')
+										span Белая Церковь
+								li
+									a.whitebuts.bold(href='#')
+										span Полтава
+								li
+									a.whitebuts.bold(href='#')
+										span Запорожье
+								li
+									a.whitebuts.bold(href='#')
+										span Хмельницкий
+								li
+									a.whitebuts.bold(href='#')
+										span Черкассы
+
+			.container.subscribe-row
+				.row
+					.col-sm-12.col-md-12
+						h3 5 причин подписаться на нашу рассылку
+						p Рассылка - это удобный способ вовремя узнавать о важных новостях и выгодных возможностях. Мы сами не любим разгребать десятки писем каждый день, поэтому будем писать вам только раз в неделю. И никакой рекламы и спама — только новости!
+						form.row(action="#")
+							.form-group.col-md-4.col-sm-12
+								label(for='exampleInputEmail1') Ваша почта
+								input#exampleInputEmail1.form-control(type='email', placeholder='Email')
+							.form-group.col-md-4.col-sm-12
+								label(for='exampleInputPassword1') Ваше имя
+								input#exampleInputPassword1.form-control(type='password', placeholder='Имя')
+							.form-group.col-md-4.col-sm-12
+								button.btn.btn-grey(type='submit')
+									span Подписаться
+
+
+			.container.where-to-buy.hidden
 				.row
 					.col-sm-12.col-md-8.col-md-offset-2
 						div

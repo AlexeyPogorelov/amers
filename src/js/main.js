@@ -26,7 +26,7 @@ $('article, .wysiwyg').find('table').each(function () {
 	$(this).wrap('<div class="table-holder"></div>');
 });
 
-$('.dropdown').hover(function() {
+$('.site-top .dropdown').hover(function() {
 	$(this).find('[data-toggle="dropdown"]').trigger('click');
 }, function() {
 	var $this = $(this);
