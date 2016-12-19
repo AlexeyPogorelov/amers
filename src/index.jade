@@ -52,7 +52,37 @@ html(lang='ru')
 			br
 			.clearfix
 
-			include ./partials/categories.jade
+			//- include ./partials/categories.jade
+
+			.categories-alternative
+				.container
+					.row
+						.categories-col
+							a(href='categories.html')
+								h3 Диваны
+								p Тут будет описание продукта или краткая информация о содержимом ссылки.
+						.categories-col
+							h3 Мы в соц. сетях
+							.categories-social-wrap
+								a.gala-social(href='#', target='_blank')
+									img(src='http://www.galameble.com/wp-content/themes/wordpress/css/icon-facebook.png', alt='Facebook')
+								a.gala-social(href='#', target='_blank')
+									img(src='http://www.galameble.com/wp-content/themes/wordpress/css/icon-google+.png', alt='Google+')
+								a.gala-social(href='#', target='_blank')
+									img(src='http://www.galameble.com/wp-content/themes/wordpress/css/icon-pinterest.png', alt='Pinterest')
+								a.gala-social(href='#', target='_blank')
+									img(src='http://www.galameble.com/wp-content/themes/wordpress/css/icon-youtube.png', alt='YouTube')
+								a.gala-social(href='#', target='_blank')
+									img(src='http://www.galameble.com/wp-content/themes/wordpress/css/icon-twitter.png', alt='Pinterest')
+								a.gala-social(href='#', target='_blank')
+									img(src='http://www.galameble.com/wp-content/themes/wordpress/css/icon-slideshare.png', alt='SlideShare')
+						.categories-col
+							a.half-height(href='categories.html', style="background-image:url('http://www.galameble.com/wp-content/themes/wordpress/img/projektanci.jpg')")
+								h3 Подушки
+						.categories-col
+							a(href='categories.html', style="background-image:url('http://www.galameble.com/wp-content/themes/wordpress/img/projektanci.jpg')")
+								h3 Кресла
+
 
 			.container.where-to-buy
 				.row
