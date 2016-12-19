@@ -385,6 +385,7 @@ body
 // WHERE TO BUY ALTERNATIVE
 //----------------------------------
 .where-to-buy-alternative
+	padding: 4em 0
 	.dropdown
 		background: #eee
 		margin-top: 2em
@@ -408,8 +409,24 @@ body
 			transform: translateY(0) translateZ(0)
 			pointer-events: all
 			opacity: 1
+	.section-label
+		background:
+			position: 50% 50%
+			size: contain
+			repeat: no-repeat
+		background: none
+		height: 100%
+		img
+			width: 100%
+		h3
+			margin-top: 0
+			margin-bottom: 1em
+			text-align: center
 	.cities-buttons
-		padding-top: 2em
+		margin-top: 46px
+		margin-bottom: 46px
+		text-align: left
+		// padding-top: 2em
 //----------------------------------
 // END WHERE TO BUY ALTERNATIVE
 //----------------------------------
@@ -417,15 +434,16 @@ body
 //----------------------------------
 // SHIELDBLOCK
 //----------------------------------
-.shieldblock-alternative
+.collections-on-main
 	font-size: 0
 	$block-height-desktop: 260px
 	.container
 	.row
-	.shieldblock-col
-		background-position: 50% 50%
-		background-size: cover
-		background-repeat: no-repeat
+	.collections-on-main-col
+		background:
+			position: 50% 50%
+			size: cover
+			repeat: no-repeat
 
 		font-size: 1rem
 		text-align: center
@@ -434,75 +452,93 @@ body
 		vertical-align: top
 		display: inline-block
 		float: left
-		width: 33.3%
+		width: 25%
 		height: $block-height-desktop
 		display: flex
 		align-items: center
 		justify-content: center
-		.shieldblock-holder
+		@media #{$media-xs}
+			width: 100%
+		a
+			color: #fff
+		&:nth-child(1),
+		&:first-child
+			width: 50%
+		.collections-on-main-holder
+			background:
+				size: cover
+				position: 50% 50%
+				repeat: no-repeat
+			position: relative
 			height: $block-height-desktop / 2
+			position: absolute
+			left: 0
+			right: 0
+			&:nth-child(1)
+				bottom: 50%
+			&:nth-child(2)
+				top: 50%
 
 		p
 			width: 100%
 
-	.shieldblock-social-wrap
+	.collections-on-main-social-wrap
 		.gala-social
 			display: inline-block
 			margin: 10px 5px
-			width: 40px
+			width: 30px
 			img
 				width: 100%
-	.shieldblock-col
-		display: flex
-		align-items: center
-
-		.hover
-			background: rgba(0,0,0,0.6)
-			position: absolute
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			opacity: 1
-			z-index: 2
-			transition: opacity 300ms, background 300ms
-			&:after
-				transition: border 300ms, top 300ms, bottom 300ms
-				content: ''
-				position: absolute
-				top: 40%
-				bottom: 40%
-				left: 10%
-				right: 10%
-				border: 1px solid rgba(255,255,255,0.4)
-				border-top-color: rgba(255,255,255,0)
-				border-bottom-color: rgba(255,255,255,0)
-				transform: translateZ(0)
-			h3
-				color: #fff
-				margin: 1em auto
-				text-transform: uppercase
-				padding: 0 12%
-			@media #{$media-sm}
-				background: none
-			a
-				text-decoration: none
-				color: #888
-				transition: color 100ms
-				font-size: 26px
-				outline: none
-				&:hover
-					color: #333
-
-		&:hover
-			.hover
-				background: rgba(0,0,0,0)
-				&:after
-					top: 10%
-					bottom: 10%
-					border-color: rgba(255,255,255,1)
-			.img
-				transform: scale(1.1)
+	// TODO remove it
+	// .collections-on-main-col-1
+	// 	display: flex
+	// 	align-items: center
+	// 	.hover
+	// 		background: rgba(0,0,0,0.6)
+	// 		position: absolute
+	// 		top: 0
+	// 		left: 0
+	// 		right: 0
+	// 		bottom: 0
+	// 		opacity: 1
+	// 		z-index: 2
+	// 		transition: opacity 300ms, background 300ms
+	// 		&:after
+	// 			transition: border 300ms, top 300ms, bottom 300ms
+	// 			content: ''
+	// 			position: absolute
+	// 			top: 40%
+	// 			bottom: 40%
+	// 			left: 10%
+	// 			right: 10%
+	// 			border: 1px solid rgba(255,255,255,0.4)
+	// 			border-top-color: rgba(255,255,255,0)
+	// 			border-bottom-color: rgba(255,255,255,0)
+	// 			transform: translateZ(0)
+	// 		h3
+	// 			color: #fff
+	// 			margin: 1em auto
+	// 			text-transform: uppercase
+	// 			padding: 0 12%
+	// 		@media #{$media-sm}
+	// 			background: none
+	// 		a
+	// 			text-decoration: none
+	// 			color: #888
+	// 			transition: color 100ms
+	// 			font-size: 26px
+	// 			outline: none
+	// 			&:hover
+	// 				color: #333
+	// 	&:hover
+	// 		.hover
+	// 			background: rgba(0,0,0,0)
+	// 			&:after
+	// 				top: 10%
+	// 				bottom: 10%
+	// 				border-color: rgba(255,255,255,1)
+	// 		.img
+	// 			transform: scale(1.1)
 
 //----------------------------------
 // END SHIELDBLOCK
