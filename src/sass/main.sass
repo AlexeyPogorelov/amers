@@ -298,6 +298,7 @@ body
 		background-position: 50% 50%
 		background-size: cover
 		background-repeat: no-repeat
+		background-color: #666
 
 		font-size: 1rem
 		text-align: center
@@ -461,6 +462,18 @@ body
 			width: 100%
 		a
 			color: #fff
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: #000
+			opacity: 0.4
+		.hover
+			position: relative
+			z-index: 1
 		&:nth-child(1),
 		&:first-child
 			width: 50%
@@ -474,13 +487,29 @@ body
 			position: absolute
 			left: 0
 			right: 0
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+				background: #000
+				opacity: 0.4
 			&:nth-child(1)
 				bottom: 50%
 			&:nth-child(2)
 				top: 50%
+				.hover
+					display: flex
+					align-items: center
+					justify-content: center
+					height: 100%
+					width: 100%
 
-		p
+		h3, p
 			width: 100%
+			color: #fff
 
 	.collections-on-main-social-wrap
 		.gala-social
@@ -489,56 +518,7 @@ body
 			width: 30px
 			img
 				width: 100%
-	// TODO remove it
-	// .collections-on-main-col-1
-	// 	display: flex
-	// 	align-items: center
-	// 	.hover
-	// 		background: rgba(0,0,0,0.6)
-	// 		position: absolute
-	// 		top: 0
-	// 		left: 0
-	// 		right: 0
-	// 		bottom: 0
-	// 		opacity: 1
-	// 		z-index: 2
-	// 		transition: opacity 300ms, background 300ms
-	// 		&:after
-	// 			transition: border 300ms, top 300ms, bottom 300ms
-	// 			content: ''
-	// 			position: absolute
-	// 			top: 40%
-	// 			bottom: 40%
-	// 			left: 10%
-	// 			right: 10%
-	// 			border: 1px solid rgba(255,255,255,0.4)
-	// 			border-top-color: rgba(255,255,255,0)
-	// 			border-bottom-color: rgba(255,255,255,0)
-	// 			transform: translateZ(0)
-	// 		h3
-	// 			color: #fff
-	// 			margin: 1em auto
-	// 			text-transform: uppercase
-	// 			padding: 0 12%
-	// 		@media #{$media-sm}
-	// 			background: none
-	// 		a
-	// 			text-decoration: none
-	// 			color: #888
-	// 			transition: color 100ms
-	// 			font-size: 26px
-	// 			outline: none
-	// 			&:hover
-	// 				color: #333
-	// 	&:hover
-	// 		.hover
-	// 			background: rgba(0,0,0,0)
-	// 			&:after
-	// 				top: 10%
-	// 				bottom: 10%
-	// 				border-color: rgba(255,255,255,1)
-	// 		.img
-	// 			transform: scale(1.1)
+
 
 //----------------------------------
 // END SHIELDBLOCK
@@ -556,6 +536,9 @@ body
 		background-position: 50% 50%
 		background-size: cover
 		background-repeat: no-repeat
+		// TODO review it
+		background-image: none !important
+		background-color: #666 !important
 
 		text-align: center
 		position: relative
