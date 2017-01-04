@@ -58,7 +58,11 @@
 	});
 
 	function syncPosition () {
-		owlHelper.find('.item').eq(this.currentItem).addClass("synced").siblings().removeClass("synced");
+		owlHelper.find('.item')
+			.eq(this.currentItem)
+			.addClass("synced")
+			.siblings()
+			.removeClass("synced");
 	}
 
 	owlHelper.on("click", ".item", function(e){

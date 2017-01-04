@@ -49,14 +49,13 @@ html(lang='ru')
 						.content
 							h1 Качественная мебель для ежедневного сна.
 							p Основными характеристиками мягкой мебели ”Amers” являются современный дизайн, компактность, надежность и функциональность. Именно это по словам наших клиентов является ключевыми преимуществами при выборе нашей мебели.
-			br
 			.clearfix
 
 			//- include ./partials/categories.jade
 
 			.categories-alternative
 				.container
-					.row-alt
+					.row
 						a(href="categories.html").categories-col(style="background-image:url('http://zegen.ua/img/p/1/2/2/122.jpg');")
 							.hover
 								h3 модульные диваны
@@ -74,7 +73,7 @@ html(lang='ru')
 								h3 пуфы
 			.categories-slider-row
 				.container
-					.row-alt
+					.row
 						a.categories-col(href="categories.html", style="background-image:url('http://zegen.ua/img/p/1/2/2/122.jpg');")
 							.hover
 								h3 кровани и матрасы
@@ -118,7 +117,7 @@ html(lang='ru')
 
 			.categories-slider-row
 				.container
-					.row-alt
+					.row
 						a.categories-col(href="categories.html", style="background-image:url('https://wallpaperscraft.com/image/furniture_design_white_living_room_10400_2560x1024.jpg');")
 							.hover
 								h3 подушки и аксесуары
@@ -161,7 +160,7 @@ html(lang='ru')
 									img(src='https://wallpaperscraft.com/image/living_room_sofa_furniture_interior_style_design_95260_2560x1024.jpg', alt='description')
 
 			.container.where-to-buy-alternative
-				.row-alt
+				.row
 					.section-label.col-sm-12.col-md-3(style="background-image:url(http://nearfuturelaboratory.com/img/nfl_map_600.png)")
 						.hover
 							h3.text-uppercase Магазины
@@ -204,7 +203,7 @@ html(lang='ru')
 
 			.collections-on-main
 				.container
-					.row-alt
+					.row
 						.collections-on-main-col(style="background-image:url('http://zegen.ua/img/p/1/2/2/122.jpg');")
 							.hover
 								a(href='categories.html')
@@ -335,30 +334,4 @@ html(lang='ru')
 
 	link(rel="stylesheet", href="external/owl/owl-carousel/owl.carousel.css")
 	script(src='external/owl/owl-carousel/owl.carousel.min.js')
-	script.
-		$('.hero-section-slider').owlCarousel({
-				autoPlay : 5000,
-				singleItem: true,
-				slideSpeed: 300,
-				navigation: true,
-				pagination: true
-			});
-
-		$('.categories-slider-row .owl-carousel').owlCarousel({
-				singleItem: false,
-				slideSpeed: 300,
-				items: 3,
-				responsive:{
-					0:{
-						items:1
-					},
-					1000:{
-						items:2
-					},
-					1200:{
-						items:3
-					}
-				},
-				navigation: true,
-				pagination: false
-			});
+	script(src="js/index.js")
