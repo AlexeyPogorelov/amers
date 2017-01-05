@@ -14,6 +14,12 @@ html(lang='ru')
 		content
 			.hero-section-slider
 
+				.hero-section(style="background-image:url('http://www.galameble.com/wp-content/uploads/slider_%C5%9Bwi%C4%99ta.jpg');")
+					.container
+						.content
+							h1 Качественная мебель для ежедневного сна.
+							p Основными характеристиками мягкой мебели ”Amers” являются современный дизайн, компактность, надежность и функциональность. Именно это по словам наших клиентов является ключевыми преимуществами при выборе нашей мебели.
+
 				.hero-section(style="background-image:url('https://wallpaperscraft.com/image/furniture_interior_design_gift_86632_2560x1024.jpg');")
 					.container
 						.content
@@ -26,29 +32,12 @@ html(lang='ru')
 							h1 Качественная мебель для ежедневного сна.
 							p Основными характеристиками мягкой мебели ”Amers” являются современный дизайн, компактность, надежность и функциональность. Именно это по словам наших клиентов является ключевыми преимуществами при выборе нашей мебели.
 
-				.hero-section(style="background-image:url('https://wallpaperscraft.com/image/paper_vase_sofa_design_interior_fireplace_painting_apartment_room_chair_lamp_plant_style_table_cup_31419_2560x1024.jpg');")
-					.container
-						.content
-							h1 Качественная мебель для ежедневного сна.
-							p Основными характеристиками мягкой мебели ”Amers” являются современный дизайн, компактность, надежность и функциональность. Именно это по словам наших клиентов является ключевыми преимуществами при выборе нашей мебели.
-
 				.hero-section(style="background-image:url('http://www.galameble.com/wp-content/uploads/camelia_slider.jpg');")
 					.container
 						.content
 							h1 Качественная мебель для ежедневного сна.
 							p Основными характеристиками мягкой мебели ”Amers” являются современный дизайн, компактность, надежность и функциональность. Именно это по словам наших клиентов является ключевыми преимуществами при выборе нашей мебели.
 
-				.hero-section(style="background-image:url('http://www.galameble.com/wp-content/uploads/Domo_slider-2.jpg');")
-					.container
-						.content
-							h1 Качественная мебель для ежедневного сна.
-							p Основными характеристиками мягкой мебели ”Amers” являются современный дизайн, компактность, надежность и функциональность. Именно это по словам наших клиентов является ключевыми преимуществами при выборе нашей мебели.
-
-				.hero-section(style="background-image:url('http://www.galameble.com/wp-content/uploads/slider_%C5%9Bwi%C4%99ta.jpg');")
-					.container
-						.content
-							h1 Качественная мебель для ежедневного сна.
-							p Основными характеристиками мягкой мебели ”Amers” являются современный дизайн, компактность, надежность и функциональность. Именно это по словам наших клиентов является ключевыми преимуществами при выборе нашей мебели.
 			.clearfix
 
 			//- include ./partials/categories.jade
@@ -161,10 +150,10 @@ html(lang='ru')
 
 			.container.where-to-buy-alternative
 				.row
-					.section-label.col-sm-12.col-md-3(style="background-image:url(http://nearfuturelaboratory.com/img/nfl_map_600.png)")
-						.hover
+					.section-label.hover-effect.col-sm-12.col-md-3
+						a(href="contacts.html").hover
 							h3.text-uppercase Магазины
-							img(src="http://nearfuturelaboratory.com/img/nfl_map_600.png", alt="map")
+							//- img(src="http://nearfuturelaboratory.com/img/nfl_map_600.png", alt="map")
 					.cities-buttons.col-sm-12.col-md-9.text-center
 						p Ваш коллектив руководствуется девизом “качество не только снаружи, но и внутри”, именно поэтому для производства мебели используются только экологически чистые материалы. Мы постоянно обновляем наш модельный ряд, а также следуем современным тенденциям в мире дизайна и технологий, которые успешно применяем при изготовлении новых изделий.
 						.dropdown
@@ -243,12 +232,12 @@ html(lang='ru')
 							.description-holder
 								h3 5 причин подписаться на нашу рассылку
 								p Рассылка - это удобный способ вовремя узнавать о важных новостях и выгодных возможностях. Мы сами не любим разгребать десятки писем каждый день, поэтому будем писать вам только раз в неделю. И никакой рекламы и спама — только новости!
-							form.row(action="#")
-								.form-group.col-md-4.col-sm-12
+							form.row.flex-width(action="#")
+								.form-group
 									input(type='email', placeholder='Email')
-								.form-group.col-md-4.col-sm-12
+								.form-group
 									input(type='password', placeholder='Имя')
-								.form-group.col-md-4.col-sm-12
+								.form-group
 									button.btn.btn-primary(type='submit')
 										span Подписаться
 

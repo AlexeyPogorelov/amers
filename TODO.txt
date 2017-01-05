@@ -1,6 +1,7 @@
-+ underline убрать
-+ hover
-+ top navigation opacity
-
-города на карте с главной
-подписаться
+- 4 slides on main page (hero)
+- pagination color
+- container width
+- where-to-buy section label
+- hover on collection
+- removed names in catalog
+- migrating to item-card

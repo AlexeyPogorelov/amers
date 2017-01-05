@@ -15,13 +15,13 @@ html(lang='ru')
 			.catalog-page
 				mixin item (name, img, category, short, price)
 					.col-md-4.catalog-item
-						//- a(href="item-card-old.html")
+						//- a(href="item-card.html")
 							//- h3= name
-						a(href="item-card-old.html" tabindex="-1").image-holder
+						a(href="item-card.html" tabindex="-1").image-holder
 							img(src= img, alt= name).fake-img
 							.img(style="background-image:url(#{img})")
 							.hover
-								h3= name
+								//- h3= name
 						.catalog-item-description
 							a(href="catalog.html")
 								h4= category
@@ -29,8 +29,8 @@ html(lang='ru')
 								p!= 'цена от <b>' + price + '</b> <small>грн</small>'
 							//- p= short
 							//- .buttons-holder
-								a(href="item-card-old.html" tabindex="-1").btn.btn-grey Подробней
-								a(href="item-card-old.html" tabindex="-1").btn.btn-primary Купить
+								a(href="item-card.html" tabindex="-1").btn.btn-grey Подробней
+								a(href="item-card.html" tabindex="-1").btn.btn-primary Купить
 
 				.page-label(style="background-image: url('https://wallpaperscraft.com/image/furniture_room_style_70008_1920x1200.jpg')")
 					.container
@@ -38,23 +38,19 @@ html(lang='ru')
 							.col-md-12
 								.catalog-category-name
 									h1 Категория товаров
+									p Приятные мелочи создадут уют в вашем доме, а компания dommino подумала о том, чтобы каждый клиент чувствовал заботу и нашел то самое дополнение к его новому дивану. Яркие подушки, функциональные накладки и стильные стремянки – здесь вы найдете то, что вам по душе.
 				.sort-controls
 					.container
 						.row
 							.col-md-12
 								form(action="#")
-									//- .form-group
-										label(for="sort-param") Сортировать по: 
+									.form-group
+										label(for="sort-param") Сортировать по: &nbsp;
 										select#sort-param(name="sort-param")
+											option новизне
 											option цена ⬆
 											option цена ⬇
-											option новые
-									.form-group
-										span Сортировка: 
-										a.active(href="#") популярные 
-										a(href="#") новые 
-										a(href="#") ценa <i>⬆</i> 
-										a(href="#") ценa <i>⬇</i> 
+
 				.container
 					.row.catalog-category-items-holder
 						+item(
