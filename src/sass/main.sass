@@ -471,6 +471,7 @@ body
 .collections-on-main
 	font-size: 0
 	$block-height-desktop: 260px
+	$block-height-vw: 20vw
 	.container
 	.row
 	.collections-on-main-col
@@ -488,6 +489,7 @@ body
 		float: left
 		width: 25%
 		height: $block-height-desktop
+		height: $block-height-vw
 		display: flex
 		align-items: center
 		justify-content: center
@@ -507,6 +509,11 @@ body
 		.hover
 			position: relative
 			z-index: 1
+
+			display: flex
+			flex-direction: column
+			justify-content: center
+			height: 100%
 		&:nth-child(1),
 		&:first-child
 			width: 50%
@@ -517,6 +524,7 @@ body
 				repeat: no-repeat
 			position: relative
 			height: $block-height-desktop / 2
+			height: $block-height-vw / 2
 			position: absolute
 			left: 0
 			right: 0
@@ -541,8 +549,9 @@ body
 					width: 100%
 
 		h3, p
-			width: 100%
 			color: #fff
+			margin: 0.2em 0
+			width: 100%
 
 	.collections-on-main-social-wrap
 		.gala-social
