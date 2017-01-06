@@ -3,7 +3,7 @@
 (function () {
 	var owlMain, owlHelper, owlOtherItems;
 
-	$('.material-link').each(function () {
+	$('.materials-list').find('label').each(function () {
 		var $this = $(this),
 			style = '',
 			color = $this.data('color') || '',
@@ -17,6 +17,7 @@
 			image = 'background-image:url('+ image +')';
 			style = style + image;
 		}
+		$this.attr('style', style);
 		$this.tooltip({
 			viewport: { selector: 'body', padding: 20 },
 			template: "<div class='color-tooltip-wrapper'><div class='color-tooltip' style='" + style + "'></div></div>"
@@ -24,8 +25,12 @@
 	});
 
 	owlMain = $("#owl-main");
-	owlHelper = $("#owl-helper");
+	owlHelper = $('#js-product-slide-pages');
 	owlOtherItems = $("#owl-other-items");
+
+	if ($(window).width() > 480) {
+		owlHelper.html(owlMain.html());
+	}
 
 	owlMain.owlCarousel({
 		singleItem: true,
@@ -47,71 +52,27 @@
 		navigation: true
 	});
 
-	owlHelper.owlCarousel({
-		items: 8,
-		navigation: true,
-		responsiveRefreshRate: 100,
-		responsive:{
-			0:{
-				items:4
-			},
-			600:{
-				items:5
-			},
-			1000:{
-				items:6
-			},
-			1200:{
-				items:8
-			}
-		},
-		afterInit: function(el){
-			el.find(".owl-item").eq(0).addClass("synced");
-		}
+	owlHelper.find(".item").eq(0).addClass("synced");
+	owlHelper.find(".item").each(function (i) {
+		$(this).data('owlItem', i);
 	});
 
-	function syncPosition(el){
-		var current = this.currentItem;
-		owlHelper
-			.find(".owl-item")
-			.removeClass("synced")
-			.eq(current)
-			.addClass("synced");
-		if(owlHelper.data("owlCarousel") !== undefined){
-			center(current);
-		}
+	function syncPosition () {
+		owlHelper.find('.item')
+			.eq(this.currentItem)
+			.addClass("synced")
+			.siblings()
+			.removeClass("synced");
 	}
 
-	owlHelper.on("click", ".owl-item", function(e){
+	owlHelper.on("click", ".item", function(e){
 		e.preventDefault();
-		var number = $(this).data("owlItem");
+		var $self = $(this),
+			number = $self.data("owlItem");
+		$self.addClass("synced").siblings().removeClass("synced");
 		owlMain.trigger("owl.goTo", number);
 	});
 
-	function center(num){
-		var owlHelpervisible = owlHelper.data("owlCarousel").owl.visibleItems;
-		var found = false;
-		for(var i in owlHelpervisible){
-			if(num === owlHelpervisible[i]){
-				found = true;
-			}
-		}
-
-		if( found===false ) {
-			if( num>owlHelpervisible[owlHelpervisible.length-1] ) {
-				owlHelper.trigger( "owl.goTo", num - owlHelpervisible.length+2 );
-			}else{
-				if( num - 1 === -1 ) {
-					num = 0;
-				}
-				owlHelper.trigger("owl.goTo", num);
-			}
-		} else if( num === owlHelpervisible[owlHelpervisible.length-1] ) {
-			owlHelper.trigger("owl.goTo", owlHelpervisible[1]);
-		} else if( num === owlHelpervisible[0] ) {
-			owlHelper.trigger("owl.goTo", num-1);
-		}
-	}
 
 	$('#owl-main').find('.item a').magnificPopup({
 		type:'image',
@@ -140,4 +101,45 @@
 			}
 		}
 	});
+
+	// smart form
+	(function () {
+		var $form = $('#js-item-card-main-form'),
+			$priceTarget = $form.find('[data-base-price]'),
+			$chosenMaterial = $form.find('#js-chosen-material'),
+			methods = {
+				changeMaterial: function () {
+					var $material = $(this).closest('li').clone();
+					$material.find('input').remove();
+					$chosenMaterial
+						.empty()
+						.append( $material );
+				}
+			};
+		$form.on('change', function (e) {
+			var i,
+				$target = $(':checked'),
+				price,
+				priceSumm = 0;
+			$target.each(function () {
+				var $currentTarget = $(this),
+					method;
+				price = $currentTarget.data('price');
+				price = parseInt(price) || 0;
+				method = $currentTarget.data('method');
+				if (method && typeof methods[method] === 'function') {
+					methods[method].call(this);
+				}
+				if (!price) return;
+				priceSumm += price;
+			});
+			$priceTarget.each(function () {
+				var $this = $(this),
+					basePrice = $this.data('base-price'),
+					currency = $this.data('currency');
+				basePrice = parseInt(basePrice) || 0;
+				$this.html(priceSumm + basePrice + '<small>' + currency + '</small>');
+			});
+		}).trigger('change');
+	})();
 })(jQuery);
