@@ -14,7 +14,7 @@ html(lang='ru')
 		content
 			.catalog-page
 				mixin item (name, img, category, short, price)
-					.col-md-4.catalog-item
+					.col-md-3.catalog-item
 						//- a(href="item-card.html")
 							//- h3= name
 						a(href="item-card.html" tabindex="-1").image-holder
@@ -40,7 +40,7 @@ html(lang='ru')
 									h1 Категория товаров
 									p Приятные мелочи создадут уют в вашем доме, а компания dommino подумала о том, чтобы каждый клиент чувствовал заботу и нашел то самое дополнение к его новому дивану. Яркие подушки, функциональные накладки и стильные стремянки – здесь вы найдете то, что вам по душе.
 				.sort-controls
-					.container
+					.container-alt
 						.row
 							.col-md-12
 								form(action="#")
@@ -51,7 +51,7 @@ html(lang='ru')
 											option от дешевых к дорогим
 											option от дорогих к дешевым
 
-				.container
+				.container-alt
 					.row.catalog-category-items-holder
 						+item(
 							'Милана',

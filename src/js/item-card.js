@@ -3,6 +3,7 @@
 (function () {
 	var owlMain, owlHelper, owlOtherItems;
 
+	// add styles to materials labels
 	$('.materials-list').find('label').each(function () {
 		var $this = $(this),
 			style = '',
@@ -49,7 +50,8 @@
 
 	owlOtherItems.owlCarousel({
 		items: 4,
-		navigation: true
+		navigation: false,
+		pagination: false
 	});
 
 	owlHelper.find(".item").eq(0).addClass("synced");
@@ -74,6 +76,7 @@
 	});
 
 
+	// magnific popup
 	$('#owl-main').find('.item a').magnificPopup({
 		type:'image',
 		zoom: {
