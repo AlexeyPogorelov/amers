@@ -12,10 +12,7 @@
 			margin-right: 20px
 
 .chosen-material
-	float: left
 	white-space: nowrap
-	@media #{$media-sm}
-		float: none
 	.color-tooltip-wrapper
 		top: auto !important
 		bottom: 100% !important
@@ -50,8 +47,14 @@
 		margin-bottom: 1em
 	img
 		width: 100%
+
+.item-card-main-media
 	iframe
-		margin-top: 1em
+		// margin-top: 1em
+		height: calc(100vw / 16 * 4.5)
+		width: 100%
+	img
+		width: 100%
 
 .item-card-main-tabs-holder
 	a
@@ -89,9 +92,32 @@
 .item-card-main-slider
 	margin-top: 1.5rem
 	margin-bottom: 1rem
+
 	.owl-prev,
 	.owl-next
-		display: none
+		background-position: 50% 50%
+		background-size: contain
+		background-repeat: no-repeat
+		background-color: rgba(0,0,0,0.2)
+		border: 8px solid transparent
+
+		opacity: 0.5
+		transition: opacity 100ms
+
+		font-size: 0
+		position: absolute
+		top: 50%
+		margin-top: -20px
+		height: 40px
+		width: 40px
+		&:hover
+			opacity: 1
+	.owl-prev
+		left: 0
+		background-image: url("../img/icons/gm-arrow-left.svg")
+	.owl-next
+		right: 0
+		background-image: url("../img/icons/gm-arrow-right.svg")
 
 /**
  * SLIDERS
@@ -111,6 +137,7 @@
 		img
 			height: auto
 			width: 100%
+
 
 // #owl-helper
 // 	.item
@@ -170,13 +197,14 @@
 		margin-top: 14px
 	.item
 		background: #000
-		margin-bottom: 12px
+		margin-bottom: 7px
 		@media #{$media-sm}
 			display: inline-block
 			width: 20%
 		img
 			width: 100%
 			opacity: 0.5
+			transform: translateZ(0)
 			transition: opacity 100ms
 		a
 			display: block
@@ -220,9 +248,13 @@
 
 .item-card-main-info-block
 	margin: 0 0 20px
-	text-align: right
 	@media #{$media-sm}
 		text-align: center
+	& > *
+		display: inline-block
+		margin-right: 1.3rem
+	label
+		font-weight: 400
 	.price-tag
 		font-weight: bold
 		font-size: 2rem
@@ -255,9 +287,7 @@
 
 .basic-information-row
 	margin-bottom: 20px
-	border-bottom: 1px solid #eee
-	// border-left: none
-	// border-right: none
+	// border-bottom: 1px solid #eee
 	li
 		padding-right: 0
 

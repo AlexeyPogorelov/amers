@@ -14,9 +14,9 @@ html(lang='ru')
 		content
 			.item-card-page
 				#item-card-main-slider.item-card-main-slider
-					.container
+					.container-alt
 						.row
-							.col-md-10.col-sm-12
+							.col-md-9.col-sm-12
 								#owl-main.owl-carousel.owl-theme
 									.item
 										a(href="http://zegen.ua/img/p/1/2/1/121.jpg")
@@ -27,31 +27,36 @@ html(lang='ru')
 									.item
 										a(href="http://zegen.ua/img/p/1/2/2/122.jpg")
 											img(src='http://zegen.ua/img/p/1/2/2/122.jpg', alt='description')
-									.item
-										a(href="http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg")
-											img(src='http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg', alt='description')
-									.item
-										a(href="https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg")
-											img(src='https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg', alt='description')
-							.col-md-2.col-sm-12
+
+							.col-md-3.col-sm-12
 								#js-product-slide-pages.product-slide-pages
 
-				.container.item-card-slider-description
-					.row
-						.col-md-12
-							p Стильная и комфортная модель "COUNTRY" - это сочетание простых линий и в то же время изысканных форм, понятных каждому. Удобное посадочное место позволит полноценно расслабится после тяжелого рабочего дня. Мягкие быльца дивана дополняют полноценный образ данной модели. Она является популярным решением для самых разнообразных вариантов интерьера. Представлена прямым нераскладным диваном, креслом и пуфом. Деревянные ножки модели изготовлены без декоративной покраски.
-				.container
+				//- .item
+				//- 	a(href="http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg")
+				//- 		img(src='http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg', alt='description')
+				//- .item
+				//- 	a(href="https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg")
+				//- 		img(src='https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg', alt='description')
+
+				.container-alt
 					.row
 
-						form#js-item-card-main-form(action="#").col-md-8.item-card-main-form
+						form#js-item-card-main-form(action="#").col-md-12.item-card-main-form
 
 							.row
 								.col-md-12
 									#basic-information-row.basic-information-row
 										.item-card-main-info-block
 											.chosen-material
-												span Ткань: 
+												span Выбрана ткань: 
 												span#js-chosen-material
+											.radios-inline
+												.radio-group.form-group
+													input#radio-6(type='radio', value='privat24', name='align', checked='true', data-price="20")
+													label(for='radio-6') Левая сторона
+												.radio-group.form-group
+													input#radio-7(type='radio', value='courier', name='align', data-price="50")
+													label(for='radio-7') Правая сторона
 											span.price-tag-old(data-base-price="2010" data-currency="грн.") 2230
 												small грн.
 											span.price-tag(data-base-price="1920" data-currency="грн.") 2140
@@ -60,16 +65,6 @@ html(lang='ru')
 												span В корзину
 											//- a.btn.btn-primary(href="order.html")
 												span Купить в один клик
-							.row
-								.col-md-12
-									.radios-inline
-										.radio-group.form-group
-											input#radio-6(type='radio', value='privat24', name='align', checked='true', data-price="20")
-											label(for='radio-6') Левая сторона
-										.radio-group.form-group
-											input#radio-7(type='radio', value='courier', name='align', data-price="50")
-											label(for='radio-7') Правая сторона
-
 							.row
 								.col-md-12
 									mixin material (name, price, color, image, checked)
@@ -216,10 +211,14 @@ html(lang='ru')
 									.item-card-main-description
 										h1 Угловой диван ВИТТО
 										p Витто - универсальный диван трасформер, конструкция которого легко  позволяет  самостоятельно изменять  угловое изделие на прямой диван и наоборот. Механизм раскладки "Еврокнижка"  без особых усилий превращает изделие в просторную двуспальную кровать, а вместительные короба для белья помогут разместить множество предметов. Также в диване предусмотрены ниши в подлокотниках, которые создают дополнительное место для вещей, а так же практичные ламинированные накладки с помощью которых подлокотники легко содержать в чистоте.
+										p Стильная и комфортная модель "COUNTRY" - это сочетание простых линий и в то же время изысканных форм, понятных каждому. Удобное посадочное место позволит полноценно расслабится после тяжелого рабочего дня. Мягкие быльца дивана дополняют полноценный образ данной модели. Она является популярным решением для самых разнообразных вариантов интерьера. Представлена прямым нераскладным диваном, креслом и пуфом. Деревянные ножки модели изготовлены без декоративной покраски.
 
-										iframe(width='560', height='315', src='https://www.youtube.com/embed/4p6AnkK01ic', frameborder='0', allowfullscreen='')
 
-						.col-md-4.item-card-main-props
+						.item-card-main-media.col-md-6.col-sm-12
+							iframe(width='560', height='315', src='https://www.youtube.com/embed/4p6AnkK01ic', frameborder='0', allowfullscreen='')
+							//- img(src="http://www.i-matrace.cz/soubory/andorra-1290626323.jpg", alt="matrace")
+
+						.col-md-6.col-sm-12.item-card-main-props
 							.row
 								.col-md-12
 									h3.description-table-header Технические характеристики
@@ -261,16 +260,16 @@ html(lang='ru')
 							h3 Похожие товары
 					.row
 						#owl-other-items.owl-carousel.owl-theme
-							a.item(href="#" style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/montaj_nikol_nikol.jpg&w=600&h=160)")
-								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/montaj_nikol_nikol.jpg&w=600&h=160', alt='description')
-							a.item(href="#" style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Nikol_razrez1_2.jpg&w=600&h=160)")
-								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Nikol_razrez1_2.jpg&w=600&h=160', alt='description')
-							a.item(href="#" style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Nikol_Soho_7.jpg&w=600&h=160)")
-								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Nikol_Soho_7.jpg&w=600&h=160', alt='description')
-							a.item(href="#" style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Juli.jpg&w=600&h=160)")
-								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Juli.jpg&w=600&h=160', alt='description')
-							a.item(href="#" style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Juli%20_razrez_1.jpg&w=600&h=160)")
-								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Juli%20_razrez_1.jpg&w=600&h=160', alt='description')
+							a.item(href="#" style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/montaj_nikol_nikol.jpg&w=600&h=260)")
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/montaj_nikol_nikol.jpg&w=600&h=260', alt='description')
+							a.item(href="#" style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Nikol_razrez1_2.jpg&w=600&h=260)")
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Nikol_razrez1_2.jpg&w=600&h=260', alt='description')
+							a.item(href="#" style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Nikol_Soho_7.jpg&w=600&h=260)")
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Nikol_Soho_7.jpg&w=600&h=260', alt='description')
+							a.item(href="#" style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Juli.jpg&w=600&h=260)")
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/Juli.jpg&w=600&h=260', alt='description')
+							a.item(href="#" style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Juli%20_razrez_1.jpg&w=600&h=260)")
+								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../..//upload/Juli%20_razrez_1.jpg&w=600&h=260', alt='description')
 
 
 		include ./partials/footer.jade
