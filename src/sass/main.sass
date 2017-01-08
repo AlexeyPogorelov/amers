@@ -330,7 +330,7 @@ body
 			position: 50% 50%
 			size: cover
 			repeat: no-repeat
-			color: #666
+			color: #444
 
 		font-size: 1rem
 		text-align: center
@@ -358,7 +358,7 @@ body
 		&:focus
 			outline: none
 		.hover
-			background: rgba(0,0,0,0.6)
+			background: rgba(0,0,0,0.35)
 			position: absolute
 			top: 0
 			left: 0
@@ -433,7 +433,7 @@ body
 			line-height: 2.4em
 			width: 100%
 			.caret
-				margin-left: 78%
+				margin-left: 80%
 		.dropdown-menu
 			border: none
 			width: 100%
@@ -442,6 +442,7 @@ body
 			display: block
 			opacity: 0
 			pointer-events: none
+			border-radius: 0
 			a
 				line-height: 3em
 		&.open > .dropdown-menu
@@ -483,12 +484,25 @@ body
 			margin: 0 auto
 			text-align: center
 	.cities-buttons
-		margin-top: 46px
-		margin-bottom: 46px
-		padding-left: 2em
-		padding-right: 2em
+		background:
+			image: url('https://wallpaperscraft.com/image/furniture_interior_design_gift_86632_2560x1024.jpg')
+			size: cover
+		padding: 2em
+		position: relative
 		text-align: left
+		height: 20vw
 		// padding-top: 2em
+		&:before
+			content: ''
+			background: rgba(0,0,0,0.4)
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+		p, h2, h3, h4
+			position: relative
+			color: #fff
 
 //----------------------------------
 // END WHERE TO BUY ALTERNATIVE
@@ -618,7 +632,7 @@ body
 			position: 50% 50%
 			size: cover
 			repeat: no-repeat
-			color: #666
+			color: #444
 		// TODO review it
 		background-image: none !important
 
@@ -632,7 +646,7 @@ body
 			display: flex
 			align-items: center
 
-			background: rgba(0,0,0,0.6)
+			background: rgba(0,0,0,0.35)
 			position: absolute
 			top: 0
 			left: 0
@@ -642,8 +656,8 @@ body
 			z-index: 2
 			transition: opacity 300ms, background 300ms
 			&:after
+				content: ''
 				transition: border 300ms, top 300ms, bottom 300ms
-				// content: ''
 				position: absolute
 				top: 40%
 				bottom: 40%
@@ -682,6 +696,21 @@ body
 				background-repeat: no-repeat
 			img
 				opacity: 0
+				width: 100%
+			span
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				line-height: 3.5rem
+				background:
+					// color: rgba(255,255,255,0.4)
+					image: linear-gradient(to top, rgba(255,255,255,0.6), rgba(255,255,255,0))
+					size: cover
+				color: #000
+				text-align: center
+				pointer-events: none
+				text-transform: uppercase
 		.owl-prev,
 		.owl-next
 			background-position: 50% 50%
