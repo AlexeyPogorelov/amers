@@ -78,8 +78,15 @@
 	padding: 10px 20px 10px
 
 .item-card-main-props
+	table
+		border: 1px solid #eee
+		margin: 2rem 0
+		width: 100%
+	td
+		padding: 1rem 1rem
+		vertical-align: top
 	h4
-		margin-top: 14px
+		margin-top: 0
 		margin-bottom: 0.3em
 	p
 		margin: 0
@@ -88,6 +95,18 @@
 	hr
 		border-top: 1px solid #ccc
 		margin: 14px 0
+
+	.description-table-header
+		background: #888
+		color: #fff
+		// padding: 0.6em 1em
+		text-align: center
+		margin: 0
+		vertical-align: middle
+
+.item-card-important-props
+	h3
+		margin-top: 0
 
 .item-card-main-slider
 	margin-top: 1.5rem
@@ -136,6 +155,7 @@
 			display: block
 		img
 			height: auto
+			height: 32vw
 			width: 100%
 
 
@@ -193,11 +213,19 @@
 
 .product-slide-pages
 	font-size: 0
+	height: 32vw
+	overflow: auto
+	overflow-x: hidden
+	overflow-y: auto
 	@media #{$media-sm}
 		margin-top: 14px
+		height: auto
 	.item
 		background: #000
 		margin-bottom: 7px
+		margin-bottom: 1vw
+		&:last-of-type
+			margin-bottom: 0
 		@media #{$media-sm}
 			display: inline-block
 			width: 20%
@@ -206,6 +234,8 @@
 			opacity: 0.5
 			transform: translateZ(0)
 			transition: opacity 100ms
+			height: auto
+			height: 10vw
 		a
 			display: block
 			position: relative
@@ -288,6 +318,7 @@
 .basic-information-row
 	margin-bottom: 20px
 	// border-bottom: 1px solid #eee
+	text-align-last: justify
 	li
 		padding-right: 0
 
@@ -332,12 +363,6 @@
 				right: 9px
 				z-index: 2
 
-.description-table-header
-	background: #888
-	color: #fff
-	padding: 0.6em 1em
-	text-align: center
-	margin-top: 0
 
 .description-table
 	tr

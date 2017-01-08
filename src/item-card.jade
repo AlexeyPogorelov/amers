@@ -27,24 +27,31 @@ html(lang='ru')
 									.item
 										a(href="http://zegen.ua/img/p/1/2/2/122.jpg")
 											img(src='http://zegen.ua/img/p/1/2/2/122.jpg', alt='description')
+									.item
+										a(href="http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg")
+											img(src='http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg', alt='description')
+									.item
+										a(href="https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg")
+											img(src='https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg', alt='description')
 
 							.col-md-3.col-sm-12
 								#js-product-slide-pages.product-slide-pages
 
-				//- .item
-				//- 	a(href="http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg")
-				//- 		img(src='http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg', alt='description')
-				//- .item
-				//- 	a(href="https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg")
-				//- 		img(src='https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg', alt='description')
 
 				.container-alt
+
+					mixin material (name, price, color, image, checked)
+						li
+							//- , style="background-color:#{color};background-image:url(#{image})"
+							input(id= name, value= name, data-price= price, type="radio", name="material", data-method="changeMaterial", checked= checked)
+							label.material-link(for= name, data-toggle="tooltip", title="&nbsp", data-color= color, data-image= image, style="background-color:#{color};background-image:url(#{image})")
+
 					.row
 
 						form#js-item-card-main-form(action="#").col-md-12.item-card-main-form
 
 							.row
-								.col-md-12
+								.col-md-9.col-sm-12
 									#basic-information-row.basic-information-row
 										.item-card-main-info-block
 											.chosen-material
@@ -65,13 +72,7 @@ html(lang='ru')
 												span В корзину
 											//- a.btn.btn-primary(href="order.html")
 												span Купить в один клик
-							.row
-								.col-md-12
-									mixin material (name, price, color, image, checked)
-										li
-											//- , style="background-color:#{color};background-image:url(#{image})"
-											input(id= name, value= name, data-price= price, type="radio", name="material", data-method="changeMaterial", checked= checked)
-											label.material-link(for= name, data-toggle="tooltip", title="&nbsp", data-color= color, data-image= image, style="background-color:#{color};background-image:url(#{image})")
+
 									ul.nav.nav-tabs.item-card-main-tabs-holder(role='tablist')
 										li.active(role='presentation')
 											a(href='#tab-category-1', aria-controls='tab-category-1', role='tab', data-toggle='tab') Популярные <small>от 100 до 300</small>
@@ -117,6 +118,31 @@ html(lang='ru')
 													'#868c8c',
 													'http://dommino.ua/media//catalog/product/g/r/30x30xgrey-09.jpg'
 												)
+												+material(
+													'material-997',
+													'9270',
+													'#dfbb42',
+													'http://dommino.ua/media/catalog/product/cache/1/full/210x210/9df78eab33525d08d6e5fb8d27136e95/s/e/seul-t75.jpg'
+												)
+												+material(
+													'material-992',
+													'9220',
+													'#c28990',
+													'http://dommino.ua/media//catalog/product/s/e/30x30xseul-t-82.jpg'
+												)
+												+material(
+													'material-994',
+													'9240',
+													'#9c3047',
+													'http://dommino.ua/media//catalog/product/s/e/30x30xseul-t65.jpg'
+												)
+												+material(
+													'material-999',
+													'9290',
+													'#e4e3de',
+													'http://dommino.ua/media//catalog/product/s/e/30x30xseul-0.jpg'
+												)
+
 										#tab-category-2.tab-pane(role='tabpanel')
 											h4 Категория ткани 61
 											ul.list-inline.materials-list
@@ -205,6 +231,27 @@ html(lang='ru')
 													'#C96100'
 												)
 
+								.col-md-3.col-sm-12.item-card-important-props
+									h3 Важная информация
+									p Укомплектован: 
+										b  пенополиуретан
+									p Опоры: 
+										b  дерево
+									p Длина: 
+										b  265 
+											small см
+												br
+									p Ширина: 
+										b  416 
+											small см
+												br
+									p Глубина посадочного места: 
+										b  60 
+											small см
+												br
+									p Спальное место: 
+										b  145x210 
+											small см
 
 							.row
 								.col-md-12
@@ -213,39 +260,46 @@ html(lang='ru')
 										p Витто - универсальный диван трасформер, конструкция которого легко  позволяет  самостоятельно изменять  угловое изделие на прямой диван и наоборот. Механизм раскладки "Еврокнижка"  без особых усилий превращает изделие в просторную двуспальную кровать, а вместительные короба для белья помогут разместить множество предметов. Также в диване предусмотрены ниши в подлокотниках, которые создают дополнительное место для вещей, а так же практичные ламинированные накладки с помощью которых подлокотники легко содержать в чистоте.
 										p Стильная и комфортная модель "COUNTRY" - это сочетание простых линий и в то же время изысканных форм, понятных каждому. Удобное посадочное место позволит полноценно расслабится после тяжелого рабочего дня. Мягкие быльца дивана дополняют полноценный образ данной модели. Она является популярным решением для самых разнообразных вариантов интерьера. Представлена прямым нераскладным диваном, креслом и пуфом. Деревянные ножки модели изготовлены без декоративной покраски.
 
-
-						.item-card-main-media.col-md-6.col-sm-12
+						.item-card-main-media.col-md-5.col-sm-12
+							img(src="http://www.i-matrace.cz/soubory/andorra-1290626323.jpg", alt="matrace")
+						.item-card-main-media.col-md-7.col-sm-12
 							iframe(width='560', height='315', src='https://www.youtube.com/embed/4p6AnkK01ic', frameborder='0', allowfullscreen='')
-							//- img(src="http://www.i-matrace.cz/soubory/andorra-1290626323.jpg", alt="matrace")
 
-						.col-md-6.col-sm-12.item-card-main-props
+						.col-md-12.item-card-main-props
 							.row
 								.col-md-12
-									h3.description-table-header Технические характеристики
-									h4 Укомплектован: 
-									p пенополиуретан, ламели, эластичные пасы
-									hr
-									h4 Опоры: 
-									p дерево
-									hr
-									h4 Габаритные размеры:
-									p Длина: 
-										b 265 
-											small см
-												br
-									p Ширина: 
-										b 416 
-											small см
-												br
-									p Глубина посадочного места: 
-										b 60 
-											small см
-												br
-									p Спальное место: 
-										b 145x210 
-											small см
+									.table-holder
+										table
+											tr
+												td.description-table-header
+													h3.description-table-header Технические характеристики
+												td
+													h4 Укомплектован: 
+													p пенополиуретан, ламели, эластичные пасы
+												td
+													h4 Опоры: 
+													p дерево
+												td
+													h4 Габаритные размеры:
+													p Длина: 
+														b 265 
+															small см
+																br
+													p Ширина: 
+														b 416 
+															small см
+																br
+												td
+													p Глубина посадочного места: 
+														b 60 
+															small см
+																br
+												td
+													p Спальное место: 
+														b 145x210 
+															small см
 
-							.item-card-main-description
+							.item-card-main-description.hidden
 								.row
 									.col-md-6
 										a(href="http://amers.ck.ua/upload/Juli_sh_1.jpg")
