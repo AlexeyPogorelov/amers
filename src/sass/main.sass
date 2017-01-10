@@ -687,16 +687,21 @@ body
 	.categories-slider
 		width: 75%
 		.item
-			background-position: 50% 50%
-			background-size: cover
-			background-repeat: no-repeat
+			background:
+				position: 50% 50%
+				size: cover
+				repeat: no-repeat
 
 			height: $block-height-desktop
 			height: $block-height-vw
 			a
-				background-position: 50% 50%
-				background-size: cover
-				background-repeat: no-repeat
+				background:
+					position: 50% 50%
+					size: cover
+					repeat: no-repeat
+				display: block
+				height: 100%
+				width: 100%
 			img
 				opacity: 0
 				width: 100%
@@ -708,12 +713,21 @@ body
 				line-height: 3.5rem
 				background:
 					// color: rgba(255,255,255,0.4)
-					image: linear-gradient(to top, rgba(255,255,255,0.6), rgba(255,255,255,0))
-					size: cover
+					image: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0))
+					position: 0% 0%
+					size: 100% 200%
 				color: #000
 				text-align: center
 				pointer-events: none
 				text-transform: uppercase
+				transition: opacity 300ms, background 300ms
+				font-weight: 600
+			&:hover
+				span
+					color: rgba(0,0,0,0.8)
+					// text-shadow: 1px 1px 1px white
+					background:
+						position: 0% 100%
 		.owl-prev,
 		.owl-next
 			background-position: 50% 50%
