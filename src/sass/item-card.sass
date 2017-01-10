@@ -179,17 +179,45 @@
 // 		background-image: url('../img/icons/slide-arrow-next-2.svg')
 
 #owl-other-items
-	padding: 0 6px
 	margin: 20px 0 40px
 	.item
 		display: block
 		margin: 0 10px
 		overflow: hidden
+		position: relative
 		background-size: cover
 		background-position: 50% 50%
 		transition: opacity 100ms
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			background: rgba(0,0,0,0.4)
+			opacity: 1
+			transition: opacity 300ms
+		&:after
+			content: ''
+			position: absolute
+			left: 10%
+			right: 10%
+			top: 40%
+			bottom: 40%
+			transition: border 300ms, top 300ms, bottom 300ms
+			border: 1px solid rgba(255, 255, 255, 0.4)
+				top-color: transparent
+				bottom-color: transparent
 		&:hover
-			opacity: 0.6
+			&:before
+				opacity: 0
+			&:after
+				border:
+					top-color: rgba(255, 255, 255, 1)
+					bottom-color: rgba(255, 255, 255, 1)
+				top: 10%
+				bottom: 10%
 	.owl-prev,
 	.owl-next
 		background: transparent 50% 50% no-repeat
@@ -217,6 +245,9 @@
 	overflow: auto
 	overflow-x: hidden
 	overflow-y: auto
+	&::-webkit-scrollbar
+		height: 0
+		width: 0
 	@media #{$media-sm}
 		margin-top: 14px
 		height: auto
