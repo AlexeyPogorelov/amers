@@ -40,13 +40,18 @@
 		width: 40px
 
 .item-card-main-description
-	margin-bottom: 20px
+	margin-top: 1.4rem
+	margin-bottom: 1.4rem
 	a
 		display: block
 	p
 		margin-bottom: 1em
 	img
 		width: 100%
+	mark
+		color: $main-color
+		background: none
+		padding: 0 !important
 
 .item-card-main-media
 	iframe
@@ -57,12 +62,33 @@
 		width: 100%
 
 .item-card-main-tabs-holder
-	a
-		background: #eee
-		color: #333
+	$border-color: #ccc
+	// border-top-color: $border-color
+	&>li
+		overflow: hidden
+		margin-left: -1px
+		margin-bottom: -2px
+		border-bottom: 1px solid $border-color
+		&:first-child
+			margin-left: 0
+		a
+			transform: translateY(18px) translateZ(0)
+			transition: transform 100ms
+			border-bottom: none
+		.active, &:hover
+			a
+				transform: translateY(0) translateZ(0)
+		&>a
+			background: #f6f6f6
+			border-color: $border-color
+			color: #333
+			&:hover
+				border-color: $border-color
 	.active
+		border-bottom: none
 		a
 			background: #fff
+			transform: translateY(0) translateZ(0)
 	small
 		display: block
 	@media #{$media-sm}
@@ -350,6 +376,9 @@
 	.btn.btn-grey
 		background-color: $main-color
 		color: #fff
+		&:hover
+			background-color: #fff
+			color: #333
 
 .basic-information-row
 	margin-bottom: 20px

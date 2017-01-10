@@ -45,21 +45,30 @@ html(lang='ru')
 			.categories-alternative
 				.container-alt
 					.row
-						a(href="categories.html").categories-col(style="background-image:url('http://zegen.ua/img/p/1/2/2/122.jpg');")
+						a.categories-col(href="categories.html", style="background-image:url('http://zegen.ua/img/p/1/2/2/122.jpg');")
 							.hover
 								h3 модульные диваны
-						a(href="categories.html").categories-col(style="background-image:url('https://wallpaperscraft.com/image/furniture_interior_design_gift_86632_2560x1024.jpg');")
+						a.categories-col(href="categories.html", style="background-image:url('https://wallpaperscraft.com/image/furniture_interior_design_gift_86632_2560x1024.jpg');")
 							.hover
 								h3 прямые диваны
-						a(href="categories.html").categories-col(style="background-image:url('https://wallpaperscraft.com/image/paper_vase_sofa_design_interior_fireplace_painting_apartment_room_chair_lamp_plant_style_table_cup_31419_2560x1024.jpg');")
+						a.categories-col(href="categories.html", style="background-image:url('https://wallpaperscraft.com/image/paper_vase_sofa_design_interior_fireplace_painting_apartment_room_chair_lamp_plant_style_table_cup_31419_2560x1024.jpg');")
 							.hover
 								h3 угловые диваны
-						a(href="categories.html").categories-col(style="background-image:url('https://wallpaperscraft.com/image/furniture_design_white_living_room_10400_2560x1024.jpg');")
+						a.categories-col(href="categories.html", style="background-image:url('https://wallpaperscraft.com/image/furniture_design_white_living_room_10400_2560x1024.jpg');")
 							.hover
 								h3 кресла
-						a(href="categories.html").categories-col(style="background-image:url('http://www.galameble.com/wp-content/themes/wordpress/img/projektanci.jpg')")
+						a.categories-col(href="categories.html", style="background-image:url('http://www.galameble.com/wp-content/themes/wordpress/img/projektanci.jpg')")
 							.hover
 								h3 пуфы
+
+
+
+			mixin categories-slider-row-item (image, name)
+				.item(style="background-image:url(" + image + ")")
+					a(href= image)
+						img(src='item-card.html', alt='description')
+						span= name
+
 			.categories-slider-row
 				.container-alt
 					.row
@@ -67,54 +76,50 @@ html(lang='ru')
 							.hover
 								h3 кровати и матрасы
 						.categories-slider.owl-carousel
-							.item(style="background-image:url(http://zegen.ua/img/p/1/2/1/121.jpg)")
-								a(href="http://zegen.ua/img/p/1/2/1/121.jpg")
-									img(src='http://zegen.ua/img/p/1/2/1/121.jpg', alt='description')
-									span Логус
-							.item(style="background-image:url(https://wallpaperscraft.com/image/furniture_chair_light_interior_painting_76171_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/furniture_chair_light_interior_painting_76171_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/furniture_chair_light_interior_painting_76171_2560x1024.jpg', alt='description')
-									span Милана
-							.item(style="background-image:url(http://zegen.ua/img/p/1/2/2/122.jpg)")
-								a(href="http://zegen.ua/img/p/1/2/2/122.jpg")
-									img(src='http://zegen.ua/img/p/1/2/2/122.jpg', alt='description')
-									span Доната
-							.item(style="background-image:url(http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg)")
-								a(href="http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg")
-									img(src='http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg', alt='description')
-									span Сенатор
-							.item(style="background-image:url(https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg', alt='description')
-									span Болеро
-							.item(style="background-image:url(https://wallpaperscraft.com/image/living_room_sofa_furniture_interior_style_design_95260_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/living_room_sofa_furniture_interior_style_design_95260_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/living_room_sofa_furniture_interior_style_design_95260_2560x1024.jpg', alt='description')
-									span Диана
-							.item(style="background-image:url(https://wallpaperscraft.com/image/penthouse_sofa_window_style_interior_75612_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/penthouse_sofa_window_style_interior_75612_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/penthouse_sofa_window_style_interior_75612_2560x1024.jpg', alt='description')
-									span Джули
-							.item(style="background-image:url(https://wallpaperscraft.com/image/furniture_interior_design_gift_86632_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/furniture_interior_design_gift_86632_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/furniture_interior_design_gift_86632_2560x1024.jpg', alt='description')
-									span Лоретта
-							.item(style="background-image:url(https://wallpaperscraft.com/image/sofa_pillows_lamp_74963_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/sofa_pillows_lamp_74963_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/sofa_pillows_lamp_74963_2560x1024.jpg', alt='description')
-									span Освальд
-							.item(style="background-image:url(https://wallpaperscraft.com/image/furniture_design_white_living_room_10400_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/furniture_design_white_living_room_10400_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/furniture_design_white_living_room_10400_2560x1024.jpg', alt='description')
-									span Доната
-							.item(style="background-image:url(https://wallpaperscraft.com/image/hotel_room_bed_furniture_luxury_70053_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/hotel_room_bed_furniture_luxury_70053_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/hotel_room_bed_furniture_luxury_70053_2560x1024.jpg', alt='description')
-									span Болеро
-							.item(style="background-image:url(https://wallpaperscraft.com/image/furniture_sofa_interior_design_style_comfort_68132_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/furniture_sofa_interior_design_style_comfort_68132_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/furniture_sofa_interior_design_style_comfort_68132_2560x1024.jpg', alt='description')
-									span Сенатор
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/tempo_640_1.jpg',
+								'Sofa Tempo'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/tempo_640_2.jpg',
+								'Fotel Tempo'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Mondo_5_640.jpg',
+								'Диван Mondo'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Domo_2001.jpg',
+								'Диван Camelia'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Arosa_640.jpg',
+								'Кресло Arosa'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Tom_640.jpg',
+								'Кресло Fotel Tom'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Neo_640.jpg',
+								'Кресло Neo'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Domo_10001.jpg',
+								'Диван Massimo'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Presto_640.jpg',
+								'Кресло Presto'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Zing_640.jpg',
+								''
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Mondo_6_640.jpg',
+								''
+							)
 
 			.categories-slider-row
 				.container-alt
@@ -123,54 +128,44 @@ html(lang='ru')
 							.hover
 								h3 подушки и аксесуары
 						.categories-slider.owl-carousel
-							.item(style="background-image:url(https://wallpaperscraft.com/image/penthouse_sofa_window_style_interior_75612_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/penthouse_sofa_window_style_interior_75612_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/penthouse_sofa_window_style_interior_75612_2560x1024.jpg', alt='description')
-									span Логус
-							.item(style="background-image:url(https://wallpaperscraft.com/image/furniture_interior_design_gift_86632_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/furniture_interior_design_gift_86632_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/furniture_interior_design_gift_86632_2560x1024.jpg', alt='description')
-									span Милана
-							.item(style="background-image:url(https://wallpaperscraft.com/image/sofa_pillows_lamp_74963_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/sofa_pillows_lamp_74963_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/sofa_pillows_lamp_74963_2560x1024.jpg', alt='description')
-									span Доната
-							.item(style="background-image:url(https://wallpaperscraft.com/image/furniture_design_white_living_room_10400_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/furniture_design_white_living_room_10400_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/furniture_design_white_living_room_10400_2560x1024.jpg', alt='description')
-									span Сенатор
-							.item(style="background-image:url(https://wallpaperscraft.com/image/hotel_room_bed_furniture_luxury_70053_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/hotel_room_bed_furniture_luxury_70053_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/hotel_room_bed_furniture_luxury_70053_2560x1024.jpg', alt='description')
-									span Болеро
-							.item(style="background-image:url(https://wallpaperscraft.com/image/furniture_sofa_interior_design_style_comfort_68132_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/furniture_sofa_interior_design_style_comfort_68132_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/furniture_sofa_interior_design_style_comfort_68132_2560x1024.jpg', alt='description')
-									span Диана
-							.item(style="background-image:url(http://zegen.ua/img/p/1/2/1/121.jpg)")
-								a(href="http://zegen.ua/img/p/1/2/1/121.jpg")
-									img(src='http://zegen.ua/img/p/1/2/1/121.jpg', alt='description')
-									span Джули
-							.item(style="background-image:url(https://wallpaperscraft.com/image/furniture_chair_light_interior_painting_76171_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/furniture_chair_light_interior_painting_76171_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/furniture_chair_light_interior_painting_76171_2560x1024.jpg', alt='description')
-									span Лоретта
-							.item(style="background-image:url(http://zegen.ua/img/p/1/2/2/122.jpg)")
-								a(href="http://zegen.ua/img/p/1/2/2/122.jpg")
-									img(src='http://zegen.ua/img/p/1/2/2/122.jpg', alt='description')
-									span Освальд
-							.item(style="background-image:url(http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg)")
-								a(href="http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg")
-									img(src='http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg', alt='description')
-									span Доната
-							.item(style="background-image:url(https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg', alt='description')
-									span Сенатор
-							.item(style="background-image:url(https://wallpaperscraft.com/image/living_room_sofa_furniture_interior_style_design_95260_2560x1024.jpg)")
-								a(href="https://wallpaperscraft.com/image/living_room_sofa_furniture_interior_style_design_95260_2560x1024.jpg")
-									img(src='https://wallpaperscraft.com/image/living_room_sofa_furniture_interior_style_design_95260_2560x1024.jpg', alt='description')
-									span Милана
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Gala_Collezione_Poduszka_Doodle640.jpg',
+								'Логус'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Gala_Collezione_poduszka_pastelowy_podmuch640.jpg',
+								'Милана'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Gala_Collezione_poduszka_gravity640.jpg',
+								'Подушка Gravity'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Gala_Collezione_poduszka_lovebirds640.jpg',
+								'Диван Mondo'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Gala_Collezione_poduszka_celeste640.jpg',
+								'Болеро'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Gala_Collezione_pufa_pastelowy_podmuch640.jpg',
+								'Диана'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Gala_Collezione_pufa_gravity640.jpg',
+								'Джули'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Gala_Collezione_pufa_Doodle640.jpg',
+								'Лоретта'
+							)
+							+categories-slider-row-item(
+								'http://www.galameble.com/wp-content/uploads/Gala_Collezione_pufa_Celeste640.jpg',
+								'Освальд'
+							)
+
+
 
 			.container-alt.where-to-buy-alternative
 				.row
