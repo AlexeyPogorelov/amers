@@ -724,10 +724,13 @@ body
 				font-weight: 600
 			&:hover
 				span
-					color: rgba(0,0,0,0.8)
 					// text-shadow: 1px 1px 1px white
 					background:
 						position: 0% 100%
+			&.invert
+				span
+					color: #fff
+					background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0))
 		.owl-prev,
 		.owl-next
 			background-position: 50% 50%

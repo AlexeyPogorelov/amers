@@ -1,5 +1,9 @@
 @import _mixins
 
+
+.mfp-content,
+	pointer-events: none
+
 .item-card-page
 	h1
 		@media #{$media-sm}
@@ -67,7 +71,7 @@
 	&>li
 		overflow: hidden
 		margin-left: -1px
-		margin-bottom: -2px
+		margin-bottom: -1px
 		border-bottom: 1px solid $border-color
 		&:first-child
 			margin-left: 0
@@ -111,6 +115,7 @@
 	td
 		padding: 1rem 1rem
 		vertical-align: top
+		width: 25%
 	h4
 		margin-top: 0
 		margin-bottom: 0.3em
@@ -129,8 +134,8 @@
 		text-align: center
 		margin: 0
 		vertical-align: middle
-	td.description-table-header
-		width: 0%
+	// td.description-table-header
+		// width: 100%
 
 .item-card-important-props
 	h3
@@ -337,11 +342,19 @@
 
 .item-card-main-info-block
 	margin: 0 0 20px
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: space-between
 	@media #{$media-sm}
 		text-align: center
 	& > *
 		display: inline-block
 		margin-right: 1.3rem
+		// margin-top: 0
+		// margin-bottom: 0
+	.form-group
+		margin-bottom: 0
 	label
 		font-weight: 400
 	.price-tag
@@ -374,11 +387,18 @@
 			display: block
 			margin: 10px 0 10px
 	.btn.btn-grey
-		background-color: $main-color
 		color: #fff
+		background-color: $main-color
+		&:before,
+		&:after
+			background-color: $main-color
 		&:hover
 			background-color: #fff
-			color: #333
+			color: $main-color
+		span
+			&:before,
+			&:after
+				background-color: $main-color
 
 .basic-information-row
 	margin-bottom: 20px

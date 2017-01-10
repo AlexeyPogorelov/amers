@@ -63,10 +63,10 @@ html(lang='ru')
 
 
 
-			mixin categories-slider-row-item (image, name)
-				.item(style="background-image:url(" + image + ")")
-					a(href= image)
-						img(src='item-card.html', alt='description')
+			mixin categories-slider-row-item (image, name, invert)
+				.item(style="background-image:url(" + image + ")" class= invert ? 'invert' : '')
+					a(href='item-card.html')
+						img(src= image, alt='description')
 						span= name
 
 			.categories-slider-row
@@ -161,8 +161,14 @@ html(lang='ru')
 								'Лоретта'
 							)
 							+categories-slider-row-item(
-								'http://www.galameble.com/wp-content/uploads/Gala_Collezione_pufa_Celeste640.jpg',
-								'Освальд'
+								'http://g02.a.alicdn.com/kf/HTB1IeJpIXXXXXa_XFXXq6xXFXXXk/luxury-couch-font-b-sofa-b-font-font-b-section-b-font-font-b-sofa-b.jpg',
+								'Освальд',
+								true
+							)
+							+categories-slider-row-item(
+								'https://s-media-cache-ak0.pinimg.com/736x/e6/df/dc/e6dfdc83f6a6bee285b6fa3cf92d34f3.jpg',
+								'Black',
+								true
 							)
 
 
