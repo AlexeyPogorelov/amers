@@ -21,7 +21,6 @@
 		background: $main-color
 	a
 		outline: none
-		text-decoration: none !important
 	.logo-main
 		height: auto
 		width: 130px
@@ -46,9 +45,15 @@
 			height: 23px
 			a
 				font-weight: 500
+				&:hover
+					text-decoration: underline
 		.dropdown-menu
 			li
 				height: auto
+				&:hover
+					a
+						color: #000
+						background: #fff
 			a
 				display: block
 	.primary-navigation
@@ -162,7 +167,8 @@
 		.dark-line
 			background: #2c2c2c
 			.dropdown-menu
-				background: #2c2c2c
+				li
+					background: #2c2c2c
 	&.closed
 		transform: translateY(-100%) translateZ(0)
 

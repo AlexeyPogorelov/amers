@@ -58,12 +58,31 @@
         $(this).data('owlItem', i);
     });
 
+    // vertical slider
     function syncPosition() {
-        owlHelper.find('.item')
-            .eq(this.currentItem)
+        var scrollTop = owlHelper.scrollTop(),
+            $currentItem = owlHelper.find('.item').eq(this.currentItem),
+            targetOffsetTop;
+
+        if (!syncPosition.containerHeight) syncPosition.containerHeight = owlHelper.height();
+
+        targetOffsetTop = $currentItem.position().top;
+        // console.log(syncPosition.containerHeight);
+
+        $currentItem
             .addClass("synced")
             .siblings()
             .removeClass("synced");
+
+        if (targetOffsetTop > syncPosition.containerHeight && targetOffsetTop + syncPosition.containerHeight > targetOffsetTop + syncPosition.containerHeight / 3) {
+            return;
+        }
+
+        owlHelper.animate({
+            'scrollTop': targetOffsetTop
+        });
+        // owlHelper.scrollTop(targetOffsetTop);
+
     }
 
     owlHelper.on("click", ".item", function(e) {
@@ -73,7 +92,6 @@
         $self.addClass("synced").siblings().removeClass("synced");
         owlMain.trigger("owl.goTo", number);
     });
-
 
     // magnific popup
     $('#owl-main').find('.item a').magnificPopup({

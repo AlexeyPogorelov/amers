@@ -5,8 +5,12 @@
 
 font?
 
-scroll navbar
++ scroll navbar
 
 + Осветление при наведении
 
 + подчеркивание в верхнем меню
+
+map application
+
+vertical slider in item-card
