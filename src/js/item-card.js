@@ -60,6 +60,7 @@
 
 	// vertical slider
 	function syncPosition() {
+
 		// TODO
 		var scrollTop = owlHelper.scrollTop(),
 			$currentItem = owlHelper.find('.item').eq(this.currentItem),
@@ -77,17 +78,13 @@
 			.siblings()
 			.removeClass("synced");
 
-		// console.log(targetTop);
-		// console.log(syncPosition.containerHeight);
-		if (targetOffsetTop > syncPosition.containerHeight && targetOffsetTop + syncPosition.containerHeight > targetOffsetTop + syncPosition.containerHeight / 3) {
+		if (targetTop > 0 && targetTop < syncPosition.containerHeight - syncPosition.containerHeight / 3) {
 			return;
 		}
-		// console.log(targetOffsetTop);
 
 		owlHelper.animate({
-			'scrollTop': targetOffsetTop
+			'scrollTop': targetOffsetTop - syncPosition.containerHeight / 3
 		});
-		// owlHelper.scrollTop(targetOffsetTop);
 	}
 
 	owlHelper.on("click", ".item", function(e) {
