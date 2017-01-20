@@ -26,7 +26,8 @@ html(lang='ru')
 									- for (var key in tags)
 										a(href= '#' + tags[key])= '#' + tags[key] + ' '
 						p= short
-						a(href="article.html").btn.btn-primary Читать
+						a(href="article.html").btn.btn-primary
+							span Читать
 
 				.container
 					.row.blog-page-posts-holder
@@ -66,6 +67,9 @@ html(lang='ru')
 							'скидки',
 							'праздник'
 						)
+
+				.container
+					include ./partials/pagination.jade
 
 		include ./partials/footer.jade
 		include ./partials/modals.jade

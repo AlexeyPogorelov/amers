@@ -1,2 +1,52 @@
 .feedback-page
 	margin-top: -42px
+	.feedback
+		border-bottom: 1px solid #333
+		margin: 1rem 0
+		&:last-of-type
+			border-bottom: none
+	.header-block
+		display: block
+		h2, h3, h4, img
+			display: inline-block
+			color: #333
+			vertical-align: middle
+		img
+			margin-left: 1rem
+	.info-block
+		font-size: 0
+		border-bottom: 1px solid #eee
+		display: inline-block
+		margin-bottom: 1rem
+		li
+			display: inline-block
+			margin: 0 8px 10px 0
+			font-size: 1rem
+			span
+				display: inline-block
+				vertical-align: middle
+			&:after
+				content: ''
+				display: inline-block
+				border-radius: 50%
+				background: #000
+				margin-left: 8px
+				height: 6px
+				width: 6px
+			&:last-of-type
+				margin-right: 0
+				&:after
+					content: none
+		.star
+			&, &-filled
+				background: transparent url('../img/icons/star.svg') 50% 50% no-repeat
+				background-size: contain
+				margin-right: 5px
+				height: 16px
+				width: 16px
+				&:last-of-type
+					margin-right: 0
+			&-filled
+				background-image: url('../img/icons/star-filled.svg')
+	.comment-block
+		padding-bottom: 1rem

@@ -350,3 +350,22 @@ $speed: 100ms
 	flex-direction: row
 	// justify-content: space-around
 	justify-content: center
+
+.pagination
+	display: block
+	text-align: center
+	font-size: 0
+	&>li
+		display: inline-block
+		&.active
+			& > a
+				background-color: #333
+				border-color: #333
+				&:hover
+					background-color: #333
+					border-color: #333
+		& > a
+			border-radius: 0 !important
+			color: #666
+			&:hover
+				color: #000
