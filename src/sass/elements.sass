@@ -13,8 +13,9 @@ $speed: 100ms
 	padding: 12px 30px
 	display: inline-block
 	text-transform: uppercase
-	font-size: 12px
-	font-weight: 600
+	font:
+		size: 12px
+		weight: 600
 	letter-spacing: 0.05em
 	line-height: 1em
 	margin: 0
@@ -194,6 +195,24 @@ $speed: 100ms
 			color: #000
 			background: #ec1b25 + #ec1b25
 			border-color: #ec1b25 + #ec1b25
+	&-transparent
+		background: transparent
+		border: 1px solid #fff
+		&:after,
+		&:before
+			content: none
+		span
+			&:before,
+			&:after
+				content: none
+		&:hover,
+		&:focus:active
+			background: #fff
+			// &:after
+			// &:before
+			// span
+			// 	&:before
+			// 	&:after
 
 .page-label
 	background:
@@ -204,6 +223,8 @@ $speed: 100ms
 	color: #fff
 	padding: 8rem 0
 	position: relative
+	&.tiny
+		padding: 1rem 0
 	&:before
 		content: ''
 		position: absolute
