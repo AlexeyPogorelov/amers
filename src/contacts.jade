@@ -12,57 +12,63 @@ html(lang='ru')
 		include ./partials/navigation.jade
 
 		content
-			.container.contacts-page
+			.contacts-page
+				.page-label(style="background-image:url('http://dommino.ua/media//stg_bannersetter/images/1_6.png')")
+						.row
+							.col-md-12
+								.catalog-category-name
+									h1 Контакты
+									p Выберайте город и обращайтесь в ближайший салон.
+				.container
+					.row
+						.col-md-8
+							.buttons-holder
+								button.btn.btn-primary.js-button-map-trigger
+									span Черкассы
+								button.btn.btn-primary.js-button-map-trigger
+									span Киев
+								button.btn.btn-primary.js-button-map-trigger
+									span Харьков
+								button.btn.btn-primary.js-button-map-trigger
+									span Белая церковь
+								button.btn.btn-primary.js-button-map-trigger
+									span Полтава
+								button.btn.btn-primary.js-button-map-trigger
+									span Запорожье
+								button.btn.btn-primary.js-button-map-trigger
+									span Хмельницкмй
+								button.btn.btn-primary.js-button-map-trigger
+									span Одесса
+						.col-md-4
+							.adresses-section
+								h4 TM AMERS
+								p г. Черкассы, ул.Зелинского 1/1
+								p Тел.: 
+									a(href="tel:0472733168") (047) 2733168
+								p Факс: (047) 2733168
+								p E-mail: 
+									a(href="mailto:amers_mebel@list.ru") amers_mebel@list.ru
 
-				.row
-					.col-md-8
-						.buttons-holder
-							button.btn.btn-primary.js-button-map-trigger
-								span Черкассы
-							button.btn.btn-primary.js-button-map-trigger
-								span Киев
-							button.btn.btn-primary.js-button-map-trigger
-								span Харьков
-							button.btn.btn-primary.js-button-map-trigger
-								span Белая церковь
-							button.btn.btn-primary.js-button-map-trigger
-								span Полтава
-							button.btn.btn-primary.js-button-map-trigger
-								span Запорожье
-							button.btn.btn-primary.js-button-map-trigger
-								span Хмельницкмй
-							button.btn.btn-primary.js-button-map-trigger
-								span Одесса
-					.col-md-4
-						.adresses-section
-							h4 TM AMERS
-							p г. Черкассы, ул.Зелинского 1/1
-							p Тел.: 
-								a(href="tel:0472733168") (047) 2733168
-							p Факс: (047) 2733168
-							p E-mail: 
-								a(href="mailto:amers_mebel@list.ru") amers_mebel@list.ru
-
-				.row
-					.col-md-8
-						#map.google-map
-					.col-md-4
-						form(action="#").contact-form.contact-form-main
-							.form-group
-								label(for='exampleInputName') Ваше имя
-								input#exampleInputName(type='text', placeholder='Введите Ваше имя')
-							.form-group
-								label(for='exampleInputEmail1') Контакт *
-								input#exampleInputEmail1(type='text', placeholder='Телефон или почта')
-								p.help-block (000) 000-00-00 или example@domain.nm
-							.form-group
-								label(for='exampleInputMessage') Текст *
-								textarea#exampleInputMessage(type='password', placeholder='Введите Ваше сообщение')
-							.form-group.input-file
-								input#exampleInputFile(type='file')
-								label(for='exampleInputFile') Прикрепить файл
-							button.btn.btn-primary(type='submit')
-								span Отправить
+					.row
+						.col-md-8
+							#map.google-map
+						.col-md-4
+							form(action="#").contact-form.contact-form-main
+								.form-group
+									label(for='exampleInputName') Ваше имя
+									input#exampleInputName(type='text', placeholder='Введите Ваше имя')
+								.form-group
+									label(for='exampleInputEmail1') Контакт *
+									input#exampleInputEmail1(type='text', placeholder='Телефон или почта')
+									p.help-block (000) 000-00-00 или example@domain.nm
+								.form-group
+									label(for='exampleInputMessage') Текст *
+									textarea#exampleInputMessage(type='password', placeholder='Введите Ваше сообщение')
+								.form-group.input-file
+									input#exampleInputFile(type='file')
+									label(for='exampleInputFile') Прикрепить файл
+								button.btn.btn-primary(type='submit')
+									span Отправить
 
 
 		script.

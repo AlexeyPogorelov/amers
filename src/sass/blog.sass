@@ -4,8 +4,10 @@
 	padding-top: 20px
 	padding-bottom: 40px
 
+.blog-page-posts-holder
+	margin-bottom: 2rem
+
 .blog-post
-	height: 200px
 	margin: 1.2rem -0px
 	@media #{$media-sm}
 		height: auto
@@ -16,10 +18,10 @@
 		margin-top: 0
 		line-height: 1em
 		font-size: 1.4rem
-		height: 21px
+		// height: 21px
 		overflow: hidden
 		text-overflow: ellipsis
-		white-space: nowrap
+		// white-space: nowrap
 		@media #{$media-sm}
 			margin-top: 0.5em
 			white-space: normal
@@ -27,9 +29,10 @@
 		margin: 0.6em 0 1em
 		position: relative
 		overflow: hidden
-		height: 91px
+		// height: 91px
 		&:after
-			content: ''
+			// content: ''
+			content: none
 			pointer-events: none
 			position: absolute
 			bottom: 0
@@ -41,16 +44,16 @@
 		height: 18px
 		overflow: hidden
 		text-overflow: ellipsis
-		white-space: nowrap
+		// white-space: nowrap
 		@media #{$media-sm}
 			height: auto
 			white-space: normal
 	.image-holder
 		display: block
-		float: left
-		margin-right: 20px
+		// margin-right: 20px
+		margin-bottom: 1rem
 		height: 200px
-		width: 300px
+		// width: 300px
 		@media #{$media-sm}
 			float: none
 			width: 100%
