@@ -1,0 +1,138 @@
+doctype html
+html(lang='ru')
+	head
+		title AMERS - каталог
+		meta(charset="utf-8")
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/noscript.jade
+		include ./partials/navigation.jade
+
+		content
+			.catalog-page
+				mixin item (name, img, category, short, price)
+					.col-md-4.catalog-item.sale
+						//- a(href="item-card.html")
+							//- h3= name
+						a(href="item-card.html" tabindex="-1").image-holder
+							img(src= img, alt= name).fake-img
+							.img(style="background-image:url(#{img})")
+							.hover
+								//- h3= name
+						.catalog-item-description
+							a(href="catalog.html")
+								h4= category
+								h3= name
+								p!= 'цена от <b>' + price + '</b> <small>грн</small>'
+							//- p= short
+							//- .buttons-holder
+								a(href="item-card.html" tabindex="-1").btn.btn-grey Подробней
+								a(href="item-card.html" tabindex="-1").btn.btn-primary Купить
+
+				.page-label.warning(style="background-image: url('img/bg/ec4c8f25319415.56344c8ea94d5.jpg')")
+					.container
+						.row
+							.col-md-12
+								.catalog-category-name
+									h1 Готовые диваны в распродаже
+									p Распродажа готовых диванов, собранных нашими лучшими дизайнерами и экспертами для Вас. Если Вы выбрали свой диван, оформите заказ online или нажмите "Купить" и наши менеджеры оперативно оформят и отправят его Вам. Вашу покупку доставят в течении 5 рабочих дней по Украине.
+									p *Фото и комплектации могут отличаться от оригинальной модели, выставленной в салоне для Распродажи. Обязательно уточняйте наличие модели и цвет обивочного материала!
+				.sort-controls
+					.container-alt
+						.row
+							.col-md-12
+								form(action="#")
+									.form-group
+										label(for="sort-param") Сортировать по: &nbsp;
+										select#sort-param(name="sort-param")
+											option новизне
+											option от дешевых к дорогим
+											option от дорогих к дешевым
+
+				.container-alt
+					.row.catalog-category-items-holder
+						+item(
+							'Милана',
+							'img/content/item-1.jpg',
+							'Угловой диван',
+							'Бладает респектабельным дизайном сочетая в себе плавность и благородство...',
+							'86820'
+						)
+						+item(
+							'Доната',
+							'img/content/item-2.jpg',
+							'Прямой диван',
+							'Элитная модель для истинных ценителей классического дизайна. Изысканные и...',
+							'95950'
+						)
+						+item(
+							'Сенатор',
+							'img/content/item-3.jpg',
+							'Прямой диван',
+							'Оригинальный набор мягкой мебели, который удачно объединяет в себе...',
+							'98410'
+						)
+						+item(
+							'Болеро',
+							'img/content/item-4.jpg',
+							'Прямой диван',
+							'Диван который по праву может стать украшением классических интерьеров, будь то...',
+							'53140'
+						)
+						+item(
+							'Диана',
+							'img/content/item-5.jpg',
+							'Угловой диван',
+							'Универсальный и стильный диван, который очень прост в использовании. Изделие...',
+							'17750'
+						)
+						+item(
+							'Джули',
+							'img/content/item-7.jpg',
+							'Угловой диван',
+							'Компактный  и  практичный диван, который легко впишется в современный...',
+							'83930'
+						)
+						+item(
+							'Лоретта',
+							'img/content/item-8.jpg',
+							'Угловой диван',
+							'Отличный выбор для небольших квартир. Несмотря на свои компактные...',
+							'35120'
+						)
+						+item(
+							'Освальд',
+							'img/content/item-9.jpg',
+							'Прямой диван',
+							'Обладает респектабельным дизайном сочетая в себе плавность и благородство...',
+							'50750'
+						)
+						+item(
+							'Доната',
+							'img/content/1444139937-joybird.jpg',
+							'Прямой диван',
+							'Элитная модель для истинных ценителей классического дизайна. Изысканные и...',
+							'25320'
+						)
+						+item(
+							'Сенатор',
+							'img/content/Furniture_-an-Example-of-Midcentury-Modern-Design_brazil-modern-06.jpg',
+							'Прямой диван',
+							'Оригинальный набор мягкой мебели, который удачно объединяет  в себе...',
+							'12900'
+						)
+						+item(
+							'Сенатор',
+							'img/content/Vitto.jpg',
+							'Прямой диван',
+							'Оригинальный набор мягкой мебели, который удачно объединяет  в себе...',
+							'83830'
+						)
+
+		include ./partials/footer.jade
+		include ./partials/modals.jade
+
+	include ./partials/scripts.jade

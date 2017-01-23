@@ -223,8 +223,6 @@ $speed: 100ms
 	color: #fff
 	padding: 8rem 0
 	position: relative
-	&.tiny
-		padding: 1rem 0
 	&:before
 		content: ''
 		position: absolute
@@ -233,6 +231,12 @@ $speed: 100ms
 		bottom: 0
 		left: 0
 		background: rgba(0,0,0,0.4)
+	&.tiny
+		padding: 1rem 0
+	&.warning
+		background: #c93b46
+		&:before
+			background: rgba(255,0,0,0.6)
 	.container
 		max-width: 1200px
 	.catalog-category-name
@@ -255,6 +259,7 @@ $speed: 100ms
 	padding: 0.8em 0
 	label
 		color: #fff
+		margin-bottom: 0
 	a
 		display: inline-block
 		padding: 0 0.8em
