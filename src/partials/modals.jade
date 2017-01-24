@@ -6,6 +6,8 @@
 				.row
 					ul
 						li
+							a(href='test.html') Тест
+						li
 							a(href='about.html') О нас
 						li
 							a(href='catalog.html') Каталог
@@ -22,8 +24,6 @@
 						li
 							a(href='catalog.html') Угловые диваны
 						li
-							a(href='catalog.html') Прямые диваны
-						li
 							a(href="tel:0472733168").binct-phone-number-1 (047) 273-31-68
 
 
@@ -33,6 +33,7 @@
 			.container-fluid
 				button.close(type='button', data-dismiss='modal', aria-label='Close')
 				include ./cart-items
+
 
 #search-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 	.modal-dialog.modal-lg
@@ -88,6 +89,7 @@
 							a.btn.btn-under(href="signup.html" data-toggle="modal" data-target="#register-modal")
 								span Регистрация
 
+
 #register-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 	.modal-dialog.modal-lg
 		.modal-content
@@ -116,6 +118,7 @@
 						.button-group
 							button.btn.btn-primary(type="submit")
 								span Регистрация
+
 
 #forgot-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 	.modal-dialog.modal-lg

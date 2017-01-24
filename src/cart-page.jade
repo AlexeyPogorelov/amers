@@ -1,7 +1,7 @@
 doctype html
 html(lang='ru')
 	head
-		title AMERS - ...
+		title AMERS - корзина
 		meta(charset="utf-8")
 
 		include ./partials/head.jade
@@ -12,7 +12,8 @@ html(lang='ru')
 		include ./partials/navigation.jade
 
 		content
-			//- Add your code here
+			.container.cart-page
+				include partials/cart-items
 
 		include ./partials/footer.jade
 		include ./partials/modals.jade
