@@ -889,16 +889,22 @@ body
 // CART
 //----------------------------------
 .cart-items-holder
-	margin: 120px 0 40px
+	margin: 40px 0
 	padding: 0 20px
 .cart-item
 	font-size: 0
 	letter-spacing: 0
-	margin: 20px 0
+	margin: 10px 0
+	padding: 10px 0
 	white-space: nowrap
+
+	display: flex
+	justify-content: space-between
+	align-items: center
 	@media #{$media-xs}
 		border-bottom: 2px solid #ccc
 		padding-bottom: 20px
+		display: block
 	.left-side,
 	.right-side
 		display: inline-block
@@ -909,81 +915,124 @@ body
 			height: auto
 			text-align: center
 	.left-side
-		width: 40%
+		// width: 40%
+		flex-grow: 1
 		@media #{$media-xs}
 			width: 100%
-		.item-name,
-		.item-image
-			display: inline-block
-			vertical-align: middle
-			@media #{$media-xs}
-				display: block
-		.item-image
-			width: 120px
-			@media #{$media-xs}
-				width: 100%
-			a
-				display: block
-				img
-		.item-name
-			margin-left: 20px
-			color: #333
-			font-weight: 600
-			white-space: normal
-			width: calc(100% - 92px)
-			@media #{$media-xs}
-				line-height: 2em
-				font-size: 2rem
-				margin: 0
-				width: 100%
 	.right-side
 		text-align: right
 		padding-top: 2px
-		width: 60%
+		// width: 60%
+		flex-grow: 2
+		white-space: nowrap
 		@media #{$media-xs}
 			text-align: center
 			width: 100%
-		select
-			padding: 2px 10px
-		.item-properties
+	.item-name,
+	.item-image
+		display: inline-block
+		vertical-align: middle
+		@media #{$media-xs}
+			display: block
+	.item-image
+		width: 120px
+		@media #{$media-xs}
+			width: 100%
+		a
+			display: block
+			img
+	.item-name
+		margin-left: 20px
+		color: #333
+		font-weight: 600
+		white-space: normal
+		max-width: calc(100% - 160px)
+		@media #{$media-xs}
+			line-height: 2em
+			font-size: 2rem
+			margin: 0
+			max-width: 100%
+			width: 100%
+	select
+		padding: 2px 10px
+
+	.item-properties,
+	.item-status
+		@media #{$media-xs}
 			white-space: normal
+		button
+			cursor: default
+			border-radius: 0
+			padding: 10px 10px
+			display: inline-block
+			text-transform: uppercase
+			font-size: 12px
+			font-weight: 600
+			letter-spacing: 0.05em
+			line-height: 1em
+			margin: 0
+			border: 2px solid #eee
+			background: #eee
+			color: #333
+			@media #{$media-xs}
+				margin-top: 2px
+				margin-bottom: 2px
+
+	&.status-done,
+	&.status-waiting,
+	&.status-canceled
+		padding: 10px
+		.item-properties
 			button
-				cursor: default
-				border-radius: 0
+				background-color: rgba(255, 255, 255, 0.5)
+				border-color: rgba(255, 255, 255, 0)
+
+	&.status-done
+		background: #eaffec
+		.item-status
+			button
+				background: #b8ffbf
+				border-color: #b8ffbf
+	&.status-waiting
+		background: #fffcea
+		.item-status
+			button
+				background: #ffec7c
+				border-color: #ffec7c
+	&.status-canceled
+		background: #ffeaea
+		.item-status
+			button
+				background: #ffbcbc
+				border-color: #ffbcbc
+
+	.item-price
+		padding: 0 10px
+		@media #{$media-xs}
+			display: block
+			padding: 18px 10px
+		.price-cost
+			font-size: 1.6em
+		.currency
+	.item-remove
+		.remove-button
+			font-size: 18px
+			@media #{$media-xs}
+				color: #fff
+				display: block
+				background: #e43131
+				height: auto
 				padding: 10px 10px
-				display: inline-block
-				text-transform: uppercase
-				font-size: 12px
-				font-weight: 600
-				letter-spacing: 0.05em
-				line-height: 1em
-				margin: 0
-				border: 2px solid #eee
-				background: #eee
-				color: #333
-		.item-price
-			padding: 0 10px
-			@media #{$media-xs}
-				display: block
-				padding: 18px 10px
-			.price-cost
-				font-size: 1.6em
-			.currency
-		.item-remove
-			.remove-button
-				font-size: 18px
-				@media #{$media-xs}
-					color: #fff
-					display: block
-					background: #e43131
-					height: auto
-					padding: 10px 10px
-					width: 100%
-				&:hover
-					color: #f00
-			@media #{$media-xs}
-				display: block
-				text-align: center
+				width: 100%
+			&:hover
+				color: #f00
+		@media #{$media-xs}
+			display: block
+			text-align: center
+
+#cart-sidebar
+	.item-name
+		// max-width: calc(100% - 92px)
 
 .make-order-button-holder
 	padding: 0 20px

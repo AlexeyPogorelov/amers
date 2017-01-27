@@ -13,6 +13,60 @@ html(lang='ru')
 
 		content
 			.purchase-history
+				.container
+					.row
+						.col-md-12
+							ul.cart-items-holder
+								mixin cart-item (name, img, status, ...prop)
+									li.cart-item(class= 'status-' + status)
+										.left-side
+											span.item-image
+												a.image-holder(href='item-card.html')
+													img(src= img, alt= name)
+											a.item-name(href='item-card.html')= name
+										.right-side
+											span.item-properties
+												-for (key in prop)
+													button= prop[key]
+											span.item-status
+												button
+													if status === 'done'
+														доставлено
+													else if status === 'waiting'
+														доставляется
+													else
+														отменено
+											span.item-price
+												span.price-cost 12700
+												span.currency грн.
+								+cart-item(
+									'Сенатор',
+									'https://www.pufetto.com.ua/items/gerardo/c/1/c.gerardo.jpg',
+									'done',
+									'Красный',
+									'PENTA'
+								)
+								+cart-item(
+									'Милана',
+									'http://amers.ck.ua/upload/Milana.jpg',
+									'done',
+									'Синий',
+									'NOVEL'
+								)
+								+cart-item(
+									'Доната',
+									'http://amers.ck.ua/upload/Donata_divan.jpg',
+									'waiting',
+									'Желтый',
+									'RITZ'
+								)
+								+cart-item(
+									'Сенатор',
+									'http://amers.ck.ua/upload/Senator_1.jpg',
+									'canceled',
+									'Красный',
+									'TRINITY'
+								)
 
 		include ./partials/footer.jade
 		include ./partials/modals.jade
