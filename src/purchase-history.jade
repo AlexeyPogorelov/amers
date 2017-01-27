@@ -31,11 +31,11 @@ html(lang='ru')
 											span.item-status
 												button
 													if status === 'done'
-														доставлено
+														| доставлено
 													else if status === 'waiting'
-														доставляется
+														| доставляется
 													else
-														отменено
+														| отменено
 											span.item-price
 												span.price-cost 12700
 												span.currency грн.
