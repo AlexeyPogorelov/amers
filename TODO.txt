@@ -1,6 +1,8 @@
 
 font?
 
+fields validation
+
 map application
 
 vertical slider in item-card
