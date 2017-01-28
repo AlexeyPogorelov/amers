@@ -221,8 +221,13 @@ $speed: 100ms
 		position: 50% 50%
 		repeat: no-repeat
 	color: #fff
-	padding: 8rem 0
+	padding: 6rem 0
 	position: relative
+	min-height: calc(400px)
+	margin-top: -42px
+	display: flex
+	align-items: center
+	justify-content: space-around
 	&:before
 		content: ''
 		position: absolute
@@ -237,8 +242,9 @@ $speed: 100ms
 		background: #c93b46
 		&:before
 			background: rgba(255,0,0,0.6)
-	.container
+	& > .container
 		max-width: 1200px
+		margin-bottom: -24px
 	.catalog-category-name
 		text-align: center
 		h1

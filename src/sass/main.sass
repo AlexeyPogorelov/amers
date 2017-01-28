@@ -436,8 +436,15 @@ body
 		button
 			line-height: 2.4em
 			width: 100%
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding:
+				left: 20px
+				right: 20px
 			.caret
 				margin-left: 80%
+				margin-left: calc(0px)
 		.dropdown-menu
 			border: none
 			width: 100%
@@ -1053,7 +1060,7 @@ body
 .about-page
 	padding-bottom: 40px
 	@media #{$media-lg}
-		padding-top: 100px
+		padding-top: 60px
 	.bottom-bar
 		margin-top: 2em
 	br
@@ -1063,6 +1070,10 @@ body
 		@media #{$media-lg}
 			margin-top: 0
 			white-space: nowrap
+	.wysiwyg
+		h1, h2, h3, p
+			&:first-child
+				margin-top: 3rem
 //----------------------------------
 // END ABOUT PAGE
 //----------------------------------
@@ -1071,7 +1082,7 @@ body
 // CONTACTS PAGE
 //----------------------------------
 .contacts-page
-	margin-top: -42px
+	// margin-top: -42px
 	padding-bottom: 80px
 	.buttons-holder
 		button
