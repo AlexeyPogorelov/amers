@@ -14,7 +14,7 @@ html(lang='ru')
 		content
 			.catalog-page
 				mixin item (name, img, category, short, price)
-					.col-md-4.catalog-item
+					.col-md-4.catalog-item-alt
 						//- a(href="item-card.html")
 							//- h3= name
 						a(href="item-card.html" tabindex="-1").image-holder
@@ -26,7 +26,7 @@ html(lang='ru')
 							a(href="catalog.html")
 								h4= category
 								h3= name
-								p!= 'от <b>' + price + '</b> <small>грн</small>'
+								p!= 'цена от <b>' + price + '</b> <small>грн</small>'
 							//- p= short
 							//- .buttons-holder
 								a(href="item-card.html" tabindex="-1").btn.btn-grey Подробней
