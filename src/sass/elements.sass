@@ -236,15 +236,19 @@ $speed: 100ms
 		bottom: 0
 		left: 0
 		background: rgba(0,0,0,0.4)
+	& > .container
+		max-width: 1200px
+		margin-bottom: -24px
 	&.tiny
-		padding: 1rem 0
+		padding: 2rem 0
+		min-height: initial
+		& > .container
+			max-width: 1200px
+			margin-bottom: 0
 	&.warning
 		background: #c93b46
 		&:before
 			background: rgba(255,0,0,0.6)
-	& > .container
-		max-width: 1200px
-		margin-bottom: -24px
 	.catalog-category-name
 		text-align: center
 		h1
