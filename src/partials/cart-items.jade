@@ -2,11 +2,11 @@
 	ul.cart-items-holder
 		mixin cart-item (name, img, ...prop)
 			li.cart-item
-				.left-side
+				a.left-side(href='item-card.html')
 					span.item-image
-						a.image-holder(href='item-card.html')
+						.image-holder
 							img(src= img, alt= name)
-					a.item-name(href='item-card.html')= name
+					.item-name= name
 				.right-side
 					span.item-properties
 						-for (key in prop)

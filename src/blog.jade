@@ -15,10 +15,10 @@ html(lang='ru')
 			.blog-page
 				mixin item (name, date, img, short, ...tags)
 					.col-md-4.blog-post
-						a(href="article.html").image-holder
-							img(src= img, alt= name).fake-img
-							.img(style="background-image:url(#{img})")
-						a(href="article.html")
+						a.header-block(href="article.html")
+							.image-holder
+								img(src= img, alt= name).fake-img
+								.img(style="background-image:url(#{img})")
 							h3= name
 						.info-block!= '<a href="#">Автор,</a> <time>' + date + ' </time>, '
 							if tags
@@ -26,8 +26,6 @@ html(lang='ru')
 									- for (var key in tags)
 										a(href= '#' + tags[key])= '#' + tags[key] + ' '
 						p= short
-						a(href="article.html").btn.btn-primary
-							span Читать
 
 				.container
 					.row.blog-page-posts-holder

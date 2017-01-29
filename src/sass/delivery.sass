@@ -11,3 +11,26 @@
 			// margin-left: 0.5em
 			// margin-right: 0.5em
 			margin: 0.6em 0.3em
+	.wysiwyg
+		text-align: center
+		// h1, h2
+		hr
+			border-color: #676767
+		.row
+			padding-bottom: 3rem
+			&:nth-of-type(odd)
+				background: #eee
+
+		.col-md-6
+			// text-align: center
+			&:nth-of-type(even)
+				border-right: 1px solid #676767
+			li
+				display: inline-block
+				&:before
+					content: '- '
+		.col-md-4
+			&:nth-of-type(3n+2)
+				border-right: 1px solid #676767
+			&:nth-of-type(3n+3)
+				border-right: 1px solid #676767
