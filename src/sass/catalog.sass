@@ -11,6 +11,8 @@
 		transform: translate(0, 0)
 		opacity: 1
 .catalog-item
+	transition: opacity 100ms
+	opacity: 1
 	margin-bottom: 20px
 	animation: catalog-item 1s 1
 	animation-fill-mode: both
@@ -41,10 +43,6 @@
 		text-decoration: none
 		padding: 0
 		margin: 0
-		transition: opacity 100ms
-		opacity: 1
-		&:hover
-			opacity: 0.6
 		h4
 			margin: 0
 	.buttons-holder
@@ -134,12 +132,38 @@
 		a
 			display: block
 			overflow: hidden
+	.catalog-item-details
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		padding: 1rem
+		transition: transform 300ms
+		transform: translateY(-100%)
+		p
+			color: inherit
+	.sale-shield
+		position: absolute
+		bottom: 10px
+		left: 0
+		background: rgba(255,0,0,0.8)
+		color: #fff
+		padding: 4px 2rem
+	&:hover
+		// opacity: 0.6
+		.catalog-item-details
+			transform: translateY(0%)
 	&.sale
-		.catalog-item-description
-			background: #f34861
+		&:hover
+			opacity: 1
+		.catalog-item-details
+			background: rgba(255,0,0,0.8)
 			color: #fff
-			h3, p
-				color: #fff
+		.catalog-item-description
+			// background: #f34861
+			// color: #fff
+			// h3, p
+				// color: #fff
 
 .catalog-category-items-holder
 	margin-top: -32px

@@ -16,6 +16,7 @@
 contacts
 
 
+rebuild cart https://www.templatemonster.com/blog/shopping-cart-page-designs/
 
 magnefic popup fix scroll issue
 

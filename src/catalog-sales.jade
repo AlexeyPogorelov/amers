@@ -13,7 +13,7 @@ html(lang='ru')
 
 		content
 			.catalog-page
-				mixin item (name, img, category, short, price)
+				mixin item (name, img, category, short, price, city)
 					.col-md-4.catalog-item.sale
 						//- a(href="item-card.html")
 							//- h3= name
@@ -22,17 +22,20 @@ html(lang='ru')
 							.img(style="background-image:url(#{img})")
 							.hover
 								//- h3= name
+							.catalog-item-details
+								p!= short
+							.sale-shield
+								span= city
 						.catalog-item-description
 							a(href="catalog.html")
 								h4= category
 								h3= name
 								p!= 'цена от <b>' + price + '</b> <small>грн</small>'
-							//- p= short
 							//- .buttons-holder
 								a(href="item-card.html" tabindex="-1").btn.btn-grey Подробней
 								a(href="item-card.html" tabindex="-1").btn.btn-primary Купить
 
-				.page-label.warning(style="background-image: url('img/bg/ec4c8f25319415.56344c8ea94d5.jpg')")
+				.page-label.warning(style="background-image: url('http://zegen.ua/img/p/1/2/1/121.jpg')")
 					.container
 						.row
 							.col-md-12
@@ -40,96 +43,113 @@ html(lang='ru')
 									h1 Готовые диваны в распродаже
 									p Распродажа готовых диванов, собранных нашими лучшими дизайнерами и экспертами для Вас. Если Вы выбрали свой диван, оформите заказ online или нажмите "Купить" и наши менеджеры оперативно оформят и отправят его Вам. Вашу покупку доставят в течении 5 рабочих дней по Украине.
 									p *Фото и комплектации могут отличаться от оригинальной модели, выставленной в салоне для Распродажи. Обязательно уточняйте наличие модели и цвет обивочного материала!
+
 				.sort-controls
 					.container-alt
 						.row
 							.col-md-12
 								form(action="#")
 									.form-group
-										label(for="sort-param") Сортировать по: &nbsp;
+										label(for="sort-param") Выбрать город: &nbsp;
 										select#sort-param(name="sort-param")
-											option новизне
-											option от дешевых к дорогим
-											option от дорогих к дешевым
+											option Киев
+											option Сумы
+											option Харьков
+											option Одесса
+											option Полтава
+											option Запорожье
+											option Хмельницкий
+											option Черкассы
 
 				.container-alt
 					.row.catalog-category-items-holder
 						+item(
 							'Милана',
-							'img/content/item-1.jpg',
+							'http://www.galameble.com/wp-content/uploads/tempo_640_1.jpg',
 							'Угловой диван',
-							'Бладает респектабельным дизайном сочетая в себе плавность и благородство...',
-							'86820'
+							'Адрес: г.Киев, ТРЦ DREAM-TOWN-2, Оболонский пр-кт, 21Б<br/>Телефон: (044) 390-1001<br/>Ткань: london-chocolate (замша)<br/>Механизм трансформации: "Реклайнер"',
+							'86820',
+							'Киев'
 						)
 						+item(
 							'Доната',
-							'img/content/item-2.jpg',
+							'http://www.galameble.com/wp-content/uploads/Mondo_5_640.jpg',
 							'Прямой диван',
-							'Элитная модель для истинных ценителей классического дизайна. Изысканные и...',
-							'95950'
+							'Адрес: г. Днепр, Салон "Zlatamebel", ТЦ "Biennale", ул.Космическая,53 А<br />Телефон: (044) 390-1001<br />Ткань: sabbia-925 (замша)<br />Механизм трансформации: "Электрореклайнер"',
+							'95950',
+							'Черкассы'
 						)
 						+item(
 							'Сенатор',
-							'img/content/item-3.jpg',
+							'http://www.galameble.com/wp-content/uploads/gala-kanapa-asti.jpg',
 							'Прямой диван',
-							'Оригинальный набор мягкой мебели, который удачно объединяет в себе...',
-							'98410'
+							'Адрес: г. Кривой Рог (склад) <br />Телефон: (044) 390-1001<br />Ткань: bambu-02 (рогожка)<br />Механизм трансформации: нет',
+							'98410',
+							'Кривой Рог'
 						)
 						+item(
 							'Болеро',
-							'img/content/item-4.jpg',
+							'http://www.galameble.com/wp-content/uploads/yuppie_640.jpg',
 							'Прямой диван',
-							'Диван который по праву может стать украшением классических интерьеров, будь то...',
-							'53140'
+							'Адрес: г. Кривой Рог (склад) <br />Телефон: (044) 390-1001<br />Ткань: savanna-15 orange (жаккард)<br />Механизм трансформации: "Инфагрид", "Реклайнер"<br />*Комплект выполняется под заказ в течении 2 недель с момента заказа.',
+							'53140',
+							'Черкассы'
 						)
 						+item(
 							'Диана',
-							'img/content/item-5.jpg',
+							'http://www.galameble.com/wp-content/uploads/tivoli_sofa_miniatura.jpg',
 							'Угловой диван',
-							'Универсальный и стильный диван, который очень прост в использовании. Изделие...',
-							'17750'
+							'Адрес: г.Киев, Салон "Zlatamebel", ТЦ "АРАКС", 2эт., пав.67, ул.Большая кольцевая, 110<br />Телефон: (044) 390-1001<br />Ткань: chelsea-red (кожа)<br />Механизм трансформации: "Ходри"',
+							'17750',
+							'Киев'
 						)
 						+item(
 							'Джули',
-							'img/content/item-7.jpg',
+							'http://www.galameble.com/wp-content/uploads/stella_sofa_miniatura.jpg',
 							'Угловой диван',
-							'Компактный  и  практичный диван, который легко впишется в современный...',
-							'83930'
+							'Адрес: г.Днепр, салон "Zlatamebel", ТЦ "КАРАВАН",ул.Нижнеднепровская,17<br />Телефон: (044) 390-1001<br />Ткань: Almira 13-soft ivory (велюр)<br />Механизм трансформации: "Седафлекс"',
+							'83930',
+							'Днепр'
 						)
 						+item(
 							'Лоретта',
-							'img/content/item-8.jpg',
+							'http://www.galameble.com/wp-content/uploads/relax_sofa_miniatura.jpg',
 							'Угловой диван',
-							'Отличный выбор для небольших квартир. Несмотря на свои компактные...',
-							'35120'
+							'Адрес: г. Киев, Салон "Zlatamebel", ТЦ ДИАМАНТ, (1 эт), ул. Петропавловская, 14Е<br />Телефон: (044) 390-1001<br />Ткань: chelsea-red (кожа)<br />Механизм трансформации: "Ходри"',
+							'35120',
+							'Киев'
 						)
 						+item(
 							'Освальд',
-							'img/content/item-9.jpg',
+							'http://www.galameble.com/wp-content/uploads/play_sofa_miniatura.jpg',
 							'Прямой диван',
-							'Обладает респектабельным дизайном сочетая в себе плавность и благородство...',
-							'50750'
+							'Адрес: г.Кривой Рог, салон "Zlatamebel", ул.Владимира Великого(Мелешкина),24 Д<br />Телефон: (044) 390-1001<br />Ткань: buderus-6811 (кожа)<br />Механизм трансформации: "Торнадо"',
+							'50750',
+							'Черкассы'
 						)
 						+item(
 							'Доната',
-							'img/content/1444139937-joybird.jpg',
+							'http://www.galameble.com/wp-content/uploads/planet_sofa_miniatura.jpg',
 							'Прямой диван',
-							'Элитная модель для истинных ценителей классического дизайна. Изысканные и...',
-							'25320'
+							'Адрес: г. Днепр, Салон "Zlatamebel", ТЦ "Biennale", ул.Космическая,53 А<br />Телефон: (044) 390-1001<br />Ткань: panarea-9 (рогожка)<br />Механизм трансформации: "Дельфин"',
+							'25320',
+							'Черкассы'
 						)
 						+item(
 							'Сенатор',
-							'img/content/Furniture_-an-Example-of-Midcentury-Modern-Design_brazil-modern-06.jpg',
+							'http://www.galameble.com/wp-content/uploads/Verona_sofa_640-2.jpg',
 							'Прямой диван',
-							'Оригинальный набор мягкой мебели, который удачно объединяет  в себе...',
-							'12900'
+							'Адрес: г.Кривой Рог, Склад<br />Телефон: (044) 390-1001<br />Ткань: idea-7047 (рогожка)<br />Механизм трансформации: "Дельфин"',
+							'12900',
+							'Кривой Рог'
 						)
 						+item(
 							'Сенатор',
-							'img/content/Vitto.jpg',
+							'http://www.galameble.com/wp-content/uploads/camino_sofa_miniatura.jpg',
 							'Прямой диван',
-							'Оригинальный набор мягкой мебели, который удачно объединяет  в себе...',
-							'83830'
+							'Адрес: г.Киев, Салон "Zlatamebel", ТЦ "ГЛОБАЛ", ул.Оноре де Бальзака, 2А<br />Телефон: (044) 390-1001<br />Ткань: panarea-10 (рогожка)<br />Механизм трансформации: "Дельфин"',
+							'83830',
+							'Киев'
 						)
 
 		include ./partials/footer.jade
