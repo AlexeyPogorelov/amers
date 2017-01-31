@@ -30,7 +30,7 @@ html(lang='ru')
 							a(href="catalog.html")
 								h4= category
 								h3= name
-								p!= 'цена от <b>' + price + '</b> <small>грн</small>'
+								p!= '<strike>' + (+price + 800) + '</strike> <b>' + price + '</b> <small>грн</small>'
 							//- .buttons-holder
 								a(href="item-card.html" tabindex="-1").btn.btn-grey Подробней
 								a(href="item-card.html" tabindex="-1").btn.btn-primary Купить

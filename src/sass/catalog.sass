@@ -134,13 +134,16 @@
 			overflow: hidden
 	.catalog-item-details
 		position: absolute
+		background: rgba(255,255,255,0.4)
 		top: 0
 		left: 0
 		right: 0
 		padding: 1rem
 		transition: transform 300ms
 		transform: translateY(-100%)
-		p
+		color: #333
+		text-transform: uppercase
+		p, span
 			color: inherit
 	.sale-shield
 		position: absolute
@@ -164,6 +167,10 @@
 			// color: #fff
 			// h3, p
 				// color: #fff
+			strike
+				font-weight: bold
+			b, small
+				color: #f00
 
 .catalog-category-items-holder
 	margin-top: -32px

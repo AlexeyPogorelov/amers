@@ -20,8 +20,8 @@ html(lang='ru')
 						a(href="item-card.html" tabindex="-1").image-holder
 							img(src= img, alt= name).fake-img
 							.img(style="background-image:url(#{img})")
-							.hover
-								//- h3= name
+							.catalog-item-details
+								span= category
 						.catalog-item-description
 							a(href="catalog.html")
 								h4= category
