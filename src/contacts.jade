@@ -23,31 +23,34 @@ html(lang='ru')
 				.row
 					.col-md-8
 						.buttons-holder
-							button.btn.active.btn-primary.js-button-map-trigger(data-addresses="" data-name="" data-cellphones="" data-email="")
-								span Черкассы
-							button.btn.btn-primary.js-button-map-trigger
+							button.btn.active.btn-primary.js-button-map-trigger(data-address="ungallant" data-name="Penny Vasher" data-cellphones="+3(854)074-85-05, +4(889)241-97-10, +4(941)901-21-64" data-emails="flaxen@phototube.net")
+								span Черкассы (Лабиринт)
+							button.btn.btn-primary.js-button-map-trigger(data-address="memorization" data-name="Hillary Weisgerber" data-cellphones="+2(251)231-89-42, +1(857)184-95-47" data-emails="tribeless@spatterdock.edu")
 								span Киев
-							button.btn.btn-primary.js-button-map-trigger
+							button.btn.btn-primary.js-button-map-trigger(data-address="Advaita" data-name="Eleni Pratley" data-cellphones="+8(640)736-48-31" data-emails="shaglike@dispirited.org")
 								span Харьков
-							button.btn.btn-primary.js-button-map-trigger
+							button.btn.btn-primary.js-button-map-trigger(data-address="dipsas" data-name="Milagros Emory" data-cellphones="+2(542)911-80-57" data-emails="hydnaceous@outrigger.net")
 								span Белая церковь
-							button.btn.btn-primary.js-button-map-trigger
+							button.btn.btn-primary.js-button-map-trigger(data-address="pyrotheology" data-name="Deb Warzecha" data-cellphones="+4(941)901-21-64" data-emails="opisthoglossal@precongratulation.net")
 								span Полтава
-							button.btn.btn-primary.js-button-map-trigger
+							button.btn.btn-primary.js-button-map-trigger(data-address="corozo" data-name="Lennie Vicens" data-cellphones="+1(102)418-85-90" data-emails="butcherbird@duosecant.net")
 								span Запорожье
-							button.btn.btn-primary.js-button-map-trigger
+							button.btn.btn-primary.js-button-map-trigger(data-address="uncorruptible" data-name="Dustin Donerson" data-cellphones="+4(889)241-97-10" data-emails="heartseed@hyracodontoid.co.uk")
 								span Хмельницкмй
-							button.btn.btn-primary.js-button-map-trigger
+							button.btn.btn-primary.js-button-map-trigger(data-address="yttrofluorite" data-name="Kylie Seil" data-cellphones="+1(857)184-95-47, +4(941)901-21-64" data-emails="unfishlike@undergraduette.net")
 								span Одесса
 					.col-md-4
 						.addresses-section
-							h4 TM AMERS
-							p г. Черкассы, ул.Зелинского 1/1
-							p Тел.: 
-								a(href="tel:0472733168") (047) 2733168
-							p Факс: (047) 2733168
+							h4.js-button-map-name TM AMERS
+							p.js-button-map-address г. Черкассы, ул.Зелинского 1/1
+							p Тел.:
+								ul.js-button-map-cellphones
+									li
+										a(href="tel:0472733168") (047) 2733168
 							p E-mail: 
-								a(href="mailto:amers_mebel@list.ru") amers_mebel@list.ru
+								ul.js-button-map-emails
+									li
+										a(href="mailto:amers_mebel@list.ru") amers_mebel@list.ru
 
 
 			#map.google-map
@@ -93,3 +96,4 @@ html(lang='ru')
 	include ./partials/scripts.jade
 
 	script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2yEFlh7UKQXEfNVR9P0B3qqSGbb8pF0Q&callback=initMap")
+	script(src='js/contacts.js')
