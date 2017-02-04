@@ -2,28 +2,29 @@
 
     function jsonToList($el, json, type) {
         // configure type
+        var i = 0;
         $el.empty();
         json = json.split(',');
         if (!type) {
-            for (var i = 0; i < json.length; i++) {
+            for (i = 0; i < json.length; i++) {
                 $('<li>').text(
                     $.trim(json[i])
                 ).appendTo($el);
             }
         } else if (type === 'email') {
-            for (var i = 0; i < json.length; i++) {
+            for (i = 0; i < json.length; i++) {
                 $('<li>').text(
                     $.trim(json[i])
                 ).appendTo($el);
             }
         } else if (type === 'phone') {
-            for (var i = 0; i < json.length; i++) {
+            for (i = 0; i < json.length; i++) {
                 $('<li>').text(
                     $.trim(json[i])
                 ).appendTo($el);
             }
         } else if (type === 'skype') {
-            for (var i = 0; i < json.length; i++) {
+            for (i = 0; i < json.length; i++) {
                 $('<li>').text(
                     $.trim(json[i])
                 ).appendTo($el);

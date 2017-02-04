@@ -23,12 +23,6 @@ html(lang='ru')
 				.row
 					.col-md-8
 						.buttons-holder
-							button.btn.active.btn-primary.js-button-map-trigger(data-address="ungallant" data-name="Penny Vasher" data-cellphones="+3(854)074-85-05, +4(889)241-97-10, +4(941)901-21-64" data-emails="flaxen@phototube.net")
-								span Черкассы (Лабиринт)
-							button.btn.btn-primary.js-button-map-trigger(data-address="memorization" data-name="Hillary Weisgerber" data-cellphones="+2(251)231-89-42, +1(857)184-95-47" data-emails="tribeless@spatterdock.edu")
-								span Киев
-							button.btn.btn-primary.js-button-map-trigger(data-address="Advaita" data-name="Eleni Pratley" data-cellphones="+8(640)736-48-31" data-emails="shaglike@dispirited.org")
-								span Харьков
 							button.btn.btn-primary.js-button-map-trigger(data-address="dipsas" data-name="Milagros Emory" data-cellphones="+2(542)911-80-57" data-emails="hydnaceous@outrigger.net")
 								span Белая церковь
 							button.btn.btn-primary.js-button-map-trigger(data-address="pyrotheology" data-name="Deb Warzecha" data-cellphones="+4(941)901-21-64" data-emails="opisthoglossal@precongratulation.net")
@@ -54,8 +48,48 @@ html(lang='ru')
 									li
 										a(href="mailto:amers_mebel@list.ru") amers_mebel@list.ru
 
+			//- Черкассы (Лабиринт)
+			//- Киев
+			//- Харьков
+			//- Белая церковь
+			//- Полтава
+			//- Запорожье
+			//- Хмельницкмй
+			//- Одесса
 
-			#map.google-map
+			.map-container
+				#map.google-map
+
+				.map-overlay
+					#accordion.panel-group(role='tablist', aria-multiselectable='true')
+						.panel.panel-default
+							#heading-cherkassy.panel-heading(role='tab')
+								h4.panel-title
+									a(role='button', data-toggle='collapse', data-parent='#accordion', href='#tab-cherkassy', aria-expanded='true', aria-controls='tab-cherkassy')
+										| Черкассы
+							#tab-cherkassy.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='heading-cherkassy')
+								.panel-body
+									.btn.active.btn-primary.js-button-map-trigger(data-address="ungallant" data-name="Penny Vasher" data-cellphones="+3(854)074-85-05, +4(889)241-97-10, +4(941)901-21-64" data-emails="flaxen@phototube.net")
+										span Черкассы (Лабиринт)
+						.panel.panel-default
+							#heading-kyiv.panel-heading(role='tab')
+								h4.panel-title
+									a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#tab-kyiv', aria-expanded='false', aria-controls='tab-kyiv')
+										| Киев
+							#tab-kyiv.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-kyiv')
+								.panel-body
+									.btn.btn-primary.js-button-map-trigger(data-address="memorization" data-name="Hillary Weisgerber" data-cellphones="+2(251)231-89-42, +1(857)184-95-47" data-emails="tribeless@spatterdock.edu")
+										span Киев
+						.panel.panel-default
+							#heading-charkov.panel-heading(role='tab')
+								h4.panel-title
+									a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#tab-charkov', aria-expanded='false', aria-controls='tab-charkov')
+										| Харьков
+							#tab-charkov.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-charkov')
+								.panel-body
+									.btn.btn-primary.js-button-map-trigger(data-address="Advaita" data-name="Eleni Pratley" data-cellphones="+8(640)736-48-31" data-emails="shaglike@dispirited.org")
+										span Харьков
+
 
 			.col-md-8.hidden
 				form(action="#").contact-form.contact-form-main
