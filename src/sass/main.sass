@@ -1113,6 +1113,7 @@ body
 .google-map
 	transition: none
 	height: 475px
+	height: 80vh
 	width: 100%
 	@media #{$media-sm}
 		max-height: 80vh
@@ -1122,13 +1123,22 @@ body
 .map-overlay
 	background: rgba(255,255,255,0.6)
 	margin: -475px 0 0 20px
+	margin: -80vh 0 0 20px
 	position: relative
 	padding: 20px
 	height: 475px
+	height: 80vh
 	width: 50%
 	overflow: auto
 	overflow-y: auto
 	overflow-x: hidden
+	.address-item
+		border-bottom: 1px dotted #333
+		padding-bottom: 1rem
+		margin-bottom: 1rem
+		&:last-of-type
+			border: none
+			margin-bottom: 0
 
 .buttons-holder,
 .addresses-section
