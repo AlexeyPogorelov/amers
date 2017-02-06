@@ -134,3 +134,26 @@
 							button.btn.btn-primary(type="submit")
 								span Напомнить пароль
 
+
+#contact-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content
+			.container-fluid
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+				.row
+					form(action="#").contact-form.contact-form-main
+						.form-group
+							label(for='exampleInputName') Ваше имя
+							input#exampleInputName(type='text', placeholder='Введите Ваше имя')
+						.form-group
+							label(for='exampleInputEmail1') Контакт *
+							input#exampleInputEmail1(type='text', placeholder='Телефон или почта')
+							p.help-block (000) 000-00-00 или example@domain.nm
+						.form-group
+							label(for='exampleInputMessage') Текст *
+							textarea#exampleInputMessage(type='password', placeholder='Введите Ваше сообщение')
+						.form-group.input-file
+							input#exampleInputFile(type='file')
+							label(for='exampleInputFile') Прикрепить файл
+						button.btn.btn-primary(type='submit')
+							span Отправить
