@@ -24,13 +24,13 @@ html(lang='ru')
 				#map.google-map
 
 				.map-overlay
-					#accordion.panel-group(role='tablist', aria-multiselectable='true')
+					#map-addresses-accordion.panel-group(role='tablist', aria-multiselectable='true')
 						.panel.panel-default
 							#heading-cherkassy.panel-heading(role='tab')
 								h4.panel-title
-									a(role='button', data-toggle='collapse', data-parent='#accordion', href='#tab-cherkassy', aria-expanded='true', aria-controls='tab-cherkassy')
+									a(role='button', data-toggle='collapse', data-parent='#map-addresses-accordion', href='#tab-cherkassy', aria-expanded='true', aria-controls='tab-cherkassy')
 										| Черкассы
-							#tab-cherkassy.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='heading-cherkassy')
+							#tab-cherkassy.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='heading-cherkassy' data-lat="49.405594" data-lng="32.111898")
 								.panel-body
 									.address-item
 										b.
@@ -68,7 +68,7 @@ html(lang='ru')
 						.panel.panel-default
 							#heading-kyiv.panel-heading(role='tab')
 								h4.panel-title
-									a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#tab-kyiv', aria-expanded='false', aria-controls='tab-kyiv')
+									a.collapsed(role='button', data-toggle='collapse', data-parent='#map-addresses-accordion', href='#tab-kyiv', aria-expanded='false', aria-controls='tab-kyiv')
 										| Киев
 							#tab-kyiv.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-kyiv')
 								.panel-body
@@ -107,7 +107,7 @@ html(lang='ru')
 						.panel.panel-default
 							#heading-charkov.panel-heading(role='tab')
 								h4.panel-title
-									a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#tab-charkov', aria-expanded='false', aria-controls='tab-charkov')
+									a.collapsed(role='button', data-toggle='collapse', data-parent='#map-addresses-accordion', href='#tab-charkov', aria-expanded='false', aria-controls='tab-charkov')
 										| Харьков
 							#tab-charkov.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-charkov')
 								.panel-body
@@ -147,7 +147,7 @@ html(lang='ru')
 						.panel.panel-default
 							#heading-dnepr.panel-heading(role='tab')
 								h4.panel-title
-									a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#tab-dnepr', aria-expanded='false', aria-controls='tab-dnepr')
+									a.collapsed(role='button', data-toggle='collapse', data-parent='#map-addresses-accordion', href='#tab-dnepr', aria-expanded='false', aria-controls='tab-dnepr')
 										| Днепр
 							#tab-dnepr.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-dnepr')
 								.panel-body
@@ -187,7 +187,7 @@ html(lang='ru')
 						.panel.panel-default
 							#heading-odessa.panel-heading(role='tab')
 								h4.panel-title
-									a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#tab-odessa', aria-expanded='false', aria-controls='tab-odessa')
+									a.collapsed(role='button', data-toggle='collapse', data-parent='#map-addresses-accordion', href='#tab-odessa', aria-expanded='false', aria-controls='tab-odessa')
 										| Одесса
 							#tab-odessa.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-odessa')
 								.panel-body
@@ -227,7 +227,7 @@ html(lang='ru')
 						.panel.panel-default
 							#heading-lviv.panel-heading(role='tab')
 								h4.panel-title
-									a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#tab-lviv', aria-expanded='false', aria-controls='tab-lviv')
+									a.collapsed(role='button', data-toggle='collapse', data-parent='#map-addresses-accordion', href='#tab-lviv', aria-expanded='false', aria-controls='tab-lviv')
 										| Львов
 							#tab-lviv.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-lviv')
 								.panel-body
@@ -287,5 +287,5 @@ html(lang='ru')
 
 	include ./partials/scripts.jade
 
-	script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2yEFlh7UKQXEfNVR9P0B3qqSGbb8pF0Q&callback=initMap")
 	script(src='js/contacts.js')
+	script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2yEFlh7UKQXEfNVR9P0B3qqSGbb8pF0Q&callback=initMap")
