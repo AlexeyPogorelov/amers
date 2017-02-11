@@ -7,17 +7,12 @@ function initMap() {
         mapWidth = $('#map').width(),
         centerMap = mapWidth / 4;
 
-    $('.address-item[data-id]').hover(function (e) {
-        $(this).data('id');
-    }, function (e) {
-        $(this).data('id');
-    });
-
     map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 49.4053761, lng: 32.1087626 },
-        zoom: 12,
+        center: { lat: 49.405594, lng: 32.111898 },
+        zoom: 13,
         styles: [{ "featureType": "poi.business", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.school", "stylers": [{ "visibility": "off" }] }, {}, { "featureType": "landscape", "stylers": [{ saturation: -100 }] }, { "featureType": "whater", "stylers": [{ saturation: -100 }] }]
     });
+    map.panBy(-centerMap, 0);
     if (map && markers && markers.length) {
         for (var i = 0; i < markers.length; i++) {
             var markerCurrent = markers[i],
@@ -25,25 +20,36 @@ function initMap() {
                     position: { lat: markerCurrent[2], lng: markerCurrent[3] },
                     map: map,
                     // label: markerCurrent[1],
+                    // path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z M -2,-30 a 2,2 0 1,1 4,0 2,2 0 1,1 -4,0',
+                    // fillColor: '#000000',
                     hookId: markerCurrent[4],
                     title: markerCurrent[0]
                 });
             mapMarkers[markerCurrent[4]] = markerApi;
-            map.panBy(-centerMap, 0);
             google.maps.event.addListener(markerApi, "mouseover", function() {
-                console.log(this.hookId);
+                $('[data-id="' + this.hookId + '"]').addClass('hover');
             });
             google.maps.event.addListener(markerApi, "mouseout", function() {
-                console.log(this.hookId);
+                $('[data-id="' + this.hookId + '"]').removeClass('hover');
             });
         }
     }
 
+    $('.address-item[data-id]').hover(function(e) {
+        var id = $(this).data('id');
+        mapMarkers[id];
+    }, function(e) {
+        var id = $(this).data('id');
+        mapMarkers[id];
+    });
+
     $('#map-addresses-accordion').on('show.bs.collapse', function(e) {
         var $target = $(e.target),
             lat = $target.data('lat'),
-            lng = $target.data('lng');
+            lng = $target.data('lng'),
+            zoom = $target.data('zoom') || 12;
         map.setCenter({ lat: lat, lng: lng });
+        map.setZoom(zoom);
         map.panBy(-centerMap, 0);
     });
 

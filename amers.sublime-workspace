@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"ma",
+				"mapMarkers"
+			],
+			[
 				"bor",
 				"border-box〔value〕"
 			],
@@ -264,10 +268,6 @@
 				"description"
 			],
 			[
-				"ma",
-				"markers"
-			],
-			[
 				"qs",
 				"qsa\tquerySelectorAll"
 			],
@@ -523,7 +523,25 @@
 			"file": "TODO.txt",
 			"settings":
 			{
-				"buffer_size": 336,
+				"buffer_size": 449,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/contacts.jade",
+			"settings":
+			{
+				"buffer_size": 11148,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/contacts.js",
+			"settings":
+			{
+				"buffer_size": 1887,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -536,13 +554,29 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 127.0,
-		"last_filter": "jad",
+		"height": 392.0,
+		"last_filter": "rand",
 		"selected_items":
 		[
 			[
+				"rand",
+				"Random:UUID"
+			],
+			[
 				"jad",
 				"Set Syntax: Jade"
+			],
+			[
+				"pull",
+				"Git: Pull"
+			],
+			[
+				"ran",
+				"Random:Word"
+			],
+			[
+				"rna",
+				"Random:Full Name"
 			],
 			[
 				"r",
@@ -619,10 +653,6 @@
 			[
 				"css",
 				"Set Syntax: CSS"
-			],
-			[
-				"ran",
-				"Random:UUID"
 			],
 			[
 				"linter",
@@ -720,6 +750,7 @@
 		"height": 126.0,
 		"history":
 		[
+			"git status",
 			"ls",
 			"ды",
 			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
@@ -737,13 +768,18 @@
 	"expanded_folders":
 	[
 		"/D/Git/amers/src",
+		"/D/Git/amers/src/js",
 		"/D/Git/amers/src/partials",
 		"/D/Git/amers/src/sass"
 	],
 	"file_history":
 	[
-		"/D/Git/amers/src/sass/elements.sass",
 		"/D/Git/amers/src/sass/main.sass",
+		"/D/Git/amers/src/contacts.jade",
+		"/D/Git/amers/src/sass/elements.sass",
+		"/D/Git/amers/src/catalog-sales.jade",
+		"/D/Git/amers/src/sass/catalog.sass",
+		"/D/Git/amers/src/index.jade",
 		"/D/Git/amers/src/about.jade",
 		"/D/Git/amers/src/sass/delivery.sass",
 		"/D/Git/amers/src/delivery.jade",
@@ -754,7 +790,6 @@
 		"/D/Git/amers/src/sass/item-card.sass",
 		"/D/Git/amers/src/sass/blog.sass",
 		"/D/Git/amers/src/partials/article.jade",
-		"/D/Git/amers/src/index.jade",
 		"/D/rabish/PogorelovCV/img/icons/github-logo.svg",
 		"/D/Git/alexeypogorelov/dist/index.html",
 		"/D/Git/alexeypogorelov/index.html",
@@ -773,7 +808,6 @@
 		"/D/Git/justicon/bower.json",
 		"/D/Git/amers/src/partials/scripts.jade",
 		"/D/Git/amers/src/catalog.jade",
-		"/D/Git/amers/src/sass/catalog.sass",
 		"/D/Git/amers/src/sass/concated.sass",
 		"/D/Git/amers/src/test.jade",
 		"/D/Git/amers/amers.sublime-project",
@@ -852,7 +886,6 @@
 		"/D/Git/amers/src/article.jade",
 		"/D/Git/amers/src/partials/footer.jade",
 		"/D/Git/amers/src/sass/profile.sass",
-		"/D/Git/amers/src/contacts.jade",
 		"/D/Git/amers/src/js/main.js",
 		"/D/Git/amers/src/categories.jade",
 		"/D/Git/interplate/src/sass/article-content.sass",
@@ -868,8 +901,7 @@
 		"/D/Git/dailymail/src/index.jade",
 		"/D/Git/dailymail/src/sass/additional.sass",
 		"/C/Users/Blick/AppData/Roaming/Sublime Text 3/Packages/User/GitGutter.sublime-settings",
-		"/C/Users/Blick/AppData/Roaming/Sublime Text 3/Packages/GitGutter/GitGutter.sublime-settings",
-		"/D/Git/dailymail/src/sass/_mixins.sass"
+		"/C/Users/Blick/AppData/Roaming/Sublime Text 3/Packages/GitGutter/GitGutter.sublime-settings"
 	],
 	"find":
 	{
@@ -937,6 +969,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"-a",
+			"]",
+			"],",
+			"collapseThree",
+			"collapseTwo",
+			"collapseOne",
+			"span ",
+			"var ",
+			"80",
+			"cellphones=\"",
+			"data-cellphones=",
+			"email",
+			"Tuvalu",
+			"Kyrgyzstan",
+			"+item(",
+			"\\n",
 			"cart-item",
 			".item-card-main",
 			".description-table-header",
@@ -1048,30 +1096,15 @@
 			"<iframe",
 			"iframe",
 			"loadElements",
-			"offsetTop",
-			"footer",
-			" (",
-			"iframe",
-			"getSize",
-			"requestAnimationFrame",
-			"addEvent",
-			"boxes",
-			"isVisible",
-			"PLG",
-			"prototype",
-			"scrolling",
-			"boxes",
-			".beta_search_wrapper label",
-			"transform",
-			"element",
-			"clientHeight"
+			"offsetTop"
 		],
 		"highlight": false,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"<br />",
 			"\\'",
 			"/'",
 			"::before",
@@ -1091,7 +1124,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1100,20 +1133,81 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 336,
+						"buffer_size": 449,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								252,
-								252
+								263,
+								263
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/contacts.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4452,
+								4431
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 57.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/js/contacts.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1887,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								301,
+								301
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1166,7 +1260,7 @@
 	},
 	"output.git":
 	{
-		"height": 118.0
+		"height": 143.0
 	},
 	"output.unsaved_changes":
 	{
@@ -1176,7 +1270,7 @@
 	"project": "amers.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":

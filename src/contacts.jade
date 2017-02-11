@@ -30,7 +30,7 @@ html(lang='ru')
 								h4.panel-title
 									a(role='button', data-toggle='collapse', data-parent='#map-addresses-accordion', href='#tab-cherkassy', aria-expanded='true', aria-controls='tab-cherkassy')
 										| Черкассы
-							#tab-cherkassy.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='heading-cherkassy' data-lat="49.405594" data-lng="32.111898")
+							#tab-cherkassy.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='heading-cherkassy' data-lat="49.405594" data-lng="32.111898" data-zoom="13")
 								.panel-body
 									.address-item(data-id="a1ee520c-a244-4807-bbe0-b8c5ad304d97")
 										b.
@@ -43,7 +43,7 @@ html(lang='ru')
 										br
 										b.
 											Телефон: 
-										span 044 383 55 33
+										a(href="callto:0443835533") 044 383 55 33
 										br
 										br
 										.btn.btn-primary(href="#" data-toggle="modal" data-target="#contact-modal")
@@ -59,7 +59,7 @@ html(lang='ru')
 										br
 										b.
 											Телефон: 
-										span 044 383 55 33
+										a(href="callto:0443835533") 044 383 55 33
 										br
 										br
 										.btn.btn-primary(href="#" data-toggle="modal" data-target="#contact-modal")
@@ -70,7 +70,7 @@ html(lang='ru')
 								h4.panel-title
 									a.collapsed(role='button', data-toggle='collapse', data-parent='#map-addresses-accordion', href='#tab-kyiv', aria-expanded='false', aria-controls='tab-kyiv')
 										| Киев
-							#tab-kyiv.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-kyiv')
+							#tab-kyiv.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-kyiv' data-lat="50.4116251" data-lng="30.4881888" data-zoom="10")
 								.panel-body
 									.address-item(data-id="7d134238-1b19-452d-bb8a-12a5258ffb73")
 										b.
@@ -83,7 +83,7 @@ html(lang='ru')
 										br
 										b.
 											Телефон: 
-										span 044 383 55 33
+										a(href="callto:0443835533") 044 383 55 33
 										br
 										br
 										.btn.btn-primary 
@@ -99,7 +99,7 @@ html(lang='ru')
 										br
 										b.
 											Телефон:  
-										span 044 383 55 33
+										a(href="callto:0443835533") 044 383 55 33
 										br
 										br
 										.btn.btn-primary(href="#" data-toggle="modal" data-target="#contact-modal")
@@ -115,7 +115,7 @@ html(lang='ru')
 										br
 										b.
 											Телефон:  
-										span 044 383 55 33
+										a(href="callto:0443835533") 044 383 55 33
 										br
 										br
 										.btn.btn-primary(href="#" data-toggle="modal" data-target="#contact-modal")
@@ -126,7 +126,7 @@ html(lang='ru')
 								h4.panel-title
 									a.collapsed(role='button', data-toggle='collapse', data-parent='#map-addresses-accordion', href='#tab-charkov', aria-expanded='false', aria-controls='tab-charkov')
 										| Харьков
-							#tab-charkov.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-charkov')
+							#tab-charkov.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-charkov' data-lat="49.9839992" data-lng="36.2387641" data-zoom="12")
 								.panel-body
 									.address-item(data-id="7b117a6f-99ee-4285-b089-52e7c3247afa")
 										b.
@@ -139,7 +139,7 @@ html(lang='ru')
 										br
 										b.
 											Телефон: 
-										span 044 383 55 33
+										a(href="callto:0443835533") 044 383 55 33
 										br
 										br
 										.btn.btn-primary 
@@ -149,8 +149,8 @@ html(lang='ru')
 							#heading-dnepr.panel-heading(role='tab')
 								h4.panel-title
 									a.collapsed(role='button', data-toggle='collapse', data-parent='#map-addresses-accordion', href='#tab-dnepr', aria-expanded='false', aria-controls='tab-dnepr')
-										| Днепр
-							#tab-dnepr.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-dnepr')
+										| Запорожье
+							#tab-dnepr.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-dnepr' data-lat="47.8293044" data-lng="35.1373833" data-zoom="12")
 								.panel-body
 									.address-item(data-id="83fb2e1f-2ddf-4fc7-bd57-20ad865fef17")
 										b.
@@ -163,7 +163,7 @@ html(lang='ru')
 										br
 										b.
 											Телефон: 
-										span 044 383 55 33
+										a(href="callto:0443835533") 044 383 55 33
 										br
 										br
 										.btn.btn-primary 
@@ -179,7 +179,7 @@ html(lang='ru')
 										br
 										b.
 											Телефон: 
-										span 044 383 55 33
+										a(href="callto:0443835533") 044 383 55 33
 										br
 										br
 										.btn.btn-primary(href="#" data-toggle="modal" data-target="#contact-modal")
@@ -190,7 +190,7 @@ html(lang='ru')
 								h4.panel-title
 									a.collapsed(role='button', data-toggle='collapse', data-parent='#map-addresses-accordion', href='#tab-odessa', aria-expanded='false', aria-controls='tab-odessa')
 										| Одесса
-							#tab-odessa.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-odessa')
+							#tab-odessa.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-odessa' data-lat="46.4308713" data-lng="30.724146" data-zoom="12")
 								.panel-body
 									.address-item(data-id="53bf8a64-0486-4c9d-958e-a6706cca874e")
 										b.
@@ -203,7 +203,7 @@ html(lang='ru')
 										br
 										b.
 											Телефон: 
-										span 044 383 55 33
+										a(href="callto:0443835533") 044 383 55 33
 										br
 										br
 										.btn.btn-primary 
@@ -219,7 +219,7 @@ html(lang='ru')
 										br
 										b.
 											Телефон: 
-										span 044 383 55 33
+										a(href="callto:0443835533") 044 383 55 33
 										br
 										br
 										.btn.btn-primary(href="#" data-toggle="modal" data-target="#contact-modal")
@@ -230,7 +230,7 @@ html(lang='ru')
 								h4.panel-title
 									a.collapsed(role='button', data-toggle='collapse', data-parent='#map-addresses-accordion', href='#tab-lviv', aria-expanded='false', aria-controls='tab-lviv')
 										| Львов
-							#tab-lviv.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-lviv')
+							#tab-lviv.panel-collapse.collapse(role='tabpanel', aria-labelledby='heading-lviv' data-lat="49.8284029" data-lng="24.033437" data-zoom="12")
 								.panel-body
 									.address-item(data-id="b30e1719-9093-4ec7-bd00-2f837bc06c13")
 										b.
@@ -243,7 +243,7 @@ html(lang='ru')
 										br
 										b.
 											Телефон: 
-										span 044 383 55 33
+										a(href="callto:0443835533") 044 383 55 33
 										br
 										br
 										.btn.btn-primary(href="#" data-toggle="modal" data-target="#contact-modal")
@@ -259,7 +259,7 @@ html(lang='ru')
 										br
 										b.
 											Телефон: 
-										span 044 383 55 33
+										a(href="callto:0443835533") 044 383 55 33
 										br
 										br
 										.btn.btn-primary(href="#" data-toggle="modal" data-target="#contact-modal")
@@ -275,11 +275,11 @@ html(lang='ru')
 				['Киев', 'ТЦ "Б - 52", 3 этаж, ул. Братиславская 52', 50.491520, 30.610616, 'd680f7bc-f3bc-4896-bc52-c8c8e034ee77'],
 				['Киев', 'Мебель Макс, пр. 40 лет октября 128', 50.384000, 30.480218, 'b68a100d-b148-4cc0-87a3-f57c816a432a'],
 				['Харьков', 'ТЦ «Sun City Plaza», Пр-т Московский, 199-А', 49.977229, 36.297531, '7b117a6f-99ee-4285-b089-52e7c3247afa'],
-				['Белая церковь', '"Магазин 1001 дрібниця", ул. Куценко 1', 49.796312, 30.128979, '83fb2e1f-2ddf-4fc7-bd57-20ad865fef17'],
-				['Полтава', 'Дом мебели "Ворскла", отдел "Piggagor interiors", ул.Октябрьская д.72, 3 этаж', 49.598253, 34.534521, '0357d82b-7426-4646-b0e4-c1188d7fd45e'],
-				['Запорожье', 'Мебельный салон "ROMANDI", ТРЦ "БРУСНИЧКА", 3 этаж, ул. Независимой Украины 57 В', 47.843419, 35.138088, '53bf8a64-0486-4c9d-958e-a6706cca874e'],
-				['Запорожье', 'Мебельный салон "Формула Комфорта", ТЦ "Строй Центр", 2 этаж, ул. Космическая 121 Б', 47.788792, 35.221235, 'b30e1719-9093-4ec7-bd00-2f837bc06c13'],
-				['Хмельницкмй', 'ТЦ "Сильпо", ул. Зареченская 34, 3 этаж', 49.423178, 26.987197, 'a2219c53-d008-469e-905c-a64a547e39ca'],
+				['Запорожье', '"Магазин 1001 дрібниця", ул. Куценко 1', 47.8435334, 35.1120257, '83fb2e1f-2ddf-4fc7-bd57-20ad865fef17'],
+				['Запорожье', 'Дом мебели "Ворскла", отдел "Piggagor interiors", ул.Октябрьская д.72, 3 этаж', 47.8131135, 35.2043124, '0357d82b-7426-4646-b0e4-c1188d7fd45e'],
+				['Запорожье', 'Мебельный салон "ROMANDI", ТРЦ "БРУСНИЧКА", 3 этаж, ул. Независимой Украины 57 В', 49.830101, 24.020669, '53bf8a64-0486-4c9d-958e-a6706cca874e'],
+				['Львов', 'Мебельный салон "Формула Комфорта", ТЦ "Строй Центр", 2 этаж, ул. Космическая 121 Б', 49.838206, 24.033061, 'b30e1719-9093-4ec7-bd00-2f837bc06c13'],
+				['Львов', 'ТЦ "Сильпо", ул. Зареченская 34, 3 этаж', 49.423178, 26.987197, 'a2219c53-d008-469e-905c-a64a547e39ca'],
 				['Одесса', 'Малиновский рынок, Павильон Б12, Л21', 46.441641, 30.638545, '799e70c0-eeea-472c-b6b5-afb684deb735'],
 				['Одесса', 'ТЦ "Шестой элемент", ул. 6-й километр ', 46.449623, 30.663936, '143a124e-a45e-4987-a0f7-f629faa93a6b']
 			]
