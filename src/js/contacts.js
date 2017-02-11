@@ -37,9 +37,10 @@ function initMap() {
 
     $('.address-item[data-id]').hover(function(e) {
         var id = $(this).data('id');
-        mapMarkers[id];
-    }, function(e) {
         var id = $(this).data('id');
+        map.setCenter({ lat: mapMarkers[id].position.lat(), lng: mapMarkers[id].position.lng() });
+        map.panBy(-centerMap, 0);
+    }, function(e) {
         mapMarkers[id];
     });
 
