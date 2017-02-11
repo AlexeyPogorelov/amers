@@ -5,10 +5,18 @@ function initMap() {
 
     var $mapAddressesAccordion = $('#map-addresses-accordion'),
         mapWidth = $('#map').width(),
-        centerMap = mapWidth / 4;
+        centerMap = mapWidth / 4,
+        pinIcon = 'img/icons/location-pin.svg',
+        pinIconHover = 'img/icons/location-pin-hover.svg';
+
+    // load hovered pin
+    var image = new Image();
+    image.src = pinIconHover;
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 49.405594, lng: 32.111898 },
+        // disableDefaultUI: true,
+        mapTypeControl: false,
         zoom: 13,
         styles: [{ "featureType": "poi.business", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.school", "stylers": [{ "visibility": "off" }] }, {}, { "featureType": "landscape", "stylers": [{ saturation: -100 }] }, { "featureType": "whater", "stylers": [{ saturation: -100 }] }]
     });
@@ -19,29 +27,32 @@ function initMap() {
                 markerApi = new google.maps.Marker({
                     position: { lat: markerCurrent[2], lng: markerCurrent[3] },
                     map: map,
-                    // label: markerCurrent[1],
-                    // path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z M -2,-30 a 2,2 0 1,1 4,0 2,2 0 1,1 -4,0',
-                    // fillColor: '#000000',
+                    icon: pinIcon,
                     hookId: markerCurrent[4],
                     title: markerCurrent[0]
                 });
             mapMarkers[markerCurrent[4]] = markerApi;
             google.maps.event.addListener(markerApi, "mouseover", function() {
                 $('[data-id="' + this.hookId + '"]').addClass('hover');
+                this.setIcon(pinIconHover);
             });
             google.maps.event.addListener(markerApi, "mouseout", function() {
                 $('[data-id="' + this.hookId + '"]').removeClass('hover');
+                this.setIcon(pinIcon);
             });
         }
     }
 
     $('.address-item[data-id]').hover(function(e) {
-        var id = $(this).data('id');
-        var id = $(this).data('id');
-        map.setCenter({ lat: mapMarkers[id].position.lat(), lng: mapMarkers[id].position.lng() });
+        var id = $(this).data('id'),
+            marker = mapMarkers[id];
+        marker.setIcon(pinIconHover);
+        map.setCenter({ lat: marker.position.lat(), lng: marker.position.lng() });
         map.panBy(-centerMap, 0);
     }, function(e) {
-        mapMarkers[id];
+        var id = $(this).data('id'),
+            marker = mapMarkers[id];
+        marker.setIcon(pinIcon);
     });
 
     $('#map-addresses-accordion').on('show.bs.collapse', function(e) {
