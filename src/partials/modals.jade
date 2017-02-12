@@ -135,6 +135,26 @@
 								span Напомнить пароль
 
 
+#change-password-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content
+			.container-fluid
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+				.row
+					form(action="#").col-md-12.profile-form
+						.form-group
+							label(for="popup-old-password") Старый пароль *
+							input(type="text")#popup-old-password
+						.form-group
+							label(for="popup-new-password") Новый пароль *
+							input(type="text")#popup-new-password
+						.form-group
+							label(for="popup-new-password-repeat") Новый пароль повторно *
+							input(type="text")#popup-new-password-repeat
+						.button-group
+							button.btn.btn-primary(type="submit")
+								span Сохранить
+
 #contact-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 	.modal-dialog.modal-lg
 		.modal-content

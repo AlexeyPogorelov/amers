@@ -4,10 +4,16 @@ var map,
 function initMap() {
 
     var $mapAddressesAccordion = $('#map-addresses-accordion'),
-        mapWidth = $('#map').width(),
+        $map = $('#map'),
+        mapWidth = $map.width(),
         centerMap = mapWidth / 4,
         pinIcon = 'img/icons/location-pin.svg',
         pinIconHover = 'img/icons/location-pin-hover.svg';
+
+    $(window).on('resize', function () {
+        mapWidth = $map.width();
+        centerMap = mapWidth / 4;
+    });
 
     // load hovered pin
     var image = new Image();

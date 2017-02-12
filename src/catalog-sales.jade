@@ -48,18 +48,32 @@ html(lang='ru')
 					.container-alt
 						.row
 							.col-md-12
-								form(action="#")
-									.form-group
-										label(for="sort-param") Выбрать город: &nbsp;
-										select#sort-param(name="sort-param")
-											option Киев
-											option Сумы
-											option Харьков
-											option Одесса
-											option Полтава
-											option Запорожье
-											option Хмельницкий
-											option Черкассы
+								button#dLabel(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+									| Выбрать город: 
+									span.caret
+								ul.dropdown-menu(aria-labelledby='dLabel')
+
+									a(href="#") Киев
+									a(href="#") Сумы
+									a(href="#") Харьков
+									a(href="#") Одесса
+									a(href="#") Полтава
+									a(href="#") Запорожье
+									a(href="#") Хмельницкий
+									a(href="#") Черкассы
+
+								//- form(action="#")
+								//- 	.form-group
+								//- 		label(for="sort-param") Выбрать город: &nbsp;
+								//- 		select#sort-param(name="sort-param")
+								//- 			option Киев
+								//- 			option Сумы
+								//- 			option Харьков
+								//- 			option Одесса
+								//- 			option Полтава
+								//- 			option Запорожье
+								//- 			option Хмельницкий
+								//- 			option Черкассы
 
 				.container-alt
 					.row.catalog-category-items-holder

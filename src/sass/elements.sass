@@ -279,7 +279,9 @@ $speed: 100ms
 .sort-controls
 	// margin-bottom: 2em
 	// background: #f5f5f5
-	transform: translateY(-100%)
+	transform: translateY(-100%) translateZ(0)
+	z-index: 7
+	position: relative
 	background: rgba(0, 0, 0, 0.3)
 	padding: 0.8em 0
 	label
@@ -308,8 +310,8 @@ $speed: 100ms
 			transition: transform 100ms, opacity 100ms
 		&:hover
 			background: rgba(255,255,255,0.6)
-		&:nth-of-type(1)
-			margin-left: 1em
+		// &:nth-of-type(1)
+			// margin-left: 1em
 		&.active
 			color: $main-color
 			&:after
@@ -317,6 +319,12 @@ $speed: 100ms
 				transform: translateY(0) translateZ(0)
 	.form-group
 		margin: 0
+	.dropdown
+		color: #fff
+		font-weight: 800
+	.dropdown-menu
+		a
+			display: block
 
 .hover-effect
 	background:

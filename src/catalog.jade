@@ -43,13 +43,21 @@ html(lang='ru')
 					.container-alt
 						.row
 							.col-md-12
-								form(action="#")
-									.form-group
-										label(for="sort-param") Сортировать по: &nbsp;
-										select#sort-param(name="sort-param")
-											option новизне
-											option от дешевых к дорогим
-											option от дорогих к дешевым
+								.dropdown
+									button#dLabel(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+										| Сортировать по: 
+										span.caret
+									ul.dropdown-menu(aria-labelledby='dLabel')
+										a(href="#new") новизне
+										a(href="#price-low") от дешевых к дорогим
+										a(href="#price-hi") от дорогих к дешевым
+								//- form(action="#")
+								//- 	.form-group
+								//- 		label(for="sort-param") Сортировать по: &nbsp;
+								//- 		select#sort-param(name="sort-param")
+								//- 			option новизне
+								//- 			option от дешевых к дорогим
+								//- 			option от дорогих к дешевым
 
 				.container-alt
 					.row.catalog-category-items-holder

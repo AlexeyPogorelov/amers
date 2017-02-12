@@ -5,7 +5,7 @@
 		[
 			[
 				"ma",
-				"mapMarkers"
+				"map"
 			],
 			[
 				"bor",
@@ -532,7 +532,7 @@
 			"file": "src/contacts.jade",
 			"settings":
 			{
-				"buffer_size": 11148,
+				"buffer_size": 11670,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -541,7 +541,7 @@
 			"file": "src/js/contacts.js",
 			"settings":
 			{
-				"buffer_size": 1887,
+				"buffer_size": 2757,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -554,8 +554,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "rand",
+		"height": 173.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -743,7 +743,7 @@
 				"Diff View: Run custom diff..."
 			]
 		],
-		"width": 432.0
+		"width": 416.0
 	},
 	"console":
 	{
@@ -1161,15 +1161,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11148,
+						"buffer_size": 11670,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4452,
-								4431
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1191,15 +1191,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1887,
+						"buffer_size": 2757,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								301,
-								301
+								1096,
+								1096
 							]
 						],
 						"settings":
@@ -1210,7 +1210,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 456.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

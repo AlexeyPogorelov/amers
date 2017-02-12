@@ -23,7 +23,7 @@ html(lang='ru')
 							li.action-link.col-sm-12.col-md-4
 								a(href="#purchase-history-tab" aria-controls="purchase-history-tab" role="tab" data-toggle="tab")
 									i.icon-history
-									span История покупок
+									span История заказов
 							li.action-link.col-sm-12.col-md-4
 								a(href="#profile-tab" aria-controls="profile-tab" role="tab" data-toggle="tab")
 									i.icon-vcard
@@ -36,7 +36,7 @@ html(lang='ru')
 
 							#purchase-history-tab.tab-pane( role="tabpanel" )
 								.cart-items-holder
-									mixin cart-item (name, img, status, ...prop)
+									mixin cart-item (name, img, orderId, color, status, ...prop)
 										li.cart-item(class= 'status-' + status)
 											.left-side
 												span.item-image
@@ -61,34 +61,38 @@ html(lang='ru')
 									+cart-item(
 										'Сенатор',
 										'https://www.pufetto.com.ua/items/gerardo/c/1/c.gerardo.jpg',
-										'done',
+										'81dbee5a-bb16-4e68-baae-20c6e5c7cc67',
 										'Красный',
+										'done',
 										'PENTA'
 									)
 									+cart-item(
 										'Милана',
 										'http://amers.ck.ua/upload/Milana.jpg',
-										'done',
+										'7c1754e2-8699-4a36-8500-912e5ed373b5',
 										'Синий',
+										'done',
 										'NOVEL'
 									)
 									+cart-item(
 										'Доната',
 										'http://amers.ck.ua/upload/Donata_divan.jpg',
-										'waiting',
+										'ae76ee1a-17ac-43c9-89ed-4eea71676692',
 										'Желтый',
+										'waiting',
 										'RITZ'
 									)
 									+cart-item(
 										'Сенатор',
 										'http://amers.ck.ua/upload/Senator_1.jpg',
-										'canceled',
+										'd3b17c9a-1e5e-4cf7-8cf8-56f2aeb514d6',
 										'Красный',
+										'canceled',
 										'TRINITY'
 									)
 
 							#profile-tab.tab-pane( role="tabpanel" )
-								.profile-form(action="#")
+								form.profile-form.col-md-12.col-lg-6(action="#")
 									.form-group
 										label(for="popup-register-email") Email *
 										input(type="text" value="test@mail.ua")#popup-register-email
@@ -99,11 +103,10 @@ html(lang='ru')
 										label(for="popup-register-email") Номер телефона
 										input(type="text" value="(033) 123-45-67")#popup-register-email
 									.form-group
-										label(for="popup-register-password") Старый пароль *
+										label(for="popup-register-password") Пароль *
 										input(type="password")#popup-register-password
 									.form-group
-										label(for="popup-register-password") Пароль повторно *
-										input(type="password")#popup-register-password
+										a(href="#" data-toggle="modal" data-target="#change-password-modal") Сменить пароль
 									.button-group
 										button.btn.btn-primary(type="submit")
 											span Сохранить
