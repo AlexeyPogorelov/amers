@@ -13,17 +13,16 @@
 
 + распродажа - сделать карточку, добавить шилдик
 
-contacts
++ vertical slider in item-card
 
++ contacts
 
-rebuild cart https://www.templatemonster.com/blog/shopping-cart-page-designs/
++ map application
+
++ rebuild cart https://www.templatemonster.com/blog/shopping-cart-page-designs/
 
 magnefic popup fix scroll issue
 
-font?
-
 fields validation
 
-map application
-
-vertical slider in item-card
+font?

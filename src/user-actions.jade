@@ -19,7 +19,7 @@ html(lang='ru')
 							li.action-link.active.col-sm-12.col-md-4
 								a(href="#cart-tab" aria-controls="cart-tab" role="tab" data-toggle="tab")
 									i.icon-basket
-									span Посмотреть корзину
+									span Корзина
 							li.action-link.col-sm-12.col-md-4
 								a(href="#purchase-history-tab" aria-controls="purchase-history-tab" role="tab" data-toggle="tab")
 									i.icon-history
@@ -32,64 +32,167 @@ html(lang='ru')
 					.col-md-12
 						.tab-content.user-actions-content
 							#cart-tab.tab-pane.active( role="tabpanel" )
-								include partials/cart-items
+								.col-md-8
+									.cart-items-holder.cart-items-holder-full
+										mixin cart-item (name, img, orderId, color, status, ...prop)
+											li.cart-item(class= 'status-' + status)
+												.left-side
+													.item-image
+														a.image-holder(href='item-card.html')
+															img(src= img, alt= name)
+													.item-name
+														a.name-link(href='item-card.html')= name
+														p
+															b Код заказа:  
+															span= orderId
+														p
+															b Тип:  
+															span Угловой диван
+														-for (key in prop)
+															p
+																b Ткань:  
+																span= prop[key]
+														p
+															b Цвет:  
+															span= color
+
+													.buttons-holder
+														a.btn.btn-grey(href="#")
+															span Удалить
+														a.btn.btn-grey(href="item-card.html")
+															span Изменить
+
+												.right-side
+													span.item-price
+														span.price-cost 12700
+														span.currency грн.
+										+cart-item(
+											'Сенатор',
+											'http://www.galameble.com/wp-content/uploads/coco_naroznik_miniatura.jpg',
+											'81dbee5a',
+											'Красный',
+											'done',
+											'PENTA'
+										)
+										+cart-item(
+											'Милана',
+											'http://www.galameble.com/wp-content/uploads/bono_naroznik_miniatura.jpg',
+											'7c1754e2',
+											'Синий',
+											'done',
+											'NOVEL'
+										)
+										+cart-item(
+											'Доната',
+											'http://www.galameble.com/wp-content/uploads/play_naroznik_miniatura.jpg',
+											'ae76ee1a',
+											'Желтый',
+											'waiting',
+											'RITZ'
+										)
+										+cart-item(
+											'Сенатор',
+											'http://www.galameble.com/wp-content/uploads/tunis_naroznik_miniatura.jpg',
+											'd3b17c9a',
+											'Красный',
+											'canceled',
+											'TRINITY'
+										)
+
+								.col-md-4
+									.cart-summary-holder
+										h3 И того
+										hr
+										p В корзине товаров на: 
+											b 50800
+												small грн.
+										p Стоимость доставки: 
+											b 400
+												small грн.
+										p Предоплата: 
+											b 6000
+												small грн.
+										hr
+										.buttons-holder
+											span.total-summ 45200
+												small грн.
+											a.btn.btn-primary(href="order.html")
+												span Оплатить
 
 							#purchase-history-tab.tab-pane( role="tabpanel" )
-								.cart-items-holder
-									mixin cart-item (name, img, orderId, color, status, ...prop)
-										li.cart-item(class= 'status-' + status)
-											.left-side
-												span.item-image
-													a.image-holder(href='item-card.html')
-														img(src= img, alt= name)
-												a.item-name(href='item-card.html')= name
-											.right-side
-												span.item-properties
-													-for (key in prop)
-														button= prop[key]
-												span.item-status
-													button
-														if status === 'done'
-															| доставлено
-														else if status === 'waiting'
-															| доставляется
-														else
-															| отменено
-												span.item-price
-													span.price-cost 12700
-													span.currency грн.
-									+cart-item(
-										'Сенатор',
-										'https://www.pufetto.com.ua/items/gerardo/c/1/c.gerardo.jpg',
-										'81dbee5a-bb16-4e68-baae-20c6e5c7cc67',
-										'Красный',
-										'done',
-										'PENTA'
-									)
-									+cart-item(
-										'Милана',
-										'http://amers.ck.ua/upload/Milana.jpg',
-										'7c1754e2-8699-4a36-8500-912e5ed373b5',
-										'Синий',
-										'done',
-										'NOVEL'
-									)
-									+cart-item(
-										'Доната',
-										'http://amers.ck.ua/upload/Donata_divan.jpg',
-										'ae76ee1a-17ac-43c9-89ed-4eea71676692',
-										'Желтый',
-										'waiting',
-										'RITZ'
-									)
-									+cart-item(
-										'Сенатор',
-										'http://amers.ck.ua/upload/Senator_1.jpg',
-										'd3b17c9a-1e5e-4cf7-8cf8-56f2aeb514d6',
-										'Красный',
-										'canceled',
-										'TRINITY'
-									)
+								.col-md-12
+									.cart-items-holder.cart-items-holder-full
+										mixin cart-item (name, img, orderId, color, status, ...prop)
+											li.cart-item(class= 'status-' + status)
+												.left-side
+													.item-image
+														a.image-holder(href='item-card.html')
+															img(src= img, alt= name)
+													.item-name
+														a.name-link(href='item-card.html')= name
+														p
+															b Код заказа:  
+															span= orderId
+														p
+															b Тип:  
+															span Угловой диван
+														-for (key in prop)
+															p
+																b Ткань:  
+																span= prop[key]
+														p
+															b Цвет:  
+															span= color
+														p
+															b Статус: 
+															b 
+																if status === 'done'
+																	| ДОСТАВЛЕНО
+																else if status === 'waiting'
+																	| ДОСТАВЛЯЕТСЯ
+																else
+																	| ОТМЕНЕНО
+
+														.buttons-holder
+															a.btn.btn-grey(href="#")
+																span Заказать повторно
+
+												.right-side
+													span.item-price
+														span.price-cost 12700
+														span.currency грн.
+										+cart-item(
+											'Сенатор',
+											'http://www.galameble.com/wp-content/uploads/coco_naroznik_miniatura.jpg',
+											'81dbee5a',
+											'Красный',
+											'done',
+											'PENTA'
+										)
+										+cart-item(
+											'Милана',
+											'http://www.galameble.com/wp-content/uploads/bono_naroznik_miniatura.jpg',
+											'7c1754e2',
+											'Синий',
+											'done',
+											'NOVEL'
+										)
+										+cart-item(
+											'Доната',
+											'http://www.galameble.com/wp-content/uploads/play_naroznik_miniatura.jpg',
+											'ae76ee1a',
+											'Желтый',
+											'waiting',
+											'RITZ'
+										)
+										+cart-item(
+											'Сенатор',
+											'http://www.galameble.com/wp-content/uploads/tunis_naroznik_miniatura.jpg',
+											'd3b17c9a',
+											'Красный',
+											'canceled',
+											'TRINITY'
+										)
 
 							#profile-tab.tab-pane( role="tabpanel" )
 								form.profile-form.col-md-12.col-lg-6(action="#")
@@ -110,6 +213,7 @@ html(lang='ru')
 									.button-group
 										button.btn.btn-primary(type="submit")
 											span Сохранить
+
 
 		include ./partials/footer.jade
 		include ./partials/modals.jade
