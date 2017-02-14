@@ -356,10 +356,17 @@ body
 		height: $block-height-vw
 		display: flex
 		align-items: center
+		@media #{$media-sm}
+			height: 200px
+			width: 100%
 		&:nth-child(4),
 		&:nth-child(5)
 			height: $block-height-desktop / 2
 			height: $block-height-vw / 2
+			@media #{$media-sm}
+				height: $block-height-desktop
+				height: $block-height-vw
+				height: 200px
 
 		p
 			width: 100%
@@ -479,6 +486,8 @@ body
 		height: 20vw
 		display: flex
 		align-items: center
+		@media #{$media-sm}
+			height: 200px
 		&:before
 			content: ''
 			position: absolute
@@ -511,6 +520,8 @@ body
 		text-align: left
 		height: 20vw
 		// padding-top: 2em
+		@media #{$media-sm}
+			height: auto
 		&:before
 			content: ''
 			background: rgba(0,0,0,0.4)
@@ -557,6 +568,8 @@ body
 		align-items: center
 		justify-content: center
 		@media #{$media-xs}
+			display: block
+			height: auto
 			width: 100%
 		a
 			color: #fff
@@ -589,6 +602,8 @@ body
 		&:nth-child(1),
 		&:first-child
 			width: 50%
+			@media #{$media-xs}
+				width: 100%
 		.collections-on-main-holder
 			background:
 				size: cover
@@ -600,6 +615,9 @@ body
 			position: absolute
 			left: 0
 			right: 0
+			@media #{$media-xs}
+				position: static
+				height: auto
 			&:before
 				content: ''
 				position: absolute
@@ -661,6 +679,9 @@ body
 		height: $block-height-desktop
 		height: $block-height-vw
 		width: 25%
+		@media #{$media-sm}
+			height: 200px
+			width: 100%
 		.hover
 			display: flex
 			align-items: center
@@ -691,8 +712,8 @@ body
 				margin: 1em auto
 				text-transform: uppercase
 				padding: 0 12%
-			@media #{$media-sm}
-				background: none
+			// @media #{$media-sm}
+				// background: none
 		&:hover
 			.hover
 				background: rgba(0,0,0,0)
@@ -702,6 +723,9 @@ body
 					border-color: rgba(255,255,255,1)
 	.categories-slider
 		width: 75%
+		@media #{$media-sm}
+			height: 200px
+			width: 100%
 		.item
 			background:
 				position: 50% 50%
@@ -710,6 +734,8 @@ body
 
 			height: $block-height-desktop
 			height: $block-height-vw
+			@media #{$media-sm}
+				height: 200px
 			a
 				background:
 					position: 50% 50%
@@ -790,6 +816,8 @@ body
 		max-width: 1200px
 		margin-left: auto
 		margin-right: auto
+		@media #{$media-sm}
+			display: block
 	.form-group
 		position: relative
 		label
@@ -802,6 +830,9 @@ body
 			margin-right: 10px
 			width: 46%
 			// max-width: 400px
+			@media #{$media-sm}
+				display: block
+				width: 100%
 	.btn
 		padding-top: 14px
 		padding-bottom: 14px
@@ -1058,6 +1089,15 @@ body
 						margin-right: 0
 		.item-name
 			font-weight: 100
+			@media #{$media-xs}
+				background: rgba(255,255,255,0.8)
+				margin-top: -140px
+				position: relative
+				z-index: 2
+			@media (max-width: 460px)
+				margin-top: -120px
+			@media (max-width: 380px)
+				margin-top: -80px
 
 		.right-side
 			margin-bottom: 1rem
