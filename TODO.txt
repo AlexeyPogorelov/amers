@@ -1,25 +1,8 @@
 
-+ about - ширина странички
+main navigation TABLET
+main page MOBILE
+item-card MOBILE
 
-+ доставка оплата - контент, убрать кнопки
-
-+ карта - отступить от серого квадрата
-
-+ одинаковые лейблы страниц
-
-+ ховеры на корзине
-
-+ блог - убрать "читать", сделать ховер
-
-+ распродажа - сделать карточку, добавить шилдик
-
-+ vertical slider in item-card
-
-+ contacts
-
-+ map application
-
-+ rebuild cart https://www.templatemonster.com/blog/shopping-cart-page-designs/
 
 magnefic popup fix scroll issue
 

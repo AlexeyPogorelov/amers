@@ -162,7 +162,7 @@ body
 // SUBSCRIBE FIELD
 //----------------------------------
 .subscribe-field
-	h4
+	// h4
 	p
 		margin-bottom: 1em
 	.form-group
@@ -214,18 +214,19 @@ body
 	.item-description
 		& > *
 			margin-left: 40px
-			@media #{$media-xs-min}
+			@media #{$media-md}
 				margin-left: 0
 	.desc_row
-		@media #{$media-xs-min}
+		@media #{$media-xs}
 			display: none
 	.h2, h2
 		color: #333
 		font-size: 28px
 		font-weight: 600
 		margin-bottom: 0.8em
-		@media #{$media-xs-min}
-			font-size: 18px
+		@media #{$media-sm}
+			font-size: 16px
+			margin-bottom: 0
 		a
 			background: #fff
 			padding: 6px 12px
@@ -233,8 +234,11 @@ body
 			color: inherit
 			font-size: inherit
 			font-weight: inherit
-			@media #{$media-xs-min}
+			@media #{$media-sm}
 				background: transparent
+	.h3, h3
+		@media #{$media-sm}
+			margin-top: 6px
 	$speed: 100ms
 	%pseudo-border
 		content: '' !important
@@ -254,6 +258,7 @@ body
 		font-weight: 600
 		letter-spacing: 0.05em
 		margin-bottom: 20px
+		background: #fff
 		&:before
 			@extend %pseudo-border
 			left: 0
@@ -303,24 +308,27 @@ body
 		margin: 30px
 		@media #{$media-xs}
 			margin-bottom: 60px
-		@media #{$media-xs-min}
+		@media #{$media-md}
 			margin-bottom: 80px
 			text-align: center
 		.category-item
 			margin: -30px
+			@media #{$media-md}
+				margin-left: -20px
+				margin-right: -20px
 		&:nth-of-type(odd)
 			.h2, h2
 				position: relative
 				top: -5px
-				margin-left: -9px
-				@media #{$media-xs-min}
+				// margin-left: -9px
+				@media #{$media-md}
 					margin-left: 0
 		&:nth-of-type(even)
 			.h2, h2
 				position: relative
 				top: -5px
 				margin-left: 60px
-				@media #{$media-xs-min}
+				@media #{$media-md}
 					margin-left: 0
 
 .categories-alternative
@@ -1015,6 +1023,9 @@ body
 	margin: 40px 0
 	padding: 0 20px
 	&-full
+		@media #{$media-xs}
+			padding-left: 0
+			padding-right: 0
 		.cart-item
 			border-bottom: 1px solid #ccc
 			margin-bottom: 1rem
@@ -1024,6 +1035,8 @@ body
 		.item-image
 			// display: block
 			// margin-left: 0
+			@media #{$media-xs}
+				font-size: 1em
 
 		.left-side
 			flex-grow: 4
@@ -1041,8 +1054,15 @@ body
 				margin-top: 1rem
 				.btn
 					margin-right: 1em
+					&:last-of-type
+						margin-right: 0
 		.item-name
 			font-weight: 100
+
+		.right-side
+			margin-bottom: 1rem
+			// @media #{$media-xs}
+				// display: none
 
 #cart-sidebar
 	.item-name
@@ -1053,9 +1073,11 @@ body
 	margin: 0 0 60px
 	.btn
 		margin-right: 1em
+		margin-bottom: 1em
 		@media #{$media-xs}
 			padding: 15px 0
 			display: block
+			margin-right: 0
 
 .cart-summary-holder
 	margin: 40px 0
@@ -1066,12 +1088,18 @@ body
 		border-color: #ddd
 	.buttons-holder
 		text-align: right
+		@media #{$media-md}
+			text-align: center
 	.total-summ
 		float: left
 		color: $main-color
 		// font-weight: 600
 		font-size: 1.6rem
 		margin-top: 0.2em
+		@media #{$media-md}
+			float: none
+			margin-bottom: 0.5em
+			display: block
 	& > *:first-child
 		margin-top: 0
 	& > *:last-child
@@ -1112,6 +1140,8 @@ body
 .contacts-page
 	// margin-top: -42px
 	padding-bottom: 80px
+	@media #{$media-sm}
+		padding-bottom: 0
 	.buttons-holder
 		button
 			margin: 4px 4px 4px 0
@@ -1145,7 +1175,8 @@ body
 	height: 80vh
 	width: 100%
 	@media #{$media-sm}
-		max-height: 80vh
+		max-height: 50vh
+		margin: 2rem auto 0
 	*
 		transition: none
 
@@ -1161,6 +1192,10 @@ body
 	overflow: auto
 	overflow-y: auto
 	overflow-x: hidden
+	@media #{$media-sm}
+		margin: 0
+		height: auto
+		width: 100%
 	.address-item
 		border-bottom: 1px dotted #777
 		padding-bottom: 1rem
@@ -1217,6 +1252,10 @@ body
 	.text-inputs-group
 		input
 			margin: 6px 10px 6px 0
+			@media #{$media-xs}
+				display: block
+				width: 100%
+
 //----------------------------------
 // END ORDER FORM
 //----------------------------------

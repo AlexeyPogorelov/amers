@@ -115,6 +115,10 @@
 		// border-top: 2px solid #b7b7b7
 		text-align: center
 		padding: 0 6px 10px 6px
+		@media #{$media-sm}
+			background: rgba(255,255,255,0.8)
+			margin-top: -50px
+			position: relative
 		h3
 			margin: 0
 			line-height: 1em
@@ -143,6 +147,8 @@
 		transform: translateY(-100%)
 		color: #333
 		text-transform: uppercase
+		@media #{$media-sm}
+			display: none
 		p, span
 			color: inherit
 	.sale-shield

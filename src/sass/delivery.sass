@@ -1,3 +1,5 @@
+@import _mixins
+
 .delivery-page
 	// margin-top: -42px
 	.buttons-holder
@@ -13,6 +15,8 @@
 			margin: 0.6em 0.3em
 	.wysiwyg
 		text-align: center
+		@media #{$media-sm}
+			text-align: left
 		// h1, h2
 		hr
 			border-color: #676767
@@ -25,6 +29,8 @@
 			// text-align: center
 			&:nth-of-type(even)
 				border-right: 1px solid #676767
+				@media #{$media-sm}
+					border: none
 			li
 				display: inline-block
 				&:before
@@ -32,5 +38,9 @@
 		.col-md-4
 			&:nth-of-type(3n+2)
 				border-right: 1px solid #676767
+				@media #{$media-sm}
+					border: none
 			&:nth-of-type(3n+3)
 				border-right: 1px solid #676767
+				@media #{$media-sm}
+					border: none

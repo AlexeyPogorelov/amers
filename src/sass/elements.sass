@@ -266,13 +266,15 @@ $speed: 100ms
 			background: rgba(255, 0, 0, 0.75)
 	.catalog-category-name
 		text-align: center
-		h1
+		h1, h2
 			// margin-top: 2em
 			margin: 0
 			margin-bottom: 0.4em
 			font-size: 2.5em
 			color: inherit
 			text-transform: uppercase
+			@media #{$media-md}
+				font-size: 1.8rem
 		p
 			color: #fff
 
@@ -323,8 +325,13 @@ $speed: 100ms
 		color: #fff
 		font-weight: 800
 	.dropdown-menu
+		padding: 0.6rem 0.6rem
 		a
 			display: block
+			padding: 0 0.4em
+			line-height: 2em
+			&:hover
+				color: $main-color
 
 .hover-effect
 	background:

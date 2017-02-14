@@ -7,12 +7,43 @@ function initMap() {
         $map = $('#map'),
         mapWidth = $map.width(),
         centerMap = mapWidth / 4,
+        touchstart = {},
+        touchend = {},
         pinIcon = 'img/icons/location-pin.svg',
         pinIconHover = 'img/icons/location-pin-hover.svg';
 
-    $(window).on('resize', function () {
+    centerMap = mapWidth / 4;
+    if (mapWidth < 992) {
+        centerMap = 0;
+        $mapAddressesAccordion.find('.address-item').on("touchstart", function (e) {
+            touchstart.time = new Date().getTime();
+            touchstart.x = touchend.x = e.originalEvent.touches[0].clientX;
+            touchstart.y = touchend.y = e.originalEvent.touches[0].clientY;
+        }).on("touchmove", function (e) {
+            touchend.x = e.originalEvent.touches[0].clientX;
+            touchend.y = e.originalEvent.touches[0].clientY;
+        }).on("touchend", function (e) {
+            var endTime = new Date().getTime();
+            if (endTime - touchstart.time < 300) {
+                if ( touchstart.x > touchend.x - 20 &&
+                    touchstart.y > touchend.y - 20 &&
+                    touchstart.x < touchend.x + 20 &&
+                    touchstart.y < touchend.y + 20 ) {
+                    $('body').animate({
+                        scrollTop: $map.position().top
+                    }, 200);
+                }
+                // .scrollTop( value )
+            }
+        });
+    }
+
+    $(window).on('resize', function() {
         mapWidth = $map.width();
         centerMap = mapWidth / 4;
+        if (mapWidth < 992) {
+            centerMap = 0;
+        }
     });
 
     // load hovered pin
@@ -23,8 +54,8 @@ function initMap() {
         center: { lat: 49.405594, lng: 32.111898 },
         // disableDefaultUI: true,
         mapTypeControl: false,
-        zoom: 13,
-        styles: [{ "featureType": "poi.business", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.school", "stylers": [{ "visibility": "off" }] }, {}, { "featureType": "landscape", "stylers": [{ saturation: -100 }] }, { "featureType": "whater", "stylers": [{ saturation: -100 }] }]
+        zoom: 13
+            // styles: [{ "featureType": "poi.business", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.school", "stylers": [{ "visibility": "off" }] }, {}, { "featureType": "landscape", "stylers": [{ saturation: -100 }] }, { "featureType": "whater", "stylers": [{ saturation: -100 }] }]
     });
     map.panBy(-centerMap, 0);
     if (map && markers && markers.length) {
