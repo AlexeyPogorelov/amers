@@ -9,6 +9,7 @@ function initMap() {
         centerMap = mapWidth / 4,
         touchstart = {},
         touchend = {},
+        hash = window.location.hash,
         pinIcon = 'img/icons/location-pin.svg',
         pinIconHover = 'img/icons/location-pin-hover.svg';
 
@@ -101,5 +102,11 @@ function initMap() {
         map.setZoom(zoom);
         map.panBy(-centerMap, 0);
     });
+
+    if (hash) {
+        setTimeout(function () {
+            $('[href="' + hash + '"]').trigger('click');
+        }, 600);
+    }
 
 }

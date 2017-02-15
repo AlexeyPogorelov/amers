@@ -1,6 +1,5 @@
 @import _mixins
 
-
 .mfp-content,
 	pointer-events: none
 
@@ -14,9 +13,17 @@
 		.radio-group
 			display: inline-block
 			margin-right: 20px
+			@media #{$media-sm}
+				display: block
+				margin: 1em auto
 
 .chosen-material
 	white-space: nowrap
+	.chosen-material-label
+		margin-top: -3px
+		text-transform: uppercase
+		font-size: 12px
+		font-weight: 600
 	.color-tooltip-wrapper
 		top: auto !important
 		bottom: 100% !important
@@ -40,8 +47,8 @@
 		vertical-align: top
 	label
 		margin: 0
-		height: 40px
-		width: 40px
+		height: 44px
+		width: 44px
 
 .item-card-main-description
 	margin-top: 1.4rem
@@ -63,6 +70,8 @@
 		// margin-top: 1em
 		height: calc(100vw / 16 * 4.5)
 		width: 100%
+		@media #{$media-sm}
+			height: calc(100vw / 16 * 9)
 	img
 		width: 100%
 
@@ -107,6 +116,18 @@
 	border: 1px solid #ddd
 	border-top: none
 	padding: 10px 20px 10px
+	@media #{$media-sm}
+		margin-bottom: 2rem
+	@media #{$media-xs}
+		border: none
+		padding-left: 0
+		padding-right: 0
+	.tab-pane
+		@media #{$media-xs}
+			display: block !important
+
+.item-card-same-items
+	margin-top: 2rem
 
 .item-card-main-props
 	table
@@ -133,7 +154,6 @@
 		text-align: left
 		display: inline-block
 
-		
 	h4
 		margin-top: 0
 		margin-bottom: 0.3em
@@ -352,10 +372,13 @@
 	align-items: center
 	justify-content: space-between
 	@media #{$media-sm}
+		display: block
 		text-align: center
+		justify-content: center
 	& > *
 		display: inline-block
 		margin-right: 1.3rem
+		vertical-align: middle
 		// margin-top: 0
 		// margin-bottom: 0
 	.form-group
@@ -394,6 +417,7 @@
 	.btn.btn-grey
 		color: #fff
 		background-color: $main-color
+		min-width: 138px
 		&:before,
 		&:after
 			background-color: $main-color
@@ -409,6 +433,8 @@
 	margin-bottom: 20px
 	// border-bottom: 1px solid #eee
 	text-align-last: justify
+	@media #{$media-sm}
+		text-align-last: center
 	li
 		padding-right: 0
 
@@ -418,8 +444,8 @@
 		cursor: pointer
 		outline: 1px solid rgba(0,0,0,0.2)
 		display: inline-block
-		height: 30px
-		width: 30px
+		height: 40px
+		width: 40px
 		transition: transform 100ms
 	input
 		text-indent: -99999px

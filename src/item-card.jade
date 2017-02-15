@@ -56,7 +56,7 @@ html(lang='ru')
 									#basic-information-row.basic-information-row
 										.item-card-main-info-block
 											.chosen-material
-												span Выбрана ткань: 
+												span.chosen-material-label Выбрана ткань: 
 												span#js-chosen-material
 											.radios-inline
 												.radio-group.form-group
@@ -74,7 +74,7 @@ html(lang='ru')
 											//- a.btn.btn-primary(href="order.html")
 												span Купить в один клик
 
-									ul.nav.nav-tabs.item-card-main-tabs-holder(role='tablist')
+									ul.nav.nav-tabs.item-card-main-tabs-holder(role='tablist').hidden-xs
 										li.active(role='presentation')
 											a(href='#tab-category-1', aria-controls='tab-category-1', role='tab', data-toggle='tab') Популярные <small>от 100 до 300</small>
 										li(role='presentation')
@@ -85,7 +85,7 @@ html(lang='ru')
 											a(href='#tab-category-4', aria-controls='tab-category-3', role='tab', data-toggle='tab') Все <small>от 100 до 900</small>
 
 									.tab-content.item-card-main-tab-content
-										#tab-category-1.tab-pane.active(role='tabpanel')
+										#tab-category-1.tab-pane.active.hidden-xs(role='tabpanel')
 											h4 Категория ткани 20
 											ul.list-inline.materials-list
 												+material(
@@ -144,7 +144,7 @@ html(lang='ru')
 													'http://dommino.ua/media//catalog/product/s/e/30x30xseul-0.jpg'
 												)
 
-										#tab-category-2.tab-pane(role='tabpanel')
+										#tab-category-2.tab-pane.hidden-xs(role='tabpanel')
 											h4 Категория ткани 61
 											ul.list-inline.materials-list
 												+material(
@@ -157,7 +157,7 @@ html(lang='ru')
 													'409',
 													'#C96100'
 												)
-										#tab-category-3.tab-pane(role='tabpanel')
+										#tab-category-3.tab-pane.hidden-xs(role='tabpanel')
 											h4 Категория ткани 58
 											ul.list-inline.materials-list
 												+material(
@@ -313,10 +313,9 @@ html(lang='ru')
 											img(src='http://amers.ck.ua/upload/Nikol_sh_4.jpg', alt='Угловой диван PARMA')
 
 
-					.row
+					.row.hidden-xs.item-card-same-items
 						.col-md-12
 							h3 Похожие товары
-					.row
 						#owl-other-items.owl-carousel.owl-theme
 							a.item(href="#" style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/montaj_nikol_nikol.jpg&w=600&h=260)")
 								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/montaj_nikol_nikol.jpg&w=600&h=260', alt='description')

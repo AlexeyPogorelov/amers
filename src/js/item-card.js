@@ -1,5 +1,5 @@
 // OWL slider
-(function() {
+(function($) {
 	var owlMain, owlHelper, owlOtherItems;
 
 	// add styles to materials labels
@@ -123,45 +123,46 @@
 			}
 		}
 	});
+})(jQuery);
 
-	// smart form
-	(function() {
-		var $form = $('#js-item-card-main-form'),
-			$priceTarget = $form.find('[data-base-price]'),
-			$chosenMaterial = $form.find('#js-chosen-material'),
-			methods = {
-				changeMaterial: function() {
-					var $material = $(this).closest('li').clone();
-					$material.find('input').remove();
-					$chosenMaterial
-						.empty()
-						.append($material);
-				}
-			};
-		$form.on('change', function(e) {
-			var i,
-				$target = $(':checked'),
-				price,
-				priceSumm = 0;
-			$target.each(function() {
-				var $currentTarget = $(this),
-					method;
-				price = $currentTarget.data('price');
-				price = parseInt(price) || 0;
-				method = $currentTarget.data('method');
-				if (method && typeof methods[method] === 'function') {
-					methods[method].call(this);
-				}
-				if (!price) return;
-				priceSumm += price;
-			});
-			$priceTarget.each(function() {
-				var $this = $(this),
-					basePrice = $this.data('base-price'),
-					currency = $this.data('currency');
-				basePrice = parseInt(basePrice) || 0;
-				$this.html(priceSumm + basePrice + '<small>' + currency + '</small>');
-			});
-		}).trigger('change');
-	})();
+// smart form
+(function($) {
+	var $form = $('#js-item-card-main-form'),
+		$priceTarget = $form.find('[data-base-price]'),
+		$chosenMaterial = $form.find('#js-chosen-material'),
+		methods = {
+			changeMaterial: function() {
+				var $material = $(this).closest('li').clone();
+				$material.find('input').remove();
+				$chosenMaterial
+					.empty()
+					.append($material);
+			}
+		};
+
+	$form.on('change', function(e) {
+		var i,
+			$target = $(':checked'),
+			price,
+			priceSumm = 0;
+		$target.each(function() {
+			var $currentTarget = $(this),
+				method;
+			price = $currentTarget.data('price');
+			price = parseInt(price) || 0;
+			method = $currentTarget.data('method');
+			if (method && typeof methods[method] === 'function') {
+				methods[method].call(this);
+			}
+			if (!price) return;
+			priceSumm += price;
+		});
+		$priceTarget.each(function() {
+			var $this = $(this),
+				basePrice = $this.data('base-price'),
+				currency = $this.data('currency');
+			basePrice = parseInt(basePrice) || 0;
+			$this.html(priceSumm + basePrice + '<small>' + currency + '</small>');
+		});
+	}).trigger('change');
 })(jQuery);

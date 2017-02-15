@@ -16,14 +16,21 @@
 	.container
 		padding-left: 6px
 		padding-right: 23px
+		@media #{$media-md}
+			width: 100%
+			padding-left: 20px
+			padding-right: 20px
+		@media #{$media-sm}
+			width: 100%
 	.badge
 		margin-top: -14px
+		margin-left: -5px
 		background: $main-color
 	a
 		outline: none
 	.logo-main
 		height: auto
-		width: 130px
+		width: 122px
 		// margin-top: -5px
 		margin-top: 0
 		margin-right: 15px
@@ -31,6 +38,7 @@
 	.primary-navigation,
 	.secondary-navigation
 		margin-bottom: 0
+		white-space: nowrap
 		a
 			text-transform: uppercase
 			font-size: 14px
@@ -102,6 +110,8 @@
 			top: 3px
 	.main-cellphone
 		margin-bottom: 0
+		@media (max-width: 1040px)
+			display: none
 		a
 			color: #333
 			font-weight: 500

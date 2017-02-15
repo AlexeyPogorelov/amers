@@ -15,7 +15,7 @@ body
 	padding-top: 98px
 	transition: none
 	@media #{$media-sm}
-		padding-top: 59px
+		padding-top: 50px
 	// &::-webkit-scrollbar
 	// 	height: 0
 	// 	width: 0
@@ -51,6 +51,8 @@ body
 	// position: relative
 	margin-top: -42px
 	margin-bottom: 20px
+	@media #{$media-sm}
+		margin-top: 0
 	.owl-controls
 		@media (max-width: $screen-md-max + 80px)
 			display: none !important
@@ -406,7 +408,8 @@ body
 				text-transform: uppercase
 				padding: 0 12%
 			@media #{$media-sm}
-				background: none
+				// background: none
+				background: rgba(0,0,0,0.5)
 			a
 				text-decoration: none
 				color: #888
@@ -530,6 +533,8 @@ body
 			left: 0
 			bottom: 0
 			right: 0
+			@media #{$media-sm}
+				background: rgba(0,0,0,0.6)
 		p, h2, h3, h4
 			position: relative
 			color: #fff
@@ -545,6 +550,8 @@ body
 	font-size: 0
 	$block-height-desktop: 360px
 	$block-height-vw: 26vw
+	@media #{$media-sm}
+		display: none
 	.container
 	.row
 	.collections-on-main-col
@@ -1156,7 +1163,7 @@ body
 .about-page
 	padding-bottom: 40px
 	@media #{$media-lg}
-		padding-top: 60px
+		padding-top: 40px
 	.bottom-bar
 		margin-top: 2em
 	br

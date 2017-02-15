@@ -4,8 +4,40 @@
 		"selected_items":
 		[
 			[
+				"sc",
+				"scrollTop〔function〕"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"pos",
+				"position〔function〕"
+			],
+			[
+				"scr",
+				"scrollTo〔function〕"
+			],
+			[
+				"wi",
+				"window"
+			],
+			[
+				"g",
+				"getTime〔function〕"
+			],
+			[
+				"tou",
+				"touchstart"
+			],
+			[
+				"cen",
+				"centerMap〔variable〕"
+			],
+			[
 				"ma",
-				"map"
+				"mapWidth"
 			],
 			[
 				"bor",
@@ -18,10 +50,6 @@
 			[
 				"st",
 				"style\tTag"
-			],
-			[
-				"l",
-				"length〔variable〕"
 			],
 			[
 				"tran",
@@ -188,10 +216,6 @@
 				"delta"
 			],
 			[
-				"wi",
-				"window.pageYOffset"
-			],
-			[
 				"o",
 				"offsetTop"
 			],
@@ -230,14 +254,6 @@
 			[
 				"al",
 				"alert"
-			],
-			[
-				"sc",
-				"scrolling"
-			],
-			[
-				"scr",
-				"scrolling〔class〕"
 			],
 			[
 				"ca",
@@ -408,10 +424,6 @@
 				"font-size"
 			],
 			[
-				"pos",
-				"post〔function〕"
-			],
-			[
 				"ke",
 				"keydown"
 			],
@@ -454,10 +466,6 @@
 			[
 				"act",
 				"activeTasks"
-			],
-			[
-				"g",
-				"getTime"
 			],
 			[
 				"ex",
@@ -506,14 +514,6 @@
 			[
 				"pl",
 				"plg"
-			],
-			[
-				"win",
-				"winWidth"
-			],
-			[
-				"back",
-				"background-size"
 			]
 		]
 	},
@@ -523,25 +523,7 @@
 			"file": "TODO.txt",
 			"settings":
 			{
-				"buffer_size": 449,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/contacts.jade",
-			"settings":
-			{
-				"buffer_size": 11670,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/contacts.js",
-			"settings":
-			{
-				"buffer_size": 2757,
+				"buffer_size": 124,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -554,10 +536,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 173.0,
-		"last_filter": "",
+		"height": 392.0,
+		"last_filter": "ra",
 		"selected_items":
 		[
+			[
+				"ra",
+				"Random:UUID"
+			],
 			[
 				"rand",
 				"Random:UUID"
@@ -597,10 +583,6 @@
 			[
 				"sass",
 				"Set Syntax: Sass"
-			],
-			[
-				"ra",
-				"Random:Int"
 			],
 			[
 				"git s",
@@ -743,7 +725,7 @@
 				"Diff View: Run custom diff..."
 			]
 		],
-		"width": 416.0
+		"width": 432.0
 	},
 	"console":
 	{
@@ -774,21 +756,32 @@
 	],
 	"file_history":
 	[
-		"/D/Git/amers/src/sass/main.sass",
-		"/D/Git/amers/src/contacts.jade",
-		"/D/Git/amers/src/sass/elements.sass",
-		"/D/Git/amers/src/catalog-sales.jade",
-		"/D/Git/amers/src/sass/catalog.sass",
 		"/D/Git/amers/src/index.jade",
-		"/D/Git/amers/src/about.jade",
+		"/D/Git/amers/src/sass/global.sass",
+		"/D/Git/amers/src/js/contacts.js",
+		"/D/Git/amers/src/js/item-card.js",
+		"/D/Git/amers/src/item-card.jade",
+		"/D/Git/amers/src/sass/navigation.sass",
+		"/D/Git/amers/src/sass/modals.sass",
+		"/D/Git/amers/src/sass/item-card.sass",
+		"/D/Git/amers/src/partials/navigation.jade",
+		"/D/Git/amers/src/sass/main.sass",
+		"/D/Git/amers/src/sass/elements.sass",
+		"/D/Git/amers/src/partials/pagination.jade",
+		"/D/Git/amers/src/sass/catalog.sass",
+		"/D/Git/amers/src/sass/catalog-alt.sass",
+		"/D/Git/amers/src/sass/blog.sass",
+		"/D/Git/amers/src/user-actions.jade",
+		"/D/Git/amers/src/sass/feedback.sass",
+		"/D/Git/amers/src/sass/article.sass",
 		"/D/Git/amers/src/sass/delivery.sass",
+		"/D/Git/amers/src/catalog.jade",
+		"/D/Git/amers/src/catalog-sales.jade",
+		"/D/Git/amers/src/contacts.jade",
+		"/D/Git/amers/src/about.jade",
 		"/D/Git/amers/src/delivery.jade",
 		"/D/Git/amers/src/partials/cart-items.jade",
-		"/D/Git/amers/src/user-actions.jade",
-		"/D/Git/amers/src/item-card.jade",
 		"/D/Git/amers/src/blog.jade",
-		"/D/Git/amers/src/sass/item-card.sass",
-		"/D/Git/amers/src/sass/blog.sass",
 		"/D/Git/amers/src/partials/article.jade",
 		"/D/rabish/PogorelovCV/img/icons/github-logo.svg",
 		"/D/Git/alexeypogorelov/dist/index.html",
@@ -797,17 +790,12 @@
 		"/D/Git/interplate/src/partials/head.jade",
 		"/D/Git/alexeypogorelov/dist/js/main.js",
 		"/D/Git/amers/src/item-card-old.jade",
-		"/D/Git/amers/src/js/item-card.js",
 		"/D/Git/amers/src/sass/item-card-old.sass",
-		"/D/Git/amers/src/sass/navigation.sass",
-		"/D/Git/amers/src/partials/navigation.jade",
-		"/D/Git/amers/src/sass/global.sass",
 		"/D/Git/amers/src/sass/_mixins.sass",
 		"/D/Git/amers/bower.json",
 		"/D/Git/amers/package.json",
 		"/D/Git/justicon/bower.json",
 		"/D/Git/amers/src/partials/scripts.jade",
-		"/D/Git/amers/src/catalog.jade",
 		"/D/Git/amers/src/sass/concated.sass",
 		"/D/Git/amers/src/test.jade",
 		"/D/Git/amers/amers.sublime-project",
@@ -871,7 +859,6 @@
 		"/C/Users/Blick/Desktop/meatstudies mail template.html",
 		"/C/Users/Blick/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/D/Dropbox/Backup/Preferences.sublime-settings",
-		"/D/Git/amers/src/sass/modals.sass",
 		"/D/Git/amers/src/partials/categories.jade",
 		"/D/Git/amers/src/partials/modals.jade",
 		"/D/Git/amers/src/img/icons/slide-arrow-prev-2.svg",
@@ -880,7 +867,6 @@
 		"/D/Git/amers/src/img/icons/slide-arrow-next-1.svg",
 		"/D/Git/amers/src/img/icons/slide-arrow-prev-1.svg",
 		"/D/Git/amers/src/order.jade",
-		"/D/Git/amers/src/sass/article.sass",
 		"/D/Git/amers/src/sass/footer.sass",
 		"/D/Git/amers/src/partials/head.jade",
 		"/D/Git/amers/src/article.jade",
@@ -897,11 +883,7 @@
 		"/D/Git/amers/src/sass/fonts.sass",
 		"/D/Git/amers/external-content",
 		"/D/Git/amers/README.md",
-		"/D/Git/amers/dist/external/bootstrap/dist/js/bootstrap.js",
-		"/D/Git/dailymail/src/index.jade",
-		"/D/Git/dailymail/src/sass/additional.sass",
-		"/C/Users/Blick/AppData/Roaming/Sublime Text 3/Packages/User/GitGutter.sublime-settings",
-		"/C/Users/Blick/AppData/Roaming/Sublime Text 3/Packages/GitGutter/GitGutter.sublime-settings"
+		"/D/Git/amers/dist/external/bootstrap/dist/js/bootstrap.js"
 	],
 	"find":
 	{
@@ -969,6 +951,26 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"#",
+			"whitebuts",
+			".item-card-main-info-block",
+			".chosen-material",
+			".item-card-main-info-block",
+			".radio-group",
+			".item-card-main-tab-content",
+			".hidden-sm",
+			".hidden-xs",
+			"tab-pane",
+			"\n.",
+			"catego",
+			"collections",
+			".cart-items-holder-full",
+			".hidden-sm",
+			".make-order-button-holder",
+			".cart-items-holder",
+			"touchend",
+			"new",
+			"'---'",
 			"-a",
 			"]",
 			"],",
@@ -1076,27 +1078,7 @@
 			"  ",
 			".top-news",
 			".kved-template",
-			".kved-1-template",
-			".item-",
-			"modal",
-			"justify",
-			"(style='text-align: justify;')",
-			"(align='justify')",
-			"(style='text-align: justify;')",
-			"justify",
-			"slide-description",
-			".cl-im",
-			".fixed-header",
-			"//",
-			"ostring",
-			":before",
-			"iframe",
-			"data-",
-			"script",
-			"<iframe",
-			"iframe",
-			"loadElements",
-			"offsetTop"
+			".kved-1-template"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -1124,7 +1106,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1133,15 +1115,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 449,
+						"buffer_size": 124,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								263,
-								263
+								47,
+								47
 							]
 						],
 						"settings":
@@ -1150,67 +1132,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/contacts.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11670,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 57.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/js/contacts.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2757,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1096,
-								1096
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 456.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1279,6 +1200,34 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"n",
+				"sass\\navigation.sass"
+			],
+			[
+				"mod",
+				"sass\\modals.sass"
+			],
+			[
+				"na",
+				"sass\\navigation.sass"
+			],
+			[
+				"ite",
+				"item-card.jade"
+			],
+			[
+				"item",
+				"js\\item-card.js"
+			],
+			[
+				"glo",
+				"sass\\global.sass"
+			],
+			[
+				"ma",
+				"sass\\main.sass"
+			],
 			[
 				"ele",
 				"src\\sass\\elements.sass"

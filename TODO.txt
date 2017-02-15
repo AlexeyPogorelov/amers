@@ -1,7 +1,7 @@
 
-main navigation TABLET
-main page MOBILE
-item-card MOBILE
++ main navigation TABLET
++ main page MOBILE
++ item-card MOBILE
 
 
 magnefic popup fix scroll issue
