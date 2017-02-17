@@ -9,6 +9,26 @@
 		transform: translate(0,40px)
 	&.in .modal-dialog
 		transform: translate(0,0)
+	.close
+		background: transparent url('../img/icons/close-icon-1.svg') 50% 50% no-repeat
+		background-size: contain
+		position: absolute
+		opacity: 0.8
+		border: 10px solid transparent
+		right: 10px
+		top: 10px
+		height: 60px
+		width: 60px
+		transition: top .1s
+		z-index: 2
+		@media #{$media-xs}
+			border: 5px solid transparent
+			height: 40px
+			width: 40px
+		&:hover
+			opacity: 1
+			transition: opacity .3s
+
 .modal-dialog
 	min-height: 100%
 	@media #{$media-xs}
@@ -27,27 +47,6 @@
 		// opacity: 0.7
 		opacity: 0.1
 
-.modal
-	.close
-		background: transparent url('../img/icons/close-icon-1.svg') 50% 50% no-repeat
-		background-size: contain
-		position: absolute
-		opacity: 0.8
-		border: 10px solid transparent
-		right: 10px
-		top: 10px
-		height: 80px
-		width: 80px
-		transition: top .1s
-		z-index: 2
-		@media #{$media-xs}
-			border: 5px solid transparent
-			height: 40px
-			width: 40px
-		&:hover
-			opacity: 1
-			transition: opacity .3s
-
 #mobile-navigation
 	text-align: center
 	background: #fff
@@ -59,6 +58,8 @@
 		font-size: 1rem
 		text-transform: uppercase
 		color: #333
+	.badge
+		margin-top: -14px
 	// .binct-phone-number-1
 		// font-weight: 700
 
@@ -174,3 +175,8 @@
 		width: 320px
 		@media #{$media-xs}
 			width: 100%
+
+#pictures-modal
+	background: rgba(255, 255, 255, 0.8)
+	.close
+		top: 0

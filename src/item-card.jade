@@ -18,22 +18,26 @@ html(lang='ru')
 					.container-alt
 						.row
 							.col-md-9.col-sm-12
+								mixin mainCardSlide (image)
+									a.item(href= image, style="background-image:url(" + image + ")")
+										img(src= image, alt='description')
+
 								#owl-main.owl-carousel.owl-theme
-									.item
-										a(href="http://zegen.ua/img/p/1/2/1/121.jpg")
-											img(src='http://zegen.ua/img/p/1/2/1/121.jpg', alt='description')
-									.item
-										a(href="https://wallpaperscraft.com/image/furniture_chair_light_interior_painting_76171_2560x1024.jpg")
-											img(src='https://wallpaperscraft.com/image/furniture_chair_light_interior_painting_76171_2560x1024.jpg', alt='description')
-									.item
-										a(href="http://zegen.ua/img/p/1/2/2/122.jpg")
-											img(src='http://zegen.ua/img/p/1/2/2/122.jpg', alt='description')
-									.item
-										a(href="http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg")
-											img(src='http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg', alt='description')
-									.item
-										a(href="https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg")
-											img(src='https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg', alt='description')
+									+mainCardSlide(
+										"http://zegen.ua/img/p/1/2/1/121.jpg"
+									)
+									+mainCardSlide(
+										"https://wallpaperscraft.com/image/furniture_chair_light_interior_painting_76171_2560x1024.jpg"
+									)
+									+mainCardSlide(
+										"http://zegen.ua/img/p/1/2/2/122.jpg"
+									)
+									+mainCardSlide(
+										"http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg"
+									)
+									+mainCardSlide(
+										"https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg"
+									)
 
 							.col-md-3.col-sm-12
 								#js-product-slide-pages.product-slide-pages

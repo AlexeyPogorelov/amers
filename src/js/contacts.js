@@ -16,20 +16,20 @@ function initMap() {
     centerMap = mapWidth / 4;
     if (mapWidth < 992) {
         centerMap = 0;
-        $mapAddressesAccordion.find('.address-item').on("touchstart", function (e) {
+        $mapAddressesAccordion.find('.address-item').on("touchstart", function(e) {
             touchstart.time = new Date().getTime();
             touchstart.x = touchend.x = e.originalEvent.touches[0].clientX;
             touchstart.y = touchend.y = e.originalEvent.touches[0].clientY;
-        }).on("touchmove", function (e) {
+        }).on("touchmove", function(e) {
             touchend.x = e.originalEvent.touches[0].clientX;
             touchend.y = e.originalEvent.touches[0].clientY;
-        }).on("touchend", function (e) {
+        }).on("touchend", function(e) {
             var endTime = new Date().getTime();
             if (endTime - touchstart.time < 300) {
-                if ( touchstart.x > touchend.x - 20 &&
+                if (touchstart.x > touchend.x - 20 &&
                     touchstart.y > touchend.y - 20 &&
                     touchstart.x < touchend.x + 20 &&
-                    touchstart.y < touchend.y + 20 ) {
+                    touchstart.y < touchend.y + 20) {
                     $('body').animate({
                         scrollTop: $map.position().top
                     }, 200);
@@ -85,8 +85,8 @@ function initMap() {
         var id = $(this).data('id'),
             marker = mapMarkers[id];
         marker.setIcon(pinIconHover);
-        map.setCenter({ lat: marker.position.lat(), lng: marker.position.lng() });
-        map.panBy(-centerMap, 0);
+        // map.setCenter({ lat: marker.position.lat(), lng: marker.position.lng() });
+        // map.panBy(-centerMap, 0);
     }, function(e) {
         var id = $(this).data('id'),
             marker = mapMarkers[id];
@@ -104,7 +104,7 @@ function initMap() {
     });
 
     if (hash) {
-        setTimeout(function () {
+        setTimeout(function() {
             $('[href="' + hash + '"]').trigger('click');
         }, 600);
     }
