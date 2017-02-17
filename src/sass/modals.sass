@@ -176,7 +176,28 @@
 		@media #{$media-xs}
 			width: 100%
 
+.modal-backdrop
+	z-index: 1000
 #pictures-modal
-	background: rgba(255, 255, 255, 0.8)
+	background: rgba(255, 255, 255, 0.9)
+	z-index: 1001
 	.close
-		top: 0
+		top: 10px
+	.modal-dialog
+		width: calc(100% - 40px)
+	.container-fluid
+		padding: 80px 20px 40px
+	.image
+		background:
+			position: 50% 50%
+			repeat: no-repeat
+			size: cover
+		display: inline-block
+		vertical-align: top
+		height: 200px
+		height: 12vw
+		width: 20%
+		img
+			height: 100%
+			opacity: 0
+			width: 100%

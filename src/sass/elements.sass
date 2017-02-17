@@ -1,5 +1,9 @@
 @import _mixins
 
+.mfp-content,
+	pointer-events: none
+
+
 $speed: 100ms
 %pseudo-border
 	content: '' !important
@@ -7,6 +11,7 @@ $speed: 100ms
 	position: absolute
 	transition: width $speed linear, height $speed linear
 	background: #333
+
 
 .btn
 	border-radius: 0

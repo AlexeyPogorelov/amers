@@ -184,8 +184,44 @@
 							span Отправить
 
 #pictures-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-	.modal-dialog.modal-lg
+	.modal-dialog
 		.modal-content
 			.container-fluid
 				button.close(type='button', data-dismiss='modal', aria-label='Close')
-				include ./cart-items
+				.pictures-modal-holder
+					mixin image (src)
+						a.image(href= src, style="background-image:url(" + src + ")")
+							img(src= src)
+
+					+image(
+						"http://zegen.ua/img/p/1/2/1/121.jpg"
+					)
+					+image(
+						"https://wallpaperscraft.com/image/furniture_interior_design_gift_86632_2560x1024.jpg"
+					)
+					+image(
+						"img/bg/ec4c8f25319415.56344c8ea94d5.jpg"
+					)
+					+image(
+						"http://www.galameble.com/wp-content/uploads/Gala_Collezione_Poduszka_Doodle640.jpg"
+					)
+					+image(
+						"http://www.galameble.com/wp-content/uploads/camelia_slider.jpg"
+					)
+					+image(
+						"http://www.galameble.com/wp-content/uploads/slider_%C5%9Bwi%C4%99ta.jpg"
+					)
+					+image(
+						"http://www.hdwlp.com/wp-content/uploads/2016/08/Living-Room-Sofas-Furniture-2560x1024.jpg"
+					)
+					+image(
+						"https://wallpaperscraft.com/image/sofa_style_interior_design_39178_2560x1024.jpg"
+					)
+					+image(
+						"https://wallpaperscraft.com/image/furniture_chair_light_interior_painting_76171_2560x1024.jpg"
+					)
+					+image(
+						"https://img.clipartfest.com/275c66a9f78681231387ca1d37a422fd_-about-convienence-store-on-store_788-468.jpeg"
+					)
+					
+					

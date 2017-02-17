@@ -110,3 +110,23 @@ function initMap() {
     }
 
 }
+
+
+(function($) {
+    $('#pictures-modal').on('shown.bs.modal', function() {
+        // console.info('test');
+        $('#pictures-modal').find('a').magnificPopup({
+            type: 'image',
+            zoom: {
+                enabled: true,
+
+                duration: 300,
+                easing: 'ease-in-out',
+
+                opener: function(openerElement) {
+                    return openerElement.is('img') ? openerElement : openerElement.find('img');
+                }
+            }
+        });
+    })
+})(jQuery);
