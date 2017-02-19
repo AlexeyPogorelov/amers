@@ -113,10 +113,20 @@ function initMap() {
 
 
 (function($) {
+
+    if ($(window).width() <= 480) {
+        return;
+    }
+
     $('#pictures-modal').on('shown.bs.modal', function() {
         // console.info('test');
         $('#pictures-modal').find('a').magnificPopup({
             type: 'image',
+            gallery: {
+                enabled: true,
+                tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
+            },
+            closeOnContentClick: true,
             zoom: {
                 enabled: true,
 

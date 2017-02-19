@@ -96,8 +96,19 @@
     });
 
     // magnific popup
-    $('#owl-main').find('a').magnificPopup({
+    var startWindowScroll;
+    $('#owl-main, .item-card-main-media').find('a').magnificPopup({
         type: 'image',
+        callbacks: {
+            beforeOpen: function() {
+                startWindowScroll = $(window).scrollTop();
+            },
+            close: function() {
+                setTimeout(function () {
+                    $(window).scrollTop(startWindowScroll);
+                }, 10);
+            }
+        },
         zoom: {
             enabled: true,
 
@@ -110,19 +121,6 @@
         }
     });
 
-    $('.item-card-main-media').find('a').magnificPopup({
-        type: 'image',
-        zoom: {
-            enabled: true,
-
-            duration: 300,
-            easing: 'ease-in-out',
-
-            opener: function(openerElement) {
-                return openerElement.is('img') ? openerElement : openerElement.find('img');
-            }
-        }
-    });
 })(jQuery);
 
 // smart form
