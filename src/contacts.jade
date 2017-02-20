@@ -12,13 +12,19 @@ html(lang='ru')
 		include ./partials/navigation.jade
 
 		content.contacts-page
-			.page-label(style="background-image:url('http://dommino.ua/media//stg_bannersetter/images/1_6.png')")
+			.page-label(style="background-image:url('https://www.pufetto.com.ua/img/pages/contacts.jpg')")
 				.container
 					.row
 						.col-md-12
 							.catalog-category-name
 								h1 Контакты
 								p Выберите город и обращайтесь в ближайший салон.
+								p
+									span Телефон: 
+									a(href="callto:01234567890")  0(123) 456-78-90
+								p
+									span Почта: 
+									a(href="mailto:mail@domain.ua")  mail@domain.ua
 
 			.map-container
 				#map.google-map
