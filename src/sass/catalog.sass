@@ -158,13 +158,23 @@
 		background: rgba(255,0,0,0.8)
 		color: #fff
 		padding: 4px 2rem
+		z-index: 1
+		@media #{$media-xs}
+			bottom: auto
+			top: 0
 	&:hover
 		// opacity: 0.6
 		.catalog-item-details
 			transform: translateY(0%)
 	&.sale
+		@media #{$media-xs}
+			border-bottom: 1px solid #e4e4e4
+			padding-bottom: 20px
+			margin-bottom: 30px
 		&:hover
 			opacity: 1
+		&:focus
+			outline-color: rgba(255,0,0,0.8)
 		.catalog-item-details
 			background: rgba(255,0,0,0.8)
 			color: #fff

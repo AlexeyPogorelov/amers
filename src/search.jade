@@ -1,0 +1,75 @@
+doctype html
+html(lang='ru')
+	head
+		title AMERS - ...
+		meta(charset="utf-8")
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/noscript.jade
+		include ./partials/navigation.jade
+
+		content
+			.container
+				.row
+					//- h2 Поиск
+					form(action="#").col-md-12.search-wrapper
+						.input-form.search-main-input-group
+							input(type="text" placeholder="Поиск по сайту")
+							input(type="submit" value="")
+						ul.tag-cloud-1
+							li
+								a.btn.btn-primary(href="#")
+									span Модульные диваны
+							li
+								a.btn.btn-primary(href="#")
+									span Угловые диваны
+							li
+								a.btn.btn-primary(href="#")
+									span Прямые диваны
+						.search-main-results-holder
+							mixin result (name, type, description, image)
+								.search-result
+									h3= name
+									h4= type
+									if image
+										img(src= image, alt= name)
+									p= description
+				.row
+					.col-md-12.search-results
+						.search-item
+							a.search-header(href='/uslugi/migr/immigr/grazhd-ukr/grazhdanstvo-ukrainy-putem-prinyatiya-v-grazhdanstvo.html?sphrase_id=13027') Гражданство Украины путем принятия в гражданство
+							.search-preview
+								| ... возможность приобрести гражданство путем принятия в гражданство Украины!
+								| Принятие в гражданство подразумевает непрерывное проживание на 
+								b законных
+								|  основаниях на территории Украины на протяжении последних пяти лет, признание и соблюдение Конституции Украины и 
+								b законов
+								|  Украины,...
+						.search-item
+							a.search-header(href='/uslugi/migr/immigr/grazhd-ukr/grazhdanstvo-ukrainy-putem-prinyatiya-v-grazhdanstvo.html?sphrase_id=13027') Гражданство Украины путем принятия в гражданство
+							.search-preview
+								| ... возможность приобрести гражданство путем принятия в гражданство Украины!
+								| Принятие в гражданство подразумевает непрерывное проживание на 
+								b законных
+								|  основаниях на территории Украины на протяжении последних пяти лет, признание и соблюдение Конституции Украины и 
+								b законов
+								|  Украины,...
+						.search-item
+							a.search-header(href='/uslugi/migr/immigr/grazhd-ukr/grazhdanstvo-ukrainy-putem-prinyatiya-v-grazhdanstvo.html?sphrase_id=13027') Гражданство Украины путем принятия в гражданство
+							.search-preview
+								| ... возможность приобрести гражданство путем принятия в гражданство Украины!
+								| Принятие в гражданство подразумевает непрерывное проживание на 
+								b законных
+								|  основаниях на территории Украины на протяжении последних пяти лет, признание и соблюдение Конституции Украины и 
+								b законов
+								|  Украины,...
+
+
+
+		include ./partials/footer.jade
+		include ./partials/modals.jade
+
+	include ./partials/scripts.jade

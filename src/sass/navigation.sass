@@ -85,12 +85,16 @@
 	.user-controls-panel
 		margin: 10px 0 0
 		height: 32px
+		@media #{$media-xs-min}
+			margin-right: -14px
 		li
 			text-align: center
 			line-height: 32px
 			margin-left: 5px
 			height: 32px
 			width: 32px
+			@media #{$media-xs-min}
+				margin-left: 2px
 			&:first-child
 				position: relative
 				&:before
@@ -106,6 +110,7 @@
 			color: #525252
 			font-size: 20px
 			line-height: 20px
+			font-weight: 900
 		.glyphicon.glyphicon-option-vertical
 			top: 3px
 	.main-cellphone

@@ -1357,6 +1357,71 @@ body
 //----------------------------------
 
 //----------------------------------
+// SEARCH PAGE
+//----------------------------------
+
+.search-wrapper
+	.input-form.search-main-input-group
+		margin-top: 80px
+		position: relative
+		input[type="text"]
+			border: 2px solid #333
+			color: #35363c
+			font-size: 2.5rem
+			font-weight: 500
+			height: 68px
+			line-height: 68px
+			padding-left: 1em
+			width: 100%
+			@media #{$media-sm}
+				font-size: 1.8rem
+				height: 60px
+				line-height: 60px
+			@media #{$media-xs}
+				font-size: 1.2rem
+				height: 50px
+				line-height: 50px
+		input[type="submit"]
+			background: url(../img/icons/search-icon-1.svg) 50% 50% no-repeat
+			background-size: contain
+			border: none
+			display: block
+			opacity: 1
+			position: absolute
+			top: 16px
+			right: 14px
+			height: 36px
+			width: 36px
+			transition: opacity 100ms
+			@media #{$media-sm}
+				top: 11px
+			@media #{$media-xs}
+				top: 11px
+				height: 26px
+				width: 26px
+			&:hover
+				opacity: 0.6
+	.tag-cloud-1
+		margin-top: 1rem
+		li
+			display: inline-block
+		a
+			margin: 0 8px 10px 0
+
+.search-results
+	padding: 2rem 0 6rem
+	.search-item
+		margin: 1rem 0 3rem
+	.search-header
+		display: block
+		font-size: 24px
+		margin-bottom: 0.4em
+	.search-preview
+//----------------------------------
+// END SEARCH PAGE
+//----------------------------------
+
+//----------------------------------
 // TEST PAGE
 //----------------------------------
 .test-page

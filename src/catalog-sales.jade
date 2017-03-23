@@ -14,10 +14,10 @@ html(lang='ru')
 		content
 			.catalog-page
 				mixin item (name, img, category, short, price, city)
-					.col-md-4.catalog-item.sale
+					a(href="#" data-toggle="modal" data-target="#sale-item-modal").col-md-4.catalog-item.sale
 						//- a(href="item-card.html")
 							//- h3= name
-						a(href="item-card.html" tabindex="-1").image-holder
+						.image-holder
 							img(src= img, alt= name).fake-img
 							.img(style="background-image:url(#{img})")
 							.hover
@@ -27,10 +27,9 @@ html(lang='ru')
 							.sale-shield
 								span= city
 						.catalog-item-description
-							a(href="catalog.html")
-								h4= category
-								h3= name
-								p!= '<strike>' + (+price + 800) + '</strike> <b>' + price + '</b> <small>грн</small>'
+							h4= category
+							h3= name
+							p!= '<strike>' + (+price + 800) + '</strike> <b>' + price + '</b> <small>грн</small>'
 							//- .buttons-holder
 								a(href="item-card.html" tabindex="-1").btn.btn-grey Подробней
 								a(href="item-card.html" tabindex="-1").btn.btn-primary Купить
@@ -48,32 +47,30 @@ html(lang='ru')
 					.container-alt
 						.row
 							.col-md-12
-								button#dLabel(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-									| Выбрать город: 
-									span.caret
-								ul.dropdown-menu(aria-labelledby='dLabel')
+								span.dropdown-holder
+									button#dLabel1(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+										| Выбрать город: 
+										span.caret
 
-									a(href="#") Киев
-									a(href="#") Сумы
-									a(href="#") Харьков
-									a(href="#") Одесса
-									a(href="#") Полтава
-									a(href="#") Запорожье
-									a(href="#") Хмельницкий
-									a(href="#") Черкассы
+									ul.dropdown-menu(aria-labelledby='dLabel1')
+										a(href="#") Киев
+										a(href="#") Сумы
+										a(href="#") Харьков
+										a(href="#") Одесса
+										a(href="#") Полтава
+										a(href="#") Запорожье
+										a(href="#") Хмельницкий
+										a(href="#") Черкассы
 
-								//- form(action="#")
-								//- 	.form-group
-								//- 		label(for="sort-param") Выбрать город: &nbsp;
-								//- 		select#sort-param(name="sort-param")
-								//- 			option Киев
-								//- 			option Сумы
-								//- 			option Харьков
-								//- 			option Одесса
-								//- 			option Полтава
-								//- 			option Запорожье
-								//- 			option Хмельницкий
-								//- 			option Черкассы
+								span.dropdown-holder
+									button#dLabel2(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+										| Тип дивана: 
+										span.caret
+
+									ul.dropdown-menu(aria-labelledby='dLabel2')
+										a(href="#") Угловой
+										a(href="#") Прямой
+										a(href="#") Еще какой-то
 
 				.container-alt
 					.row.catalog-category-items-holder
