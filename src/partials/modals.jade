@@ -31,7 +31,10 @@
 						li
 							a(href="tel:0472733168").binct-phone-number-1 (047) 273-31-68
 						li
-							a(href="#") UA
+							form(method="post")
+								select.langPost(name="langPost" onchange="this.form.submit()")
+									option(value="setLangRu" "<?php echo $selR; ?>") RU
+									option(value="setLangEn" "<?php echo $selE; ?>") ENG
 
 
 #cart-sidebar.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
@@ -230,7 +233,7 @@
 #sale-item-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 	.modal-dialog.modal-lg
 		.modal-content
-			.container
+			.container-fluid
 				button.close(type='button', data-dismiss='modal', aria-label='Close')
 				.catalog-item-sale-modal
 					.row
@@ -249,3 +252,37 @@
 							.catalog-item-sale-modal-details
 								p Универсальный диван трасформер, конструкция которого легко позволяет самостоятельно изменять угловое изделие на прямой диван и наоборот. Механизм раскладки "Еврокнижка" без особых усилий превращает изделие в просторную двуспальную кровать, а вместительные короба для белья помогут разместить множество предметов. Также в диване предусмотрены ниши в подлокотниках, которые создают дополнительное место для вещей, а так же практичные ламинированные накладки с помощью которых подлокотники легко содержать в чистоте.
 								p Стильная и комфортная модель "COUNTRY" - это сочетание простых линий и в то же время изысканных форм, понятных каждому. Удобное посадочное место позволит полноценно расслабится после тяжелого рабочего дня. Мягкие быльца дивана дополняют полноценный образ данной модели. Она является популярным решением для самых разнообразных вариантов интерьера. Представлена прямым нераскладным диваном, креслом и пуфом. Деревянные ножки модели изготовлены без декоративной покраски.
+
+
+#leave-feedback-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content
+			.container-fluid
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+				.row
+					form(action="#").contact-form.contact-form-main
+						.form-group
+							label(for='exampleInputName') Ваше имя *
+							input#exampleInputName(type='text', placeholder='Введите Ваше имя')
+						.form-group
+							label(for='exampleInputEmail1') Город *
+							input#exampleInputEmail1(type='text', placeholder='Телефон или почта')
+						.form-group
+							label(for='exampleInputMessage') Отзыв *
+							textarea#exampleInputMessage(type='password', placeholder='Введите Ваше сообщение')
+						.form-group.star-ratings
+							input(type="radio" id="rating-5" name="rating" value="5")
+							label(for='rating-5')
+							input(type="radio" id="rating-4" name="rating" value="4")
+							label(for='rating-4')
+							input(type="radio" id="rating-3" name="rating" value="3")
+							label(for='rating-3')
+							input(type="radio" id="rating-2" name="rating" value="2")
+							label(for='rating-2')
+							input(type="radio" id="rating-1" name="rating" value="1")
+							label(for='rating-1')
+						.form-group.input-file
+							input#exampleInputFile(type='file')
+							label(for='exampleInputFile') Прикрепить файл
+						button.btn.btn-primary(type='submit')
+							span Отправить

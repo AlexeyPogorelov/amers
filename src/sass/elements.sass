@@ -433,3 +433,66 @@ $speed: 100ms
 			color: #666
 			&:hover
 				color: #000
+
+.langPost
+	border: none
+	font-weight: 800
+	font-size: 18px
+
+.star-ratings
+
+	$unchecked-star: '\2606';
+	$unchecked-color: #888;
+	$checked-star: '\2605';
+	$checked-color: #333;
+
+
+	/* remove inline-block whitespace */
+	margin-left: -5px
+	font-size: 0
+	text-align: left
+	*
+		font-size: 2rem
+		text-align: right
+	/* flip the order so we can use the + and ~ combinators */
+	unicode-bidi: bidi-override
+	direction: rtl
+	& > input
+		display: none
+		& + label
+			/* only enough room for the star */
+			display: inline-block
+			overflow: hidden
+			text-indent: 9999px
+			width: 1em
+			white-space: nowrap
+			cursor: pointer
+			&:before
+				display: inline-block
+				text-indent: -9999px
+				content: $unchecked-star
+				color: $unchecked-color
+		&:checked ~ label:before,
+			& + label:hover ~ label:before,
+			& + label:hover:before
+			content: $checked-star
+			color: $checked-color
+			text-shadow: 0 0 1px #333
+	
+	/* the hidden clearer */
+	& > .star-cb-clear + label
+		text-indent: -9999px
+		width: .5em
+		margin-left: -.5em
+	& > .star-cb-clear + label:before
+		width: .5em
+
+	&:hover > input + label:before
+		content: $unchecked-star
+		color: $unchecked-color
+		text-shadow: none
+	&:hover > input + label:hover ~ label:before,
+	&:hover > input + label:hover:before
+		content: $checked-star
+		color: $checked-color
+		text-shadow: 0 0 1px #333

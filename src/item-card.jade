@@ -317,6 +317,65 @@ html(lang='ru')
 											img(src='http://amers.ck.ua/upload/Nikol_sh_4.jpg', alt='Угловой диван PARMA')
 
 
+					h3 Отзывы покупателей
+
+					.feedback-page
+						mixin feed (name, img, user, city, date, description)
+							li.feedback
+								//- .header-block
+								//- 	a(href="#")
+								//- 		h3= name
+								//- 		img(src= img, alt= name)
+								.info-block
+									ul
+										li
+											span= user
+										li
+											span= city
+										li
+											span= date
+										li
+											span.star-filled
+											span.star-filled
+											span.star-filled
+											span.star-filled
+											span.star
+								.comment-block
+									p= description
+
+						ul.feedbacks-holder
+							+feed(
+								'Кресло Paolo',
+								'https://www.pufetto.com.ua/items/paolo/a/1/small/a.paolo.jpg',
+								'Виктория',
+								'Ирпень',
+								'10.01.2017',
+								'Все понравилось, уже 3 покупка'
+							)
+							+feed(
+								'Угловой диван Renata',
+								'https://www.pufetto.com.ua/items/renata/d/1/small/d.renata.l.jpg',
+								'Александра',
+								'Одесса',
+								'29.12.2016',
+								'Очень довольны заказом. Диван выглядит очень красиво, ткань ETNA супер, переживали, чтоб не выглядел просто. Все было выполнено в срок, служба доставки/сборки пунктуальна, надели бахилы при входе, что я считаю безусловным плюсом. Будем рекомендовать'
+							)
+							+feed(
+								'Двухспальная кровать Dimaro',
+								'https://www.pufetto.com.ua/items/dimaro/g/1/small/g.dimaro.jpg',
+								'Ольга',
+								'Киев',
+								'27.12.2016',
+								'Заказ приняли оперативно. Доставили даже чуть раньше обещанного срока. Сборщики вежливые, аккуратные, в бахилах. Качество кроватки и матраца - на высоте, сплошное удовольствие. Один момент - цвет обивки все же лучше выбирать не полагаясь на фото с сайта, т.к. вышло чуть темнее ожидаемого.'
+							)
+
+					.row.feedbacks-buttons-holder
+						.col-md-12
+							a.btn.btn-primary(href='#' data-toggle="modal" data-target="#leave-feedback-modal")
+								span Оставить отзыв
+							a.btn.btn-primary(href='feedback.html')
+								span Читать все отзывы
+
 					.row.hidden-xs.item-card-same-items
 						.col-md-12
 							h3 Похожие товары
