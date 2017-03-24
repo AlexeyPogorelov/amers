@@ -317,9 +317,9 @@ html(lang='ru')
 											img(src='http://amers.ck.ua/upload/Nikol_sh_4.jpg', alt='Угловой диван PARMA')
 
 
-					h3 Отзывы покупателей
+					h3.description-table-header Отзывы покупателей
 
-					.feedback-page
+					.feedback-page.row
 						mixin feed (name, img, user, city, date, description)
 							li.feedback
 								//- .header-block
@@ -343,7 +343,7 @@ html(lang='ru')
 								.comment-block
 									p= description
 
-						ul.feedbacks-holder
+						ul.feedbacks-holder.col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1.col-sm-12.col-sm-offset-0.col-xs-12.col-xs-offset-0
 							+feed(
 								'Кресло Paolo',
 								'https://www.pufetto.com.ua/items/paolo/a/1/small/a.paolo.jpg',
@@ -369,8 +369,7 @@ html(lang='ru')
 								'Заказ приняли оперативно. Доставили даже чуть раньше обещанного срока. Сборщики вежливые, аккуратные, в бахилах. Качество кроватки и матраца - на высоте, сплошное удовольствие. Один момент - цвет обивки все же лучше выбирать не полагаясь на фото с сайта, т.к. вышло чуть темнее ожидаемого.'
 							)
 
-					.row.feedbacks-buttons-holder
-						.col-md-12
+						.col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1.col-sm-12.col-sm-offset-0.col-xs-12.col-xs-offset-0.feedbacks-buttons-holder
 							a.btn.btn-primary(href='#' data-toggle="modal" data-target="#leave-feedback-modal")
 								span Оставить отзыв
 							a.btn.btn-primary(href='feedback.html')
@@ -378,7 +377,7 @@ html(lang='ru')
 
 					.row.hidden-xs.item-card-same-items
 						.col-md-12
-							h3 Похожие товары
+							h3.description-table-header Похожие товары
 						#owl-other-items.owl-carousel.owl-theme
 							a.item(href="#" style="background-image:url(http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/montaj_nikol_nikol.jpg&w=600&h=260)")
 								img(src='http://amers.ck.ua/ru/f/resize_im.php?src=../../upload/montaj_nikol_nikol.jpg&w=600&h=260', alt='description')
