@@ -1,0 +1,75 @@
+doctype html
+html(lang='ru')
+	head
+		title AMERS - каталог
+		meta(charset="utf-8")
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/noscript.jade
+		include ./partials/navigation.jade
+
+		content
+			.configuration-page
+				mixin item (name, img, category, short, price)
+					.col-md-4.catalog-item
+						//- a(href="item-card.html")
+							//- h3= name
+						a(href="item-card.html" tabindex="-1").image-holder
+							img(src= img, alt= name).fake-img
+							.img(style="background-image:url(#{img})")
+							.catalog-item-details
+								span= category
+						.catalog-item-description
+							a(href="catalog.html")
+								h4= category
+								h3= name
+								p!= 'от <b>' + price + '</b> <small>грн</small>'
+							//- p= short
+							//- .buttons-holder
+								a(href="item-card.html" tabindex="-1").btn.btn-grey Подробней
+								a(href="item-card.html" tabindex="-1").btn.btn-primary Купить
+
+				.page-label.tiny(style="background-image: url('http://zegen.ua/img/p/1/2/1/121.jpg')")
+					.container
+						.row
+							.col-md-12
+								.catalog-category-name
+									h1 Категория товаров
+
+				.container-alt
+					.row.configuration-page__item
+						.col-md-6.col-md-push-6.col-sm-12
+							h2 Мебель точно такая, о какой Вы мечтали
+							p Каждый мягкий уголок, кресло, диван, софа, который производится на Мебельной фабрике Gala Collezione, создаётся по индивидуальному заказу. Ваши требования, касающиеся специфической отделки деталей, вида обивки и конфигурации, позволяют нам каждый раз создавать модель, идеально подогнанную к Вашим потребностям и потребностям Вашей семьи. Свой выбор Вы можете проконсультировать дополнительно с продавцом в мебельном салоне, где Вам расскажут о всех доступных решениях. Список салонов Вы найдете в закладке ГДЕ КУПИТЬ.
+						.col-md-6.col-md-pull-6.col-sm-12
+							.image-holder
+								img(src= 'http://www.galameble.com/wp-content/uploads/mod-0n.jpg').fake-img
+								.img(style="background-image:url('http://www.galameble.com/wp-content/uploads/mod-0n.jpg')")
+
+					.row.configuration-page__item
+						.col-md-6.col-sm-12
+							h2 Разные отделки боковых частей мебели
+							p В зависимости от модели, бока мебели могут быть закончены удлинённым сидением, сниженной полкой или обычным подлокотником. Выберите такой вариант, который Вы посчитаете самым для себя удобным – Вы можете, например, выбрать модель с подвижным подлокотником или боком с полкой, благодаря которой получите дополнительное место для газет и книг.
+						.col-md-6.col-sm-12
+							.image-holder
+								img(src= 'http://www.galameble.com/wp-content/uploads/mod-1.jpg').fake-img
+								.img(style="background-image:url('http://www.galameble.com/wp-content/uploads/mod-1.jpg')")
+
+					.row.configuration-page__item
+						.col-md-8.col-md-push-4.col-sm-12
+							h2 Мебель точно такая, о какой Вы мечтали
+							p Каждый мягкий уголок, кресло, диван, софа, который производится на Мебельной фабрике Gala Collezione, создаётся по индивидуальному заказу. Ваши требования, касающиеся специфической отделки деталей, вида обивки и конфигурации, позволяют нам каждый раз создавать модель, идеально подогнанную к Вашим потребностям и потребностям Вашей семьи. Свой выбор Вы можете проконсультировать дополнительно с продавцом в мебельном салоне, где Вам расскажут о всех доступных решениях. Список салонов Вы найдете в закладке ГДЕ КУПИТЬ.
+						.col-md-4.col-md-pull-8.col-sm-12
+							.image-holder
+								img(src= 'http://www.galameble.com/wp-content/uploads/mod-0n.jpg').fake-img
+								.img(style="background-image:url('http://www.galameble.com/wp-content/uploads/mod-0n.jpg')")
+
+
+
+		include ./partials/footer.jade
+		include ./partials/modals.jade
+
+	include ./partials/scripts.jade
